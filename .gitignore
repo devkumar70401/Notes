@@ -1,0 +1,19 @@
+# complete Python virtual environment.
+.venv/   
+
+# Whenever Python imports a module -> Python compiles it into bytecode.
+# Instead of recompiling every time, it stores the compiled version.
+__pycache__/
+
+# Same reason as __pycache__.
+# Sometimes .pyc files exist outside __pycache__.
+# This rule catches them too.
+*.pyc
+
+# This one is specific to Jupyter Notebook.
+# Jupyter automatically creates
+# Automatic backups -> Just like Microsoft Word creates autosaves -> Every few minutes:
+.ipynb_checkpoints/
+
+
+
