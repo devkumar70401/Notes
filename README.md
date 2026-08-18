@@ -1,5 +1,12 @@
 # 🧠 Master Knowledge Vault & Research Notes
 
+## Most Important Skills
+1. Building and Deploying AI Applications
+2. Software engineering fundamentals
+3. Using coding agents
+4. Shaping the build
+
+
 > **Core Philosophy**: *The Expandable Domain-Stack (Dewey-Zettelkasten Hybrid)*
 > 
 > As a Machine Learning Engineer aspirant, your knowledge naturally evolves across software engineering, mathematical foundations, data science tools, advanced AI architectures (ML $\rightarrow$ DL $\rightarrow$ CV $\rightarrow$ NLP $\rightarrow$ RL $\rightarrow$ Robotics), as well as your creative & scientific curiosities (Physics, Chemistry, Poetry, Biographies like Van Gogh).
