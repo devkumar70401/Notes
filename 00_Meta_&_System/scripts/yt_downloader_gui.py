@@ -1,11 +1,6 @@
 """
-yt_downloader.py - Hardened YouTube Audio Downloader
-Location: /home/dev/SE/Notes/00_Meta_&_System/scripts/yt_downloader.py
-
-Features:
-1. Dynamic Storage Location with native folder picker and presets.
-2. True Multi-Threading with thread-safe UI updates via root.after().
-3. FFmpeg audio conversion to 320kbps MP3 with full metadata & thumbnail embedding.
+yt_downloader_gui.py - Standalone Graphical Interface for YouTube Media Downloader
+Location: /home/dev/SE/Notes/00_Meta_&_System/scripts/yt_downloader_gui.py
 """
 
 import os
@@ -17,26 +12,34 @@ from tkinter import ttk, filedialog, messagebox
 import yt_dlp
 
 
-class YouTubeAudioDownloader(tk.Tk):
+def get_default_music_dir() -> Path:
+    music_dir = Path.home() / "Music"
+    music_dir.mkdir(parents=True, exist_ok=True)
+    return music_dir
+
+
+def get_node_runtime() -> dict:
+    node_bin = shutil.which("node") or shutil.which("nodejs") or str(Path.home() / "SE/Notes/.venv/bin/node")
+    if node_bin and (os.path.exists(node_bin) or shutil.which(node_bin)):
+        return {"node": {"path": node_bin}}
+    return {}
+
+
+class YouTubeDownloaderGUI(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        # --- Window Configuration ---
-        self.title("🎵 YouTube → MP3 Downloader (Pro)")
+        self.title("🎵 YouTube Media Downloader (Pro)")
         self.geometry("560x490")
         self.resizable(False, False)
         self.configure(bg="#181825")
         self.protocol("WM_DELETE_WINDOW", self._on_close)
 
-        # --- Directory State ---
-        self.default_music_dir = str(Path.home() / "Downloads" / "music")
-        os.makedirs(self.default_music_dir, exist_ok=True)
-
+        self.default_music_dir = str(get_default_music_dir())
         self.storage_path = tk.StringVar(value=self.default_music_dir)
         self.prompt_every_time = tk.BooleanVar(value=False)
         self.is_downloading = False
 
-        # --- Setup UI Layout ---
         self._setup_styles()
         self._build_interface()
 
@@ -44,7 +47,6 @@ class YouTubeAudioDownloader(tk.Tk):
         self.style = ttk.Style(self)
         self.style.theme_use("clam")
 
-        # Color Palette (Catppuccin Mocha)
         self.bg_color = "#181825"
         self.card_color = "#1e1e2e"
         self.fg_color = "#cdd6f4"
@@ -92,11 +94,9 @@ class YouTubeAudioDownloader(tk.Tk):
         container = ttk.Frame(self, padding=16)
         container.pack(fill=tk.BOTH, expand=True)
 
-        # 1. Header
-        header = ttk.Label(container, text="YouTube Music & Audio Downloader", style="Header.TLabel")
+        header = ttk.Label(container, text="YouTube Media Downloader", style="Header.TLabel")
         header.pack(anchor="w", pady=(0, 12))
 
-        # 2. Storage Card
         storage_card = ttk.Frame(container, style="Card.TFrame", padding=12)
         storage_card.pack(fill=tk.X, pady=(0, 12))
 
@@ -126,7 +126,7 @@ class YouTubeAudioDownloader(tk.Tk):
         ttk.Label(options_row, text="Presets:", style="Card.TLabel").pack(side=tk.LEFT, padx=(0, 5))
         self.preset_combo = ttk.Combobox(
             options_row,
-            values=["Downloads/music", "User Music Folder", "Desktop", "Custom Selection..."],
+            values=["User Music Folder", "Downloads/music", "Desktop", "Custom Selection..."],
             state="readonly",
             width=18
         )
@@ -142,7 +142,6 @@ class YouTubeAudioDownloader(tk.Tk):
         )
         prompt_chk.pack(side=tk.LEFT)
 
-        # 3. URL Card
         url_card = ttk.Frame(container, style="Card.TFrame", padding=12)
         url_card.pack(fill=tk.X, pady=(0, 12))
 
@@ -158,7 +157,6 @@ class YouTubeAudioDownloader(tk.Tk):
         )
         self.url_entry.pack(fill=tk.X, ipady=6)
 
-        # 4. Progress Tracking
         self.progress_bar = ttk.Progressbar(container, style="Horizontal.TProgressbar", mode="determinate")
         self.progress_bar.pack(fill=tk.X, pady=(0, 6))
 
@@ -168,10 +166,9 @@ class YouTubeAudioDownloader(tk.Tk):
         self.speed_label = ttk.Label(container, text="Speed: -- | ETA: --", style="Status.TLabel")
         self.speed_label.pack(anchor="w", pady=(0, 12))
 
-        # 5. Action Button
         self.download_btn = ttk.Button(
             container,
-            text="⚡ Download & Convert to MP3",
+            text="⚡ Download in Original High Quality",
             style="Primary.TButton",
             command=self.start_download
         )
@@ -180,7 +177,7 @@ class YouTubeAudioDownloader(tk.Tk):
     def _browse_directory(self):
         chosen = filedialog.askdirectory(
             initialdir=self.storage_path.get(),
-            title="Select Storage Folder for Music"
+            title="Select Storage Folder"
         )
         if chosen:
             self.storage_path.set(chosen)
@@ -188,10 +185,10 @@ class YouTubeAudioDownloader(tk.Tk):
     def _on_preset_changed(self, event):
         choice = self.preset_combo.get()
         home = Path.home()
-        if choice == "Downloads/music":
-            self.storage_path.set(str(home / "Downloads" / "music"))
-        elif choice == "User Music Folder":
+        if choice == "User Music Folder":
             self.storage_path.set(str(home / "Music"))
+        elif choice == "Downloads/music":
+            self.storage_path.set(str(home / "Downloads" / "music"))
         elif choice == "Desktop":
             self.storage_path.set(str(home / "Desktop"))
         elif choice == "Custom Selection...":
@@ -207,19 +204,11 @@ class YouTubeAudioDownloader(tk.Tk):
             messagebox.showerror("Error", "Please paste a YouTube URL first.")
             return
 
-        if not shutil.which("ffmpeg"):
-            messagebox.showerror(
-                "FFmpeg Not Found",
-                "FFmpeg is required for MP3 transcoding and metadata tagging.\n"
-                "Install it via your package manager (e.g., `sudo apt install ffmpeg`)."
-            )
-            return
-
         target_dir = self.storage_path.get().strip()
         if self.prompt_every_time.get():
             selected_dir = filedialog.askdirectory(
                 initialdir=target_dir or self.default_music_dir,
-                title="Select Storage Destination for This Song"
+                title="Select Storage Destination"
             )
             if not selected_dir:
                 self.status_label.config(text="Download cancelled by user.", foreground="#f9e2af")
@@ -243,11 +232,11 @@ class YouTubeAudioDownloader(tk.Tk):
         worker.start()
 
     def _progress_hook(self, d):
-        if d['status'] == 'downloading':
-            total = d.get('total_bytes') or d.get('total_bytes_estimate') or 0
-            downloaded = d.get('downloaded_bytes', 0)
-            speed = d.get('speed') or 0
-            eta = d.get('eta')
+        if d["status"] == "downloading":
+            total = d.get("total_bytes") or d.get("total_bytes_estimate") or 0
+            downloaded = d.get("downloaded_bytes", 0)
+            speed = d.get("speed") or 0
+            eta = d.get("eta")
 
             percent = (downloaded / total * 100) if total > 0 else 0
             speed_str = f"{speed / (1024 * 1024):.2f} MB/s" if speed > 1024 * 1024 else f"{speed / 1024:.2f} KB/s"
@@ -261,8 +250,8 @@ class YouTubeAudioDownloader(tk.Tk):
 
             self.after(0, self._update_ui_progress, percent, status_text, speed_text)
 
-        elif d['status'] == 'finished':
-            self.after(0, self._update_ui_progress, 100, "Transcoding & Embedding Metadata...", "Finalizing...")
+        elif d["status"] == "finished":
+            self.after(0, self._update_ui_progress, 100, "Processing & Finalizing...", "Finalizing...")
 
     def _update_ui_progress(self, percent, status_text, speed_text):
         self.progress_bar["value"] = percent
@@ -271,28 +260,28 @@ class YouTubeAudioDownloader(tk.Tk):
 
     def _download_worker(self, url, output_dir):
         ydl_opts = {
-            'format': 'bestaudio/best',
-            'outtmpl': os.path.join(output_dir, '%(title)s.%(ext)s'),
-            'noplaylist': True,
-            'writethumbnail': True,
-            'progress_hooks': [self._progress_hook],
-            'postprocessors': [
+            "format": "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+            "outtmpl": os.path.join(output_dir, "%(title)s.%(ext)s"),
+            "merge_output_format": "mp4",
+            "noplaylist": True,
+            "writethumbnail": False,
+            "progress_hooks": [self._progress_hook],
+            "socket_timeout": 30,
+            "retries": 10,
+            "fragment_retries": 10,
+            "quiet": True,
+            "no_warnings": True,
+            "postprocessors": [
                 {
-                    'key': 'FFmpegExtractAudio',
-                    'preferredcodec': 'mp3',
-                    'preferredquality': '320',
-                },
-                {
-                    'key': 'FFmpegMetadata',
-                    'add_metadata': True,
-                },
-                {
-                    'key': 'EmbedThumbnail',
-                },
+                    "key": "FFmpegMetadata",
+                    "add_metadata": True,
+                }
             ],
-            'quiet': True,
-            'no_warnings': True,
         }
+
+        js_runtime = get_node_runtime()
+        if js_runtime:
+            ydl_opts["js_runtimes"] = js_runtime
 
         error_msg = None
         try:
@@ -314,7 +303,7 @@ class YouTubeAudioDownloader(tk.Tk):
             self.status_label.config(text=f"Status: ✅ Saved to {output_dir}", foreground=self.success_color)
             self.speed_label.config(text="Complete!")
             self.url_entry.delete(0, tk.END)
-            messagebox.showinfo("Success", f"Audio downloaded & converted to MP3!\n\nFolder: {output_dir}")
+            messagebox.showinfo("Success", f"Media downloaded successfully!\n\nFolder: {output_dir}")
 
     def _on_close(self):
         if self.is_downloading:
@@ -325,5 +314,5 @@ class YouTubeAudioDownloader(tk.Tk):
 
 
 if __name__ == "__main__":
-    app = YouTubeAudioDownloader()
+    app = YouTubeDownloaderGUI()
     app.mainloop()
