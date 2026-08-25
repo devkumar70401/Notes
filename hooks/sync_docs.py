@@ -11,22 +11,11 @@ def on_pre_build(config):
     for item in docs_dir.iterdir():
         if item.is_symlink() and not item.exists():
             item.unlink()
-        elif item.is_symlink() and item.name != "index.md":
-            item.unlink()
 
-    # 2. Link README.md to docs/index.md
+    # 2. Ensure docs/index.md exists
     index_md = docs_dir / "index.md"
-    readme = root_dir / "README.md"
-    if readme.exists():
-        if index_md.is_symlink() or index_md.exists():
-            try:
-                index_md.unlink(missing_ok=True)
-            except OSError:
-                pass
-        try:
-            index_md.symlink_to("../README.md")
-        except OSError:
-            shutil.copy2(readme, index_md)
+    if not index_md.exists():
+        index_md.write_text("# Hi, Brother 😊\n\nWelcome to my notes.\n", encoding="utf-8")
             
     # 3. Only link numbered directories that exist and contain actual files
     for item in root_dir.iterdir():

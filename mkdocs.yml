@@ -1,5 +1,5 @@
-site_name: Devendra's Knowledge Vault
-site_description: Production ML Systems Engineer Master Knowledge Vault & Notes
+site_name: ML Engineer
+site_description: Machine Learning Engineer Knowledge Vault & Notes
 site_author: Devendra
 site_url: https://devkumar70401.github.io/Notes/
 repo_url: https://github.com/devkumar70401/Notes
@@ -7,6 +7,24 @@ repo_name: devkumar70401/Notes
 
 hooks:
   - hooks/sync_docs.py
+
+nav:
+  - Home: index.md
+  - 1. Languages:
+    - Java:
+      - Week 4:
+        - Abstract Classes & Interfaces: 10_CS_&_Engineering/11_Languages/Java/week_4/01_abstract_classes_and_Interfaces.md
+        - Interfaces: 10_CS_&_Engineering/11_Languages/Java/week_4/02_interfaces.md
+        - Private Classes: 10_CS_&_Engineering/11_Languages/Java/week_4/03_private_classes.md
+        - Controlled Interaction with Objects: 10_CS_&_Engineering/11_Languages/Java/week_4/04_controlled_interaction_with_objects.md
+        - CallBacks: 10_CS_&_Engineering/11_Languages/Java/week_4/05_CallBacks.md
+        - Iterators: 10_CS_&_Engineering/11_Languages/Java/week_4/06_Interators.md
+    - Python:
+      - Coming Soon: 10_CS_&_Engineering/11_Languages/Python/soon.md
+
+validation:
+  nav:
+    omitted_files: info
 
 theme:
   name: material
@@ -52,7 +70,6 @@ theme:
 
 plugins:
   - search
-  - awesome-pages
   - mkdocs-jupyter:
       include_source: True
       ignore:
