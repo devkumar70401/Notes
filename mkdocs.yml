@@ -11,32 +11,44 @@ hooks:
 theme:
   name: material
   language: en
+  logo: assets/avatar.png
+  favicon: assets/avatar.png
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
-    # Palette toggle for light mode
-    - scheme: default
+    # Auto preference detection + Light / Dark toggle
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
-      accent: indigo
+      accent: cyan
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: Switch to dark mode
-    # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: indigo
-      accent: indigo
+      accent: cyan
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
   features:
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.path
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
     - content.code.annotate
+    - content.tabs.link
+    - toc.follow
 
 plugins:
   - search
@@ -69,6 +81,10 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.caret
   - attr_list
   - md_in_html
   - tables
@@ -82,3 +98,13 @@ extra_javascript:
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/devkumar70401
+      name: GitHub Profile
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:devkumar70401@gmail.com
+      name: Email Devendra

@@ -41,10 +41,12 @@ def on_pre_build(config):
                         if not target.exists():
                             shutil.copytree(item, target)
 
-    # 4. Ensure javascripts are available
-    src_js = root_dir / "javascripts"
-    dst_js = docs_dir / "javascripts"
-    if src_js.exists():
-        dst_js.mkdir(exist_ok=True)
-        for js_file in src_js.glob("*.js"):
-            shutil.copy2(js_file, dst_js / js_file.name)
+    # 4. Ensure assets, javascripts, stylesheets are copied to docs
+    for folder in ["assets", "javascripts", "stylesheets"]:
+        src_folder = root_dir / folder
+        dst_folder = docs_dir / folder
+        if src_folder.exists():
+            dst_folder.mkdir(exist_ok=True)
+            for f in src_folder.glob("*"):
+                if f.is_file():
+                    shutil.copy2(f, dst_folder / f.name)
