@@ -12,6 +12,13 @@ nav:
   - Home: index.md
   - 1. Languages:
     - Java:
+      - Week 3:
+        - The Philosophy of OO Programming: 10_CS_&_Engineering/11_Languages/Java/week_3/01_philosophy_of_object_oriented_programming.md
+        - Subclasses & Inheritance: 10_CS_&_Engineering/11_Languages/Java/week_3/02_subclasses_and_inheritance.md
+        - Dynamic Dispatch & Polymorphism: 10_CS_&_Engineering/11_Languages/Java/week_3/03_dynamic_dispatch_and_polymorphism.md
+        - The Java Class Hierarchy: 10_CS_&_Engineering/11_Languages/Java/week_3/04_the_java_class_hierarchy.md
+        - Subtyping vs Inheritance: 10_CS_&_Engineering/11_Languages/Java/week_3/05_subtyping_vs_inheritance.md
+        - Java Modifiers: 10_CS_&_Engineering/11_Languages/Java/week_3/06_java_modifiers.md
       - Week 4:
         - Abstract Classes & Interfaces: 10_CS_&_Engineering/11_Languages/Java/week_4/01_abstract_classes_and_Interfaces.md
         - Interfaces: 10_CS_&_Engineering/11_Languages/Java/week_4/02_interfaces.md
