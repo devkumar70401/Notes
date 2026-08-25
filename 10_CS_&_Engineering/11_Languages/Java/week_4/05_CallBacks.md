@@ -1,5 +1,19 @@
 # Implementing a call-back facility
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Client as Myclass (Owner)
+    participant TimerObj as Timer (Runnable)
+
+    Client->>TimerObj: new Timer(this) (Passes identity)
+    Client->>TimerObj: timer.start()
+    Note over Client,TimerObj: Myclass continues parallel execution...
+    Note over TimerObj: Time limit expires in Timer thread
+    TimerObj-->>Client: owner.timerdone() (Callback Triggered!)
+```
+
+
 - `Myclass m` creates a `Timer t`
 
 ![1787138520587](image/05_CallBacks/1787138520587.png)

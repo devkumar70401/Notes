@@ -24,6 +24,14 @@ public class HelloWorld {
 
 # Compilation and Execution Flow
 
+```mermaid
+graph LR
+    SRC["HelloWorld.java<br>(Source Code)"] -->|javac| BYTE["HelloWorld.class<br>(JVM Bytecode)"]
+    BYTE -->|java| JVM["JVM Runtime Engine"]
+    JVM -->|JIT / Interpreter| CPU["Host Machine Execution"]
+```
+
+
 ```bash
 # 1. Compile source (.java) to bytecode (.class)
 javac HelloWorld.java

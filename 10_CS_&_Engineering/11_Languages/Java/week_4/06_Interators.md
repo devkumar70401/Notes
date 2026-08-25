@@ -58,6 +58,22 @@ public class Linearlist{
 
 # Iteration
 
+```mermaid
+graph LR
+    subgraph LinearList Container
+        DATA["Internal Node / Array Storage"]
+    end
+
+    subgraph Exported Iterators
+        IT1["Iterator 1 (Position: Index 0)"]
+        IT2["Iterator 2 (Position: Index 4)"]
+    end
+
+    IT1 --> DATA
+    IT2 --> DATA
+```
+
+
 - Want a loop to run through all values in a linear list
 - If the list is an array with public access, we write this
 

@@ -21,6 +21,24 @@
 
 # Java's Type System: The Two Universes
 
+```mermaid
+graph TD
+    TYPES["Java Data Types"] --> PRIM["Primitive Types (Value on Stack)"]
+    TYPES --> REF["Reference Types (Pointers to Heap)"]
+
+    PRIM --> NUM["Numeric"]
+    PRIM --> CHAR["char (16-bit)"]
+    PRIM --> BOOL["boolean (1-bit)"]
+
+    NUM --> INT_T["Integral: byte, short, int, long"]
+    NUM --> FLOAT_T["Floating: float, double"]
+
+    REF --> CLASS_T["Class Types (String, User Classes)"]
+    REF --> ARR_T["Array Types (int[], Object[])"]
+    REF --> INTF_T["Interface Types"]
+```
+
+
 Java strictly divides types into two distinct categories:
 
 ### 1. Primitive Types (Value Types)

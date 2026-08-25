@@ -1,5 +1,13 @@
 # Java Maps (`Map<K, V>`)
 
+```mermaid
+graph TD
+    MAP["Map&lt;K, V&gt;"] --> HM["HashMap&lt;K, V&gt;<br>(O(1) Hash Table)"]
+    MAP --> TM["TreeMap&lt;K, V&gt;<br>(O(log n) Red-Black Tree)"]
+    MAP --> LHM["LinkedHashMap&lt;K, V&gt;<br>(O(1) Insertion / LRU Order)"]
+```
+
+
 - A `Map` stores **Key-Value pairs** (associations / dictionaries)
 - Keys are strictly **unique**; each key maps to exactly one value
 - `Map` is part of JCF, but does **not** extend `Collection<E>` (it models mappings, not single-element collections).

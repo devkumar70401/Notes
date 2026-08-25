@@ -9,6 +9,27 @@
 
 # 1. Abstraction (Separation of Concerns)
 
+```mermaid
+graph TD
+    subgraph Client Application
+        APP["Client Code"]
+    end
+
+    subgraph Public Interface Barrier
+        CONTRACT["Interface: Stack<br>+ push(x)<br>+ pop()<br>+ is_empty()"]
+    end
+
+    subgraph Hidden Private Implementations
+        IMP1["ArrayStack<br>(Contiguous Buffer)"]
+        IMP2["LinkedStack<br>(Node Pointer Chain)"]
+    end
+
+    APP -->|Calls only| CONTRACT
+    CONTRACT -.->|Encapsulates| IMP1
+    CONTRACT -.->|Encapsulates| IMP2
+```
+
+
 - **Abstraction**: Highlighting essential features while hiding background implementation details
 - **Interface vs Implementation**:
   - The **Interface** defines *what* an entity does (contract / capabilities)

@@ -1,5 +1,13 @@
 # Java I/O Streams Architecture
 
+```mermaid
+graph TD
+    IO["Java I/O Hierarchy"]
+    IO --> BYTE["Byte Streams (8-bit binary)<br>InputStream / OutputStream<br>- FileInputStream<br>- BufferedInputStream"]
+    IO --> CHAR["Character Streams (16-bit Unicode text)<br>Reader / Writer<br>- FileReader<br>- BufferedReader"]
+```
+
+
 - Java models I/O as **Streams** of data flowing sequentially from a source to a destination.
 - Separated into two distinct hierarchies:
 

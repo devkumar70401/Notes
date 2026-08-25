@@ -1,5 +1,15 @@
 # Basic Input & Output in Java
 
+```mermaid
+graph LR
+    USER["User Keyboard Input"] --> SYS_IN["System.in<br>(Raw Byte Stream)"]
+    SYS_IN --> SCANNER["java.util.Scanner<br>(Regex Tokenizer)"]
+    SCANNER --> APP["Application Code<br>(nextInt, nextLine)"]
+    APP --> SYS_OUT["System.out<br>(PrintStream)"]
+    SYS_OUT --> CONSOLE["Terminal Display"]
+```
+
+
 Java standard library provides robust I/O capabilities through `System.out` and `java.util.Scanner`.
 
 ---

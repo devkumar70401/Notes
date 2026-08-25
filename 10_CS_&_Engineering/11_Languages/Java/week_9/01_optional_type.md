@@ -9,6 +9,14 @@
 
 # Working with `Optional<T>`
 
+```mermaid
+graph TD
+    OPT["Optional&lt;T&gt; Wrapper"]
+    OPT -->|Value Present| PRES["Contains Non-Null Value: 'Hello'<br>opt.ifPresent(...) executes"]
+    OPT -->|Value Absent| EMPT["Optional.empty()<br>opt.orElse('Default') used"]
+```
+
+
 ### 1. Creating Optionals:
 ```java
 Optional<String> opt1 = Optional.of("Hello");      // Non-null value

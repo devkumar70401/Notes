@@ -41,6 +41,21 @@ t.start();
 
 # Thread Lifecycle States
 
+```mermaid
+stateDiagram-v2
+    [*] --> NEW : new Thread()
+    NEW --> RUNNABLE : start()
+    RUNNABLE --> WAITING : wait() / join()
+    WAITING --> RUNNABLE : notify() / done
+    RUNNABLE --> TIMED_WAITING : sleep(t) / wait(t)
+    TIMED_WAITING --> RUNNABLE : timer expired
+    RUNNABLE --> BLOCKED : waiting for monitor lock
+    BLOCKED --> RUNNABLE : lock acquired
+    RUNNABLE --> TERMINATED : run() completes
+    TERMINATED --> [*]
+```
+
+
 ```text
 NEW ----(start())----> RUNNABLE <========> BLOCKED / WAITING / TIMED_WAITING
                           |

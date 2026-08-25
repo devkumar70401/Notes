@@ -7,6 +7,20 @@
 
 # Shallow Copy vs Deep Copy
 
+```mermaid
+graph TD
+    subgraph Shallow Copy (Shared Mutable Field)
+        ORIG1["Original Employee (0x01)"] --> D1["Shared Date Object (0xAA)"]
+        CLON1["Cloned Employee (0x02)"] --> D1
+    end
+
+    subgraph Deep Copy (Independent Clone)
+        ORIG2["Original Employee (0x03)"] --> D2["Date Object 1 (0xBB)"]
+        CLON2["Cloned Employee (0x04)"] --> D3["New Cloned Date Object (0xCC)"]
+    end
+```
+
+
 ```text
 Shallow Copy:
 Original ----> [ Object A: salary, Date Ref ] ----> [ Date Object: 2026 ]

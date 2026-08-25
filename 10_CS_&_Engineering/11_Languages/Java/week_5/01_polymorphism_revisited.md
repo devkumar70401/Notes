@@ -1,5 +1,14 @@
 # Three Types of Polymorphism
 
+```mermaid
+graph TD
+    POLY["Polymorphism in Computer Science"]
+    POLY --> ADHOC["1. Ad-Hoc (Overloading)<br>- Compile-time static choice<br>- Arrays.sort(int[]) vs sort(double[])"]
+    POLY --> SUB["2. Subtype (Inheritance)<br>- Runtime dynamic dispatch<br>- Shape.perimeter() overridden"]
+    POLY --> PARAM["3. Parametric (Generics)<br>- Type parameters <T><br>- Box<T>, List<T>"]
+```
+
+
 Polymorphism means "having many forms". In computer science and Java, it manifests in three distinct ways:
 
 ```text

@@ -40,6 +40,24 @@ public class Employee {
 
 # Subclasses
 
+```mermaid
+classDiagram
+    class Employee {
+      -name: String
+      -salary: double
+      +getName() String
+      +getSalary() double
+      +bonus(percent) double
+    }
+    class Manager {
+      -secretary: String
+      +getSecretary() String
+      +setSecretary(String) boolean
+    }
+    Manager --|> Employee : extends (Is-A)
+```
+
+
 - Often, a new category of entity is a specialized version of an existing class
 - For example, a `Manager` is an `Employee` with additional responsibilities:
   - Has all attributes of an employee (`name`, `salary`)

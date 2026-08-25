@@ -83,6 +83,25 @@ public class Date {
 
 # 2. `static` Components
 
+```mermaid
+graph TD
+    subgraph Class State: Order (Heap Memory)
+        STAT["static lastorderid = 2<br>(Single Shared Counter)"]
+    end
+
+    subgraph Instance 1: order1
+        O1["orderid = 1"]
+    end
+
+    subgraph Instance 2: order2
+        O2["orderid = 2"]
+    end
+
+    O1 -.->|reads/increments| STAT
+    O2 -.->|reads/increments| STAT
+```
+
+
 - A `static` component belongs to the **class itself**, rather than to any specific instance/object.
 - Exists in memory even if no objects of the class are ever instantiated.
 

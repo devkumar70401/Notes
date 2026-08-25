@@ -1,5 +1,22 @@
 # The Producer-Consumer Bounded Buffer Problem
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Producer as Producer Thread
+    participant Buffer as BoundedBuffer (Synchronized Monitor)
+    actor Consumer as Consumer Thread
+
+    Producer->>Buffer: put(item)
+    Note over Buffer: If full: wait()
+    Buffer-->>Producer: Item stored, notifyAll()
+    
+    Consumer->>Buffer: get()
+    Note over Buffer: If empty: wait()
+    Buffer-->>Consumer: Item retrieved, notifyAll()
+```
+
+
 - A classic concurrent systems problem:
   - **Producers** generate data and place items into a fixed-size buffer.
   - **Consumers** extract and process items from the buffer.

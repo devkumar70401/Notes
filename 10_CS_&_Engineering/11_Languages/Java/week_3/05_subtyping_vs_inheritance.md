@@ -42,6 +42,26 @@ Consider three fundamental data structures:
 
 # Analyzing the Relationships
 
+```mermaid
+graph TD
+    subgraph Subtyping Hierarchy (Capabilities)
+        Q1["Queue (2 ops)"]
+        S1["Stack (2 ops)"]
+        D1["Deque (4 ops)"]
+        D1 -.->|Subtype of| Q1
+        D1 -.->|Subtype of| S1
+    end
+
+    subgraph Inheritance Hierarchy (Code Reuse)
+        D2["Deque (Doubly-Linked Core)"]
+        Q2["Queue (Restricted Deque)"]
+        S2["Stack (Restricted Deque)"]
+        Q2 -->|Reuses implementation| D2
+        S2 -->|Reuses implementation| D2
+    end
+```
+
+
 ### From the Perspective of Subtyping (Capabilities):
 - `Deque` provides all 4 operations.
 - Anyone expecting a `Queue` needs only `insert_rear()` and `delete_front()` (which `Deque` supports).

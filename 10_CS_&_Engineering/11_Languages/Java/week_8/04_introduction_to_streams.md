@@ -7,6 +7,19 @@
 
 # The 3-Stage Stream Pipeline
 
+```mermaid
+graph LR
+    SRC["List&lt;Employee&gt;<br>(Data Source)"] -->|stream()| F1["filter(e -> isManager)"]
+    F1 --> F2["filter(e -> salary > 80k)"]
+    F2 --> M1["map(Employee::getName)"]
+    M1 --> S1["sorted()"]
+    S1 -->|collect(toList)| RES["List&lt;String&gt;<br>(Final Result)"]
+    
+    style SRC fill:#3b82f6,stroke:#fff,color:#fff
+    style RES fill:#10b981,stroke:#fff,color:#fff
+```
+
+
 ```text
 [ Data Source ] ----> [ Intermediate Operations ] ----> [ Terminal Operation ]
 (List, Array)           (filter, map, sorted)             (collect, count, sum)

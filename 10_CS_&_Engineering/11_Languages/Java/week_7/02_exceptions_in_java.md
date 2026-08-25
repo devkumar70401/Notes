@@ -1,5 +1,15 @@
 # Java Exception Hierarchy
 
+```mermaid
+graph TD
+    TH["Throwable"] --> ERR["Error (Fatal JVM Issues)<br>- OutOfMemoryError<br>- StackOverflowError"]
+    TH --> EXC["Exception (Application Level)"]
+    
+    EXC --> CHK["Checked Exceptions (Must handle/declare)<br>- IOException<br>- SQLException<br>- FileNotFoundException"]
+    EXC --> UNCHK["RuntimeException (Unchecked Bugs)<br>- NullPointerException<br>- IndexOutOfBoundsException<br>- ClassCastException"]
+```
+
+
 In Java, all error and exception objects inherit from **`java.lang.Throwable`**:
 
 ```text

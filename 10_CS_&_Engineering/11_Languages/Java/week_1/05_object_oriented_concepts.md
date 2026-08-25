@@ -1,5 +1,15 @@
 # Core Concepts of Object-Oriented Programming
 
+```mermaid
+graph TD
+    OOP["4 Core Pillars of OOP"]
+    OOP --> ENC["1. Encapsulation<br>(Data Hiding & State Protection)"]
+    OOP --> ABS["2. Abstraction<br>(Hiding Complexity via Interfaces)"]
+    OOP --> INH["3. Inheritance<br>(Code Reuse & Is-A Hierarchies)"]
+    OOP --> POL["4. Polymorphism<br>(Dynamic Behavior at Runtime)"]
+```
+
+
 OOP is built around four fundamental concepts:
 
 ```text

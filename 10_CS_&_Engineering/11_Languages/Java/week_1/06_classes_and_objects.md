@@ -1,5 +1,18 @@
 # Classes vs Objects
 
+```mermaid
+graph TD
+    CLASS["Class Blueprint: Point<br>- x: double<br>- y: double<br>+ distance(other)"]
+    
+    CLASS -->|new Point(3, 4)| OBJ1["Heap Object 1 (0x1A)<br>x = 3.0<br>y = 4.0"]
+    CLASS -->|new Point(7, 1)| OBJ2["Heap Object 2 (0x2B)<br>x = 7.0<br>y = 1.0"]
+
+    P1["Ref: p1 (0x1A)"] --> OBJ1
+    P2["Ref: p2 (0x1A)"] --> OBJ1
+    P3["Ref: p3 (0x2B)"] --> OBJ2
+```
+
+
 - **Class**: A blueprint, template, or user-defined data type describing what attributes and behaviors instances will possess.
 - **Object**: A concrete instance of a class allocated in memory at runtime.
 

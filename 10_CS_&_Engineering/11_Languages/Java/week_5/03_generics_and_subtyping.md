@@ -49,6 +49,15 @@ Java provides **Wildcards (`?`)** to restore safe subtyping relationships:
 
 # The PECS Rule
 
+```mermaid
+graph TD
+    subgraph PECS Principle
+        PROD["Producer: List<? extends Employee><br>(Covariance - Safe to READ as Employee)"]
+        CONS["Consumer: List<? super Manager><br>(Contravariance - Safe to WRITE Manager)"]
+    end
+```
+
+
 > **PECS**: **P**roducer **E**xtends, **C**onsumer **S**uper
 
 - If your method **reads/produces** data from a parameter collection: use `? extends T`

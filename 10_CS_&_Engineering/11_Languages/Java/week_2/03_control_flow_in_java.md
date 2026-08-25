@@ -30,6 +30,16 @@ switch (day) {
 
 # 2. Loops
 
+```mermaid
+graph TD
+    START(["Start Loop"]) --> COND{"Condition True?"}
+    COND -- Yes --> BODY["Execute Loop Body"]
+    BODY --> UPDATE["Update Loop Counter"]
+    UPDATE --> COND
+    COND -- No --> EXIT(["Exit Loop"])
+```
+
+
 ### `while` and `do-while`:
 ```java
 // while: condition checked before body execution

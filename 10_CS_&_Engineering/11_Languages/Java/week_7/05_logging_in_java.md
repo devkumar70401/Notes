@@ -1,5 +1,15 @@
 # Logging in Java (`java.util.logging`)
 
+```mermaid
+graph LR
+    APP["App Code (logger.info)"] --> LOGGER["Logger"]
+    LOGGER --> FILTER{"Level Filter<br>(>= Log Level)"}
+    FILTER -- Yes --> HANDLER["Handler (Console / File)"]
+    HANDLER --> FORMAT["Formatter (Simple / XML / JSON)"]
+    FORMAT --> LOGFILE["Output Log Destination"]
+```
+
+
 - Why avoid `System.out.println` in production?
   1. Cannot be toggled dynamically without code edits
   2. No timestamps, thread IDs, or severity classification

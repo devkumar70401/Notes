@@ -109,6 +109,34 @@ public class Order {
 
 # Relationships Between Classes
 
+```mermaid
+classDiagram
+    class Order {
+      -status: OrderStatus
+      -items: List~Item~
+      +addItem(Item)
+      +shipOrder()
+      +cancelOrder()
+    }
+    class Item {
+      -name: String
+      -price: double
+    }
+    class Account {
+      -balance: double
+      +checkCredit()
+    }
+    class ExpressOrder {
+      -priorityLevel: int
+      +calculateExpressFee()
+    }
+
+    Order "1" *-- "many" Item : Aggregation (Has-A)
+    Order ..> Account : Dependence (Uses-A)
+    ExpressOrder --|> Order : Inheritance (Is-A)
+```
+
+
 In a well-designed OO system, classes interact via three main relationships:
 
 ### 1. Dependence ("Uses-A")

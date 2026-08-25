@@ -42,6 +42,24 @@ public class Manager extends Employee {
 
 # Dynamic Dispatch and Runtime Polymorphism
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Caller
+    participant StaffArray as Employee[] staff
+    participant EmpObj as Employee Instance
+    participant MgrObj as Manager Instance
+
+    Caller->>StaffArray: staff[0].bonus(5.0)
+    StaffArray->>EmpObj: Dispatches to Employee.bonus()
+    EmpObj-->>Caller: Returns standard bonus
+
+    Caller->>StaffArray: staff[1].bonus(5.0)
+    StaffArray->>MgrObj: Dispatches dynamically to Manager.bonus()
+    MgrObj-->>Caller: Returns 1.5x manager bonus
+```
+
+
 - **Dynamic Dispatch**: The decision of which method implementation to execute is deferred until run-time, based on the actual type of the object pointed to by the reference.
 - **Polymorphism ("Many Forms")**: Different subclasses respond to the same method invocation in their own specialized way.
 

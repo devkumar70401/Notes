@@ -7,6 +7,19 @@
 
 # Core Swing Components
 
+```mermaid
+graph TD
+    FRAME["JFrame (Top-Level Window)"] --> CONTENT["Content Pane"]
+    CONTENT --> BORDER["BorderLayout Manager"]
+    BORDER --> NORTH["NORTH: Title JLabel"]
+    BORDER --> CENTER["CENTER: JPanel (GridLayout)"]
+    BORDER --> SOUTH["SOUTH: JButton ('Submit')"]
+    
+    CENTER --> B1["JButton 1"]
+    CENTER --> B2["JButton 2"]
+```
+
+
 ### 1. Top-Level Containers:
 - `JFrame`: Main desktop application window with title bar and minimize/close buttons.
 - `JDialog`: Pop-up dialog window.

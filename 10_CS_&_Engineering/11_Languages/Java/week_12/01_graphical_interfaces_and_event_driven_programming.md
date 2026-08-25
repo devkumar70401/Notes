@@ -1,5 +1,15 @@
 # Event-Driven Programming Paradigm
 
+```mermaid
+graph TD
+    USER["User Action (Mouse Click / Key Press)"] --> OS["OS Windowing System"]
+    OS --> QUEUE["AWT Event Queue"]
+    QUEUE --> EDT["Event Dispatch Thread (EDT)"]
+    EDT --> LISTENER["ActionListener.actionPerformed(e)"]
+    LISTENER --> UPDATE["Update UI Component State"]
+```
+
+
 - Traditional CLI programs follow a **linear execution flow**:
   ```text
   Start ---> Prompt User ---> Read Input ---> Compute ---> Output ---> Terminate

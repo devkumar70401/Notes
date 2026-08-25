@@ -1,5 +1,24 @@
 # Java Collections Framework (JCF)
 
+```mermaid
+graph TD
+    ITER["Iterable&lt;E&gt;"] --> COLL["Collection&lt;E&gt;"]
+    
+    COLL --> LIST["List&lt;E&gt;<br>(Ordered, Duplicates Allowed)"]
+    COLL --> SET["Set&lt;E&gt;<br>(Unique Elements)"]
+    COLL --> QUEUE["Queue&lt;E&gt;<br>(FIFO Staging)"]
+
+    LIST --> AL["ArrayList&lt;E&gt;"]
+    LIST --> LL["LinkedList&lt;E&gt;"]
+
+    SET --> HS["HashSet&lt;E&gt;"]
+    SET --> TS["TreeSet&lt;E&gt; (SortedSet)"]
+
+    QUEUE --> PQ["PriorityQueue&lt;E&gt;"]
+    QUEUE --> DEQ["Deque&lt;E&gt; (ArrayDeque)"]
+```
+
+
 - Prior to Java 2, data structures were ad-hoc (`Vector`, `Hashtable`, raw arrays).
 - JCF provides a unified architecture for representing and manipulating collections.
 

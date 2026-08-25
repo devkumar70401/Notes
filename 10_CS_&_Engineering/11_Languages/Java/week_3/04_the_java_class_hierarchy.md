@@ -16,6 +16,21 @@
 
 # The Universal Superclass: `java.lang.Object`
 
+```mermaid
+graph TD
+    OBJ["java.lang.Object<br>(Universal Superclass Root)<br>+ equals(Object)<br>+ toString()<br>+ hashCode()"]
+    
+    OBJ --> EMP["Employee"]
+    OBJ --> SHP["Shape"]
+    OBJ --> STR["String"]
+    OBJ --> DATE["Date"]
+
+    EMP --> MGR["Manager"]
+    SHP --> CIR["Circle"]
+    SHP --> REC["Rectangle"]
+```
+
+
 - At the root of the entire Java class hierarchy sits a single built-in class: **`java.lang.Object`**
 - If a class declaration does not explicitly use `extends`, Java implicitly makes it extend `Object`:
   ```java

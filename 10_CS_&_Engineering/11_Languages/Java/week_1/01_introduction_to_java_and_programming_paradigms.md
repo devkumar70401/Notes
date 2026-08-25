@@ -10,6 +10,27 @@
 
 # Why Java?
 
+```mermaid
+graph TD
+    subgraph Traditional C/C++ Architecture
+        C_SRC["Source (.c / .cpp)"] --> C_COMP["C Compiler"]
+        C_COMP --> C_BIN["Platform-Specific Binary (x86 / ARM)"]
+        C_BIN --> C_OS["Runs only on Target OS"]
+    end
+
+    subgraph Java WORA Architecture
+        J_SRC["Source (.java)"] --> J_COMP["javac Compiler"]
+        J_COMP --> J_BYTE["Bytecode (.class)"]
+        J_BYTE --> JVM_WIN["Windows JVM"]
+        J_BYTE --> JVM_LIN["Linux JVM"]
+        J_BYTE --> JVM_MAC["macOS JVM"]
+        JVM_WIN --> WIN_RUN["Native Execution"]
+        JVM_LIN --> LIN_RUN["Native Execution"]
+        JVM_MAC --> MAC_RUN["Native Execution"]
+    end
+```
+
+
 - Designed by James Gosling at Sun Microsystems (1995)
 - Core Design Philosophy: **"Write Once, Run Anywhere" (WORA)**
 - Solved the platform dependency problem of compiled C/C++ binaries:

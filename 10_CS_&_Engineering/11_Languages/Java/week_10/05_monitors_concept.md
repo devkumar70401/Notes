@@ -1,5 +1,19 @@
 # The Monitor Abstraction
 
+```mermaid
+graph TD
+    subgraph Monitor Structure
+        ENTRY["Entry Queue (Threads waiting to enter)"]
+        MUTEX["Mutual Exclusion Lock<br>[ Active Running Thread ]"]
+        WAITSET["Condition Variable Wait Set<br>(Threads calling wait())"]
+    end
+
+    ENTRY -->|Acquires Lock| MUTEX
+    MUTEX -->|condition not met: wait()| WAITSET
+    WAITSET -->|condition met: notify()| MUTEX
+```
+
+
 - Writing raw low-level synchronization (semaphores, spinlocks) is error-prone (forgetting to unlock leads to deadlock).
 - **Monitor** (invented by C.A.R. Hoare and Edsger Dijkstra):
   - A high-level synchronization construct that encapsulates data, methods, and automatic mutual exclusion into a single module.

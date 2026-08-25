@@ -1,5 +1,21 @@
 # Memory Organization in Execution
 
+```mermaid
+graph LR
+    subgraph STACK [Call Stack - Fast LIFO]
+        F1["Stack Frame: main()"]
+        F2["Stack Frame: createObjects()<br>------------------<br>int x = 100<br>int[] data (Ref: 0x7A)"]
+    end
+
+    subgraph HEAP [Garbage-Collected Heap]
+        OBJ1["int[1000] Array Object<br>Address: 0x7A<br>[0, 0, 0, ...]"]
+        OBJ2["Unreferenced Dead Object<br>(Marked for Garbage Collection)"]
+    end
+
+    F2 -.->|Points to| OBJ1
+```
+
+
 When a Java program runs, the JVM allocates memory into two primary runtime areas:
 
 ```text
