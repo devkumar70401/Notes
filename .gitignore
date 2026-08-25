@@ -15,5 +15,6 @@ __pycache__/
 # Automatic backups -> Just like Microsoft Word creates autosaves -> Every few minutes:
 .ipynb_checkpoints/
 
-
-
+# MkDocs build output and cache
+site/
+.cache/
