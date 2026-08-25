@@ -3123,6 +3123,20 @@
 </span></code></pre></div>
 <hr />
 <h1 id="subclasses">Subclasses<a class="headerlink" href="#subclasses" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>classDiagram
+    class Employee {
+      -name: String
+      -salary: double
+      +getName() String
+      +getSalary() double
+      +bonus(percent) double
+    }
+    class Manager {
+      -secretary: String
+      +getSecretary() String
+      +setSecretary(String) boolean
+    }
+    Manager --|&gt; Employee : extends (Is-A)</code></pre>
 <ul>
 <li>Often, a new category of entity is a specialized version of an existing class</li>
 <li>For example, a <code>Manager</code> is an <code>Employee</code> with additional responsibilities:</li>

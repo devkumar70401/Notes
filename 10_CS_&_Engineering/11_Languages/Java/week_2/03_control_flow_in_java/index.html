@@ -3107,6 +3107,12 @@
 </span></code></pre></div>
 <hr />
 <h1 id="2-loops">2. Loops<a class="headerlink" href="#2-loops" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    START(["Start Loop"]) --&gt; COND{"Condition True?"}
+    COND -- Yes --&gt; BODY["Execute Loop Body"]
+    BODY --&gt; UPDATE["Update Loop Counter"]
+    UPDATE --&gt; COND
+    COND -- No --&gt; EXIT(["Exit Loop"])</code></pre>
 <h3 id="while-and-do-while"><code>while</code> and <code>do-while</code>:<a class="headerlink" href="#while-and-do-while" title="Permanent link">&para;</a></h3>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// while: condition checked before body execution</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>

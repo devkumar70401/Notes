@@ -3126,6 +3126,20 @@
 </ul>
 <hr />
 <h1 id="dynamic-dispatch-and-runtime-polymorphism">Dynamic Dispatch and Runtime Polymorphism<a class="headerlink" href="#dynamic-dispatch-and-runtime-polymorphism" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Caller
+    participant StaffArray as Employee[] staff
+    participant EmpObj as Employee Instance
+    participant MgrObj as Manager Instance
+
+    Caller-&gt;&gt;StaffArray: staff[0].bonus(5.0)
+    StaffArray-&gt;&gt;EmpObj: Dispatches to Employee.bonus()
+    EmpObj--&gt;&gt;Caller: Returns standard bonus
+
+    Caller-&gt;&gt;StaffArray: staff[1].bonus(5.0)
+    StaffArray-&gt;&gt;MgrObj: Dispatches dynamically to Manager.bonus()
+    MgrObj--&gt;&gt;Caller: Returns 1.5x manager bonus</code></pre>
 <ul>
 <li><strong>Dynamic Dispatch</strong>: The decision of which method implementation to execute is deferred until run-time, based on the actual type of the object pointed to by the reference.</li>
 <li><strong>Polymorphism ("Many Forms")</strong>: Different subclasses respond to the same method invocation in their own specialized way.</li>

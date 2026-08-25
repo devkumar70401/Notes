@@ -3128,6 +3128,20 @@
 </table>
 <hr />
 <h1 id="javas-type-system-the-two-universes">Java's Type System: The Two Universes<a class="headerlink" href="#javas-type-system-the-two-universes" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    TYPES["Java Data Types"] --&gt; PRIM["Primitive Types (Value on Stack)"]
+    TYPES --&gt; REF["Reference Types (Pointers to Heap)"]
+
+    PRIM --&gt; NUM["Numeric"]
+    PRIM --&gt; CHAR["char (16-bit)"]
+    PRIM --&gt; BOOL["boolean (1-bit)"]
+
+    NUM --&gt; INT_T["Integral: byte, short, int, long"]
+    NUM --&gt; FLOAT_T["Floating: float, double"]
+
+    REF --&gt; CLASS_T["Class Types (String, User Classes)"]
+    REF --&gt; ARR_T["Array Types (int[], Object[])"]
+    REF --&gt; INTF_T["Interface Types"]</code></pre>
 <p>Java strictly divides types into two distinct categories:</p>
 <h3 id="1-primitive-types-value-types">1. Primitive Types (Value Types)<a class="headerlink" href="#1-primitive-types-value-types" title="Permanent link">&para;</a></h3>
 <ul>

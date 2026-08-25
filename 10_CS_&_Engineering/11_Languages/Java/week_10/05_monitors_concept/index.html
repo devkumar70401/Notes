@@ -3086,6 +3086,16 @@
 
 
 <h1 id="the-monitor-abstraction">The Monitor Abstraction<a class="headerlink" href="#the-monitor-abstraction" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph Monitor Structure
+        ENTRY["Entry Queue (Threads waiting to enter)"]
+        MUTEX["Mutual Exclusion Lock&lt;br&gt;[ Active Running Thread ]"]
+        WAITSET["Condition Variable Wait Set&lt;br&gt;(Threads calling wait())"]
+    end
+
+    ENTRY --&gt;|Acquires Lock| MUTEX
+    MUTEX --&gt;|condition not met: wait()| WAITSET
+    WAITSET --&gt;|condition met: notify()| MUTEX</code></pre>
 <ul>
 <li>Writing raw low-level synchronization (semaphores, spinlocks) is error-prone (forgetting to unlock leads to deadlock).</li>
 <li><strong>Monitor</strong> (invented by C.A.R. Hoare and Edsger Dijkstra):</li>

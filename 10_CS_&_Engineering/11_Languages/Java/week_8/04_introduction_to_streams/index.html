@@ -3092,6 +3092,15 @@
 </ul>
 <hr />
 <h1 id="the-3-stage-stream-pipeline">The 3-Stage Stream Pipeline<a class="headerlink" href="#the-3-stage-stream-pipeline" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph LR
+    SRC["List&amp;lt;Employee&amp;gt;&lt;br&gt;(Data Source)"] --&gt;|stream()| F1["filter(e -&gt; isManager)"]
+    F1 --&gt; F2["filter(e -&gt; salary &gt; 80k)"]
+    F2 --&gt; M1["map(Employee::getName)"]
+    M1 --&gt; S1["sorted()"]
+    S1 --&gt;|collect(toList)| RES["List&amp;lt;String&amp;gt;&lt;br&gt;(Final Result)"]
+
+    style SRC fill:#3b82f6,stroke:#fff,color:#fff
+    style RES fill:#10b981,stroke:#fff,color:#fff</code></pre>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[ Data Source ] ----&gt; [ Intermediate Operations ] ----&gt; [ Terminal Operation ]
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>(List, Array)           (filter, map, sorted)             (collect, count, sum)
 </span></code></pre></div>

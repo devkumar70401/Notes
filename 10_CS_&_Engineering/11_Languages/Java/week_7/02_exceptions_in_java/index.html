@@ -3086,6 +3086,12 @@
 
 
 <h1 id="java-exception-hierarchy">Java Exception Hierarchy<a class="headerlink" href="#java-exception-hierarchy" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    TH["Throwable"] --&gt; ERR["Error (Fatal JVM Issues)&lt;br&gt;- OutOfMemoryError&lt;br&gt;- StackOverflowError"]
+    TH --&gt; EXC["Exception (Application Level)"]
+
+    EXC --&gt; CHK["Checked Exceptions (Must handle/declare)&lt;br&gt;- IOException&lt;br&gt;- SQLException&lt;br&gt;- FileNotFoundException"]
+    EXC --&gt; UNCHK["RuntimeException (Unchecked Bugs)&lt;br&gt;- NullPointerException&lt;br&gt;- IndexOutOfBoundsException&lt;br&gt;- ClassCastException"]</code></pre>
 <p>In Java, all error and exception objects inherit from <strong><code>java.lang.Throwable</code></strong>:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                          Throwable
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                         /                             Error           Exception

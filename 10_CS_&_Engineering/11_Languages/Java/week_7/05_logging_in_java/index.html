@@ -3086,6 +3086,12 @@
 
 
 <h1 id="logging-in-java-javautillogging">Logging in Java (<code>java.util.logging</code>)<a class="headerlink" href="#logging-in-java-javautillogging" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph LR
+    APP["App Code (logger.info)"] --&gt; LOGGER["Logger"]
+    LOGGER --&gt; FILTER{"Level Filter&lt;br&gt;(&gt;= Log Level)"}
+    FILTER -- Yes --&gt; HANDLER["Handler (Console / File)"]
+    HANDLER --&gt; FORMAT["Formatter (Simple / XML / JSON)"]
+    FORMAT --&gt; LOGFILE["Output Log Destination"]</code></pre>
 <ul>
 <li>Why avoid <code>System.out.println</code> in production?</li>
 <li>Cannot be toggled dynamically without code edits</li>

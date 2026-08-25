@@ -3117,6 +3117,17 @@
 </span></code></pre></div>
 <hr />
 <h1 id="thread-lifecycle-states">Thread Lifecycle States<a class="headerlink" href="#thread-lifecycle-states" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; NEW : new Thread()
+    NEW --&gt; RUNNABLE : start()
+    RUNNABLE --&gt; WAITING : wait() / join()
+    WAITING --&gt; RUNNABLE : notify() / done
+    RUNNABLE --&gt; TIMED_WAITING : sleep(t) / wait(t)
+    TIMED_WAITING --&gt; RUNNABLE : timer expired
+    RUNNABLE --&gt; BLOCKED : waiting for monitor lock
+    BLOCKED --&gt; RUNNABLE : lock acquired
+    RUNNABLE --&gt; TERMINATED : run() completes
+    TERMINATED --&gt; [*]</code></pre>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>NEW ----(start())----&gt; RUNNABLE &lt;========&gt; BLOCKED / WAITING / TIMED_WAITING
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                          |
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                          v (run() completes)

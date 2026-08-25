@@ -3149,6 +3149,16 @@
 </table>
 <hr />
 <h1 id="type-conversion-and-casting">Type Conversion and Casting<a class="headerlink" href="#type-conversion-and-casting" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph LR
+    B["byte (8)"] --&gt; S["short (16)"]
+    C["char (16)"] --&gt; I["int (32)"]
+    S --&gt; I
+    I --&gt; L["long (64)"]
+    L --&gt; F["float (32)"]
+    F --&gt; D["double (64)"]
+
+    style B fill:#4f46e5,stroke:#fff,color:#fff
+    style D fill:#06b6d4,stroke:#fff,color:#fff</code></pre>
 <h3 id="1-widening-conversion-implicit-safe">1. Widening Conversion (Implicit / Safe)<a class="headerlink" href="#1-widening-conversion-implicit-safe" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Automatically promoted when assigning a smaller type to a larger type:

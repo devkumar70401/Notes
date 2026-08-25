@@ -3086,6 +3086,12 @@
 
 
 <h1 id="basic-input-output-in-java">Basic Input &amp; Output in Java<a class="headerlink" href="#basic-input-output-in-java" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph LR
+    USER["User Keyboard Input"] --&gt; SYS_IN["System.in&lt;br&gt;(Raw Byte Stream)"]
+    SYS_IN --&gt; SCANNER["java.util.Scanner&lt;br&gt;(Regex Tokenizer)"]
+    SCANNER --&gt; APP["Application Code&lt;br&gt;(nextInt, nextLine)"]
+    APP --&gt; SYS_OUT["System.out&lt;br&gt;(PrintStream)"]
+    SYS_OUT --&gt; CONSOLE["Terminal Display"]</code></pre>
 <p>Java standard library provides robust I/O capabilities through <code>System.out</code> and <code>java.util.Scanner</code>.</p>
 <hr />
 <h1 id="standard-output-systemout">Standard Output (<code>System.out</code>)<a class="headerlink" href="#standard-output-systemout" title="Permanent link">&para;</a></h1>

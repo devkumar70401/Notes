@@ -3086,6 +3086,12 @@
 
 
 <h1 id="event-driven-programming-paradigm">Event-Driven Programming Paradigm<a class="headerlink" href="#event-driven-programming-paradigm" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    USER["User Action (Mouse Click / Key Press)"] --&gt; OS["OS Windowing System"]
+    OS --&gt; QUEUE["AWT Event Queue"]
+    QUEUE --&gt; EDT["Event Dispatch Thread (EDT)"]
+    EDT --&gt; LISTENER["ActionListener.actionPerformed(e)"]
+    LISTENER --&gt; UPDATE["Update UI Component State"]</code></pre>
 <ul>
 <li>Traditional CLI programs follow a <strong>linear execution flow</strong>:
   <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Start ---&gt; Prompt User ---&gt; Read Input ---&gt; Compute ---&gt; Output ---&gt; Terminate

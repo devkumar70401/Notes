@@ -3086,6 +3086,18 @@
 
 
 <h1 id="memory-organization-in-execution">Memory Organization in Execution<a class="headerlink" href="#memory-organization-in-execution" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph LR
+    subgraph STACK [Call Stack - Fast LIFO]
+        F1["Stack Frame: main()"]
+        F2["Stack Frame: createObjects()&lt;br&gt;------------------&lt;br&gt;int x = 100&lt;br&gt;int[] data (Ref: 0x7A)"]
+    end
+
+    subgraph HEAP [Garbage-Collected Heap]
+        OBJ1["int[1000] Array Object&lt;br&gt;Address: 0x7A&lt;br&gt;[0, 0, 0, ...]"]
+        OBJ2["Unreferenced Dead Object&lt;br&gt;(Marked for Garbage Collection)"]
+    end
+
+    F2 -.-&gt;|Points to| OBJ1</code></pre>
 <p>When a Java program runs, the JVM allocates memory into two primary runtime areas:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+------------------------------------+
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|               STACK                |

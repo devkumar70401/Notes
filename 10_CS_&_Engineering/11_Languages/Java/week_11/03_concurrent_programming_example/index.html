@@ -3086,6 +3086,19 @@
 
 
 <h1 id="the-producer-consumer-bounded-buffer-problem">The Producer-Consumer Bounded Buffer Problem<a class="headerlink" href="#the-producer-consumer-bounded-buffer-problem" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Producer as Producer Thread
+    participant Buffer as BoundedBuffer (Synchronized Monitor)
+    actor Consumer as Consumer Thread
+
+    Producer-&gt;&gt;Buffer: put(item)
+    Note over Buffer: If full: wait()
+    Buffer--&gt;&gt;Producer: Item stored, notifyAll()
+
+    Consumer-&gt;&gt;Buffer: get()
+    Note over Buffer: If empty: wait()
+    Buffer--&gt;&gt;Consumer: Item retrieved, notifyAll()</code></pre>
 <ul>
 <li>A classic concurrent systems problem:</li>
 <li><strong>Producers</strong> generate data and place items into a fixed-size buffer.</li>

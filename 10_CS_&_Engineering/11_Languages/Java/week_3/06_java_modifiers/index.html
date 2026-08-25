@@ -3162,6 +3162,21 @@
 </span></code></pre></div>
 <hr />
 <h1 id="2-static-components">2. <code>static</code> Components<a class="headerlink" href="#2-static-components" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph Class State: Order (Heap Memory)
+        STAT["static lastorderid = 2&lt;br&gt;(Single Shared Counter)"]
+    end
+
+    subgraph Instance 1: order1
+        O1["orderid = 1"]
+    end
+
+    subgraph Instance 2: order2
+        O2["orderid = 2"]
+    end
+
+    O1 -.-&gt;|reads/increments| STAT
+    O2 -.-&gt;|reads/increments| STAT</code></pre>
 <ul>
 <li>A <code>static</code> component belongs to the <strong>class itself</strong>, rather than to any specific instance/object.</li>
 <li>Exists in memory even if no objects of the class are ever instantiated.</li>

@@ -3195,6 +3195,11 @@
 </ul>
 <hr />
 <h1 id="the-pecs-rule">The PECS Rule<a class="headerlink" href="#the-pecs-rule" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph PECS Principle
+        PROD["Producer: List&lt;? extends Employee&gt;&lt;br&gt;(Covariance - Safe to READ as Employee)"]
+        CONS["Consumer: List&lt;? super Manager&gt;&lt;br&gt;(Contravariance - Safe to WRITE Manager)"]
+    end</code></pre>
 <blockquote>
 <p><strong>PECS</strong>: <strong>P</strong>roducer <strong>E</strong>xtends, <strong>C</strong>onsumer <strong>S</strong>uper</p>
 </blockquote>

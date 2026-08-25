@@ -3092,6 +3092,15 @@
 </ul>
 <hr />
 <h1 id="core-swing-components">Core Swing Components<a class="headerlink" href="#core-swing-components" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    FRAME["JFrame (Top-Level Window)"] --&gt; CONTENT["Content Pane"]
+    CONTENT --&gt; BORDER["BorderLayout Manager"]
+    BORDER --&gt; NORTH["NORTH: Title JLabel"]
+    BORDER --&gt; CENTER["CENTER: JPanel (GridLayout)"]
+    BORDER --&gt; SOUTH["SOUTH: JButton ('Submit')"]
+
+    CENTER --&gt; B1["JButton 1"]
+    CENTER --&gt; B2["JButton 2"]</code></pre>
 <h3 id="1-top-level-containers">1. Top-Level Containers:<a class="headerlink" href="#1-top-level-containers" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>JFrame</code>: Main desktop application window with title bar and minimize/close buttons.</li>

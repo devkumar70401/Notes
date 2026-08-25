@@ -3094,6 +3094,23 @@
 </ul>
 <hr />
 <h1 id="1-abstraction-separation-of-concerns">1. Abstraction (Separation of Concerns)<a class="headerlink" href="#1-abstraction-separation-of-concerns" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph Client Application
+        APP["Client Code"]
+    end
+
+    subgraph Public Interface Barrier
+        CONTRACT["Interface: Stack&lt;br&gt;+ push(x)&lt;br&gt;+ pop()&lt;br&gt;+ is_empty()"]
+    end
+
+    subgraph Hidden Private Implementations
+        IMP1["ArrayStack&lt;br&gt;(Contiguous Buffer)"]
+        IMP2["LinkedStack&lt;br&gt;(Node Pointer Chain)"]
+    end
+
+    APP --&gt;|Calls only| CONTRACT
+    CONTRACT -.-&gt;|Encapsulates| IMP1
+    CONTRACT -.-&gt;|Encapsulates| IMP2</code></pre>
 <ul>
 <li><strong>Abstraction</strong>: Highlighting essential features while hiding background implementation details</li>
 <li><strong>Interface vs Implementation</strong>:</li>

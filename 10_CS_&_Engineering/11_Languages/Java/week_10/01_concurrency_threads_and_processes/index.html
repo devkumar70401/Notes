@@ -3086,6 +3086,23 @@
 
 
 <h1 id="concurrency-threads-and-processes">Concurrency: Threads and Processes<a class="headerlink" href="#concurrency-threads-and-processes" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph Process Memory Space
+        HEAP["HEAP Memory&lt;br&gt;(Shared Objects, Global Variables)"]
+
+        subgraph Thread 1
+            T1_STACK["Thread 1 Stack&lt;br&gt;- Method Frames&lt;br&gt;- Local Vars"]
+            T1_PC["Program Counter 1"]
+        end
+
+        subgraph Thread 2
+            T2_STACK["Thread 2 Stack&lt;br&gt;- Method Frames&lt;br&gt;- Local Vars"]
+            T2_PC["Program Counter 2"]
+        end
+    end
+
+    T1_STACK -.-&gt;|Accesses shared data| HEAP
+    T2_STACK -.-&gt;|Accesses shared data| HEAP</code></pre>
 <ul>
 <li><strong>Process</strong>: An independent executing program instance with its own isolated address space, memory, and OS resources.</li>
 <li><strong>Thread ("Lightweight Process")</strong>: An independent path of execution <em>within</em> a process sharing the same process memory (Heap), but possessing its own private Stack and Program Counter (PC).</li>

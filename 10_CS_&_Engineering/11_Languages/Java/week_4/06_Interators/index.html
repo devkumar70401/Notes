@@ -3139,6 +3139,18 @@
 </span></code></pre></div>
 <hr />
 <h1 id="iteration">Iteration<a class="headerlink" href="#iteration" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph LR
+    subgraph LinearList Container
+        DATA["Internal Node / Array Storage"]
+    end
+
+    subgraph Exported Iterators
+        IT1["Iterator 1 (Position: Index 0)"]
+        IT2["Iterator 2 (Position: Index 4)"]
+    end
+
+    IT1 --&gt; DATA
+    IT2 --&gt; DATA</code></pre>
 <ul>
 <li>Want a loop to run through all values in a linear list</li>
 <li>If the list is an array with public access, we write this</li>

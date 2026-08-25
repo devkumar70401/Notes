@@ -3100,6 +3100,17 @@
 </ul>
 <hr />
 <h1 id="the-universal-superclass-javalangobject">The Universal Superclass: <code>java.lang.Object</code><a class="headerlink" href="#the-universal-superclass-javalangobject" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    OBJ["java.lang.Object&lt;br&gt;(Universal Superclass Root)&lt;br&gt;+ equals(Object)&lt;br&gt;+ toString()&lt;br&gt;+ hashCode()"]
+
+    OBJ --&gt; EMP["Employee"]
+    OBJ --&gt; SHP["Shape"]
+    OBJ --&gt; STR["String"]
+    OBJ --&gt; DATE["Date"]
+
+    EMP --&gt; MGR["Manager"]
+    SHP --&gt; CIR["Circle"]
+    SHP --&gt; REC["Rectangle"]</code></pre>
 <ul>
 <li>At the root of the entire Java class hierarchy sits a single built-in class: <strong><code>java.lang.Object</code></strong></li>
 <li>If a class declaration does not explicitly use <code>extends</code>, Java implicitly makes it extend <code>Object</code>:

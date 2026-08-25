@@ -3086,6 +3086,10 @@
 
 
 <h1 id="java-maps-mapk-v">Java Maps (<code>Map&lt;K, V&gt;</code>)<a class="headerlink" href="#java-maps-mapk-v" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    MAP["Map&amp;lt;K, V&amp;gt;"] --&gt; HM["HashMap&amp;lt;K, V&amp;gt;&lt;br&gt;(O(1) Hash Table)"]
+    MAP --&gt; TM["TreeMap&amp;lt;K, V&amp;gt;&lt;br&gt;(O(log n) Red-Black Tree)"]
+    MAP --&gt; LHM["LinkedHashMap&amp;lt;K, V&amp;gt;&lt;br&gt;(O(1) Insertion / LRU Order)"]</code></pre>
 <ul>
 <li>A <code>Map</code> stores <strong>Key-Value pairs</strong> (associations / dictionaries)</li>
 <li>Keys are strictly <strong>unique</strong>; each key maps to exactly one value</li>

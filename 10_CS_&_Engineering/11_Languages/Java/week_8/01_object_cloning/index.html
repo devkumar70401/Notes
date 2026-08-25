@@ -3092,6 +3092,16 @@
 </ul>
 <hr />
 <h1 id="shallow-copy-vs-deep-copy">Shallow Copy vs Deep Copy<a class="headerlink" href="#shallow-copy-vs-deep-copy" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph Shallow Copy (Shared Mutable Field)
+        ORIG1["Original Employee (0x01)"] --&gt; D1["Shared Date Object (0xAA)"]
+        CLON1["Cloned Employee (0x02)"] --&gt; D1
+    end
+
+    subgraph Deep Copy (Independent Clone)
+        ORIG2["Original Employee (0x03)"] --&gt; D2["Date Object 1 (0xBB)"]
+        CLON2["Cloned Employee (0x04)"] --&gt; D3["New Cloned Date Object (0xCC)"]
+    end</code></pre>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Shallow Copy:
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Original ----&gt; [ Object A: salary, Date Ref ] ----&gt; [ Date Object: 2026 ]
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                      ^

@@ -3095,6 +3095,23 @@
 </ul>
 <hr />
 <h1 id="why-java">Why Java?<a class="headerlink" href="#why-java" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph Traditional C/C++ Architecture
+        C_SRC["Source (.c / .cpp)"] --&gt; C_COMP["C Compiler"]
+        C_COMP --&gt; C_BIN["Platform-Specific Binary (x86 / ARM)"]
+        C_BIN --&gt; C_OS["Runs only on Target OS"]
+    end
+
+    subgraph Java WORA Architecture
+        J_SRC["Source (.java)"] --&gt; J_COMP["javac Compiler"]
+        J_COMP --&gt; J_BYTE["Bytecode (.class)"]
+        J_BYTE --&gt; JVM_WIN["Windows JVM"]
+        J_BYTE --&gt; JVM_LIN["Linux JVM"]
+        J_BYTE --&gt; JVM_MAC["macOS JVM"]
+        JVM_WIN --&gt; WIN_RUN["Native Execution"]
+        JVM_LIN --&gt; LIN_RUN["Native Execution"]
+        JVM_MAC --&gt; MAC_RUN["Native Execution"]
+    end</code></pre>
 <ul>
 <li>Designed by James Gosling at Sun Microsystems (1995)</li>
 <li>Core Design Philosophy: <strong>"Write Once, Run Anywhere" (WORA)</strong></li>

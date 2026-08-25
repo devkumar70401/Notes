@@ -3086,6 +3086,10 @@
 
 
 <h1 id="java-io-streams-architecture">Java I/O Streams Architecture<a class="headerlink" href="#java-io-streams-architecture" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    IO["Java I/O Hierarchy"]
+    IO --&gt; BYTE["Byte Streams (8-bit binary)&lt;br&gt;InputStream / OutputStream&lt;br&gt;- FileInputStream&lt;br&gt;- BufferedInputStream"]
+    IO --&gt; CHAR["Character Streams (16-bit Unicode text)&lt;br&gt;Reader / Writer&lt;br&gt;- FileReader&lt;br&gt;- BufferedReader"]</code></pre>
 <ul>
 <li>Java models I/O as <strong>Streams</strong> of data flowing sequentially from a source to a destination.</li>
 <li>Separated into two distinct hierarchies:</li>

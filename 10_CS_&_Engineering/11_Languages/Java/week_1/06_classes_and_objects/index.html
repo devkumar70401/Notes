@@ -3086,6 +3086,15 @@
 
 
 <h1 id="classes-vs-objects">Classes vs Objects<a class="headerlink" href="#classes-vs-objects" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    CLASS["Class Blueprint: Point&lt;br&gt;- x: double&lt;br&gt;- y: double&lt;br&gt;+ distance(other)"]
+
+    CLASS --&gt;|new Point(3, 4)| OBJ1["Heap Object 1 (0x1A)&lt;br&gt;x = 3.0&lt;br&gt;y = 4.0"]
+    CLASS --&gt;|new Point(7, 1)| OBJ2["Heap Object 2 (0x2B)&lt;br&gt;x = 7.0&lt;br&gt;y = 1.0"]
+
+    P1["Ref: p1 (0x1A)"] --&gt; OBJ1
+    P2["Ref: p2 (0x1A)"] --&gt; OBJ1
+    P3["Ref: p3 (0x2B)"] --&gt; OBJ2</code></pre>
 <ul>
 <li><strong>Class</strong>: A blueprint, template, or user-defined data type describing what attributes and behaviors instances will possess.</li>
 <li><strong>Object</strong>: A concrete instance of a class allocated in memory at runtime.</li>

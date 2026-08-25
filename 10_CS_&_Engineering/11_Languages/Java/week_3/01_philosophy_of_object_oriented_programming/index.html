@@ -3187,6 +3187,30 @@
 </span></code></pre></div>
 <hr />
 <h1 id="relationships-between-classes">Relationships Between Classes<a class="headerlink" href="#relationships-between-classes" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>classDiagram
+    class Order {
+      -status: OrderStatus
+      -items: List~Item~
+      +addItem(Item)
+      +shipOrder()
+      +cancelOrder()
+    }
+    class Item {
+      -name: String
+      -price: double
+    }
+    class Account {
+      -balance: double
+      +checkCredit()
+    }
+    class ExpressOrder {
+      -priorityLevel: int
+      +calculateExpressFee()
+    }
+
+    Order "1" *-- "many" Item : Aggregation (Has-A)
+    Order ..&gt; Account : Dependence (Uses-A)
+    ExpressOrder --|&gt; Order : Inheritance (Is-A)</code></pre>
 <p>In a well-designed OO system, classes interact via three main relationships:</p>
 <h3 id="1-dependence-uses-a">1. Dependence ("Uses-A")<a class="headerlink" href="#1-dependence-uses-a" title="Permanent link">&para;</a></h3>
 <ul>

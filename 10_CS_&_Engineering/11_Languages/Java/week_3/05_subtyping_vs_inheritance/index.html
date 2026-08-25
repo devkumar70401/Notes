@@ -3137,6 +3137,22 @@
 </table>
 <hr />
 <h1 id="analyzing-the-relationships">Analyzing the Relationships<a class="headerlink" href="#analyzing-the-relationships" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    subgraph Subtyping Hierarchy (Capabilities)
+        Q1["Queue (2 ops)"]
+        S1["Stack (2 ops)"]
+        D1["Deque (4 ops)"]
+        D1 -.-&gt;|Subtype of| Q1
+        D1 -.-&gt;|Subtype of| S1
+    end
+
+    subgraph Inheritance Hierarchy (Code Reuse)
+        D2["Deque (Doubly-Linked Core)"]
+        Q2["Queue (Restricted Deque)"]
+        S2["Stack (Restricted Deque)"]
+        Q2 --&gt;|Reuses implementation| D2
+        S2 --&gt;|Reuses implementation| D2
+    end</code></pre>
 <h3 id="from-the-perspective-of-subtyping-capabilities">From the Perspective of Subtyping (Capabilities):<a class="headerlink" href="#from-the-perspective-of-subtyping-capabilities" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>Deque</code> provides all 4 operations.</li>

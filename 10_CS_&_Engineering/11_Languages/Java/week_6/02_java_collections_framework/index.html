@@ -3086,6 +3086,21 @@
 
 
 <h1 id="java-collections-framework-jcf">Java Collections Framework (JCF)<a class="headerlink" href="#java-collections-framework-jcf" title="Permanent link">&para;</a></h1>
+<pre class="mermaid"><code>graph TD
+    ITER["Iterable&amp;lt;E&amp;gt;"] --&gt; COLL["Collection&amp;lt;E&amp;gt;"]
+
+    COLL --&gt; LIST["List&amp;lt;E&amp;gt;&lt;br&gt;(Ordered, Duplicates Allowed)"]
+    COLL --&gt; SET["Set&amp;lt;E&amp;gt;&lt;br&gt;(Unique Elements)"]
+    COLL --&gt; QUEUE["Queue&amp;lt;E&amp;gt;&lt;br&gt;(FIFO Staging)"]
+
+    LIST --&gt; AL["ArrayList&amp;lt;E&amp;gt;"]
+    LIST --&gt; LL["LinkedList&amp;lt;E&amp;gt;"]
+
+    SET --&gt; HS["HashSet&amp;lt;E&amp;gt;"]
+    SET --&gt; TS["TreeSet&amp;lt;E&amp;gt; (SortedSet)"]
+
+    QUEUE --&gt; PQ["PriorityQueue&amp;lt;E&amp;gt;"]
+    QUEUE --&gt; DEQ["Deque&amp;lt;E&amp;gt; (ArrayDeque)"]</code></pre>
 <ul>
 <li>Prior to Java 2, data structures were ad-hoc (<code>Vector</code>, <code>Hashtable</code>, raw arrays).</li>
 <li>JCF provides a unified architecture for representing and manipulating collections.</li>
