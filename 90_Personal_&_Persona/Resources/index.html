@@ -3795,6 +3795,223 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e5b8cc48">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="state-of-the-art-sota-ai-systems-engineering-courses-2026">🚀 State-of-the-Art (SOTA) AI &amp; Systems Engineering Courses (2026)<a class="anchor-link" href="#state-of-the-art-sota-ai-systems-engineering-courses-2026">¶</a></h1><p>A curated index of the world's most rigorous, implementation-heavy, and state-of-the-art AI systems courses from Stanford, UC Berkeley, MIT, and leading frontier research labs.</p>
+<hr/>
+<h2 id="1-llm-systems-pretraining-from-scratch">🏎️ 1. LLM Systems &amp; Pretraining from Scratch<a class="anchor-link" href="#1-llm-systems-pretraining-from-scratch">¶</a></h2><ul>
+<li><p><a href="https://cs336.stanford.edu/">Stanford CS336: Language Modeling from Scratch</a></p>
+<ul>
+<li><strong>Syllabus &amp; Code</strong>: <a href="https://github.com/stanford-cs336">Stanford CS336 GitHub</a> | <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMqXOcazWaTUHhq-yembLCV">Stanford Online YouTube Playlist</a></li>
+<li><strong>Focus</strong>: Building the entire LLM stack from scratch: Tokenization, RoPE, RMSNorm, SwiGLU, FlashAttention, custom OpenAI Triton CUDA kernels, Distributed Training (DDP, ZeRO, FSDP), SFT, and DPO alignment.</li>
+</ul>
+</li>
+<li><p><a href="https://eurekalabs.ai/">Eureka Labs: LLM101n &amp; llm.c (Andrej Karpathy)</a></p>
+<ul>
+<li><strong>Repository</strong>: <a href="https://github.com/karpathy/llm.c">GitHub - karpathy/llm.c</a></li>
+<li><strong>Focus</strong>: Pure C/CUDA implementation of GPT-2/3 pretraining without Python/PyTorch dependencies. Low-level GPU memory layouts, warp primitives, and distributed multi-GPU training over NCCL.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="2-agentic-ai-reasoning-post-training-alignment">🧠 2. Agentic AI, Reasoning &amp; Post-Training Alignment<a class="anchor-link" href="#2-agentic-ai-reasoning-post-training-alignment">¶</a></h2><ul>
+<li><p><a href="https://rdi.berkeley.edu/">UC Berkeley CS294/194: Large Language Model Agents &amp; Agentic AI</a></p>
+<ul>
+<li><strong>Lectures &amp; Materials</strong>: <a href="https://rdi.berkeley.edu/">Berkeley RDI Portal</a> | <a href="https://www.youtube.com/@BerkeleyRDI">Berkeley RDI YouTube Channel</a></li>
+<li><strong>Focus</strong>: Test-time compute (MCTS, Tree of Thoughts), autonomous tool-calling, sandboxed execution, memory architectures, formal neuro-symbolic verification (Lean/Coq), and multi-agent coordination.</li>
+</ul>
+</li>
+<li><p><a href="https://huggingface.co/learn/agents-course">Hugging Face: Open-Source AI Agents &amp; Deep RL Course</a></p>
+<ul>
+<li><strong>Course Portal</strong>: <a href="https://huggingface.co/learn/agents-course">Hugging Face Learn - AI Agents</a> | <a href="https://huggingface.co/learn/deep-rl-course">Hugging Face Deep RL Course</a></li>
+<li><strong>Focus</strong>: Function calling, tool use, DPO (Direct Preference Optimization), GRPO (Group Relative Policy Optimization), and open-weights agent deployment.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="3-hardware-efficiency-quantization-ultra-fast-serving">⚡ 3. Hardware Efficiency, Quantization &amp; Ultra-Fast Serving<a class="anchor-link" href="#3-hardware-efficiency-quantization-ultra-fast-serving">¶</a></h2><ul>
+<li><p><a href="https://efficientml.ai/">MIT 6.5940: TinyML &amp; Efficient Deep Learning Computing</a></p>
+<ul>
+<li><strong>Lectures &amp; Labs</strong>: <a href="https://efficientml.ai/">efficientml.ai</a> | <a href="https://www.youtube.com/@mit-han-lab">MIT HAN Lab YouTube Channel</a></li>
+<li><strong>Focus</strong>: Model compression, FP8/INT4 Quantization, AWQ (Activation-aware Weight Quantization), SmoothQuant, vLLM / PagedAttention mechanics, continuous batching, and Speculative Decoding.</li>
+</ul>
+</li>
+<li><p><a href="https://web.stanford.edu/class/cs25/">Stanford CS25: Transformers United</a></p>
+<ul>
+<li><strong>Lectures &amp; Syllabus</strong>: <a href="https://web.stanford.edu/class/cs25/">CS25 Course Portal</a> | <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rNiJRchCzutFw5UJTeMLOfn">Stanford CS25 YouTube</a></li>
+<li><strong>Focus</strong>: Frontiers of sequence architectures: Multimodal Joint Embeddings, Diffusion Transformers (DiTs), and State-Space Models (Mamba / RWKV).</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="the-2026-sota-production-toolchain">🛠️ The 2026 SOTA Production Toolchain<a class="anchor-link" href="#the-2026-sota-production-toolchain">¶</a></h2><table>
+<thead>
+<tr>
+<th style="text-align:left">Domain</th>
+<th style="text-align:left">Legacy Approach</th>
+<th style="text-align:left">2026 Production Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>High-Throughput Serving</strong></td>
+<td style="text-align:left">Naive PyTorch <code>generate()</code></td>
+<td style="text-align:left"><strong>vLLM / TensorRT-LLM</strong> (PagedAttention + Continuous Batching)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Custom GPU Kernels</strong></td>
+<td style="text-align:left">Raw C++/CUDA wrappers</td>
+<td style="text-align:left"><strong>OpenAI Triton</strong> + <strong>FlashAttention-3</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Model Alignment</strong></td>
+<td style="text-align:left">Complex 4-model PPO</td>
+<td style="text-align:left"><strong>DPO / GRPO (Direct Preference Optimization)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Agent Tool Execution</strong></td>
+<td style="text-align:left">Unstructured prompt parsing</td>
+<td style="text-align:left"><strong>Structured JSON Outputs + Sandboxed Python REPL Tool Calling</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Quantization</strong></td>
+<td style="text-align:left">Naive post-training quantization</td>
+<td style="text-align:left"><strong>AWQ / GPTQ in FP8 &amp; INT4</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>RAG Retrieval</strong></td>
+<td style="text-align:left">Simple vector cosine similarity</td>
+<td style="text-align:left"><strong>Hybrid Sparse-Dense (BM25 + ColBERT) + Cohere Re-ranker</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=351126fa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="frontier-lab-industry-published-ai-engineering-playbooks-2026">🏭 Frontier Lab &amp; Industry-Published AI Engineering Playbooks (2026)<a class="anchor-link" href="#frontier-lab-industry-published-ai-engineering-playbooks-2026">¶</a></h1><p>A curated collection of battle-tested engineering playbooks, open-source cookbooks, architectural whitepapers, and production codebases published directly by frontier AI research labs and tech giants (Anthropic, Meta, OpenAI, NVIDIA, Hugging Face, and Cohere).</p>
+<hr/>
+<h2 id="1-anthropic-agentic-ai-context-engineering-prompting">🏢 1. Anthropic: Agentic AI, Context Engineering &amp; Prompting<a class="anchor-link" href="#1-anthropic-agentic-ai-context-engineering-prompting">¶</a></h2><ul>
+<li><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic: Building Effective Agents (Architectural Guide)</a><ul>
+<li><strong>Focus</strong>: The definitive industry blueprint for agentic systems: Workflows (Chaining, Routing, Parallelization) vs. Autonomous Agents (Orchestrator-Workers, Evaluator-Optimizer).</li>
+</ul>
+</li>
+<li><a href="https://github.com/anthropics/anthropic-cookbook">Anthropic Cookbook &amp; Skills Repository</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/anthropics/anthropic-cookbook">GitHub - anthropics/anthropic-cookbook</a> | <a href="https://github.com/anthropics/skills">GitHub - anthropics/skills</a></li>
+<li><strong>Focus</strong>: Prompt Caching (90% latency reduction), Context Engineering for multi-hour autonomous coding agents, Tool-Use design, and automated LLM-as-a-Judge evaluations.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="2-meta-ai-open-weights-industrial-mastery-distributed-pytorch">🏢 2. Meta AI: Open-Weights Industrial Mastery &amp; Distributed PyTorch<a class="anchor-link" href="#2-meta-ai-open-weights-industrial-mastery-distributed-pytorch">¶</a></h2><ul>
+<li><a href="https://github.com/meta-llama/llama-recipes">Meta Llama Stack &amp; Llama Recipes</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/meta-llama/llama-recipes">GitHub - meta-llama/llama-recipes</a> | <a href="https://github.com/meta-llama/llama-stack">GitHub - meta-llama/llama-stack</a></li>
+<li><strong>Focus</strong>: Production Fine-Tuning (Full parameter vs PEFT / LoRA / QLoRA), Synthetic Data Generation pipelines, Quantization (AWQ/GPTQ), and serving on vLLM.</li>
+</ul>
+</li>
+<li><a href="https://pytorch.org/tutorials/recipes/distributed_recipes_index.html">PyTorch Core Distributed &amp; Compiler Recipes</a><ul>
+<li><strong>Portal</strong>: <a href="https://pytorch.org/tutorials/">pytorch.org/tutorials</a></li>
+<li><strong>Focus</strong>: FSDP2 (Fully Sharded Data Parallel), <code>torch.compile</code> JIT kernel fusion, TorchDynamo, and TorchInductor GPU optimization.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="3-openai-gpu-kernels-evals-function-calling">🏢 3. OpenAI: GPU Kernels, Evals &amp; Function Calling<a class="anchor-link" href="#3-openai-gpu-kernels-evals-function-calling">¶</a></h2><ul>
+<li><a href="https://github.com/openai/openai-cookbook">OpenAI Cookbook &amp; Best Practices</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/openai/openai-cookbook">GitHub - openai/openai-cookbook</a></li>
+<li><strong>Focus</strong>: Structured Outputs (Strict JSON mode via CFG constrained sampling), Function Calling, Agent handoffs, and Embeddings.</li>
+</ul>
+</li>
+<li><a href="https://triton-lang.org/">OpenAI Triton Language Tutorials</a><ul>
+<li><strong>Portal</strong>: <a href="https://triton-lang.org/">triton-lang.org</a></li>
+<li><strong>Focus</strong>: Writing custom, high-performance GPU kernels (FlashAttention, Fused LayerNorm) directly in Python with bare-metal CUDA speed.</li>
+</ul>
+</li>
+<li><a href="https://github.com/openai/evals">OpenAI Evals Framework</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/openai/evals">GitHub - openai/evals</a></li>
+<li><strong>Focus</strong>: Open-source framework for unit-testing, red-teaming, and benchmarking LLMs on complex reasoning and safety tasks.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="4-nvidia-bare-metal-supercomputing-high-throughput-serving">🏢 4. NVIDIA: Bare-Metal Supercomputing &amp; High-Throughput Serving<a class="anchor-link" href="#4-nvidia-bare-metal-supercomputing-high-throughput-serving">¶</a></h2><ul>
+<li><a href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM Architecture Guide</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/NVIDIA/TensorRT-LLM">GitHub - NVIDIA/TensorRT-LLM</a></li>
+<li><strong>Focus</strong>: In-Flight (Continuous) Batching, PagedAttention, KV-Cache Quantization (FP8/INT4), and Speculative Decoding for low-latency production serving.</li>
+</ul>
+</li>
+<li><a href="https://github.com/NVIDIA/Megatron-LM">NVIDIA Megatron-LM (Massive 3D Parallelism)</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/NVIDIA/Megatron-LM">GitHub - NVIDIA/Megatron-LM</a></li>
+<li><strong>Focus</strong>: Industrial codebase for pretraining 100B–1T parameter models using Tensor, Pipeline, and Sequence Parallelism across multi-node GPU clusters.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="5-hugging-face-open-source-alignment-code-agents">🏢 5. Hugging Face: Open-Source Alignment &amp; Code-Agents<a class="anchor-link" href="#5-hugging-face-open-source-alignment-code-agents">¶</a></h2><ul>
+<li><a href="https://github.com/huggingface/trl">Hugging Face TRL (Transformer Reinforcement Learning)</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/huggingface/trl">GitHub - huggingface/trl</a> | <a href="https://github.com/huggingface/alignment-handbook">Alignment Handbook</a></li>
+<li><strong>Focus</strong>: SFTTrainer, DPOTrainer, GRPOTrainer, and KTO alignment (Direct Preference Optimization without complex PPO reward models).</li>
+</ul>
+</li>
+<li><a href="https://github.com/huggingface/smolagents">Hugging Face smolagents (Minimalist Code-Agents)</a><ul>
+<li><strong>Repository</strong>: <a href="https://github.com/huggingface/smolagents">GitHub - huggingface/smolagents</a></li>
+<li><strong>Focus</strong>: Building lightweight, reliable agents where the model writes and executes raw Python code snippets rather than fragile JSON tool payloads.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="6-cohere-enterprise-semantic-search-reranking">🏢 6. Cohere: Enterprise Semantic Search &amp; Reranking<a class="anchor-link" href="#6-cohere-enterprise-semantic-search-reranking">¶</a></h2><ul>
+<li><a href="https://cohere.com/llmu">Cohere LLM University</a><ul>
+<li><strong>Portal</strong>: <a href="https://cohere.com/llmu">cohere.com/llmu</a></li>
+<li><strong>Focus</strong>: Two-stage retrieval pipelines (Dense Vector + BM25 Sparse Search), Cross-Encoder Re-ranking, Contextual Embeddings, and production RAG architecture.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="industrial-study-priority-matrix">📋 Industrial Study Priority Matrix<a class="anchor-link" href="#industrial-study-priority-matrix">¶</a></h2><table>
+<thead>
+<tr>
+<th style="text-align:left">Production Objective</th>
+<th style="text-align:left">Primary Industry Material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Autonomous AI Agents &amp; Coding Workflows</strong></td>
+<td style="text-align:left"><a href="https://www.anthropic.com/research/building-effective-agents">Anthropic: Building Effective Agents</a> + <a href="https://github.com/huggingface/smolagents">Hugging Face smolagents</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Model Fine-Tuning &amp; Alignment (LoRA / DPO)</strong></td>
+<td style="text-align:left"><a href="https://github.com/meta-llama/llama-recipes">Meta Llama Recipes</a> + <a href="https://github.com/huggingface/alignment-handbook">Hugging Face TRL Handbook</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Ultra-Fast GPU Serving (Low-Latency / High RPS)</strong></td>
+<td style="text-align:left"><a href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM</a> + <a href="https://github.com/vllm-project/vllm">vLLM</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Custom GPU Acceleration Kernels</strong></td>
+<td style="text-align:left"><a href="https://triton-lang.org/">OpenAI Triton Tutorials</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Enterprise RAG &amp; Hybrid Search</strong></td>
+<td style="text-align:left"><a href="https://cohere.com/llmu">Cohere LLM University</a> + <a href="https://github.com/anthropics/anthropic-cookbook">Anthropic Prompt Caching</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
 </div> <!-- jp-Notebook -->
 </div> <!-- jupyter-wrapper -->
 
