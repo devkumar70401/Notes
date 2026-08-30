@@ -115,7 +115,7 @@ nav:
     - I DLGenAI:
       - "AI Engineering Skills Map": IV Deep_Learning/I DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map.md
       - I ANNs:
-        - "I ANN Slides": IV Deep_Learning/I DLGenAI/I ANNs/I ANN.pdf
+        - "I ANN Slides": IV Deep_Learning/I DLGenAI/I ANNs/I ANN.md
         - "II PyTorch Fundamentals": IV Deep_Learning/I DLGenAI/I ANNs/II Pytorch Fundamentals.ipynb
         - "III PyTorch Workflow": IV Deep_Learning/I DLGenAI/I ANNs/III Pytorch Workflow.ipynb
         - "IV Customer Churn Prediction": IV Deep_Learning/I DLGenAI/I ANNs/IV Customer Churn Prediction.ipynb
