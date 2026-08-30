@@ -2,21 +2,18 @@ import os
 import shutil
 from pathlib import Path
 
-def on_config(config):
-    root_dir = Path(__file__).resolve().parent.parent
-    docs_dir = root_dir / ".docs"
-    docs_dir.mkdir(exist_ok=True)
-    return config
-
-def on_pre_build(config):
-    root_dir = Path(__file__).resolve().parent.parent
-    docs_dir = root_dir / ".docs"
+def sync_all(root_dir, docs_dir):
     docs_dir.mkdir(exist_ok=True)
     
-    # 1. Clean up broken symlinks in docs_dir
+    # 1. Clean up stale or broken symlinks/dirs in docs_dir
+    valid_names = {item.name for item in root_dir.iterdir() if not item.name.startswith(".")}
+    valid_names.update({"index.md", "assets", "javascripts", "stylesheets"})
     for item in docs_dir.iterdir():
-        if item.is_symlink() and not item.exists():
-            item.unlink()
+        if item.name not in valid_names or (item.is_symlink() and not item.exists()):
+            if item.is_symlink() or item.is_file():
+                item.unlink()
+            elif item.is_dir():
+                shutil.rmtree(item)
 
     # 2. Ensure docs/index.md exists
     index_md = docs_dir / "index.md"
@@ -54,4 +51,15 @@ def on_pre_build(config):
             for f in src_folder.glob("*"):
                 if f.is_file():
                     shutil.copy2(f, dst_folder / f.name)
+
+def on_config(config):
+    root_dir = Path(__file__).resolve().parent.parent
+    docs_dir = root_dir / ".docs"
+    sync_all(root_dir, docs_dir)
+    return config
+
+def on_pre_build(config):
+    root_dir = Path(__file__).resolve().parent.parent
+    docs_dir = root_dir / ".docs"
+    sync_all(root_dir, docs_dir)
 
