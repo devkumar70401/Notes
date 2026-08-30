@@ -87,18 +87,18 @@ nav:
   - 3. Deep Learning:
     - 1. DLGenAI:
       - Foundations & Mastery:
-        - "Week 01 Mastery - ANN & PyTorch": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_01_Mastery_ANN_and_PyTorch.md
-        - "Week 02 Mastery - MLP & Production PyTorch": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch.md
+        - "Week 01 Mastery - ANN & PyTorch": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_01_Mastery_ANN_and_PyTorch.md
+        - "Week 02 Mastery - MLP & Production PyTorch": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch.md
       - Mathematical Derivations:
-        - "The 4 Master Backprop Equations": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_4_Master_Backpropagation_Equations_Demystified.md
-        - "Jacobians & Vector Chain Rule": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Jacobian_Matrices_and_Vector_Chain_Rule.md
-        - "Multi-Architecture Batch Derivations": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
-        - "Microscopic Gradient Formulas": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
-        - "Role of Input Data in Backprop": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
-        - "XOR Problem Proof": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
-        - "Neural Networks & Jacobians": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Neural_Networks_Backpropagation_and_Jacobians.md
+        - "The 4 Master Backprop Equations": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_4_Master_Backpropagation_Equations_Demystified.md
+        - "Jacobians & Vector Chain Rule": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Jacobian_Matrices_and_Vector_Chain_Rule.md
+        - "Multi-Architecture Batch Derivations": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
+        - "Microscopic Gradient Formulas": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
+        - "Role of Input Data in Backprop": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
+        - "XOR Problem Proof": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
+        - "Neural Networks & Jacobians": test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Neural_Networks_Backpropagation_and_Jacobians.md
       - Generative AI:
-        - "AI Engineering Skills Map": 3.Deep Learning/1. DLGenAI/45_Generative_AI/Andrew_Ng_AI_Engineering_Skills_Map.md
+        - "AI Engineering Skills Map": test/3.Deep Learning/1. DLGenAI/45_Generative_AI/Andrew_Ng_AI_Engineering_Skills_Map.md
 
 validation:
   nav:
