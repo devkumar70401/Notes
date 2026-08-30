@@ -4,6 +4,7 @@ site_author: Devendra
 site_url: https://devkumar70401.github.io/Notes/
 repo_url: https://github.com/devkumar70401/Notes
 repo_name: devkumar70401/Notes
+docs_dir: .docs
 
 hooks:
   - hooks/sync_docs.py

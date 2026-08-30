@@ -2,9 +2,15 @@ import os
 import shutil
 from pathlib import Path
 
+def on_config(config):
+    root_dir = Path(__file__).resolve().parent.parent
+    docs_dir = root_dir / ".docs"
+    docs_dir.mkdir(exist_ok=True)
+    return config
+
 def on_pre_build(config):
     root_dir = Path(__file__).resolve().parent.parent
-    docs_dir = root_dir / "docs"
+    docs_dir = root_dir / ".docs"
     docs_dir.mkdir(exist_ok=True)
     
     # 1. Clean up broken symlinks in docs_dir

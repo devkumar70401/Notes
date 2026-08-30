@@ -30,6 +30,7 @@ jobs:
 
       - name: Build site with MkDocs
         run: |
+          mkdir -p .docs
           mkdocs build
 
       - name: Deploy to gh-pages
