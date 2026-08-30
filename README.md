@@ -93,18 +93,18 @@ graph LR
 * [ ] [`STAT-2`] Bayesian Inference & Maximum Likelihood
 
 ### ☕ 2. Programming & Systems
-* [x] [`JAVA`] [Week 01: Intro, Types & Memory Layout](test/10_CS_&_Engineering/11_Languages/Java/week_1/01_introduction_to_java_and_programming_paradigms.md)
-* [x] [`JAVA`] [Week 02: Syntax, Control Flow & I/O](test/10_CS_&_Engineering/11_Languages/Java/week_2/01_a_first_taste_of_java.md)
-* [x] [`JAVA`] [Week 03: Inheritance, Dynamic Dispatch & Modifiers](test/10_CS_&_Engineering/11_Languages/Java/week_3/01_philosophy_of_object_oriented_programming.md)
-* [x] [`JAVA`] [Week 04: Interfaces, Capability Security, Callbacks & Iterators](test/10_CS_&_Engineering/11_Languages/Java/week_4/Java_Week_4_Mastery_Notes.md)
-* [x] [`JAVA`] [Week 05: Generics, Subtyping (PECS) & Reflection](test/10_CS_&_Engineering/11_Languages/Java/week_5/01_polymorphism_revisited.md)
-* [x] [`JAVA`] [Week 06: Collections Framework & Maps](test/10_CS_&_Engineering/11_Languages/Java/week_6/01_the_benefits_of_indirection.md)
-* [x] [`JAVA`] [Week 07: Exceptions, Packages & Structured Logging](test/10_CS_&_Engineering/11_Languages/Java/week_7/01_dealing_with_errors.md)
-* [x] [`JAVA`] [Week 08: Lambdas, Higher-Order Functions & Stream Pipelines](test/10_CS_&_Engineering/11_Languages/Java/week_8/01_object_cloning.md)
-* [x] [`JAVA`] [Week 09: Optionals, Stream Collectors & Serialization](test/10_CS_&_Engineering/11_Languages/Java/week_9/01_optional_type.md)
-* [x] [`JAVA`] [Week 10: Concurrency Foundations & Monitor Abstraction](test/10_CS_&_Engineering/11_Languages/Java/week_10/01_concurrency_threads_and_processes.md)
-* [x] [`JAVA`] [Week 11: Java Multithreading & Thread-Safe JUC Collections](test/10_CS_&_Engineering/11_Languages/Java/week_11/01_monitors_in_java.md)
-* [x] [`JAVA`] [Week 12: Event-Driven Programming & Swing GUI Toolkit](test/10_CS_&_Engineering/11_Languages/Java/week_12/01_graphical_interfaces_and_event_driven_programming.md)
+* [x] [`JAVA`] [Week 01: Intro, Types & Memory Layout](💻%20Programming/☕%20Java/week_1/01_introduction_to_java_and_programming_paradigms.md)
+* [x] [`JAVA`] [Week 02: Syntax, Control Flow & I/O](💻%20Programming/☕%20Java/week_2/01_a_first_taste_of_java.md)
+* [x] [`JAVA`] [Week 03: Inheritance, Dynamic Dispatch & Modifiers](💻%20Programming/☕%20Java/week_3/01_philosophy_of_object_oriented_programming.md)
+* [x] [`JAVA`] [Week 04: Interfaces, Capability Security, Callbacks & Iterators](💻%20Programming/☕%20Java/week_4/Java_Week_4_Mastery_Notes.md)
+* [x] [`JAVA`] [Week 05: Generics, Subtyping (PECS) & Reflection](💻%20Programming/☕%20Java/week_5/01_polymorphism_revisited.md)
+* [x] [`JAVA`] [Week 06: Collections Framework & Maps](💻%20Programming/☕%20Java/week_6/01_the_benefits_of_indirection.md)
+* [x] [`JAVA`] [Week 07: Exceptions, Packages & Structured Logging](💻%20Programming/☕%20Java/week_7/01_dealing_with_errors.md)
+* [x] [`JAVA`] [Week 08: Lambdas, Higher-Order Functions & Stream Pipelines](💻%20Programming/☕%20Java/week_8/01_object_cloning.md)
+* [x] [`JAVA`] [Week 09: Optionals, Stream Collectors & Serialization](💻%20Programming/☕%20Java/week_9/01_optional_type.md)
+* [x] [`JAVA`] [Week 10: Concurrency Foundations & Monitor Abstraction](💻%20Programming/☕%20Java/week_10/01_concurrency_threads_and_processes.md)
+* [x] [`JAVA`] [Week 11: Java Multithreading & Thread-Safe JUC Collections](💻%20Programming/☕%20Java/week_11/01_monitors_in_java.md)
+* [x] [`JAVA`] [Week 12: Event-Driven Programming & Swing GUI Toolkit](💻%20Programming/☕%20Java/week_12/01_graphical_interfaces_and_event_driven_programming.md)
 * [ ] [`PDSA`] Abstract Data Types & Cache-Conscious Memory Layout
 
 ### 📈 3. Machine Learning
@@ -113,13 +113,13 @@ graph LR
 * [ ] [`TDS`] NumPy Array Internals & Stride Strides Manipulation
 
 ### 🧠 4. Deep Learning & Frontier AI
-* [x] [`DL`] [The 4 Master Backpropagation Equations Demystified](test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_4_Master_Backpropagation_Equations_Demystified.md)
-* [x] [`DL`] [Jacobian Matrices and Vector Chain Rule](test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Jacobian_Matrices_and_Vector_Chain_Rule.md)
-* [x] [`DL`] [Microscopic Mathematical Derivation of Gradients](test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md)
-* [x] [`DL`] [XOR Problem Mathematical Proof (Why Linear Models Fail)](test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md)
-* [x] [`DLP`] [Week 01 Mastery: ANN & PyTorch Fundamentals](test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_01_Mastery_ANN_and_PyTorch.md)
-* [x] [`DLP`] [Week 02 Mastery: MLP, Backprop & Production PyTorch](test/3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch.md)
-* [x] [`DLGenAI`] [Andrew Ng AI Engineering Skills Map](test/3.Deep Learning/1. DLGenAI/45_Generative_AI/Andrew_Ng_AI_Engineering_Skills_Map.md)
+* [x] [`DL`] [The 4 Master Backpropagation Equations Demystified](🧠%20Deep%20Learning/⚡%20Core%20&%20Derivations%20(DL)/The_4_Master_Backpropagation_Equations_Demystified.md)
+* [x] [`DL`] [Jacobian Matrices and Vector Chain Rule](🧠%20Deep%20Learning/⚡%20Core%20&%20Derivations%20(DL)/Jacobian_Matrices_and_Vector_Chain_Rule.md)
+* [x] [`DL`] [Microscopic Mathematical Derivation of Gradients](🧠%20Deep%20Learning/⚡%20Core%20&%20Derivations%20(DL)/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md)
+* [x] [`DL`] [XOR Problem Mathematical Proof (Why Linear Models Fail)](🧠%20Deep%20Learning/⚡%20Core%20&%20Derivations%20(DL)/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md)
+* [x] [`DLP`] [Week 01 Mastery: ANN & PyTorch Fundamentals](🧠%20Deep%20Learning/⚡%20Core%20&%20Derivations%20(DL)/Week_01_Mastery_ANN_and_PyTorch.md)
+* [x] [`DLP`] [Week 02 Mastery: MLP, Backprop & Production PyTorch](🧠%20Deep%20Learning/⚡%20Core%20&%20Derivations%20(DL)/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch.md)
+* [x] [`DLGenAI`] [Andrew Ng AI Engineering Skills Map](🧠%20Deep%20Learning/✨%20Generative%20AI%20&%20Frontier%20(DLGenAI)/Andrew_Ng_AI_Engineering_Skills_Map.md)
 * [ ] [`DLGenAI`] Transformer Multi-Head Attention & KV Cache Architecture
 * [ ] [`DLGenAI`] Diffusion Models & Denoising Score Matching
 * [ ] [`DLCV`] Convolutional Neural Networks & Feature Extraction
