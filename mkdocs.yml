@@ -13,76 +13,92 @@ nav:
   - 1. Languages:
     - Java:
       - "Week 1: Intro, Types & Memory":
-        - "01 Introduction to Java & OOP": 10_CS_&_Engineering/11_Languages/Java/week_1/01_introduction_to_java_and_programming_paradigms.md
-        - "02 Types & Type Systems": 10_CS_&_Engineering/11_Languages/Java/week_1/02_data_types_and_type_systems.md
-        - "03 Memory - Stack vs Heap": 10_CS_&_Engineering/11_Languages/Java/week_1/03_memory_management_stack_vs_heap.md
-        - "04 Abstraction & Modularity": 10_CS_&_Engineering/11_Languages/Java/week_1/04_abstraction_and_modularity.md
-        - "05 Object Oriented Concepts": 10_CS_&_Engineering/11_Languages/Java/week_1/05_object_oriented_concepts.md
-        - "06 Classes & Objects": 10_CS_&_Engineering/11_Languages/Java/week_1/06_classes_and_objects.md
+        - "01 Introduction to Java & OOP": test/10_CS_&_Engineering/11_Languages/Java/week_1/01_introduction_to_java_and_programming_paradigms.md
+        - "02 Types & Type Systems": test/10_CS_&_Engineering/11_Languages/Java/week_1/02_data_types_and_type_systems.md
+        - "03 Memory - Stack vs Heap": test/10_CS_&_Engineering/11_Languages/Java/week_1/03_memory_management_stack_vs_heap.md
+        - "04 Abstraction & Modularity": test/10_CS_&_Engineering/11_Languages/Java/week_1/04_abstraction_and_modularity.md
+        - "05 Object Oriented Concepts": test/10_CS_&_Engineering/11_Languages/Java/week_1/05_object_oriented_concepts.md
+        - "06 Classes & Objects": test/10_CS_&_Engineering/11_Languages/Java/week_1/06_classes_and_objects.md
       - "Week 2: Java Syntax, Types & I/O":
-        - "01 First Taste of Java": 10_CS_&_Engineering/11_Languages/Java/week_2/01_a_first_taste_of_java.md
-        - "02 Basic Datatypes & Casting": 10_CS_&_Engineering/11_Languages/Java/week_2/02_basic_datatypes_in_java.md
-        - "03 Control Flow Structures": 10_CS_&_Engineering/11_Languages/Java/week_2/03_control_flow_in_java.md
-        - "04 Defining Classes & Objects": 10_CS_&_Engineering/11_Languages/Java/week_2/04_defining_classes_and_objects.md
-        - "05 Basic Input and Output": 10_CS_&_Engineering/11_Languages/Java/week_2/05_basic_input_and_output.md
+        - "01 First Taste of Java": test/10_CS_&_Engineering/11_Languages/Java/week_2/01_a_first_taste_of_java.md
+        - "02 Basic Datatypes & Casting": test/10_CS_&_Engineering/11_Languages/Java/week_2/02_basic_datatypes_in_java.md
+        - "03 Control Flow Structures": test/10_CS_&_Engineering/11_Languages/Java/week_2/03_control_flow_in_java.md
+        - "04 Defining Classes & Objects": test/10_CS_&_Engineering/11_Languages/Java/week_2/04_defining_classes_and_objects.md
+        - "05 Basic Input and Output": test/10_CS_&_Engineering/11_Languages/Java/week_2/05_basic_input_and_output.md
       - "Week 3: Inheritance & Polymorphism":
-        - "01 Philosophy of OO Programming": 10_CS_&_Engineering/11_Languages/Java/week_3/01_philosophy_of_object_oriented_programming.md
-        - "02 Subclasses & Inheritance": 10_CS_&_Engineering/11_Languages/Java/week_3/02_subclasses_and_inheritance.md
-        - "03 Dynamic Dispatch & Polymorphism": 10_CS_&_Engineering/11_Languages/Java/week_3/03_dynamic_dispatch_and_polymorphism.md
-        - "04 The Java Class Hierarchy": 10_CS_&_Engineering/11_Languages/Java/week_3/04_the_java_class_hierarchy.md
-        - "05 Subtyping vs Inheritance": 10_CS_&_Engineering/11_Languages/Java/week_3/05_subtyping_vs_inheritance.md
-        - "06 Java Modifiers": 10_CS_&_Engineering/11_Languages/Java/week_3/06_java_modifiers.md
+        - "01 Philosophy of OO Programming": test/10_CS_&_Engineering/11_Languages/Java/week_3/01_philosophy_of_object_oriented_programming.md
+        - "02 Subclasses & Inheritance": test/10_CS_&_Engineering/11_Languages/Java/week_3/02_subclasses_and_inheritance.md
+        - "03 Dynamic Dispatch & Polymorphism": test/10_CS_&_Engineering/11_Languages/Java/week_3/03_dynamic_dispatch_and_polymorphism.md
+        - "04 The Java Class Hierarchy": test/10_CS_&_Engineering/11_Languages/Java/week_3/04_the_java_class_hierarchy.md
+        - "05 Subtyping vs Inheritance": test/10_CS_&_Engineering/11_Languages/Java/week_3/05_subtyping_vs_inheritance.md
+        - "06 Java Modifiers": test/10_CS_&_Engineering/11_Languages/Java/week_3/06_java_modifiers.md
       - "Week 4: Interfaces, Inner Classes & Patterns":
-        - "01 Abstract Classes & Interfaces": 10_CS_&_Engineering/11_Languages/Java/week_4/01_abstract_classes_and_Interfaces.md
-        - "02 Interfaces & Default Methods": 10_CS_&_Engineering/11_Languages/Java/week_4/02_interfaces.md
-        - "03 Private / Inner Classes": 10_CS_&_Engineering/11_Languages/Java/week_4/03_private_classes.md
-        - "04 Controlled Interaction with Objects": 10_CS_&_Engineering/11_Languages/Java/week_4/04_controlled_interaction_with_objects.md
-        - "05 CallBacks & Async Notifications": 10_CS_&_Engineering/11_Languages/Java/week_4/05_CallBacks.md
-        - "06 Iterators & Traversal": 10_CS_&_Engineering/11_Languages/Java/week_4/06_Interators.md
+        - "01 Abstract Classes & Interfaces": test/10_CS_&_Engineering/11_Languages/Java/week_4/01_abstract_classes_and_Interfaces.md
+        - "02 Interfaces & Default Methods": test/10_CS_&_Engineering/11_Languages/Java/week_4/02_interfaces.md
+        - "03 Private / Inner Classes": test/10_CS_&_Engineering/11_Languages/Java/week_4/03_private_classes.md
+        - "04 Controlled Interaction with Objects": test/10_CS_&_Engineering/11_Languages/Java/week_4/04_controlled_interaction_with_objects.md
+        - "05 CallBacks & Async Notifications": test/10_CS_&_Engineering/11_Languages/Java/week_4/05_CallBacks.md
+        - "06 Iterators & Traversal": test/10_CS_&_Engineering/11_Languages/Java/week_4/06_Interators.md
+        - "Week 4 Mastery Notes": test/10_CS_&_Engineering/11_Languages/Java/week_4/Java_Week_4_Mastery_Notes.md
       - "Week 5: Generics, Subtyping & Reflection":
-        - "01 Polymorphism Revisited": 10_CS_&_Engineering/11_Languages/Java/week_5/01_polymorphism_revisited.md
-        - "02 Java Generics": 10_CS_&_Engineering/11_Languages/Java/week_5/02_java_generics.md
-        - "03 Generics & Subtyping (PECS)": 10_CS_&_Engineering/11_Languages/Java/week_5/03_generics_and_subtyping.md
-        - "04 Java Reflection API": 10_CS_&_Engineering/11_Languages/Java/week_5/04_java_reflection.md
-        - "05 Type Erasure & Limitations": 10_CS_&_Engineering/11_Languages/Java/week_5/05_type_erasure_and_runtime_implications.md
+        - "01 Polymorphism Revisited": test/10_CS_&_Engineering/11_Languages/Java/week_5/01_polymorphism_revisited.md
+        - "02 Java Generics": test/10_CS_&_Engineering/11_Languages/Java/week_5/02_java_generics.md
+        - "03 Generics & Subtyping (PECS)": test/10_CS_&_Engineering/11_Languages/Java/week_5/03_generics_and_subtyping.md
+        - "04 Java Reflection API": test/10_CS_&_Engineering/11_Languages/Java/week_5/04_java_reflection.md
+        - "05 Type Erasure & Limitations": test/10_CS_&_Engineering/11_Languages/Java/week_5/05_type_erasure_and_runtime_implications.md
       - "Week 6: Collections & Maps":
-        - "01 Benefits of Indirection": 10_CS_&_Engineering/11_Languages/Java/week_6/01_the_benefits_of_indirection.md
-        - "02 Collections Framework": 10_CS_&_Engineering/11_Languages/Java/week_6/02_java_collections_framework.md
-        - "03 Concrete Collections": 10_CS_&_Engineering/11_Languages/Java/week_6/03_concrete_collections.md
-        - "04 Java Maps & Hashing": 10_CS_&_Engineering/11_Languages/Java/week_6/04_java_maps.md
+        - "01 Benefits of Indirection": test/10_CS_&_Engineering/11_Languages/Java/week_6/01_the_benefits_of_indirection.md
+        - "02 Collections Framework": test/10_CS_&_Engineering/11_Languages/Java/week_6/02_java_collections_framework.md
+        - "03 Concrete Collections": test/10_CS_&_Engineering/11_Languages/Java/week_6/03_concrete_collections.md
+        - "04 Java Maps & Hashing": test/10_CS_&_Engineering/11_Languages/Java/week_6/04_java_maps.md
       - "Week 7: Exceptions, Packages & Logging":
-        - "01 Dealing with Errors": 10_CS_&_Engineering/11_Languages/Java/week_7/01_dealing_with_errors.md
-        - "02 Exceptions in Java": 10_CS_&_Engineering/11_Languages/Java/week_7/02_exceptions_in_java.md
-        - "03 Packages & Access Protection": 10_CS_&_Engineering/11_Languages/Java/week_7/03_packages_in_java.md
-        - "04 Assertions in Java": 10_CS_&_Engineering/11_Languages/Java/week_7/04_assertions_in_java.md
-        - "05 Structured Logging": 10_CS_&_Engineering/11_Languages/Java/week_7/05_logging_in_java.md
+        - "01 Dealing with Errors": test/10_CS_&_Engineering/11_Languages/Java/week_7/01_dealing_with_errors.md
+        - "02 Exceptions in Java": test/10_CS_&_Engineering/11_Languages/Java/week_7/02_exceptions_in_java.md
+        - "03 Packages & Access Protection": test/10_CS_&_Engineering/11_Languages/Java/week_7/03_packages_in_java.md
+        - "04 Assertions in Java": test/10_CS_&_Engineering/11_Languages/Java/week_7/04_assertions_in_java.md
+        - "05 Structured Logging": test/10_CS_&_Engineering/11_Languages/Java/week_7/05_logging_in_java.md
       - "Week 8: Cloning, Type Inference & Lambdas":
-        - "01 Object Cloning (Shallow vs Deep)": 10_CS_&_Engineering/11_Languages/Java/week_8/01_object_cloning.md
-        - "02 Local Type Inference (var)": 10_CS_&_Engineering/11_Languages/Java/week_8/02_type_inference.md
-        - "03 Higher-Order Functions & Lambdas": 10_CS_&_Engineering/11_Languages/Java/week_8/03_higher_order_functions_and_lambdas.md
-        - "04 Introduction to Streams": 10_CS_&_Engineering/11_Languages/Java/week_8/04_introduction_to_streams.md
+        - "01 Object Cloning (Shallow vs Deep)": test/10_CS_&_Engineering/11_Languages/Java/week_8/01_object_cloning.md
+        - "02 Local Type Inference (var)": test/10_CS_&_Engineering/11_Languages/Java/week_8/02_type_inference.md
+        - "03 Higher-Order Functions & Lambdas": test/10_CS_&_Engineering/11_Languages/Java/week_8/03_higher_order_functions_and_lambdas.md
+        - "04 Introduction to Streams": test/10_CS_&_Engineering/11_Languages/Java/week_8/04_introduction_to_streams.md
       - "Week 9: Optionals, Stream Collectors & I/O":
-        - "01 Optional Type": 10_CS_&_Engineering/11_Languages/Java/week_9/01_optional_type.md
-        - "02 Collecting Results from Streams": 10_CS_&_Engineering/11_Languages/Java/week_9/02_collecting_results_from_streams.md
-        - "03 I/O Streams (Byte vs Char)": 10_CS_&_Engineering/11_Languages/Java/week_9/03_input_and_output_streams.md
-        - "04 Object Serialization": 10_CS_&_Engineering/11_Languages/Java/week_9/04_serialization_in_java.md
+        - "01 Optional Type": test/10_CS_&_Engineering/11_Languages/Java/week_9/01_optional_type.md
+        - "02 Collecting Results from Streams": test/10_CS_&_Engineering/11_Languages/Java/week_9/02_collecting_results_from_streams.md
+        - "03 I/O Streams (Byte vs Char)": test/10_CS_&_Engineering/11_Languages/Java/week_9/03_input_and_output_streams.md
+        - "04 Object Serialization": test/10_CS_&_Engineering/11_Languages/Java/week_9/04_serialization_in_java.md
       - "Week 10: Concurrency Foundations":
-        - "01 Threads & Processes": 10_CS_&_Engineering/11_Languages/Java/week_10/01_concurrency_threads_and_processes.md
-        - "02 Race Conditions & Critical Sections": 10_CS_&_Engineering/11_Languages/Java/week_10/02_race_conditions_and_critical_sections.md
-        - "03 Peterson's Algorithm": 10_CS_&_Engineering/11_Languages/Java/week_10/03_mutual_exclusion_algorithms.md
-        - "04 Hardware Primitives (TAS & CAS)": 10_CS_&_Engineering/11_Languages/Java/week_10/04_hardware_synchronization_primitives.md
-        - "05 The Monitor Abstraction": 10_CS_&_Engineering/11_Languages/Java/week_10/05_monitors_concept.md
+        - "01 Threads & Processes": test/10_CS_&_Engineering/11_Languages/Java/week_10/01_concurrency_threads_and_processes.md
+        - "02 Race Conditions & Critical Sections": test/10_CS_&_Engineering/11_Languages/Java/week_10/02_race_conditions_and_critical_sections.md
+        - "03 Peterson's Algorithm": test/10_CS_&_Engineering/11_Languages/Java/week_10/03_mutual_exclusion_algorithms.md
+        - "04 Hardware Primitives (TAS & CAS)": test/10_CS_&_Engineering/11_Languages/Java/week_10/04_hardware_synchronization_primitives.md
+        - "05 The Monitor Abstraction": test/10_CS_&_Engineering/11_Languages/Java/week_10/05_monitors_concept.md
       - "Week 11: Java Multithreading & JUC":
-        - "01 Java Monitors & synchronized": 10_CS_&_Engineering/11_Languages/Java/week_11/01_monitors_in_java.md
-        - "02 Thread Lifecycle & Management": 10_CS_&_Engineering/11_Languages/Java/week_11/02_threads_in_java.md
-        - "03 Bounded Buffer (Producer-Consumer)": 10_CS_&_Engineering/11_Languages/Java/week_11/03_concurrent_programming_example.md
-        - "04 Concurrent Collections & Atomics": 10_CS_&_Engineering/11_Languages/Java/week_11/04_thread_safe_collections_and_utilities.md
+        - "01 Java Monitors & synchronized": test/10_CS_&_Engineering/11_Languages/Java/week_11/01_monitors_in_java.md
+        - "02 Thread Lifecycle & Management": test/10_CS_&_Engineering/11_Languages/Java/week_11/02_threads_in_java.md
+        - "03 Bounded Buffer (Producer-Consumer)": test/10_CS_&_Engineering/11_Languages/Java/week_11/03_concurrent_programming_example.md
+        - "04 Concurrent Collections & Atomics": test/10_CS_&_Engineering/11_Languages/Java/week_11/04_thread_safe_collections_and_utilities.md
       - "Week 12: Event-Driven Programming & Swing":
-        - "01 Event-Driven Programming": 10_CS_&_Engineering/11_Languages/Java/week_12/01_graphical_interfaces_and_event_driven_programming.md
-        - "02 The Swing GUI Toolkit": 10_CS_&_Engineering/11_Languages/Java/week_12/02_the_swing_toolkit.md
-        - "03 Swing Event Listeners & Examples": 10_CS_&_Engineering/11_Languages/Java/week_12/03_swing_event_handling_and_examples.md
+        - "01 Event-Driven Programming": test/10_CS_&_Engineering/11_Languages/Java/week_12/01_graphical_interfaces_and_event_driven_programming.md
+        - "02 The Swing GUI Toolkit": test/10_CS_&_Engineering/11_Languages/Java/week_12/02_the_swing_toolkit.md
+        - "03 Swing Event Listeners & Examples": test/10_CS_&_Engineering/11_Languages/Java/week_12/03_swing_event_handling_and_examples.md
     - Python:
-      - Coming Soon: 10_CS_&_Engineering/11_Languages/Python/soon.md
+      - Coming Soon: test/10_CS_&_Engineering/11_Languages/Python/soon.md
+  - 3. Deep Learning:
+    - 1. DLGenAI:
+      - Foundations & Mastery:
+        - "Week 01 Mastery - ANN & PyTorch": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_01_Mastery_ANN_and_PyTorch.md
+        - "Week 02 Mastery - MLP & Production PyTorch": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch.md
+      - Mathematical Derivations:
+        - "The 4 Master Backprop Equations": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_4_Master_Backpropagation_Equations_Demystified.md
+        - "Jacobians & Vector Chain Rule": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Jacobian_Matrices_and_Vector_Chain_Rule.md
+        - "Multi-Architecture Batch Derivations": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
+        - "Microscopic Gradient Formulas": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
+        - "Role of Input Data in Backprop": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
+        - "XOR Problem Proof": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
+        - "Neural Networks & Jacobians": 3.Deep Learning/1. DLGenAI/42_Deep_Learning/Neural_Networks_Backpropagation_and_Jacobians.md
+      - Generative AI:
+        - "AI Engineering Skills Map": 3.Deep Learning/1. DLGenAI/45_Generative_AI/Andrew_Ng_AI_Engineering_Skills_Map.md
 
 validation:
   nav:

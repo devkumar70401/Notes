@@ -14,12 +14,21 @@ def on_pre_build(config):
 
     # 2. Ensure docs/index.md exists
     index_md = docs_dir / "index.md"
-    if not index_md.exists():
+    if not index_md.exists() and not (root_dir / "README.md").exists():
         index_md.write_text("# Hi, Brother 😊\n\nWelcome to my notes.\n", encoding="utf-8")
+    elif (root_dir / "README.md").exists() and not index_md.exists() and not index_md.is_symlink():
+        try:
+            index_md.symlink_to("../README.md")
+        except OSError:
+            shutil.copy2(root_dir / "README.md", index_md)
             
-    # 3. Only link numbered directories that exist and contain actual files
+    # 3. Link top-level content directories
+    excluded_dirs = {
+        "docs", "site", ".venv", ".git", ".github", ".cache",
+        "__pycache__", "hooks", "assets", "javascripts", "stylesheets"
+    }
     for item in root_dir.iterdir():
-        if item.is_dir() and len(item.name) > 2 and item.name[:2].isdigit() and item.name[2] == "_":
+        if item.is_dir() and item.name not in excluded_dirs and not item.name.startswith("."):
             has_files = any(f.is_file() and not f.name.startswith(".") for f in item.rglob("*"))
             if has_files:
                 target = docs_dir / item.name
@@ -39,3 +48,4 @@ def on_pre_build(config):
             for f in src_folder.glob("*"):
                 if f.is_file():
                     shutil.copy2(f, dst_folder / f.name)
+
