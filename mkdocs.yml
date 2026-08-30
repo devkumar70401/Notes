@@ -112,7 +112,15 @@ nav:
     - Practice & Auditing (MLP):
       - "01 Introduction": III Machine_Learning/Practice_and_Auditing_MLP/01_Introduction.ipynb
   - Deep Learning:
-    - Core & Mathematical Derivations:
+    - I DLGenAI:
+      - "AI Engineering Skills Map": IV Deep_Learning/I DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map.md
+      - I ANNs:
+        - "I PyTorch Fundamentals": IV Deep_Learning/I DLGenAI/I ANNs/I Pytorch Fundamentals.ipynb
+        - "II PyTorch Workflow": IV Deep_Learning/I DLGenAI/I ANNs/II Pytorch Workflow.ipynb
+        - "III XOR Problem": IV Deep_Learning/I DLGenAI/I ANNs/III XOR Problem.ipynb
+        - "IV Customer Churn Prediction": IV Deep_Learning/I DLGenAI/I ANNs/IV Customer Churn Prediction.ipynb
+        - "V Fashion MNIST Classification": IV Deep_Learning/I DLGenAI/I ANNs/V Fashion MNIST Classification.ipynb
+    - II DL:
       - "Week 01 Mastery - ANN & PyTorch": IV Deep_Learning/II DL/Week_01_Mastery_ANN_and_PyTorch.md
       - "Week 02 Mastery - MLP & Production PyTorch": IV Deep_Learning/II DL/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch.md
       - "The 4 Master Backprop Equations": IV Deep_Learning/II DL/The_4_Master_Backpropagation_Equations_Demystified.md
@@ -124,13 +132,6 @@ nav:
       - "Neural Networks & Jacobians": IV Deep_Learning/II DL/Neural_Networks_Backpropagation_and_Jacobians.md
       - "Master Study Roadmap": IV Deep_Learning/II DL/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment.md
       - "Master Curriculum Tier List": IV Deep_Learning/II DL/Master_Curriculum_Tier_List_Robotics_AI_and_Microfly.md
-    - Generative AI & Frontier:
-      - "AI Engineering Skills Map": IV Deep_Learning/I DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map.md
-      - "01 PyTorch Fundamentals": IV Deep_Learning/I DLGenAI/I ANNs/I Pytorch Fundamentals.ipynb
-      - "02 PyTorch Workflow": IV Deep_Learning/I DLGenAI/I ANNs/II Pytorch Workflow.ipynb
-      - "03 XOR Problem": IV Deep_Learning/I DLGenAI/I ANNs/III XOR Problem.ipynb
-      - "04 Customer Churn Prediction": IV Deep_Learning/I DLGenAI/I ANNs/IV Customer Churn Prediction.ipynb
-      - "05 Fashion MNIST Classification": IV Deep_Learning/I DLGenAI/I ANNs/V Fashion MNIST Classification.ipynb
 
 validation:
   nav:
