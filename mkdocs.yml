@@ -129,10 +129,10 @@ nav:
           - "XOR Problem Proof": IV Deep_Learning/I DLGenAI/I ANNs/extra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
           - "Neural Networks & Jacobians": IV Deep_Learning/I DLGenAI/I ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians.md
       - II CNNs:
-        - "CNNs (Lecture Slides PDF)": IV Deep_Learning/I DLGenAI/II CNNs/CNNs.pdf
-        - "CNN Fundamentals": IV Deep_Learning/I DLGenAI/II CNNs/CNN_Fundamentals.ipynb
-        - "Transfer Learning": IV Deep_Learning/I DLGenAI/II CNNs/Transfer_Learning.ipynb
-        - "Image Segmentation UNET": IV Deep_Learning/I DLGenAI/II CNNs/Image_Segmentation_UNET.ipynb
+        - "I CNNs (Lecture Slides PDF)": IV Deep_Learning/I DLGenAI/II CNNs/I CNNs.pdf
+        - "II CNN Fundamentals": IV Deep_Learning/I DLGenAI/II CNNs/II CNN_Fundamentals.ipynb
+        - "III Image Segmentation UNET": IV Deep_Learning/I DLGenAI/II CNNs/III Image_Segmentation_UNET.ipynb
+        - "IV Transfer Learning": IV Deep_Learning/I DLGenAI/II CNNs/IV Transfer_Learning.ipynb
   - Tools:
     - Antigravity:
       - "Introduction & Guide": V Tools/I Agy/I Introduction.md
