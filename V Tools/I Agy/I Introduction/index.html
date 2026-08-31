@@ -12,31 +12,29 @@
         <meta name="author" content="Devendra">
       
       
-        <link rel="canonical" href="https://devkumar70401.github.io/Notes/II%20Programming/Java/week_8/02_type_inference/">
+        <link rel="canonical" href="https://devkumar70401.github.io/Notes/V%20Tools/I%20Agy/I%20Introduction/">
       
       
-        <link rel="prev" href="../01_object_cloning/">
+        <link rel="prev" href="../../../IV%20Deep_Learning/II%20DL/Master_Curriculum_Tier_List_Robotics_AI_and_Microfly/">
       
-      
-        <link rel="next" href="../03_higher_order_functions_and_lambdas/">
       
       
         
       
       
-      <link rel="icon" href="../../../../assets/avatar.png">
+      <link rel="icon" href="../../../assets/avatar.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>02 Local Type Inference (var) - ML Engineer</title>
+        <title>Introduction & Guide - ML Engineer</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,9 +55,9 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -84,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#local-variable-type-inference-var" class="md-skip">
+        <a href="#comprehensive-guide-to-google-antigravity-agy" class="md-skip">
           Skip to content
         </a>
       
@@ -100,9 +98,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="ML Engineer" class="md-header__button md-logo" aria-label="ML Engineer" data-md-component="logo">
+    <a href="../../.." title="ML Engineer" class="md-header__button md-logo" aria-label="ML Engineer" data-md-component="logo">
       
-  <img src="../../../../assets/avatar.png" alt="logo">
+  <img src="../../../assets/avatar.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02 Local Type Inference (var)
+              Introduction & Guide
             
           </span>
         </div>
@@ -231,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -259,7 +257,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-tabs__link">
+        <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-tabs__link">
           
   
   
@@ -278,7 +276,12 @@
   
   
   
+  
     
+    
+      
+  
+  
   
   
     
@@ -287,22 +290,11 @@
   
   
   
-    
-  
   
     
     
-      
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../week_1/01_introduction_to_java_and_programming_paradigms/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-tabs__link">
           
   
   
@@ -335,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-tabs__link">
+        <a href="../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-tabs__link">
           
   
   
@@ -365,7 +357,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-tabs__link">
+        <a href="../../../IV%20Deep_Learning/I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-tabs__link">
           
   
   
@@ -384,6 +376,8 @@
   
   
   
+    
+  
   
     
     
@@ -391,11 +385,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -438,9 +434,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="ML Engineer" class="md-nav__button md-logo" aria-label="ML Engineer" data-md-component="logo">
+    <a href="../../.." title="ML Engineer" class="md-nav__button md-logo" aria-label="ML Engineer" data-md-component="logo">
       
-  <img src="../../../../assets/avatar.png" alt="logo">
+  <img src="../../../assets/avatar.png" alt="logo">
 
     </a>
     ML Engineer
@@ -467,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -602,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
         
   
   
@@ -630,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
         
   
   
@@ -658,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
         
   
   
@@ -686,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
         
   
   
@@ -714,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
         
   
   
@@ -742,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
         
   
   
@@ -770,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
         
   
   
@@ -798,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
         
   
   
@@ -888,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="md-nav__link">
         
   
   
@@ -916,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../I%20Foundations/Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="md-nav__link">
+      <a href="../../../I%20Foundations/Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="md-nav__link">
         
   
   
@@ -956,31 +952,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -998,7 +991,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1013,31 +1006,28 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
         
           
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
   
@@ -1055,7 +1045,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1127,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_1/01_introduction_to_java_and_programming_paradigms/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-nav__link">
         
   
   
@@ -1155,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_1/02_data_types_and_type_systems/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_1/02_data_types_and_type_systems/" class="md-nav__link">
         
   
   
@@ -1183,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_1/03_memory_management_stack_vs_heap/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_1/03_memory_management_stack_vs_heap/" class="md-nav__link">
         
   
   
@@ -1211,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_1/04_abstraction_and_modularity/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_1/04_abstraction_and_modularity/" class="md-nav__link">
         
   
   
@@ -1239,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_1/05_object_oriented_concepts/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_1/05_object_oriented_concepts/" class="md-nav__link">
         
   
   
@@ -1267,7 +1257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_1/06_classes_and_objects/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_1/06_classes_and_objects/" class="md-nav__link">
         
   
   
@@ -1357,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_2/01_a_first_taste_of_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_2/01_a_first_taste_of_java/" class="md-nav__link">
         
   
   
@@ -1385,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_2/02_basic_datatypes_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_2/02_basic_datatypes_in_java/" class="md-nav__link">
         
   
   
@@ -1413,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_2/03_control_flow_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_2/03_control_flow_in_java/" class="md-nav__link">
         
   
   
@@ -1441,7 +1431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_2/04_defining_classes_and_objects/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_2/04_defining_classes_and_objects/" class="md-nav__link">
         
   
   
@@ -1469,7 +1459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_2/05_basic_input_and_output/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_2/05_basic_input_and_output/" class="md-nav__link">
         
   
   
@@ -1559,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_3/01_philosophy_of_object_oriented_programming/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_3/01_philosophy_of_object_oriented_programming/" class="md-nav__link">
         
   
   
@@ -1587,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_3/02_subclasses_and_inheritance/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_3/02_subclasses_and_inheritance/" class="md-nav__link">
         
   
   
@@ -1615,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_3/03_dynamic_dispatch_and_polymorphism/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_3/03_dynamic_dispatch_and_polymorphism/" class="md-nav__link">
         
   
   
@@ -1643,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_3/04_the_java_class_hierarchy/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_3/04_the_java_class_hierarchy/" class="md-nav__link">
         
   
   
@@ -1671,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_3/05_subtyping_vs_inheritance/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_3/05_subtyping_vs_inheritance/" class="md-nav__link">
         
   
   
@@ -1699,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_3/06_java_modifiers/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_3/06_java_modifiers/" class="md-nav__link">
         
   
   
@@ -1789,7 +1779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_4/01_abstract_classes_and_Interfaces/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_4/01_abstract_classes_and_Interfaces/" class="md-nav__link">
         
   
   
@@ -1817,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_4/02_interfaces/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_4/02_interfaces/" class="md-nav__link">
         
   
   
@@ -1845,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_4/03_private_classes/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_4/03_private_classes/" class="md-nav__link">
         
   
   
@@ -1873,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_4/04_controlled_interaction_with_objects/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_4/04_controlled_interaction_with_objects/" class="md-nav__link">
         
   
   
@@ -1901,7 +1891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_4/05_CallBacks/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_4/05_CallBacks/" class="md-nav__link">
         
   
   
@@ -1929,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_4/06_Interators/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_4/06_Interators/" class="md-nav__link">
         
   
   
@@ -1957,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_4/Java_Week_4_Mastery_Notes/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_4/Java_Week_4_Mastery_Notes/" class="md-nav__link">
         
   
   
@@ -2047,7 +2037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_5/01_polymorphism_revisited/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_5/01_polymorphism_revisited/" class="md-nav__link">
         
   
   
@@ -2075,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_5/02_java_generics/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_5/02_java_generics/" class="md-nav__link">
         
   
   
@@ -2103,7 +2093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_5/03_generics_and_subtyping/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_5/03_generics_and_subtyping/" class="md-nav__link">
         
   
   
@@ -2131,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_5/04_java_reflection/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_5/04_java_reflection/" class="md-nav__link">
         
   
   
@@ -2159,7 +2149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_5/05_type_erasure_and_runtime_implications/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_5/05_type_erasure_and_runtime_implications/" class="md-nav__link">
         
   
   
@@ -2249,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_6/01_the_benefits_of_indirection/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_6/01_the_benefits_of_indirection/" class="md-nav__link">
         
   
   
@@ -2277,7 +2267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_6/02_java_collections_framework/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_6/02_java_collections_framework/" class="md-nav__link">
         
   
   
@@ -2305,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_6/03_concrete_collections/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_6/03_concrete_collections/" class="md-nav__link">
         
   
   
@@ -2333,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_6/04_java_maps/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_6/04_java_maps/" class="md-nav__link">
         
   
   
@@ -2423,7 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_7/01_dealing_with_errors/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_7/01_dealing_with_errors/" class="md-nav__link">
         
   
   
@@ -2451,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_7/02_exceptions_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_7/02_exceptions_in_java/" class="md-nav__link">
         
   
   
@@ -2479,7 +2469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_7/03_packages_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_7/03_packages_in_java/" class="md-nav__link">
         
   
   
@@ -2507,7 +2497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_7/04_assertions_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_7/04_assertions_in_java/" class="md-nav__link">
         
   
   
@@ -2535,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_7/05_logging_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_7/05_logging_in_java/" class="md-nav__link">
         
   
   
@@ -2568,8 +2558,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2582,11 +2570,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_8" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1_8" >
         
           
           <label class="md-nav__link" for="__nav_3_1_8" id="__nav_3_1_8_label" tabindex="0">
@@ -2607,7 +2597,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2625,7 +2615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_object_cloning/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_8/01_object_cloning/" class="md-nav__link">
         
   
   
@@ -2650,19 +2640,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../II%20Programming/Java/week_8/02_type_inference/" class="md-nav__link">
         
   
   
@@ -2678,7 +2659,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2691,7 +2671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_higher_order_functions_and_lambdas/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_8/03_higher_order_functions_and_lambdas/" class="md-nav__link">
         
   
   
@@ -2719,7 +2699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_introduction_to_streams/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_8/04_introduction_to_streams/" class="md-nav__link">
         
   
   
@@ -2809,7 +2789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_9/01_optional_type/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_9/01_optional_type/" class="md-nav__link">
         
   
   
@@ -2837,7 +2817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_9/02_collecting_results_from_streams/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_9/02_collecting_results_from_streams/" class="md-nav__link">
         
   
   
@@ -2865,7 +2845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_9/03_input_and_output_streams/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_9/03_input_and_output_streams/" class="md-nav__link">
         
   
   
@@ -2893,7 +2873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_9/04_serialization_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_9/04_serialization_in_java/" class="md-nav__link">
         
   
   
@@ -2983,7 +2963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_10/01_concurrency_threads_and_processes/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_10/01_concurrency_threads_and_processes/" class="md-nav__link">
         
   
   
@@ -3011,7 +2991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_10/02_race_conditions_and_critical_sections/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_10/02_race_conditions_and_critical_sections/" class="md-nav__link">
         
   
   
@@ -3039,7 +3019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_10/03_mutual_exclusion_algorithms/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_10/03_mutual_exclusion_algorithms/" class="md-nav__link">
         
   
   
@@ -3067,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_10/04_hardware_synchronization_primitives/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_10/04_hardware_synchronization_primitives/" class="md-nav__link">
         
   
   
@@ -3095,7 +3075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_10/05_monitors_concept/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_10/05_monitors_concept/" class="md-nav__link">
         
   
   
@@ -3185,7 +3165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_11/01_monitors_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_11/01_monitors_in_java/" class="md-nav__link">
         
   
   
@@ -3213,7 +3193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_11/02_threads_in_java/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_11/02_threads_in_java/" class="md-nav__link">
         
   
   
@@ -3241,7 +3221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_11/03_concurrent_programming_example/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_11/03_concurrent_programming_example/" class="md-nav__link">
         
   
   
@@ -3269,7 +3249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_11/04_thread_safe_collections_and_utilities/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_11/04_thread_safe_collections_and_utilities/" class="md-nav__link">
         
   
   
@@ -3359,7 +3339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_12/01_graphical_interfaces_and_event_driven_programming/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_12/01_graphical_interfaces_and_event_driven_programming/" class="md-nav__link">
         
   
   
@@ -3387,7 +3367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_12/02_the_swing_toolkit/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_12/02_the_swing_toolkit/" class="md-nav__link">
         
   
   
@@ -3415,7 +3395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week_12/03_swing_event_handling_and_examples/" class="md-nav__link">
+      <a href="../../../II%20Programming/Java/week_12/03_swing_event_handling_and_examples/" class="md-nav__link">
         
   
   
@@ -3465,13 +3445,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3480,7 +3457,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   
@@ -3516,7 +3493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Python/soon/" class="md-nav__link">
+      <a href="../../../II%20Programming/Python/soon/" class="md-nav__link">
         
   
   
@@ -3558,13 +3535,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3573,7 +3547,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   
@@ -3609,7 +3583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Algorithms_and_DSA/01_Abstract_Data_Types/" class="md-nav__link">
+      <a href="../../../II%20Programming/Algorithms_and_DSA/01_Abstract_Data_Types/" class="md-nav__link">
         
   
   
@@ -3651,13 +3625,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3666,7 +3637,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   
@@ -3702,7 +3673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../System_Design/01_Zero_Trust_Security/" class="md-nav__link">
+      <a href="../../../II%20Programming/System_Design/01_Zero_Trust_Security/" class="md-nav__link">
         
   
   
@@ -3730,7 +3701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../System_Design/02_Identity_and_Access_Management/" class="md-nav__link">
+      <a href="../../../II%20Programming/System_Design/02_Identity_and_Access_Management/" class="md-nav__link">
         
   
   
@@ -3758,7 +3729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="md-nav__link">
+      <a href="../../../II%20Programming/System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="md-nav__link">
         
   
   
@@ -3786,7 +3757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../System_Design/04_Phoneblok_Design/" class="md-nav__link">
+      <a href="../../../II%20Programming/System_Design/04_Phoneblok_Design/" class="md-nav__link">
         
   
   
@@ -3814,7 +3785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../System_Design/05_Lego_Design_Philosophy/" class="md-nav__link">
+      <a href="../../../II%20Programming/System_Design/05_Lego_Design_Philosophy/" class="md-nav__link">
         
   
   
@@ -3965,7 +3936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-nav__link">
+      <a href="../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-nav__link">
         
   
   
@@ -4055,7 +4026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../III%20Machine_Learning/Practice_and_Auditing_MLP/01_Introduction/" class="md-nav__link">
+      <a href="../../../III%20Machine_Learning/Practice_and_Auditing_MLP/01_Introduction/" class="md-nav__link">
         
   
   
@@ -4206,7 +4177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-nav__link">
         
   
   
@@ -4288,7 +4259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/II%20Pytorch%20Fundamentals/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/II%20Pytorch%20Fundamentals/" class="md-nav__link">
         
   
   
@@ -4316,7 +4287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/III%20Pytorch%20Workflow/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/III%20Pytorch%20Workflow/" class="md-nav__link">
         
   
   
@@ -4344,7 +4315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/IV%20Customer%20Churn%20Prediction/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/IV%20Customer%20Churn%20Prediction/" class="md-nav__link">
         
   
   
@@ -4372,7 +4343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/V%20XOR%20Problem/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/V%20XOR%20Problem/" class="md-nav__link">
         
   
   
@@ -4400,7 +4371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/VI%20Fashion%20MNIST%20Classification/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/VI%20Fashion%20MNIST%20Classification/" class="md-nav__link">
         
   
   
@@ -4490,7 +4461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/CNN_Fundamentals/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/CNN_Fundamentals/" class="md-nav__link">
         
   
   
@@ -4518,7 +4489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/Transfer_Learning/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/Transfer_Learning/" class="md-nav__link">
         
   
   
@@ -4546,7 +4517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/Image_Segmentation_UNET/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/Image_Segmentation_UNET/" class="md-nav__link">
         
   
   
@@ -4644,7 +4615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Week_01_Mastery_ANN_and_PyTorch/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Week_01_Mastery_ANN_and_PyTorch/" class="md-nav__link">
         
   
   
@@ -4672,7 +4643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch/" class="md-nav__link">
         
   
   
@@ -4700,7 +4671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
         
   
   
@@ -4728,7 +4699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
         
   
   
@@ -4756,7 +4727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
         
   
   
@@ -4784,7 +4755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
         
   
   
@@ -4812,7 +4783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
         
   
   
@@ -4840,7 +4811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
         
   
   
@@ -4868,7 +4839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
         
   
   
@@ -4896,7 +4867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
         
   
   
@@ -4924,7 +4895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../IV%20Deep_Learning/II%20DL/Master_Curriculum_Tier_List_Robotics_AI_and_Microfly/" class="md-nav__link">
+      <a href="../../../IV%20Deep_Learning/II%20DL/Master_Curriculum_Tier_List_Robotics_AI_and_Microfly/" class="md-nav__link">
         
   
   
@@ -4964,28 +4935,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -5003,7 +4977,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -5018,28 +4992,31 @@
                 
   
   
+    
   
   
+  
     
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="">
             
   
   
@@ -5057,7 +5034,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -5072,10 +5049,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction & Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -5091,6 +5095,226 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-core-ai-interaction-modalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Core AI Interaction Modalities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Core AI Interaction Modalities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-passive-antigravity-tab-autocomplete-supercomplete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Passive: Antigravity Tab (Autocomplete &amp; Supercomplete)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-instructive-inline-command-ctrl-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Instructive: Inline Command (Ctrl + I)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-collaborative-agent-mode-sidebar-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Collaborative: Agent Mode &amp; Sidebar Chat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-customization-system-file-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Customization System &amp; File Hierarchy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Customization System &amp; File Hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-workspace-project-rules-geminimd-agentsmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Workspace Project Rules (GEMINI.md / AGENTS.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-modular-workspace-rules-agentsrulesmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Modular Workspace Rules (.agents/rules/*.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-custom-workspace-skills-agentsskillsnameskillmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Custom Workspace Skills (.agents/skills/&lt;name&gt;/SKILL.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-tool-integrations-via-model-context-protocol-mcp_configjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Tool Integrations via Model Context Protocol (mcp_config.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-lifecycle-hooks-hooksjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Lifecycle Hooks (hooks.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-context-flow-progressive-disclosure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Context Flow &amp; Progressive Disclosure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-antigravity-cli-agy-terminal-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Antigravity CLI (agy) Terminal Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Antigravity CLI (agy) Terminal Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slash-commands-cheatsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slash Commands Cheatsheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-local-reference-links-runbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Local Reference Links &amp; Runbooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Local Reference Links &amp; Runbooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customization-rules-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customization &amp; Rules System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprehensive-tooling-manuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprehensive Tooling Manuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5131,6 +5355,214 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-core-ai-interaction-modalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Core AI Interaction Modalities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Core AI Interaction Modalities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-passive-antigravity-tab-autocomplete-supercomplete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Passive: Antigravity Tab (Autocomplete &amp; Supercomplete)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-instructive-inline-command-ctrl-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Instructive: Inline Command (Ctrl + I)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-collaborative-agent-mode-sidebar-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Collaborative: Agent Mode &amp; Sidebar Chat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-customization-system-file-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Customization System &amp; File Hierarchy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Customization System &amp; File Hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-workspace-project-rules-geminimd-agentsmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Workspace Project Rules (GEMINI.md / AGENTS.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-modular-workspace-rules-agentsrulesmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Modular Workspace Rules (.agents/rules/*.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-custom-workspace-skills-agentsskillsnameskillmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Custom Workspace Skills (.agents/skills/&lt;name&gt;/SKILL.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-tool-integrations-via-model-context-protocol-mcp_configjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Tool Integrations via Model Context Protocol (mcp_config.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-lifecycle-hooks-hooksjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Lifecycle Hooks (hooks.json)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-context-flow-progressive-disclosure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Context Flow &amp; Progressive Disclosure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-antigravity-cli-agy-terminal-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Antigravity CLI (agy) Terminal Workflows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Antigravity CLI (agy) Terminal Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slash-commands-cheatsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slash Commands Cheatsheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-local-reference-links-runbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Local Reference Links &amp; Runbooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Local Reference Links &amp; Runbooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customization-rules-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customization &amp; Rules System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprehensive-tooling-manuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprehensive Tooling Manuals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5154,7 +5586,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../../.." class="md-path__link">
+      <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -5176,45 +5608,11 @@
   
     
     
-      
-  
-  
-    
-    
       <li class="md-path__item">
-        <a href="../../week_1/01_introduction_to_java_and_programming_paradigms/" class="md-path__link">
+        <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    Programming
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../../week_1/01_introduction_to_java_and_programming_paradigms/" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Java
+    Tools
   </span>
 
         </a>
@@ -5232,10 +5630,10 @@
     
     
       <li class="md-path__item">
-        <a href="../01_object_cloning/" class="md-path__link">
+        <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    Week 8: Cloning, Type Inference & Lambdas
+    Antigravity
   </span>
 
         </a>
@@ -5257,39 +5655,189 @@
   
 
 
-<h1 id="local-variable-type-inference-var">Local Variable Type Inference (<code>var</code>)<a class="headerlink" href="#local-variable-type-inference-var" title="Permanent link">&para;</a></h1>
+<h1 id="comprehensive-guide-to-google-antigravity-agy">Comprehensive Guide to Google Antigravity (AGY)<a class="headerlink" href="#comprehensive-guide-to-google-antigravity-agy" title="Permanent link">&para;</a></h1>
+<p>Antigravity is an AI-first agentic pair programming environment and command-line interface (<code>agy</code>) designed by Google DeepMind. It bridges direct code intelligence with autonomous agent workflows, terminal orchestration, and granular project customization.</p>
+<hr />
+<pre class="mermaid"><code>flowchart TD
+    A["Antigravity Ecosystem"] --&gt; B["1. Core AI Modalities"]
+    A --&gt; C["2. Customization Architecture"]
+    A --&gt; D["3. Progressive Context Flow"]
+    A --&gt; E["4. CLI &amp; IDE Workflows"]
+
+    B --&gt; B1["Tab Autocomplete • Inline Edit (Ctrl+I) • Collaborative Agent"]
+    C --&gt; C1["GEMINI.md • .agents/rules/ • Custom Skills • MCP Servers"]
+    D --&gt; D1["Always-on Rules vs. Progressive On-Demand Skills Loading"]
+    E --&gt; E1["Keyboard Shortcuts • agy CLI Pipes • Slash Commands"]</code></pre>
+<hr />
+<h2 id="1-core-ai-interaction-modalities">1. Core AI Interaction Modalities<a class="headerlink" href="#1-core-ai-interaction-modalities" title="Permanent link">&para;</a></h2>
+<p>Antigravity operates across three distinct interaction tiers based on the task complexity:</p>
+<h3 id="a-passive-antigravity-tab-autocomplete-supercomplete">A. Passive: Antigravity Tab (Autocomplete &amp; Supercomplete)<a class="headerlink" href="#a-passive-antigravity-tab-autocomplete-supercomplete" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Introduced in Java 10 to reduce repetitive boilerplate</li>
-<li>Allows the compiler to <strong>infer the type</strong> of a local variable from its initialization expression at compile-time.</li>
+<li><strong>Intent Prediction:</strong> Anticipates code, docstrings, imports, and navigation directly at your cursor with grey ghost text.</li>
+<li><strong>Supercomplete:</strong> Suggests multi-line code diffs (including refactorings and deletions) in floating inline windows.</li>
+<li><strong>Keyboard Controls:</strong></li>
+<li><kbd>Tab</kbd> → Accept full suggestion.</li>
+<li><kbd>Ctrl</kbd> + <kbd>→</kbd> → Accept suggestion word-by-word.</li>
+<li><kbd>Esc</kbd> → Dismiss suggestion.</li>
+<li><strong>Tab-to-Import:</strong> Automatically adds missing imports at the top of the file when a new module or library is referenced.</li>
 </ul>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Traditional Java:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">departmentStaff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;&gt;</span><span class="p">();</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// With Type Inference (var):</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">var</span><span class="w"> </span><span class="n">departmentStaff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;&gt;</span><span class="p">();</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kd">var</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">          </span><span class="c1">// Inferred as int</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kd">var</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">;</span><span class="w">   </span><span class="c1">// Inferred as String</span>
+<h3 id="b-instructive-inline-command-ctrl-i">B. Instructive: Inline Command (<kbd>Ctrl</kbd> + <kbd>I</kbd>)<a class="headerlink" href="#b-instructive-inline-command-ctrl-i" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Targeted Refactoring:</strong> Highlight any block of code, comments, or documentation and press <kbd>Ctrl</kbd> + <kbd>I</kbd> <em>(or <code>Cmd + I</code> on macOS)</em>.</li>
+<li><strong>Inline Diff Canvas:</strong> Generates a real-time red/green visual diff directly in your editor.</li>
+<li><strong>Accept / Reject:</strong> Press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to accept changes in place.</li>
+<li><strong>Diagnostic Quick-Fix (<kbd>Ctrl</kbd> + <kbd>.</kbd>):</strong> Place your cursor over any compiler/linter error and click <em>"Fix with Antigravity"</em> to resolve syntax errors or broken types automatically.</li>
+</ul>
+<h3 id="c-collaborative-agent-mode-sidebar-chat">C. Collaborative: Agent Mode &amp; Sidebar Chat<a class="headerlink" href="#c-collaborative-agent-mode-sidebar-chat" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Autonomous Pairing:</strong> Reads and writes project files, executes shell commands, runs test suites, manages background tasks, and performs multi-step codebase refactoring.</li>
+<li><strong>Pair Programming Console:</strong> Accessed via the sidebar or by pressing <kbd>Ctrl</kbd> + <kbd>L</kbd>.</li>
+</ul>
+<hr />
+<h2 id="2-customization-system-file-hierarchy">2. Customization System &amp; File Hierarchy<a class="headerlink" href="#2-customization-system-file-hierarchy" title="Permanent link">&para;</a></h2>
+<p>You have full control over the agent's persona, constraints, workflows, and tool integrations through a structured file hierarchy.</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Highest Priority
+        A["1. Current Directory Rules&lt;br&gt;GEMINI.md / AGENTS.md"]
+    end
+    subgraph High Priority
+        B["2. Workspace Modular Rules&lt;br&gt;.agents/rules/*.md"]
+    end
+    subgraph Medium Priority
+        C["3. Workspace Custom Skills&lt;br&gt;.agents/skills/&lt;name&gt;/SKILL.md"]
+    end
+    subgraph Low Priority
+        D["4. Global Machine Config&lt;br&gt;~/.gemini/antigravity-cli/rules.md"]
+    end
+    subgraph Default
+        E["5. Built-in System Skills&lt;br&gt;~/.gemini/antigravity-cli/builtin/skills/"]
+    end
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E</code></pre>
+<h3 id="a-workspace-project-rules-geminimd-agentsmd">A. Workspace Project Rules (<code>GEMINI.md</code> / <code>AGENTS.md</code>)<a class="headerlink" href="#a-workspace-project-rules-geminimd-agentsmd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Primary Scope:</strong> Placed at the root of your workspace (<code>/home/dev/SE/GEMINI.md</code>) or in any subdirectory.</li>
+<li><strong>Implicitly Always On:</strong> These files do not require frontmatter tags; they are <strong>automatically loaded on 100% of conversation turns</strong>.</li>
+<li><strong>Cascading Inheritance:</strong> Rules placed in subdirectories (e.g., <code>Devendra/GEMINI.md</code>) automatically inherit all parent rules and add folder-specific guidelines.</li>
+<li><strong>Best Use Cases:</strong></li>
+<li>Strict constraints (e.g. <em>"Never delete personal data"</em>, <em>"Enforce non-destructive package freeze"</em>).</li>
+<li>Project coding standards and architectural patterns.</li>
+<li>Custom safety triggers (e.g. <code>#read-only</code>, <code>#audit</code>, <code>#dry-run</code>).</li>
+</ul>
+<h3 id="b-modular-workspace-rules-agentsrulesmd">B. Modular Workspace Rules (<code>.agents/rules/*.md</code>)<a class="headerlink" href="#b-modular-workspace-rules-agentsrulesmd" title="Permanent link">&para;</a></h3>
+<p>For granular, file-specific, or modular guidelines:
+* <strong>Path:</strong> <code>.agents/rules/&lt;rule-name&gt;.md</code>
+* <strong>Trigger Modes (YAML Frontmatter):</strong>
+  <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">trigger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always_on</span><span class="w">        </span><span class="c1"># Loaded unconditionally every turn</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># OR</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">trigger</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">model_decision</span><span class="w">   </span><span class="c1"># Loaded only when relevant to the user request</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Enforce</span><span class="nv"> </span><span class="s">strict</span><span class="nv"> </span><span class="s">TypeScript</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">handling&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nn">---</span>
+</span></code></pre></div></p>
+<h3 id="c-custom-workspace-skills-agentsskillsnameskillmd">C. Custom Workspace Skills (<code>.agents/skills/&lt;name&gt;/SKILL.md</code>)<a class="headerlink" href="#c-custom-workspace-skills-agentsskillsnameskillmd" title="Permanent link">&para;</a></h3>
+<p>Skills teach the agent specialized multi-step procedures, runbooks, and domain workflows:
+* <strong>Path:</strong> <code>.agents/skills/&lt;skill_name&gt;/SKILL.md</code>
+* <strong>Structure:</strong>
+  <div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>---
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>name: device-debloat-runbook
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gu">description: Step-by-step procedure to inspect and debloat Android devices safely.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="gu">---</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="gh"># Device Debloat Runbook</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">1.</span> Check connected ADB devices via <span class="sb">`adb devices -l`</span>.
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">2.</span> Inspect memory and NAND swap state.
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">3.</span> Freeze non-essential packages using <span class="sb">`pm disable-user --user 0`</span>.
 </span></code></pre></div>
-<hr />
-<h1 id="what-var-is-and-is-not">What <code>var</code> IS and IS NOT<a class="headerlink" href="#what-var-is-and-is-not" title="Permanent link">&para;</a></h1>
+* <strong>Best Use Cases:</strong>
+  * Database migration runbooks.
+  * Release deployment checklists.
+  * Device optimization and diagnostic scripts.</p>
+<h3 id="d-tool-integrations-via-model-context-protocol-mcp_configjson">D. Tool Integrations via Model Context Protocol (<code>mcp_config.json</code>)<a class="headerlink" href="#d-tool-integrations-via-model-context-protocol-mcp_configjson" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong><code>var</code> is STILL statically typed</strong>: Type is fixed at compile-time; cannot assign an integer to <code>message</code> later!</li>
-<li><strong><code>var</code> is NOT <code>any</code> or dynamic typing</strong> (unlike Python or JavaScript).</li>
+<li><strong>Path:</strong> <code>mcp_config.json</code> or <code>.agents/mcp_config.json</code></li>
+<li>Connects the agent to custom local Python scripts, PostgreSQL databases, Docker daemons, or third-party APIs using the open Model Context Protocol.</li>
 </ul>
-<h3 id="restrictions-on-var">Restrictions on <code>var</code>:<a class="headerlink" href="#restrictions-on-var" title="Permanent link">&para;</a></h3>
+<h3 id="e-lifecycle-hooks-hooksjson">E. Lifecycle Hooks (<code>hooks.json</code>)<a class="headerlink" href="#e-lifecycle-hooks-hooksjson" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Only permitted for <strong>local variables inside methods with initializers</strong></li>
-<li>Cannot be used for:</li>
-<li>Class instance variables / fields</li>
-<li>Method parameters or return types</li>
-<li>Uninitialized variables (<code>var x;</code> is illegal)</li>
-<li>Null initialization (<code>var x = null;</code> is illegal)</li>
+<li><strong>Path:</strong> <code>hooks.json</code> or <code>.agents/hooks.json</code></li>
+<li>Runs pre-execution commands, linters, or security checks before and after specific tool executions.</li>
 </ul>
 <hr />
-<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<h2 id="3-context-flow-progressive-disclosure">3. Context Flow &amp; Progressive Disclosure<a class="headerlink" href="#3-context-flow-progressive-disclosure" title="Permanent link">&para;</a></h2>
+<p>To prevent context bloat and keep response latency minimal, Antigravity uses <strong>Progressive Disclosure</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Loading Behavior</th>
+<th style="text-align: left;">Memory / Token Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>GEMINI.md</code> Rules</strong></td>
+<td style="text-align: left;"><strong>Always Injected</strong> on every prompt</td>
+<td style="text-align: left;">Minimal token footprint (~200–500 tokens)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Available Skills</strong></td>
+<td style="text-align: left;"><strong>Index Only</strong> (Names &amp; 1-sentence summaries)</td>
+<td style="text-align: left;">Tiny (~50 tokens)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Full Skill Documentation</strong></td>
+<td style="text-align: left;"><strong>Loaded On-Demand Only</strong> when activated</td>
+<td style="text-align: left;">Zero background token waste</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Project Source Code</strong></td>
+<td style="text-align: left;"><strong>Read On-Demand</strong> via read tools (<code>view_file</code>)</td>
+<td style="text-align: left;">Clean context window</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Session Transcripts</strong></td>
+<td style="text-align: left;"><strong>Persisted to Disk</strong> in JSONL format</td>
+<td style="text-align: left;">Survives VS Code restarts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-antigravity-cli-agy-terminal-workflows">4. Antigravity CLI (<code>agy</code>) Terminal Workflows<a class="headerlink" href="#4-antigravity-cli-agy-terminal-workflows" title="Permanent link">&para;</a></h2>
+<p>You can interact with Antigravity directly from your terminal:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 1. Direct instructions &amp; code generation</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>agy<span class="w"> </span><span class="s2">&quot;Review and fix typos in Devendra/profile.md&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 2. Piping shell output directly to the agent</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>cat<span class="w"> </span>error.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>agy<span class="w"> </span><span class="s2">&quot;Explain this stack trace and suggest a patch&quot;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># 3. Interactive pair-programming console</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>agy
+</span></code></pre></div>
+<h3 id="slash-commands-cheatsheet">Slash Commands Cheatsheet<a class="headerlink" href="#slash-commands-cheatsheet" title="Permanent link">&para;</a></h3>
+<p>Slash commands automate complex pair-programming workflows:
+* <strong><code>/plan</code></strong> — Formulate a detailed step-by-step plan before making file edits.
+* <strong><code>/goal</code></strong> — Execute long-running autonomous tasks without stopping until completion.
+* <strong><code>/schedule</code></strong> — Set recurring cron tasks or one-shot background timers.
+* <strong><code>/grill-me</code></strong> — Run an interactive design interview to resolve architecture decisions.
+* <strong><code>/learn</code></strong> — Persist a newly learned workflow or correction for future conversations.</p>
+<hr />
+<h2 id="5-local-reference-links-runbooks">5. Local Reference Links &amp; Runbooks<a class="headerlink" href="#5-local-reference-links-runbooks" title="Permanent link">&para;</a></h2>
+<p>All built-in skill runbooks and reference guides are accessible directly in the system configuration:</p>
+<h3 id="customization-rules-system">Customization &amp; Rules System<a class="headerlink" href="#customization-rules-system" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>var</code> reduces visual clutter while maintaining full static compile-time type safety</li>
-<li>Restricted strictly to initialized local variables within method bodies</li>
+<li>📘 <strong>Customization System Guide:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/agy-customizations/SKILL.md</code></li>
+<li>📜 <strong>Rules &amp; Triggers Architecture:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/agy-customizations/docs/rules.md</code></li>
+<li>🧠 <strong>Skills Loading &amp; Progressive Disclosure:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/agy-customizations/docs/skills.md</code></li>
+<li>🔌 <strong>MCP Server Configuration Guide:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/agy-customizations/docs/mcp_servers.md</code></li>
+<li>🪝 <strong>Lifecycle Hooks Reference:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/agy-customizations/docs/hooks.md</code></li>
+</ul>
+<h3 id="comprehensive-tooling-manuals">Comprehensive Tooling Manuals<a class="headerlink" href="#comprehensive-tooling-manuals" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🚀 <strong>Antigravity Handbook (Main):</strong> <code>~/.gemini/antigravity-cli/builtin/skills/antigravity_guide/SKILL.md</code></li>
+<li>💻 <strong>CLI Reference Guide:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/antigravity_guide/references/cli.md</code></li>
+<li>🛠️ <strong>IDE Reference &amp; Keybindings:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/antigravity_guide/references/ide.md</code></li>
+<li>🐍 <strong>Python SDK Documentation:</strong> <code>~/.gemini/antigravity-cli/builtin/skills/antigravity_guide/references/sdk.md</code></li>
 </ul>
 
 
@@ -5371,12 +5919,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../../../javascripts/katex.js"></script>
+        <script src="../../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
