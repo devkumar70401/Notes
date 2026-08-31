@@ -119,6 +119,14 @@ nav:
         - "IV Customer Churn Prediction": IV Deep_Learning/I DLGenAI/I ANNs/IV Customer Churn Prediction.ipynb
         - "V XOR Problem": IV Deep_Learning/I DLGenAI/I ANNs/V XOR Problem.ipynb
         - "VI Fashion MNIST Classification": IV Deep_Learning/I DLGenAI/I ANNs/VI Fashion MNIST Classification.ipynb
+        - extra:
+          - "The 4 Master Backprop Equations": IV Deep_Learning/I DLGenAI/I ANNs/extra/The_4_Master_Backpropagation_Equations_Demystified.md
+          - "Jacobian Matrices & Vector Chain Rule": IV Deep_Learning/I DLGenAI/I ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule.md
+          - "Multi-Architecture Batch Derivations": IV Deep_Learning/I DLGenAI/I ANNs/extra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
+          - "Microscopic Gradient Formulas": IV Deep_Learning/I DLGenAI/I ANNs/extra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
+          - "Role of Input Data in Backprop": IV Deep_Learning/I DLGenAI/I ANNs/extra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
+          - "XOR Problem Proof": IV Deep_Learning/I DLGenAI/I ANNs/extra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
+          - "Neural Networks & Jacobians": IV Deep_Learning/I DLGenAI/I ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians.md
       - II CNNs:
         - "CNN Fundamentals": IV Deep_Learning/I DLGenAI/II CNNs/CNN_Fundamentals.ipynb
         - "Transfer Learning": IV Deep_Learning/I DLGenAI/II CNNs/Transfer_Learning.ipynb
