@@ -5312,7 +5312,7 @@ It only ever needs the <strong>product</strong> of the incoming gradient row vec
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[Input x] ──(W₁,b₁)──► [z₁] ──(ReLU)──► [a₁] ──(W₂,b₂)──► [ŷ] ──(Loss)──► [Scalar L]
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                                                                             │
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>BACKWARD PASS (Backpropagation / Vector Chain Rule):                         │
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[∂L/∂W₁, ∂L/∂b₁] ◄── [δ₁] ◄── (ReLU') ◄── [∂L/∂a₁] ◄── [∂L/∂W₂, ∂L/∂b₂] ◄───┘
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[∂L/∂W₁, ∂L/∂b₁] ◄── [δ₁] ◄── (ReLU&#39;) ◄── [∂L/∂a₁] ◄── [∂L/∂W₂, ∂L/∂b₂] ◄───┘
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                                                           │
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>OPTIMIZER STEP (Gradient Descent):                         │
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>W₁ ← W₁ - η(∂L/∂W₁)                                        ▼
