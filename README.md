@@ -1,27 +1,80 @@
-# Machine Learning Engineer Knowledge Vault & Live Site
-
-Welcome to the central repository for the Machine Learning Engineer Knowledge Vault, hosted live at [https://devkumar70401.github.io/Notes/](https://devkumar70401.github.io/Notes/).
-
----
-
-## 🧭 Live Site Navigation Management
-
-The navigation tree and structure for the live site are defined and managed through the following core configuration files:
-
-1. **Master Navigation & Site Configuration:**
-   * **File:** [`mkdocs.yml`](file:///home/dev/SE/Notes/mkdocs.yml)
-   * **Role:** Defines the complete hierarchy under the `nav:` section, site metadata, Material for MkDocs theme settings, math rendering (KaTeX), Jupyter notebook plugins, and Markdown extensions.
-
-2. **Automated Documentation Sync Hook:**
-   * **File:** [`hooks/sync_docs.py`](file:///home/dev/SE/Notes/hooks/sync_docs.py)
-   * **Role:** An automated pre-build hook that dynamically synchronizes and symlinks markdown notes, Jupyter notebooks (`.ipynb`), and static assets into `.docs/` before MkDocs compiles the static site.
+# Machine Learning Engineer
+### BS in Data Science & Applications — IIT Madras
 
 ---
 
-## 🗂️ Knowledge Vault Structure
+## 1. Foundation Level
 
-* **`I Foundations/`**: Calculus, Linear Algebra, Optimization, Backpropagation derivations, and Computational Physics.
-* **`II Programming/`**: Core Java (Weeks 1–12), Python, Algorithms & DSA, and Zero-Fail System Design.
-* **`III Machine_Learning/`**: Practical Machine Learning, Data Wrangling, and Auditing.
-* **`IV Deep_Learning/`**: ANNs, CNNs, Transformers, and PyTorch workflows.
-* **`V Tools/`**: Developer tooling, system automation, and Antigravity guides.
+| Course | Notes | Full Understanding | YT Playlist | Supplementary |
+| :--- | :---: | :---: | :---: | :---: |
+| Mathematics 1 | | | | |
+| Mathematics 2 | | | | |
+| Statistics 1 | | | | |
+| Statistics 2 | | | | |
+| Computational Thinking (CT) | | | | |
+| Introduction to Python | | | | |
+| English 1 | | | | |
+| English 2 | | | | |
+
+---
+
+## 2. Diploma Level
+
+### Diploma in Programming
+
+| Course | Notes | Full Understanding | YT Playlist | Supplementary |
+| :--- | :---: | :---: | :---: | :---: |
+| System Commands | | | | |
+| Database Management Systems (DBMS) | | | | |
+| Programming, Data Structures & Algorithms (PDSA) | | | | |
+| Java Programming | | | | |
+| Application Development 1 (MAD-1) | | | | |
+| Application Development 2 (MAD-2) | | | | |
+
+### Diploma in Data Science
+
+| Course | Notes | Full Understanding | YT Playlist | Supplementary |
+| :--- | :---: | :---: | :---: | :---: |
+| Machine Learning Foundations (MLF) | | | | |
+| Machine Learning Techniques (MLT) | | | | |
+| Machine Learning Practice (MLP) | | | | |
+| Tools in Data Science (TDS) | | | | |
+| Business Data Management (BDM) | | | | |
+| Deep Learning & Generative AI (DLGenAI) | | | | |
+
+### Diploma Projects
+
+| Project | Notes | Full Understanding | YT Playlist | Supplementary |
+| :--- | :---: | :---: | :---: | :---: |
+| Application Development 1 Project (MAD-1P) | | | | |
+| Application Development 2 Project (MAD-2P) | | | | |
+| Machine Learning Practice Project (MLP-P) | | | | |
+| Deep Learning & Generative AI Project (DLGenAI-P) | | | | |
+
+---
+
+## 3. BSc Degree Level
+
+| Course | Notes | Full Understanding | YT Playlist | Supplementary |
+| :--- | :---: | :---: | :---: | :---: |
+| Deep Learning | | | | |
+| AI: Search Methods for Problem Solving | | | | |
+| Software Engineering | | | | |
+| Software Testing | | | | |
+| Strategies for Professional Growth | | | | |
+| Data Science & AI Lab | | | | |
+| Programming in C / Technical Elective | | | | |
+
+---
+
+## 4. BS Degree Level
+
+| Course | Notes | Full Understanding | YT Playlist | Supplementary |
+| :--- | :---: | :---: | :---: | :---: |
+| Large Language Models (LLMs) | | | | |
+| Deep Learning Practice (DLP) | | | | |
+| Mathematical Foundations of Generative AI | | | | |
+| MLOps | | | | |
+| Algorithms for Data Science | | | | |
+| Reinforcement Learning | | | | |
+| Game Theory & Strategy / HS-MG Elective | | | | |

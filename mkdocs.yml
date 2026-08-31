@@ -10,232 +10,121 @@ hooks:
   - hooks/sync_docs.py
 
 nav:
-  - "Home": index.md
-  - I Foundations:
-    - Calculus_and_Linear_Algebra:
-      - "Jacobian_Matrices_and_Vector_Chain_Rule": I Foundations/Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule.md
-      - "Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations": I Foundations/Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
-      - "Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment": I Foundations/Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment.md
-      - "Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas": I Foundations/Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
-      - "Neural_Networks_Backpropagation_and_Jacobians": I Foundations/Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians.md
-      - "Role_of_Input_Data_in_Backpropagation_and_Weight_Updation": I Foundations/Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
-      - "The_4_Master_Backpropagation_Equations_Demystified": I Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified.md
-      - "The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail": I Foundations/Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
-    - Physics_and_Computation:
-      - "Computational_Science_Topology_Optimization_and_Quantum_Simulation": I Foundations/Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation.md
-      - "Quantum_Physics_and_Quantum_Computing_Mastery": I Foundations/Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery.md
-  - II Programming:
-    - Algorithms_and_DSA:
-      - "01_Abstract_Data_Types": II Programming/Algorithms_and_DSA/01_Abstract_Data_Types.md
-    - Java:
-      - week_1:
-        - "01_introduction_to_java_and_programming_paradigms": II Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms.md
-        - "02_data_types_and_type_systems": II Programming/Java/week_1/02_data_types_and_type_systems.md
-        - "03_memory_management_stack_vs_heap": II Programming/Java/week_1/03_memory_management_stack_vs_heap.md
-        - "04_abstraction_and_modularity": II Programming/Java/week_1/04_abstraction_and_modularity.md
-        - "05_object_oriented_concepts": II Programming/Java/week_1/05_object_oriented_concepts.md
-        - "06_classes_and_objects": II Programming/Java/week_1/06_classes_and_objects.md
-      - week_2:
-        - "01_a_first_taste_of_java": II Programming/Java/week_2/01_a_first_taste_of_java.md
-        - "02_basic_datatypes_in_java": II Programming/Java/week_2/02_basic_datatypes_in_java.md
-        - "03_control_flow_in_java": II Programming/Java/week_2/03_control_flow_in_java.md
-        - "04_defining_classes_and_objects": II Programming/Java/week_2/04_defining_classes_and_objects.md
-        - "05_basic_input_and_output": II Programming/Java/week_2/05_basic_input_and_output.md
-      - week_3:
-        - "01_philosophy_of_object_oriented_programming": II Programming/Java/week_3/01_philosophy_of_object_oriented_programming.md
-        - "02_subclasses_and_inheritance": II Programming/Java/week_3/02_subclasses_and_inheritance.md
-        - "03_dynamic_dispatch_and_polymorphism": II Programming/Java/week_3/03_dynamic_dispatch_and_polymorphism.md
-        - "04_the_java_class_hierarchy": II Programming/Java/week_3/04_the_java_class_hierarchy.md
-        - "05_subtyping_vs_inheritance": II Programming/Java/week_3/05_subtyping_vs_inheritance.md
-        - "06_java_modifiers": II Programming/Java/week_3/06_java_modifiers.md
-      - week_4:
-        - "01_abstract_classes_and_Interfaces": II Programming/Java/week_4/01_abstract_classes_and_Interfaces.md
-        - "02_interfaces": II Programming/Java/week_4/02_interfaces.md
-        - "03_private_classes": II Programming/Java/week_4/03_private_classes.md
-        - "04_controlled_interaction_with_objects": II Programming/Java/week_4/04_controlled_interaction_with_objects.md
-        - "05_CallBacks": II Programming/Java/week_4/05_CallBacks.md
-        - "06_Interators": II Programming/Java/week_4/06_Interators.md
-        - "Java_Week_4_Mastery_Notes": II Programming/Java/week_4/Java_Week_4_Mastery_Notes.md
-      - week_5:
-        - "01_polymorphism_revisited": II Programming/Java/week_5/01_polymorphism_revisited.md
-        - "02_java_generics": II Programming/Java/week_5/02_java_generics.md
-        - "03_generics_and_subtyping": II Programming/Java/week_5/03_generics_and_subtyping.md
-        - "04_java_reflection": II Programming/Java/week_5/04_java_reflection.md
-        - "05_type_erasure_and_runtime_implications": II Programming/Java/week_5/05_type_erasure_and_runtime_implications.md
-      - week_6:
-        - "01_the_benefits_of_indirection": II Programming/Java/week_6/01_the_benefits_of_indirection.md
-        - "02_java_collections_framework": II Programming/Java/week_6/02_java_collections_framework.md
-        - "03_concrete_collections": II Programming/Java/week_6/03_concrete_collections.md
-        - "04_java_maps": II Programming/Java/week_6/04_java_maps.md
-      - week_7:
-        - "01_dealing_with_errors": II Programming/Java/week_7/01_dealing_with_errors.md
-        - "02_exceptions_in_java": II Programming/Java/week_7/02_exceptions_in_java.md
-        - "03_packages_in_java": II Programming/Java/week_7/03_packages_in_java.md
-        - "04_assertions_in_java": II Programming/Java/week_7/04_assertions_in_java.md
-        - "05_logging_in_java": II Programming/Java/week_7/05_logging_in_java.md
-      - week_8:
-        - "01_object_cloning": II Programming/Java/week_8/01_object_cloning.md
-        - "02_type_inference": II Programming/Java/week_8/02_type_inference.md
-        - "03_higher_order_functions_and_lambdas": II Programming/Java/week_8/03_higher_order_functions_and_lambdas.md
-        - "04_introduction_to_streams": II Programming/Java/week_8/04_introduction_to_streams.md
-      - week_9:
-        - "01_optional_type": II Programming/Java/week_9/01_optional_type.md
-        - "02_collecting_results_from_streams": II Programming/Java/week_9/02_collecting_results_from_streams.md
-        - "03_input_and_output_streams": II Programming/Java/week_9/03_input_and_output_streams.md
-        - "04_serialization_in_java": II Programming/Java/week_9/04_serialization_in_java.md
-      - week_10:
-        - "01_concurrency_threads_and_processes": II Programming/Java/week_10/01_concurrency_threads_and_processes.md
-        - "02_race_conditions_and_critical_sections": II Programming/Java/week_10/02_race_conditions_and_critical_sections.md
-        - "03_mutual_exclusion_algorithms": II Programming/Java/week_10/03_mutual_exclusion_algorithms.md
-        - "04_hardware_synchronization_primitives": II Programming/Java/week_10/04_hardware_synchronization_primitives.md
-        - "05_monitors_concept": II Programming/Java/week_10/05_monitors_concept.md
-      - week_11:
-        - "01_monitors_in_java": II Programming/Java/week_11/01_monitors_in_java.md
-        - "02_threads_in_java": II Programming/Java/week_11/02_threads_in_java.md
-        - "03_concurrent_programming_example": II Programming/Java/week_11/03_concurrent_programming_example.md
-        - "04_thread_safe_collections_and_utilities": II Programming/Java/week_11/04_thread_safe_collections_and_utilities.md
-      - week_12:
-        - "01_graphical_interfaces_and_event_driven_programming": II Programming/Java/week_12/01_graphical_interfaces_and_event_driven_programming.md
-        - "02_the_swing_toolkit": II Programming/Java/week_12/02_the_swing_toolkit.md
-        - "03_swing_event_handling_and_examples": II Programming/Java/week_12/03_swing_event_handling_and_examples.md
-    - Python:
-      - "soon": II Programming/Python/soon.md
-    - System_Design:
-      - "01_Zero_Trust_Security": II Programming/System_Design/01_Zero_Trust_Security.md
-      - "02_Identity_and_Access_Management": II Programming/System_Design/02_Identity_and_Access_Management.md
-      - "03_Zero_Fail_Deterministic_Systems_Mastery": II Programming/System_Design/03_Zero_Fail_Deterministic_Systems_Mastery.md
-      - "04_Phoneblok_Design": II Programming/System_Design/04_Phoneblok_Design.md
-      - "05_Lego_Design_Philosophy": II Programming/System_Design/05_Lego_Design_Philosophy.md
-  - III Machine_Learning:
-    - Data_Wrangling_TDS:
-      - "01_Array_creation": III Machine_Learning/Data_Wrangling_TDS/01_Array_creation.ipynb
-    - MLP:
-      - "01_Introduction": III Machine_Learning/MLP/01_Introduction.ipynb
-  - IV Deep_Learning:
-    - I DLGenAI:
-      - I ANNs:
-        - extra:
-          - "Jacobian_Matrices_and_Vector_Chain_Rule": IV Deep_Learning/I DLGenAI/I ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule.md
-          - "Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations": IV Deep_Learning/I DLGenAI/I ANNs/extra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
-          - "Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas": IV Deep_Learning/I DLGenAI/I ANNs/extra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
-          - "Neural_Networks_Backpropagation_and_Jacobians": IV Deep_Learning/I DLGenAI/I ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians.md
-          - "Role_of_Input_Data_in_Backpropagation_and_Weight_Updation": IV Deep_Learning/I DLGenAI/I ANNs/extra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
-          - "The_4_Master_Backpropagation_Equations_Demystified": IV Deep_Learning/I DLGenAI/I ANNs/extra/The_4_Master_Backpropagation_Equations_Demystified.md
-          - "The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail": IV Deep_Learning/I DLGenAI/I ANNs/extra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
-        - "I ANN.pdf": IV Deep_Learning/I DLGenAI/I ANNs/I ANN.pdf
-        - "II Pytorch Fundamentals": IV Deep_Learning/I DLGenAI/I ANNs/II Pytorch Fundamentals.ipynb
-        - "III Pytorch Workflow": IV Deep_Learning/I DLGenAI/I ANNs/III Pytorch Workflow.ipynb
-        - "IV Customer Churn Prediction": IV Deep_Learning/I DLGenAI/I ANNs/IV Customer Churn Prediction.ipynb
-        - "V XOR Problem": IV Deep_Learning/I DLGenAI/I ANNs/V XOR Problem.ipynb
-        - "VI Fashion MNIST Classification": IV Deep_Learning/I DLGenAI/I ANNs/VI Fashion MNIST Classification.ipynb
-      - II CNNs:
-        - "I CNNs.pdf": IV Deep_Learning/I DLGenAI/II CNNs/I CNNs.pdf
-        - "II CNN_Fundamentals": IV Deep_Learning/I DLGenAI/II CNNs/II CNN_Fundamentals.ipynb
-        - "III Image_Segmentation_UNET": IV Deep_Learning/I DLGenAI/II CNNs/III Image_Segmentation_UNET.ipynb
-        - "IV Transfer_Learning": IV Deep_Learning/I DLGenAI/II CNNs/IV Transfer_Learning.ipynb
-  - V Tools:
+  - README.md: index.md
+  - II Diploma:
+    - I Diploma_in_Programming:
+      - III PDSA:
+        - 01_Abstract_Data_Types.md: II Diploma/I Diploma_in_Programming/III PDSA/01_Abstract_Data_Types.md
+      - IV Java:
+        - week_1:
+          - 01_introduction_to_java_and_programming_paradigms.md: II Diploma/I Diploma_in_Programming/IV Java/week_1/01_introduction_to_java_and_programming_paradigms.md
+          - 02_data_types_and_type_systems.md: II Diploma/I Diploma_in_Programming/IV Java/week_1/02_data_types_and_type_systems.md
+          - 03_memory_management_stack_vs_heap.md: II Diploma/I Diploma_in_Programming/IV Java/week_1/03_memory_management_stack_vs_heap.md
+          - 04_abstraction_and_modularity.md: II Diploma/I Diploma_in_Programming/IV Java/week_1/04_abstraction_and_modularity.md
+          - 05_object_oriented_concepts.md: II Diploma/I Diploma_in_Programming/IV Java/week_1/05_object_oriented_concepts.md
+          - 06_classes_and_objects.md: II Diploma/I Diploma_in_Programming/IV Java/week_1/06_classes_and_objects.md
+        - week_10:
+          - 01_concurrency_threads_and_processes.md: II Diploma/I Diploma_in_Programming/IV Java/week_10/01_concurrency_threads_and_processes.md
+          - 02_race_conditions_and_critical_sections.md: II Diploma/I Diploma_in_Programming/IV Java/week_10/02_race_conditions_and_critical_sections.md
+          - 03_mutual_exclusion_algorithms.md: II Diploma/I Diploma_in_Programming/IV Java/week_10/03_mutual_exclusion_algorithms.md
+          - 04_hardware_synchronization_primitives.md: II Diploma/I Diploma_in_Programming/IV Java/week_10/04_hardware_synchronization_primitives.md
+          - 05_monitors_concept.md: II Diploma/I Diploma_in_Programming/IV Java/week_10/05_monitors_concept.md
+        - week_11:
+          - 01_monitors_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_11/01_monitors_in_java.md
+          - 02_threads_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_11/02_threads_in_java.md
+          - 03_concurrent_programming_example.md: II Diploma/I Diploma_in_Programming/IV Java/week_11/03_concurrent_programming_example.md
+          - 04_thread_safe_collections_and_utilities.md: II Diploma/I Diploma_in_Programming/IV Java/week_11/04_thread_safe_collections_and_utilities.md
+        - week_12:
+          - 01_graphical_interfaces_and_event_driven_programming.md: II Diploma/I Diploma_in_Programming/IV Java/week_12/01_graphical_interfaces_and_event_driven_programming.md
+          - 02_the_swing_toolkit.md: II Diploma/I Diploma_in_Programming/IV Java/week_12/02_the_swing_toolkit.md
+          - 03_swing_event_handling_and_examples.md: II Diploma/I Diploma_in_Programming/IV Java/week_12/03_swing_event_handling_and_examples.md
+        - week_2:
+          - 01_a_first_taste_of_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_2/01_a_first_taste_of_java.md
+          - 02_basic_datatypes_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_2/02_basic_datatypes_in_java.md
+          - 03_control_flow_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_2/03_control_flow_in_java.md
+          - 04_defining_classes_and_objects.md: II Diploma/I Diploma_in_Programming/IV Java/week_2/04_defining_classes_and_objects.md
+          - 05_basic_input_and_output.md: II Diploma/I Diploma_in_Programming/IV Java/week_2/05_basic_input_and_output.md
+        - week_3:
+          - 01_philosophy_of_object_oriented_programming.md: II Diploma/I Diploma_in_Programming/IV Java/week_3/01_philosophy_of_object_oriented_programming.md
+          - 02_subclasses_and_inheritance.md: II Diploma/I Diploma_in_Programming/IV Java/week_3/02_subclasses_and_inheritance.md
+          - 03_dynamic_dispatch_and_polymorphism.md: II Diploma/I Diploma_in_Programming/IV Java/week_3/03_dynamic_dispatch_and_polymorphism.md
+          - 04_the_java_class_hierarchy.md: II Diploma/I Diploma_in_Programming/IV Java/week_3/04_the_java_class_hierarchy.md
+          - 05_subtyping_vs_inheritance.md: II Diploma/I Diploma_in_Programming/IV Java/week_3/05_subtyping_vs_inheritance.md
+          - 06_java_modifiers.md: II Diploma/I Diploma_in_Programming/IV Java/week_3/06_java_modifiers.md
+        - week_4:
+          - 01_abstract_classes_and_Interfaces.md: II Diploma/I Diploma_in_Programming/IV Java/week_4/01_abstract_classes_and_Interfaces.md
+          - 02_interfaces.md: II Diploma/I Diploma_in_Programming/IV Java/week_4/02_interfaces.md
+          - 03_private_classes.md: II Diploma/I Diploma_in_Programming/IV Java/week_4/03_private_classes.md
+          - 04_controlled_interaction_with_objects.md: II Diploma/I Diploma_in_Programming/IV Java/week_4/04_controlled_interaction_with_objects.md
+          - 05_CallBacks.md: II Diploma/I Diploma_in_Programming/IV Java/week_4/05_CallBacks.md
+          - 06_Interators.md: II Diploma/I Diploma_in_Programming/IV Java/week_4/06_Interators.md
+          - Java_Week_4_Mastery_Notes.md: II Diploma/I Diploma_in_Programming/IV Java/week_4/Java_Week_4_Mastery_Notes.md
+        - week_5:
+          - 01_polymorphism_revisited.md: II Diploma/I Diploma_in_Programming/IV Java/week_5/01_polymorphism_revisited.md
+          - 02_java_generics.md: II Diploma/I Diploma_in_Programming/IV Java/week_5/02_java_generics.md
+          - 03_generics_and_subtyping.md: II Diploma/I Diploma_in_Programming/IV Java/week_5/03_generics_and_subtyping.md
+          - 04_java_reflection.md: II Diploma/I Diploma_in_Programming/IV Java/week_5/04_java_reflection.md
+          - 05_type_erasure_and_runtime_implications.md: II Diploma/I Diploma_in_Programming/IV Java/week_5/05_type_erasure_and_runtime_implications.md
+        - week_6:
+          - 01_the_benefits_of_indirection.md: II Diploma/I Diploma_in_Programming/IV Java/week_6/01_the_benefits_of_indirection.md
+          - 02_java_collections_framework.md: II Diploma/I Diploma_in_Programming/IV Java/week_6/02_java_collections_framework.md
+          - 03_concrete_collections.md: II Diploma/I Diploma_in_Programming/IV Java/week_6/03_concrete_collections.md
+          - 04_java_maps.md: II Diploma/I Diploma_in_Programming/IV Java/week_6/04_java_maps.md
+        - week_7:
+          - 01_dealing_with_errors.md: II Diploma/I Diploma_in_Programming/IV Java/week_7/01_dealing_with_errors.md
+          - 02_exceptions_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_7/02_exceptions_in_java.md
+          - 03_packages_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_7/03_packages_in_java.md
+          - 04_assertions_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_7/04_assertions_in_java.md
+          - 05_logging_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_7/05_logging_in_java.md
+        - week_8:
+          - 01_object_cloning.md: II Diploma/I Diploma_in_Programming/IV Java/week_8/01_object_cloning.md
+          - 02_type_inference.md: II Diploma/I Diploma_in_Programming/IV Java/week_8/02_type_inference.md
+          - 03_higher_order_functions_and_lambdas.md: II Diploma/I Diploma_in_Programming/IV Java/week_8/03_higher_order_functions_and_lambdas.md
+          - 04_introduction_to_streams.md: II Diploma/I Diploma_in_Programming/IV Java/week_8/04_introduction_to_streams.md
+        - week_9:
+          - 01_optional_type.md: II Diploma/I Diploma_in_Programming/IV Java/week_9/01_optional_type.md
+          - 02_collecting_results_from_streams.md: II Diploma/I Diploma_in_Programming/IV Java/week_9/02_collecting_results_from_streams.md
+          - 03_input_and_output_streams.md: II Diploma/I Diploma_in_Programming/IV Java/week_9/03_input_and_output_streams.md
+          - 04_serialization_in_java.md: II Diploma/I Diploma_in_Programming/IV Java/week_9/04_serialization_in_java.md
+    - II Diploma_in_Data_Science:
+      - III MLP:
+        - 01_Introduction.md: II Diploma/II Diploma_in_Data_Science/III MLP/01_Introduction.md
+      - IV TDS:
+        - 01_Array_creation.md: II Diploma/II Diploma_in_Data_Science/IV TDS/01_Array_creation.md
+      - VI DLGenAI:
+        - I ANNs:
+          - extra:
+            - Jacobian_Matrices_and_Vector_Chain_Rule.md: II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule.md
+            - Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md: II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
+            - Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md: II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
+            - Neural_Networks_Backpropagation_and_Jacobians.md: II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians.md
+            - Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md: II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
+            - The_4_Master_Backpropagation_Equations_Demystified.md: II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/The_4_Master_Backpropagation_Equations_Demystified.md
+            - The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md: II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
+  - V Languages:
+    - I Python:
+      - soon.md: V Languages/I Python/soon.md
+    - II Rust:
+      - Readme.md: V Languages/II Rust/Readme.md
+  - VI Advanced_Foundations:
+    - I Physics_and_Computation:
+      - Computational_Science_Topology_Optimization_and_Quantum_Simulation.md: VI Advanced_Foundations/I Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation.md
+      - Quantum_Physics_and_Quantum_Computing_Mastery.md: VI Advanced_Foundations/I Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery.md
+    - II Calculus_and_Linear_Algebra:
+      - Jacobian_Matrices_and_Vector_Chain_Rule.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule.md
+      - Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md
+      - Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment.md
+      - Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md
+      - Neural_Networks_Backpropagation_and_Jacobians.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians.md
+      - Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md
+      - The_4_Master_Backpropagation_Equations_Demystified.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified.md
+      - The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md: VI Advanced_Foundations/II Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
+    - III System_Design:
+      - 01_Zero_Trust_Security.md: VI Advanced_Foundations/III System_Design/01_Zero_Trust_Security.md
+      - 02_Identity_and_Access_Management.md: VI Advanced_Foundations/III System_Design/02_Identity_and_Access_Management.md
+      - 03_Zero_Fail_Deterministic_Systems_Mastery.md: VI Advanced_Foundations/III System_Design/03_Zero_Fail_Deterministic_Systems_Mastery.md
+      - 04_Phoneblok_Design.md: VI Advanced_Foundations/III System_Design/04_Phoneblok_Design.md
+      - 05_Lego_Design_Philosophy.md: VI Advanced_Foundations/III System_Design/05_Lego_Design_Philosophy.md
+  - VII Tools:
     - I Agy:
-      - "I Introduction": V Tools/I Agy/I Introduction.md
-validation:
-  nav:
-    omitted_files: info
-
-theme:
-  name: material
-  language: en
-  logo: assets/avatar.png
-  favicon: assets/avatar.png
-  font:
-    text: Inter
-    code: JetBrains Mono
-  palette:
-    # Auto preference detection + Light / Dark toggle
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-  features:
-    - navigation.instant
-    - navigation.instant.progress
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - navigation.path
-    - search.suggest
-    - search.highlight
-    - search.share
-    - content.code.copy
-    - content.code.annotate
-    - content.tabs.link
-    - toc.follow
-
-plugins:
-  - search
-  - mkdocs-jupyter:
-      include_source: True
-      ignore:
-        - "*scripts*"
-        - "*.py"
-        - ".venv/*"
-        - ".git/*"
-
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.caret
-  - attr_list
-  - md_in_html
-  - tables
-  - toc:
-      permalink: true
-
-extra_javascript:
-  - javascripts/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-
-extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
-  - stylesheets/extra.css
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/devkumar70401
-      name: GitHub Profile
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:devkumar70401@gmail.com
-      name: Email Devendra
+      - I Introduction.md: VII Tools/I Agy/I Introduction.md
