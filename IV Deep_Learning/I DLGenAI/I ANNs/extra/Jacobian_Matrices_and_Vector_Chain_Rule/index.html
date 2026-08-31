@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule/">
       
       
+        <link rel="prev" href="../The_4_Master_Backpropagation_Equations_Demystified/">
+      
+      
+        <link rel="next" href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>📐 Jacobian Matrices & Generalized Vector Chain Rule: The Foundation of Backpropagation - ML Engineer</title>
+        <title>Jacobian Matrices & Vector Chain Rule - ML Engineer</title>
       
     
     
@@ -115,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📐 Jacobian Matrices &amp; Generalized Vector Chain Rule: The Foundation of Backpropagation
+              Jacobian Matrices & Vector Chain Rule
             
           </span>
         </div>
@@ -344,6 +348,8 @@
   
   
   
+    
+  
   
     
     
@@ -351,6 +357,8 @@
   
   
   
+    
+  
   
     
     
@@ -358,10 +366,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../II%20Pytorch%20Fundamentals/" class="md-tabs__link">
           
   
@@ -4070,28 +4080,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -4109,7 +4122,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4124,28 +4137,31 @@
                 
   
   
+    
   
   
+  
     
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
             
   
   
@@ -4163,7 +4179,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4178,8 +4194,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -4190,13 +4208,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
@@ -4217,7 +4233,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4363,6 +4379,705 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_1_6" id="__nav_5_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    extra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_1_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    extra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The 4 Master Backprop Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jacobian Matrices & Vector Chain Rule
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jacobian Matrices & Vector Chain Rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-core-problem-why-scalar-calculus-breaks-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Core Problem: Why Scalar Calculus Breaks Down
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. The Core Problem: Why Scalar Calculus Breaks Down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-bottleneck-in-real-world-systems-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Bottleneck in Real-World Systems &amp; Neural Networks:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mathematical-definition-what-is-a-jacobian-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Mathematical Definition: What is a Jacobian Matrix?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-detailed-walkthroughs-from-1-d-to-n-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Detailed Walkthroughs: From 1-D to \(N\)-D
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Detailed Walkthroughs: From 1-D to \(N\)-D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-1-dimensional-scalar-case-1-to-1-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Example 1: 1-Dimensional Scalar Case (\(1 \to 1 \to 1\))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Example 1: 1-Dimensional Scalar Case (\(1 \to 1 \to 1\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-differentiate-y-with-respect-to-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Differentiate \(y\) with respect to \(x\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-differentiate-l-with-respect-to-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Differentiate \(L\) with respect to \(y\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-apply-the-1-d-scalar-chain-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Apply the 1-D Scalar Chain Rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-verification-via-direct-algebraic-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Verification via Direct Algebraic Substitution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-2-dimensional-case-2-to-2-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Example 2: 2-Dimensional Case (\(2 \to 2 \to 1\))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Example 2: 2-Dimensional Case (\(2 \to 2 \to 1\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-compute-the-2-times-2-jacobian-matrix-j_mathbfx-mathbfy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Compute the \(2 \times 2\) Jacobian Matrix \(J_{\mathbf{x}} \mathbf{y}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-compute-the-1-times-2-jacobian-matrix-j_mathbfy-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Compute the \(1 \times 2\) Jacobian Matrix \(J_{\mathbf{y}} L\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-solve-via-multivariable-total-derivative-path-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Solve via Multivariable Total Derivative (Path Tracking)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-solve-via-matrix-multiplication-j_mathbfy-lj_mathbfx-mathbfy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Solve via Matrix Multiplication \((J_{\mathbf{y}} L)(J_{\mathbf{x}} \mathbf{y})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-direct-verification-via-full-algebraic-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Direct Verification via Full Algebraic Substitution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-3-dimensional-case-3-to-3-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Example 3: 3-Dimensional Case (\(3 \to 3 \to 1\))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Example 3: 3-Dimensional Case (\(3 \to 3 \to 1\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-setup_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-compute-the-3-times-3-jacobian-matrix-j_mathbfx-mathbfy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Compute the \(3 \times 3\) Jacobian Matrix \(J_{\mathbf{x}} \mathbf{y}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-compute-the-1-times-3-jacobian-matrix-j_mathbfy-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Compute the \(1 \times 3\) Jacobian Matrix \(J_{\mathbf{y}} L\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-compute-matrix-product-j_mathbfy-lj_mathbfx-mathbfy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Compute Matrix Product \((J_{\mathbf{y}} L)(J_{\mathbf{x}} \mathbf{y})\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-the-general-n-dimensional-vector-case-n-to-m-to-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Example 4: The General \(N\)-Dimensional Vector Case (\(n \to m \to 1\))
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Example 4: The General \(N\)-Dimensional Vector Case (\(n \to m \to 1\))">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-setup_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-the-total-derivative-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: The Total Derivative Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-formulating-the-vector-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Formulating the Vector Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-matrix-multiplication-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Matrix Multiplication Identity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deep-neural-network-generalization-k-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Deep Neural Network Generalization (\(K\) Layers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Deep Neural Network Generalization (\(K\) Layers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-backpropagation-matrix-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Backpropagation Matrix Chain:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-production-insight-how-pytorch-implements-this-vjps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Production Insight: How PyTorch Implements This (VJPs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-summary-comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Summary Comparison Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Architecture Batch Derivations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microscopic Gradient Formulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Role of Input Data in Backprop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XOR Problem Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neural Networks & Jacobians
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5125,6 +5840,124 @@
 
   
 
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Deep Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    I DLGenAI
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    I ANNs
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    extra
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">

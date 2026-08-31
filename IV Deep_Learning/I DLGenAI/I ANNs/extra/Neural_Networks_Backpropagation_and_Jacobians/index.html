@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians/">
       
       
+        <link rel="prev" href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/">
+      
+      
+        <link rel="next" href="../../../II%20CNNs/CNN_Fundamentals/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>🧠 Bridging Mathematics to Deep Neural Networks: Jacobians, Weights & Backpropagation - ML Engineer</title>
+        <title>Neural Networks & Jacobians - ML Engineer</title>
       
     
     
@@ -115,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🧠 Bridging Mathematics to Deep Neural Networks: Jacobians, Weights &amp; Backpropagation
+              Neural Networks & Jacobians
             
           </span>
         </div>
@@ -344,6 +348,8 @@
   
   
   
+    
+  
   
     
     
@@ -351,6 +357,8 @@
   
   
   
+    
+  
   
     
     
@@ -358,10 +366,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../II%20Pytorch%20Fundamentals/" class="md-tabs__link">
           
   
@@ -4070,28 +4080,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -4109,7 +4122,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4124,28 +4137,31 @@
                 
   
   
+    
   
   
+  
     
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
             
   
   
@@ -4163,7 +4179,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4178,8 +4194,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -4190,13 +4208,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
@@ -4217,7 +4233,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4363,6 +4379,633 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_1_6" id="__nav_5_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    extra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_1_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    extra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The 4 Master Backprop Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jacobian Matrices & Vector Chain Rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-Architecture Batch Derivations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microscopic Gradient Formulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Role of Input Data in Backprop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XOR Problem Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neural Networks & Jacobians
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neural Networks & Jacobians
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-core-questions-answered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Overview &amp; Core Questions Answered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-do-multiple-dimensions-represent-in-a-real-neural-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What Do Multiple Dimensions Represent in a Real Neural Network?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-great-role-reversal-inputs-vs-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Great Role Reversal: Inputs vs. Weights
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Great Role Reversal: Inputs vs. Weights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-neural-network-training-the-roles-flip-completely" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ In Neural Network Training, the Roles Flip Completely!
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-3-distinct-stages-of-deep-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The 3 Distinct Stages of Deep Learning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rosetta-stone-math-symbols-longleftrightarrow-neural-network-realities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rosetta Stone: Math Symbols \(\longleftrightarrow\) Neural Network Realities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fully-solved-concrete-numerical-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Fully Solved Concrete Numerical Walkthrough
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Fully Solved Concrete Numerical Walkthrough">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Architecture:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-forward-pass-computing-prediction-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Forward Pass (Computing Prediction &amp; Loss)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Forward Pass (Computing Prediction &amp; Loss)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-layer-1-pre-activation-mathbfz_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Layer 1 Pre-activation \(\mathbf{z}_1\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-layer-1-activation-mathbfa_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Layer 1 Activation \(\mathbf{a}_1\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-layer-2-output-haty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Layer 2 Output \(\hat{y}\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-total-loss-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Total Loss \(L\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-backward-pass-backpropagation-vector-chain-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Backward Pass (Backpropagation / Vector Chain Rule)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Backward Pass (Backpropagation / Vector Chain Rule)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-gradient-at-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Gradient at the Output:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-gradients-for-layer-2-parameters-w_2-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Gradients for Layer 2 Parameters \((W_2, b_2)\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-propagate-error-back-to-layer-1-activations-mathbfa_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Propagate Error Back to Layer 1 Activations \(\mathbf{a}_1\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-pass-through-relu-non-linearity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Pass Through ReLU Non-Linearity:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-gradients-for-layer-1-parameters-w_1-mathbfb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Gradients for Layer 1 Parameters \((W_1, \mathbf{b}_1)\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-optimizer-step-updating-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Optimizer Step (Updating Weights)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Optimizer Step (Updating Weights)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updated-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated Layer 2:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updated-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated Layer 1:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-demystifying-pytorch-what-is-a-vector-jacobian-product-vjp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Demystifying PyTorch: What is a Vector-Jacobian Product (VJP)?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Demystifying PyTorch: What is a Vector-Jacobian Product (VJP)?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-full-jacobians-are-memory-disasters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem: Full Jacobians are Memory Disasters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-solution-vector-jacobian-products-vjp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution: Vector-Jacobian Products (VJP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-master-summary-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Master Summary Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5053,6 +5696,124 @@
 
   
 
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Deep Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    I DLGenAI
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    I ANNs
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    extra
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">
