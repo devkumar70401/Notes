@@ -114,6 +114,7 @@ nav:
   - Deep Learning:
     - I DLGenAI:
       - I ANNs:
+        - "I ANN (Lecture Slides PDF)": IV Deep_Learning/I DLGenAI/I ANNs/I ANN.pdf
         - "II PyTorch Fundamentals": IV Deep_Learning/I DLGenAI/I ANNs/II Pytorch Fundamentals.ipynb
         - "III PyTorch Workflow": IV Deep_Learning/I DLGenAI/I ANNs/III Pytorch Workflow.ipynb
         - "IV Customer Churn Prediction": IV Deep_Learning/I DLGenAI/I ANNs/IV Customer Churn Prediction.ipynb
@@ -128,6 +129,7 @@ nav:
           - "XOR Problem Proof": IV Deep_Learning/I DLGenAI/I ANNs/extra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md
           - "Neural Networks & Jacobians": IV Deep_Learning/I DLGenAI/I ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians.md
       - II CNNs:
+        - "CNNs (Lecture Slides PDF)": IV Deep_Learning/I DLGenAI/II CNNs/CNNs.pdf
         - "CNN Fundamentals": IV Deep_Learning/I DLGenAI/II CNNs/CNN_Fundamentals.ipynb
         - "Transfer Learning": IV Deep_Learning/I DLGenAI/II CNNs/Transfer_Learning.ipynb
         - "Image Segmentation UNET": IV Deep_Learning/I DLGenAI/II CNNs/Image_Segmentation_UNET.ipynb
