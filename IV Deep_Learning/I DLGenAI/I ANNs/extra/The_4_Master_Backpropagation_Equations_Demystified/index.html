@@ -5554,15 +5554,15 @@ Because the input connected to a bias is always physically fixed at <span class=
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[Output Loss L]
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>       │
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>       ▼
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   Apply [BP1]  ──► Compute Output Error: δ[³] = (ŷ - y) ⊙ σ&#39;(z[³])
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   Apply [BP1]  ──► Compute Output Error: δ[³] = (ŷ - y) ⊙ σ'(z[³])
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>       │
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>       ├──────────► Apply [BP3] &amp; [BP4] ──► Get Gradients: ∂L/∂W[³] and ∂L/∂b[³]
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>       ▼
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>   Apply [BP2]  ──► Pull Error to Layer 2: δ[²] = ((W[³])ᵀ δ[³]) ⊙ σ&#39;(z[²])
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>   Apply [BP2]  ──► Pull Error to Layer 2: δ[²] = ((W[³])ᵀ δ[³]) ⊙ σ'(z[²])
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>       │
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>       ├──────────► Apply [BP3] &amp; [BP4] ──► Get Gradients: ∂L/∂W[²] and ∂L/∂b[²]
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>       ▼
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>   Apply [BP2]  ──► Pull Error to Layer 1: δ[¹] = ((W[²])ᵀ δ[²]) ⊙ σ&#39;(z[¹])
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>   Apply [BP2]  ──► Pull Error to Layer 1: δ[¹] = ((W[²])ᵀ δ[²]) ⊙ σ'(z[¹])
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>       │
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>       └──────────► Apply [BP3] &amp; [BP4] ──► Get Gradients: ∂L/∂W[¹] and ∂L/∂b[¹]
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                                                   │
