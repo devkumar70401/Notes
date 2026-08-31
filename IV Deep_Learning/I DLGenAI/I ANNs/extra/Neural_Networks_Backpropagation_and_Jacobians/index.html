@@ -12,31 +12,27 @@
         <meta name="author" content="Devendra">
       
       
-        <link rel="canonical" href="https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/">
+        <link rel="canonical" href="https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians/">
       
       
-        <link rel="prev" href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/">
-      
-      
-        <link rel="next" href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/avatar.png">
+      <link rel="icon" href="../../../../../assets/avatar.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Role of Input Data in Backprop - ML Engineer</title>
+        <title>🧠 Bridging Mathematics to Deep Neural Networks: Jacobians, Weights & Backpropagation - ML Engineer</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,9 +53,9 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -84,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-role-of-input-data-in-backpropagation-weight-updation-where-thousands-of-features-actually-learn" class="md-skip">
+        <a href="#bridging-mathematics-to-deep-neural-networks-jacobians-weights-backpropagation" class="md-skip">
           Skip to content
         </a>
       
@@ -100,9 +96,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ML Engineer" class="md-header__button md-logo" aria-label="ML Engineer" data-md-component="logo">
+    <a href="../../../../.." title="ML Engineer" class="md-header__button md-logo" aria-label="ML Engineer" data-md-component="logo">
       
-  <img src="../../../assets/avatar.png" alt="logo">
+  <img src="../../../../../assets/avatar.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Role of Input Data in Backprop
+              🧠 Bridging Mathematics to Deep Neural Networks: Jacobians, Weights &amp; Backpropagation
             
           </span>
         </div>
@@ -231,7 +227,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
   
@@ -259,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-tabs__link">
+        <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-tabs__link">
           
   
   
@@ -296,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-tabs__link">
+        <a href="../../../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-tabs__link">
           
   
   
@@ -329,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-tabs__link">
+        <a href="../../../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-tabs__link">
           
   
   
@@ -348,7 +344,12 @@
   
   
   
+  
     
+    
+      
+  
+  
   
   
     
@@ -357,13 +358,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-tabs__link">
           
   
   
@@ -371,6 +370,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -393,7 +395,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-tabs__link">
+        <a href="../../../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-tabs__link">
           
   
   
@@ -436,9 +438,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ML Engineer" class="md-nav__button md-logo" aria-label="ML Engineer" data-md-component="logo">
+    <a href="../../../../.." title="ML Engineer" class="md-nav__button md-logo" aria-label="ML Engineer" data-md-component="logo">
       
-  <img src="../../../assets/avatar.png" alt="logo">
+  <img src="../../../../../assets/avatar.png" alt="logo">
 
     </a>
     ML Engineer
@@ -465,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -600,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
         
   
   
@@ -628,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
         
   
   
@@ -656,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
         
   
   
@@ -684,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
         
   
   
@@ -712,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
         
   
   
@@ -740,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
         
   
   
@@ -768,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
         
   
   
@@ -796,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
         
   
   
@@ -886,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="md-nav__link">
         
   
   
@@ -914,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="md-nav__link">
         
   
   
@@ -1119,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-nav__link">
         
   
   
@@ -1147,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/02_data_types_and_type_systems/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/02_data_types_and_type_systems/" class="md-nav__link">
         
   
   
@@ -1175,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/03_memory_management_stack_vs_heap/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/03_memory_management_stack_vs_heap/" class="md-nav__link">
         
   
   
@@ -1203,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/04_abstraction_and_modularity/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/04_abstraction_and_modularity/" class="md-nav__link">
         
   
   
@@ -1231,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/05_object_oriented_concepts/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/05_object_oriented_concepts/" class="md-nav__link">
         
   
   
@@ -1259,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/06_classes_and_objects/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/06_classes_and_objects/" class="md-nav__link">
         
   
   
@@ -1349,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/01_a_first_taste_of_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/01_a_first_taste_of_java/" class="md-nav__link">
         
   
   
@@ -1377,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/02_basic_datatypes_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/02_basic_datatypes_in_java/" class="md-nav__link">
         
   
   
@@ -1405,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/03_control_flow_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/03_control_flow_in_java/" class="md-nav__link">
         
   
   
@@ -1433,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/04_defining_classes_and_objects/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/04_defining_classes_and_objects/" class="md-nav__link">
         
   
   
@@ -1461,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/05_basic_input_and_output/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/05_basic_input_and_output/" class="md-nav__link">
         
   
   
@@ -1551,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/01_philosophy_of_object_oriented_programming/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/01_philosophy_of_object_oriented_programming/" class="md-nav__link">
         
   
   
@@ -1579,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/02_subclasses_and_inheritance/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/02_subclasses_and_inheritance/" class="md-nav__link">
         
   
   
@@ -1607,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/03_dynamic_dispatch_and_polymorphism/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/03_dynamic_dispatch_and_polymorphism/" class="md-nav__link">
         
   
   
@@ -1635,7 +1637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/04_the_java_class_hierarchy/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/04_the_java_class_hierarchy/" class="md-nav__link">
         
   
   
@@ -1663,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/05_subtyping_vs_inheritance/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/05_subtyping_vs_inheritance/" class="md-nav__link">
         
   
   
@@ -1691,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/06_java_modifiers/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/06_java_modifiers/" class="md-nav__link">
         
   
   
@@ -1781,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/01_abstract_classes_and_Interfaces/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/01_abstract_classes_and_Interfaces/" class="md-nav__link">
         
   
   
@@ -1809,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/02_interfaces/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/02_interfaces/" class="md-nav__link">
         
   
   
@@ -1837,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/03_private_classes/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/03_private_classes/" class="md-nav__link">
         
   
   
@@ -1865,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/04_controlled_interaction_with_objects/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/04_controlled_interaction_with_objects/" class="md-nav__link">
         
   
   
@@ -1893,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/05_CallBacks/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/05_CallBacks/" class="md-nav__link">
         
   
   
@@ -1921,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/06_Interators/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/06_Interators/" class="md-nav__link">
         
   
   
@@ -1949,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/Java_Week_4_Mastery_Notes/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/Java_Week_4_Mastery_Notes/" class="md-nav__link">
         
   
   
@@ -2039,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/01_polymorphism_revisited/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/01_polymorphism_revisited/" class="md-nav__link">
         
   
   
@@ -2067,7 +2069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/02_java_generics/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/02_java_generics/" class="md-nav__link">
         
   
   
@@ -2095,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/03_generics_and_subtyping/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/03_generics_and_subtyping/" class="md-nav__link">
         
   
   
@@ -2123,7 +2125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/04_java_reflection/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/04_java_reflection/" class="md-nav__link">
         
   
   
@@ -2151,7 +2153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/05_type_erasure_and_runtime_implications/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/05_type_erasure_and_runtime_implications/" class="md-nav__link">
         
   
   
@@ -2241,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/01_the_benefits_of_indirection/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/01_the_benefits_of_indirection/" class="md-nav__link">
         
   
   
@@ -2269,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/02_java_collections_framework/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/02_java_collections_framework/" class="md-nav__link">
         
   
   
@@ -2297,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/03_concrete_collections/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/03_concrete_collections/" class="md-nav__link">
         
   
   
@@ -2325,7 +2327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/04_java_maps/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/04_java_maps/" class="md-nav__link">
         
   
   
@@ -2415,7 +2417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/01_dealing_with_errors/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/01_dealing_with_errors/" class="md-nav__link">
         
   
   
@@ -2443,7 +2445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/02_exceptions_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/02_exceptions_in_java/" class="md-nav__link">
         
   
   
@@ -2471,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/03_packages_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/03_packages_in_java/" class="md-nav__link">
         
   
   
@@ -2499,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/04_assertions_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/04_assertions_in_java/" class="md-nav__link">
         
   
   
@@ -2527,7 +2529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/05_logging_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/05_logging_in_java/" class="md-nav__link">
         
   
   
@@ -2617,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/01_object_cloning/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/01_object_cloning/" class="md-nav__link">
         
   
   
@@ -2645,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/02_type_inference/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/02_type_inference/" class="md-nav__link">
         
   
   
@@ -2673,7 +2675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/03_higher_order_functions_and_lambdas/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/03_higher_order_functions_and_lambdas/" class="md-nav__link">
         
   
   
@@ -2701,7 +2703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/04_introduction_to_streams/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/04_introduction_to_streams/" class="md-nav__link">
         
   
   
@@ -2791,7 +2793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/01_optional_type/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/01_optional_type/" class="md-nav__link">
         
   
   
@@ -2819,7 +2821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/02_collecting_results_from_streams/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/02_collecting_results_from_streams/" class="md-nav__link">
         
   
   
@@ -2847,7 +2849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/03_input_and_output_streams/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/03_input_and_output_streams/" class="md-nav__link">
         
   
   
@@ -2875,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/04_serialization_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/04_serialization_in_java/" class="md-nav__link">
         
   
   
@@ -2965,7 +2967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/01_concurrency_threads_and_processes/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/01_concurrency_threads_and_processes/" class="md-nav__link">
         
   
   
@@ -2993,7 +2995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/02_race_conditions_and_critical_sections/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/02_race_conditions_and_critical_sections/" class="md-nav__link">
         
   
   
@@ -3021,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/03_mutual_exclusion_algorithms/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/03_mutual_exclusion_algorithms/" class="md-nav__link">
         
   
   
@@ -3049,7 +3051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/04_hardware_synchronization_primitives/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/04_hardware_synchronization_primitives/" class="md-nav__link">
         
   
   
@@ -3077,7 +3079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/05_monitors_concept/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/05_monitors_concept/" class="md-nav__link">
         
   
   
@@ -3167,7 +3169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/01_monitors_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/01_monitors_in_java/" class="md-nav__link">
         
   
   
@@ -3195,7 +3197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/02_threads_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/02_threads_in_java/" class="md-nav__link">
         
   
   
@@ -3223,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/03_concurrent_programming_example/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/03_concurrent_programming_example/" class="md-nav__link">
         
   
   
@@ -3251,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/04_thread_safe_collections_and_utilities/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/04_thread_safe_collections_and_utilities/" class="md-nav__link">
         
   
   
@@ -3341,7 +3343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_12/01_graphical_interfaces_and_event_driven_programming/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_12/01_graphical_interfaces_and_event_driven_programming/" class="md-nav__link">
         
   
   
@@ -3369,7 +3371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_12/02_the_swing_toolkit/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_12/02_the_swing_toolkit/" class="md-nav__link">
         
   
   
@@ -3397,7 +3399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_12/03_swing_event_handling_and_examples/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_12/03_swing_event_handling_and_examples/" class="md-nav__link">
         
   
   
@@ -3495,7 +3497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Python/soon/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Python/soon/" class="md-nav__link">
         
   
   
@@ -3585,7 +3587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Algorithms_and_DSA/01_Abstract_Data_Types/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Algorithms_and_DSA/01_Abstract_Data_Types/" class="md-nav__link">
         
   
   
@@ -3675,7 +3677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/01_Zero_Trust_Security/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/01_Zero_Trust_Security/" class="md-nav__link">
         
   
   
@@ -3703,7 +3705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/02_Identity_and_Access_Management/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/02_Identity_and_Access_Management/" class="md-nav__link">
         
   
   
@@ -3731,7 +3733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="md-nav__link">
         
   
   
@@ -3759,7 +3761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/04_Phoneblok_Design/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/04_Phoneblok_Design/" class="md-nav__link">
         
   
   
@@ -3787,7 +3789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/05_Lego_Design_Philosophy/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/05_Lego_Design_Philosophy/" class="md-nav__link">
         
   
   
@@ -3938,7 +3940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-nav__link">
+      <a href="../../../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-nav__link">
         
   
   
@@ -4028,7 +4030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../III%20Machine_Learning/Practice_and_Auditing_MLP/01_Introduction/" class="md-nav__link">
+      <a href="../../../../../III%20Machine_Learning/MLP/01_Introduction/" class="md-nav__link">
         
   
   
@@ -4068,31 +4070,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -4110,7 +4109,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4134,13 +4133,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4149,7 +4145,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -4184,34 +4180,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AI Engineering Skills Map
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
     
@@ -4228,10 +4196,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_1" >
         
           
-          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
             
   
   
@@ -4249,8 +4217,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4267,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/II%20Pytorch%20Fundamentals/" class="md-nav__link">
+      <a href="../../II%20Pytorch%20Fundamentals/" class="md-nav__link">
         
   
   
@@ -4295,7 +4263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/III%20Pytorch%20Workflow/" class="md-nav__link">
+      <a href="../../III%20Pytorch%20Workflow/" class="md-nav__link">
         
   
   
@@ -4323,7 +4291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/IV%20Customer%20Churn%20Prediction/" class="md-nav__link">
+      <a href="../../IV%20Customer%20Churn%20Prediction/" class="md-nav__link">
         
   
   
@@ -4351,7 +4319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/V%20XOR%20Problem/" class="md-nav__link">
+      <a href="../../V%20XOR%20Problem/" class="md-nav__link">
         
   
   
@@ -4379,7 +4347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/VI%20Fashion%20MNIST%20Classification/" class="md-nav__link">
+      <a href="../../VI%20Fashion%20MNIST%20Classification/" class="md-nav__link">
         
   
   
@@ -4430,10 +4398,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_2" >
         
           
-          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
             
   
   
@@ -4451,8 +4419,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4469,7 +4437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/II%20CNNs/CNN_Fundamentals/" class="md-nav__link">
+      <a href="../../../II%20CNNs/CNN_Fundamentals/" class="md-nav__link">
         
   
   
@@ -4497,7 +4465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/II%20CNNs/Transfer_Learning/" class="md-nav__link">
+      <a href="../../../II%20CNNs/Transfer_Learning/" class="md-nav__link">
         
   
   
@@ -4525,7 +4493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/II%20CNNs/Image_Segmentation_UNET/" class="md-nav__link">
+      <a href="../../../II%20CNNs/Image_Segmentation_UNET/" class="md-nav__link">
         
   
   
@@ -4549,631 +4517,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    II DL
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    II DL
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Week_01_Mastery_ANN_and_PyTorch/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Week 01 Mastery - ANN & PyTorch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Week_02_Mastery_MLP_Backprop_and_Production_PyTorch/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Week 02 Mastery - MLP & Production PyTorch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    The 4 Master Backprop Equations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Jacobian Matrices & Vector Chain Rule
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Multi-Architecture Batch Derivations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Microscopic Gradient Formulas
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Role of Input Data in Backprop
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Role of Input Data in Backprop
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#core-questions-addressed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧭 Core Questions Addressed
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-the-big-misconception-is-input-data-only-used-in-the-loss-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. The Big Misconception: "Is Input Data Only Used in the Loss Function?"
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. The Big Misconception: &#34;Is Input Data Only Used in the Loss Function?&#34;">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-reality" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚠️ The Reality:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-the-smoking-gun-equation-where-input-data-enters-backprop" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. The "Smoking Gun" Equation: Where Input Data Enters Backprop
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. The &#34;Smoking Gun&#34; Equation: Where Input Data Enters Backprop">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#look-at-that-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Look at that result!
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-the-full-chain-rule-how-input-multiplies-the-error-signal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. The Full Chain Rule: How Input Multiplies the Error Signal
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-the-intuition-the-blame-credit-assignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. The Intuition: The "Blame &amp; Credit" Assignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-concrete-numerical-proof-3-features-learning-differently" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Concrete Numerical Proof: 3 Features Learning Differently
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Concrete Numerical Proof: 3 Features Learning Differently">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Setup:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-data-point" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sample Data Point:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-forward-pass" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Forward Pass
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-backward-pass-error-signal-weight-gradients" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Backward Pass (Error Signal &amp; Weight Gradients)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-optimizer-step-weight-updation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Optimizer Step (Weight Updation)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-verification-testing-the-updated-weights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Verification (Testing the Updated Weights)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-how-thousands-of-features-contribute-in-deep-networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. How Thousands of Features Contribute in Deep Networks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-what-happens-in-deep-hidden-layers-activations-become-the-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. What Happens in Deep Hidden Layers? (Activations Become the "Data")
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-summary-the-complete-ecosystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Summary: The Complete Ecosystem
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    XOR Problem Proof
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Neural Networks & Jacobians
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Master Study Roadmap
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Master_Curriculum_Tier_List_Robotics_AI_and_Microfly/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Master Curriculum Tier List
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -5309,7 +4652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-nav__link">
+      <a href="../../../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-nav__link">
         
   
   
@@ -5372,10 +4715,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-questions-addressed" class="md-nav__link">
+  <a href="#overview-core-questions-answered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧭 Core Questions Addressed
+        🧭 Overview &amp; Core Questions Answered
       
     </span>
   </a>
@@ -5383,22 +4726,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-the-big-misconception-is-input-data-only-used-in-the-loss-function" class="md-nav__link">
+  <a href="#1-what-do-multiple-dimensions-represent-in-a-real-neural-network" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. The Big Misconception: "Is Input Data Only Used in the Loss Function?"
+        1. What Do Multiple Dimensions Represent in a Real Neural Network?
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. The Big Misconception: &#34;Is Input Data Only Used in the Loss Function?&#34;">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-great-role-reversal-inputs-vs-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Great Role Reversal: Inputs vs. Weights
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Great Role Reversal: Inputs vs. Weights">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-reality" class="md-nav__link">
+  <a href="#in-neural-network-training-the-roles-flip-completely" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ The Reality:
+        ⚠️ In Neural Network Training, the Roles Flip Completely!
       
     </span>
   </a>
@@ -5411,22 +4765,255 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-the-smoking-gun-equation-where-input-data-enters-backprop" class="md-nav__link">
+  <a href="#3-the-3-distinct-stages-of-deep-learning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. The "Smoking Gun" Equation: Where Input Data Enters Backprop
+        3. The 3 Distinct Stages of Deep Learning
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. The &#34;Smoking Gun&#34; Equation: Where Input Data Enters Backprop">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rosetta-stone-math-symbols-longleftrightarrow-neural-network-realities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rosetta Stone: Math Symbols \(\longleftrightarrow\) Neural Network Realities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fully-solved-concrete-numerical-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Fully Solved Concrete Numerical Walkthrough
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Fully Solved Concrete Numerical Walkthrough">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#look-at-that-result" class="md-nav__link">
+  <a href="#network-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Look at that result!
+        Network Architecture:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-forward-pass-computing-prediction-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Forward Pass (Computing Prediction &amp; Loss)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Forward Pass (Computing Prediction &amp; Loss)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-layer-1-pre-activation-mathbfz_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Layer 1 Pre-activation \(\mathbf{z}_1\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-layer-1-activation-mathbfa_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Layer 1 Activation \(\mathbf{a}_1\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-layer-2-output-haty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Layer 2 Output \(\hat{y}\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-total-loss-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Total Loss \(L\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-backward-pass-backpropagation-vector-chain-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Backward Pass (Backpropagation / Vector Chain Rule)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Backward Pass (Backpropagation / Vector Chain Rule)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-gradient-at-the-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Gradient at the Output:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-gradients-for-layer-2-parameters-w_2-b_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Gradients for Layer 2 Parameters \((W_2, b_2)\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-propagate-error-back-to-layer-1-activations-mathbfa_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Propagate Error Back to Layer 1 Activations \(\mathbf{a}_1\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-pass-through-relu-non-linearity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        D. Pass Through ReLU Non-Linearity:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-gradients-for-layer-1-parameters-w_1-mathbfb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E. Gradients for Layer 1 Parameters \((W_1, \mathbf{b}_1)\):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-optimizer-step-updating-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Optimizer Step (Updating Weights)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Optimizer Step (Updating Weights)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updated-layer-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated Layer 2:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updated-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated Layer 1:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-demystifying-pytorch-what-is-a-vector-jacobian-product-vjp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Demystifying PyTorch: What is a Vector-Jacobian Product (VJP)?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Demystifying PyTorch: What is a Vector-Jacobian Product (VJP)?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-full-jacobians-are-memory-disasters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem: Full Jacobians are Memory Disasters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-solution-vector-jacobian-products-vjp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution: Vector-Jacobian Products (VJP)
       
     </span>
   </a>
@@ -5439,137 +5026,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-the-full-chain-rule-how-input-multiplies-the-error-signal" class="md-nav__link">
+  <a href="#7-master-summary-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. The Full Chain Rule: How Input Multiplies the Error Signal
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-the-intuition-the-blame-credit-assignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. The Intuition: The "Blame &amp; Credit" Assignment
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-concrete-numerical-proof-3-features-learning-differently" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Concrete Numerical Proof: 3 Features Learning Differently
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Concrete Numerical Proof: 3 Features Learning Differently">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Setup:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sample-data-point" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sample Data Point:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-forward-pass" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Forward Pass
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-backward-pass-error-signal-weight-gradients" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Backward Pass (Error Signal &amp; Weight Gradients)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-optimizer-step-weight-updation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Optimizer Step (Weight Updation)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-verification-testing-the-updated-weights" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Verification (Testing the Updated Weights)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-how-thousands-of-features-contribute-in-deep-networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. How Thousands of Features Contribute in Deep Networks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-what-happens-in-deep-hidden-layers-activations-become-the-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. What Happens in Deep Hidden Layers? (Activations Become the "Data")
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-summary-the-complete-ecosystem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Summary: The Complete Ecosystem
+        7. Master Summary Diagram
       
     </span>
   </a>
@@ -5594,72 +5054,6 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../../I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Deep Learning
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../Week_01_Mastery_ANN_and_PyTorch/" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    II DL
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
               
               <article class="md-content__inner md-typeset">
                 
@@ -5670,214 +5064,259 @@
   
 
 
-<h1 id="the-role-of-input-data-in-backpropagation-weight-updation-where-thousands-of-features-actually-learn">🎯 The Role of Input Data in Backpropagation &amp; Weight Updation: Where Thousands of Features Actually Learn<a class="headerlink" href="#the-role-of-input-data-in-backpropagation-weight-updation-where-thousands-of-features-actually-learn" title="Permanent link">&para;</a></h1>
+<h1 id="bridging-mathematics-to-deep-neural-networks-jacobians-weights-backpropagation">🧠 Bridging Mathematics to Deep Neural Networks: Jacobians, Weights &amp; Backpropagation<a class="headerlink" href="#bridging-mathematics-to-deep-neural-networks-jacobians-weights-backpropagation" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="core-questions-addressed">🧭 Core Questions Addressed<a class="headerlink" href="#core-questions-addressed" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Is Backpropagation <strong>purely</strong> <span class="arithmatex">\(\frac{\partial L}{\partial W}\)</span> and <span class="arithmatex">\(\frac{\partial L}{\partial \mathbf{b}}\)</span> calculated right-to-left from Loss to Layer 1? (<strong>YES!</strong>)</li>
-<li>Does the raw input data only appear at the end in <span class="arithmatex">\(\text{Loss} = \hat{y} - y\)</span>? (<strong>NO! The input data directly multiplies every single weight gradient!</strong>)</li>
-<li>If a network has thousands of input features, where does each feature's contribution actually go during backpropagation and weight update?</li>
-<li>What is the mathematical and intuitive relationship between <strong>Input Features (<span class="arithmatex">\(x\)</span>)</strong>, <strong>Error Signals (<span class="arithmatex">\(\delta\)</span>)</strong>, <strong>Gradients (<span class="arithmatex">\(\frac{\partial L}{\partial W}\)</span>)</strong>, and <strong>Weight Updates (<span class="arithmatex">\(\Delta W\)</span>)</strong>?</li>
-</ol>
+<h2 id="overview-core-questions-answered">🧭 Overview &amp; Core Questions Answered<a class="headerlink" href="#overview-core-questions-answered" title="Permanent link">&para;</a></h2>
+<p>This guide serves as the direct physical companion to <a href="file:///home/dev/SE/Notes/20_Mathematics_&amp;_Sciences/21_Mathematics/Jacobian_Matrices_and_Vector_Chain_Rule.md"><code>Jacobian_Matrices_and_Vector_Chain_Rule.md</code></a>.</p>
+<p>It bridges the gap between <strong>Abstract Vector Calculus (<span class="arithmatex">\(y = f(x)\)</span>)</strong> and <strong>Real Deep Neural Network Architectures</strong>, answering:
+1. What do these multiple dimensions (<span class="arithmatex">\(n, m, k\)</span>) physically represent in a real network?
+2. Do partial derivatives happen with respect to <strong>Inputs</strong> or <strong>Weights</strong>?
+3. How do the <strong>Data Track (Forward)</strong> and <strong>Parameter Track (Backward &amp; Optimization)</strong> connect?
+4. What <em>exactly</em> is Backpropagation vs. the Forward Pass vs. the Optimizer?
+5. What are <strong>Vector-Jacobian Products (VJPs)</strong> in PyTorch in plain English?</p>
 <hr />
-<h2 id="1-the-big-misconception-is-input-data-only-used-in-the-loss-function">1. The Big Misconception: "Is Input Data Only Used in the Loss Function?"<a class="headerlink" href="#1-the-big-misconception-is-input-data-only-used-in-the-loss-function" title="Permanent link">&para;</a></h2>
-<p>When first learning backpropagation, it is very easy to think:</p>
-<blockquote>
-<p><em>"Data goes forward <span class="arithmatex">\(\to\)</span> we compute Loss <span class="arithmatex">\((\hat{y} - y_{\text{true}})\)</span> <span class="arithmatex">\(\to\)</span> then backpropagation is just pure chain rule calculus moving backwards with weights, and the input data is forgotten."</em></p>
-</blockquote>
-<h3 id="the-reality">⚠️ The Reality:<a class="headerlink" href="#the-reality" title="Permanent link">&para;</a></h3>
-<p>The input data <span class="arithmatex">\(\mathbf{x}\)</span> (and intermediate activations <span class="arithmatex">\(\mathbf{a}\)</span>) is <strong>the fundamental building block of every single weight gradient in the network!</strong></p>
-<p>Without the input features, backpropagation cannot compute a single weight derivative <span class="arithmatex">\(\frac{\partial L}{\partial W}\)</span>.</p>
-<hr />
-<h2 id="2-the-smoking-gun-equation-where-input-data-enters-backprop">2. The "Smoking Gun" Equation: Where Input Data Enters Backprop<a class="headerlink" href="#2-the-smoking-gun-equation-where-input-data-enters-backprop" title="Permanent link">&para;</a></h2>
-<p>Look at the basic linear equation of any neuron:</p>
-<div class="arithmatex">\[z = w_1 x_1 + w_2 x_2 + w_3 x_3 + \dots + w_n x_n + b\]</div>
-<p>In vector notation:
-$<span class="arithmatex">\(\mathbf{z} = W \mathbf{x} + \mathbf{b}\)</span>$</p>
-<p>Now ask the fundamental calculus question:</p>
-<blockquote>
-<p><strong>"How much does pre-activation <span class="arithmatex">\(z\)</span> change when weight <span class="arithmatex">\(w_j\)</span> changes?"</strong></p>
-</blockquote>
-<p>Take the partial derivative of <span class="arithmatex">\(z\)</span> with respect to <span class="arithmatex">\(w_j\)</span>:</p>
-<div class="arithmatex">\[\frac{\partial z}{\partial w_j} = \frac{\partial}{\partial w_j}\left(w_1 x_1 + \dots + w_j x_j + \dots + w_n x_n + b\right) = x_j\]</div>
-<div class="arithmatex">\[\frac{\partial \mathbf{z}}{\partial W} = \mathbf{x}^T\]</div>
-<h3 id="look-at-that-result">Look at that result!<a class="headerlink" href="#look-at-that-result" title="Permanent link">&para;</a></h3>
-<p>The derivative of the neuron's output with respect to its weight is <strong>the input feature <span class="arithmatex">\(x_j\)</span> itself</strong>!</p>
-<hr />
-<h2 id="3-the-full-chain-rule-how-input-multiplies-the-error-signal">3. The Full Chain Rule: How Input Multiplies the Error Signal<a class="headerlink" href="#3-the-full-chain-rule-how-input-multiplies-the-error-signal" title="Permanent link">&para;</a></h2>
-<p>By the Multivariable Chain Rule, the gradient of the final Loss <span class="arithmatex">\(L\)</span> with respect to any individual weight <span class="arithmatex">\(w_{ij}\)</span> (connecting input feature <span class="arithmatex">\(x_j\)</span> to neuron <span class="arithmatex">\(i\)</span>) is:</p>
-<div class="arithmatex">\[\frac{\partial L}{\partial w_{ij}} = \underbrace{\frac{\partial L}{\partial z_i}}_{\text{Error Signal } \delta_i} \times \underbrace{\frac{\partial z_i}{\partial w_{ij}}}_{\text{Input Feature } x_j}\]</div>
-<div class="arithmatex">\[\Large \frac{\partial L}{\partial w_{ij}} = \delta_i \cdot x_j\]</div>
-<p>In matrix form for the entire layer:</p>
-<div class="arithmatex">\[\Large \frac{\partial L}{\partial W} = \boldsymbol{\delta} \cdot \mathbf{x}^T\]</div>
-<p>Where:
-- <span class="arithmatex">\(\boldsymbol{\delta} = \frac{\partial L}{\partial \mathbf{z}}\)</span> is the <strong>Error Signal</strong> (flowing backwards from the loss function).
-- <span class="arithmatex">\(\mathbf{x}\)</span> is the <strong>Actual Input Feature Vector</strong> (stored from the forward pass).</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────────────────────────┐
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                       THE WEIGHT GRADIENT FORMULA                           │
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├─────────────────────────────────────────────────────────────────────────────┤
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│                                                                             │
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│          ∂L/∂wᵢⱼ    =       δᵢ        ×        xⱼ                           │
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│                                                                             │
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│      [Weight Gradient] = [Error Signal]  ×  [Input Feature Value]           │
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│                                                                             │
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│      "How much weight    "How wrong the     "How active this                │
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│       wᵢⱼ must change"    neuron was"        specific input feature was"    │
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│                                                                             │
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>└─────────────────────────────────────────────────────────────────────────────┘
-</span></code></pre></div>
-<hr />
-<h2 id="4-the-intuition-the-blame-credit-assignment">4. The Intuition: The "Blame &amp; Credit" Assignment<a class="headerlink" href="#4-the-intuition-the-blame-credit-assignment" title="Permanent link">&para;</a></h2>
-<p>Why does multiplying by <span class="arithmatex">\(x_j\)</span> make complete intuitive sense?</p>
-<p>Imagine a committee of experts making a house price prediction.
-Neuron <span class="arithmatex">\(i\)</span> predicted a price based on 3 input features:
-1. <span class="arithmatex">\(x_1 = 5\)</span> (Number of bedrooms)
-2. <span class="arithmatex">\(x_2 = 0\)</span> (Has a swimming pool: No)
-3. <span class="arithmatex">\(x_3 = 3000\)</span> (Square footage)</p>
-<p>Suppose the prediction was <strong>way too high</strong> (<span class="arithmatex">\(\delta_i &gt; 0\)</span>, error signal is positive). The model needs to reduce its prediction.</p>
-<p>Now, who should be <strong>blamed</strong> for the high prediction?
-- <strong>Feature <span class="arithmatex">\(x_2 = 0\)</span> (Swimming Pool):</strong> It contributed <span class="arithmatex">\(w_{i,2} \cdot 0 = 0\)</span> to the prediction! It had <strong>zero influence</strong> on why the prediction was too high.
-  $<span class="arithmatex">\(\frac{\partial L}{\partial w_{i,2}} = \delta_i \cdot 0 = 0 \implies \text{No weight update! } w_{i,2} \text{ is not blamed.}\)</span>$
-- <strong>Feature <span class="arithmatex">\(x_3 = 3000\)</span> (Square Footage):</strong> It contributed <span class="arithmatex">\(w_{i,3} \cdot 3000\)</span>, a <strong>massive number</strong>! It is primarily responsible for the huge prediction!
-  $<span class="arithmatex">\(\frac{\partial L}{\partial w_{i,3}} = \delta_i \cdot 3000 \implies \text{Massive gradient! } w_{i,3} \text{ receives a huge correction.}\)</span>$</p>
-<blockquote>
-<p><strong>Key Rule of Learning:</strong> <strong>The input feature <span class="arithmatex">\(x_j\)</span> acts as a lever arm.</strong>
-- A feature that was <strong>inactive (<span class="arithmatex">\(x_j = 0\)</span>)</strong> receives <strong><span class="arithmatex">\(0\)</span> weight update</strong>.
-- A feature that was <strong>loud / active (<span class="arithmatex">\(x_j = 100\)</span>)</strong> receives a <strong>huge weight update</strong>.</p>
-</blockquote>
-<hr />
-<h2 id="5-concrete-numerical-proof-3-features-learning-differently">5. Concrete Numerical Proof: 3 Features Learning Differently<a class="headerlink" href="#5-concrete-numerical-proof-3-features-learning-differently" title="Permanent link">&para;</a></h2>
-<p>Let's see this in action with exact numbers!</p>
-<h3 id="setup">Setup:<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Single neuron predicting output <span class="arithmatex">\(\hat{y} = w_1 x_1 + w_2 x_2 + w_3 x_3 + b\)</span>.</li>
-<li>Current Weights: <span class="arithmatex">\(w_1 = 0.5, \quad w_2 = 0.5, \quad w_3 = 0.5, \quad b = 0.0\)</span>.</li>
-<li>Learning Rate: <span class="arithmatex">\(\eta = 0.01\)</span>.</li>
-</ul>
-<h3 id="sample-data-point">Sample Data Point:<a class="headerlink" href="#sample-data-point" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Input Features:</li>
-<li><span class="arithmatex">\(x_1 = 10.0\)</span> (Strong positive feature, e.g. High Income)</li>
-<li><span class="arithmatex">\(x_2 = 0.0\)</span> (Inactive feature, e.g. Has Boat = No)</li>
-<li><span class="arithmatex">\(x_3 = -4.0\)</span> (Negative feature, e.g. Debt ratio)</li>
-<li>Target Label: <span class="arithmatex">\(y_{\text{true}} = 2.0\)</span>.</li>
-</ul>
-<hr />
-<h3 id="step-1-forward-pass">Step 1: Forward Pass<a class="headerlink" href="#step-1-forward-pass" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[\hat{y} = (0.5)(10.0) + (0.5)(0.0) + (0.5)(-4.0) + 0.0 = 5.0 + 0.0 - 2.0 = 3.0\]</div>
-<p>Loss Function <span class="arithmatex">\(L = \frac{1}{2}(\hat{y} - y_{\text{true}})^2\)</span>:
-$<span class="arithmatex">\(L = \frac{1}{2}(3.0 - 2.0)^2 = \frac{1}{2}(1.0)^2 = 0.5\)</span>$</p>
-<hr />
-<h3 id="step-2-backward-pass-error-signal-weight-gradients">Step 2: Backward Pass (Error Signal &amp; Weight Gradients)<a class="headerlink" href="#step-2-backward-pass-error-signal-weight-gradients" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p><strong>Compute Output Error Signal <span class="arithmatex">\(\delta\)</span>:</strong>
-   $<span class="arithmatex">\(\delta = \frac{\partial L}{\partial \hat{y}} = (\hat{y} - y_{\text{true}}) = 3.0 - 2.0 = +1.0\)</span>$</p>
-</li>
-<li>
-<p><strong>Compute Gradients for each Weight using <span class="arithmatex">\(\frac{\partial L}{\partial w_j} = \delta \cdot x_j\)</span>:</strong></p>
-</li>
-<li>
-<p><strong>For Weight <span class="arithmatex">\(w_1\)</span> (connected to <span class="arithmatex">\(x_1 = 10.0\)</span>):</strong>
-     $<span class="arithmatex">\(\frac{\partial L}{\partial w_1} = \delta \cdot x_1 = (+1.0) \cdot (10.0) = \mathbf{+10.0}\)</span>$</p>
-</li>
-<li>
-<p><strong>For Weight <span class="arithmatex">\(w_2\)</span> (connected to <span class="arithmatex">\(x_2 = 0.0\)</span>):</strong>
-     $<span class="arithmatex">\(\frac{\partial L}{\partial w_2} = \delta \cdot x_2 = (+1.0) \cdot (0.0) = \mathbf{0.0}\)</span>$</p>
-</li>
-<li>
-<p><strong>For Weight <span class="arithmatex">\(w_3\)</span> (connected to <span class="arithmatex">\(x_3 = -4.0\)</span>):</strong>
-     $<span class="arithmatex">\(\frac{\partial L}{\partial w_3} = \delta \cdot x_3 = (+1.0) \cdot (-4.0) = \mathbf{-4.0}\)</span>$</p>
-</li>
-<li>
-<p><strong>For Bias <span class="arithmatex">\(b\)</span> (always has input <span class="arithmatex">\(1.0\)</span>):</strong>
-     $<span class="arithmatex">\(\frac{\partial L}{\partial b} = \delta \cdot 1.0 = \mathbf{+1.0}\)</span>$</p>
-</li>
-</ol>
-<hr />
-<h3 id="step-3-optimizer-step-weight-updation">Step 3: Optimizer Step (Weight Updation)<a class="headerlink" href="#step-3-optimizer-step-weight-updation" title="Permanent link">&para;</a></h3>
-<p>Using gradient descent formula <span class="arithmatex">\(w_{\text{new}} = w_{\text{old}} - \eta \frac{\partial L}{\partial w}\)</span>:</p>
-<ul>
-<li>
-<p><strong>Update <span class="arithmatex">\(w_1\)</span>:</strong>
-  $<span class="arithmatex">\(w_1 \leftarrow 0.5 - 0.01(+10.0) = 0.5 - 0.10 = \mathbf{0.40} \quad (\text{Decreased significantly!})\)</span>$</p>
-</li>
-<li>
-<p><strong>Update <span class="arithmatex">\(w_2\)</span>:</strong>
-  $<span class="arithmatex">\(w_2 \leftarrow 0.5 - 0.01(0.0) = 0.5 - 0.00 = \mathbf{0.50} \quad (\text{Did NOT change at all!})\)</span>$</p>
-</li>
-<li>
-<p><strong>Update <span class="arithmatex">\(w_3\)</span>:</strong>
-  $<span class="arithmatex">\(w_3 \leftarrow 0.5 - 0.01(-4.0) = 0.5 + 0.04 = \mathbf{0.54} \quad (\text{Increased!})\)</span>$</p>
-</li>
-<li>
-<p><strong>Update <span class="arithmatex">\(b\)</span>:</strong>
-  $<span class="arithmatex">\(b \leftarrow 0.0 - 0.01(+1.0) = \mathbf{-0.01}\)</span>$</p>
-</li>
-</ul>
-<hr />
-<h3 id="step-4-verification-testing-the-updated-weights">Step 4: Verification (Testing the Updated Weights)<a class="headerlink" href="#step-4-verification-testing-the-updated-weights" title="Permanent link">&para;</a></h3>
-<p>Let's feed the same input <span class="arithmatex">\(\mathbf{x} = [10.0, 0.0, -4.0]^T\)</span> into the new weights:</p>
-<div class="arithmatex">\[\hat{y}_{\text{new}} = (0.40)(10.0) + (0.50)(0.0) + (0.54)(-4.0) - 0.01$$
-$$\hat{y}_{\text{new}} = 4.00 + 0.00 - 2.16 - 0.01 = \mathbf{1.83}\]</div>
-<p>New Loss:
-$<span class="arithmatex">\(L_{\text{new}} = \frac{1}{2}(1.83 - 2.0)^2 = \frac{1}{2}(-0.17)^2 = \mathbf{0.014}\)</span>$</p>
-<p>The loss plummeted from <strong><span class="arithmatex">\(0.50 \to 0.014\)</span></strong>! 
-Notice how <span class="arithmatex">\(w_1\)</span> took the major correction because <span class="arithmatex">\(x_1\)</span> was the largest feature, <span class="arithmatex">\(w_2\)</span> stayed untouched because <span class="arithmatex">\(x_2 = 0\)</span>, and <span class="arithmatex">\(w_3\)</span> adjusted in reverse!</p>
-<hr />
-<h2 id="6-how-thousands-of-features-contribute-in-deep-networks">6. How Thousands of Features Contribute in Deep Networks<a class="headerlink" href="#6-how-thousands-of-features-contribute-in-deep-networks" title="Permanent link">&para;</a></h2>
-<p>What happens when you have <strong><span class="arithmatex">\(50{,}000\)</span> input features</strong> (e.g. pixels in a high-res image, words in a vocabulary, or financial market indicators)?</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Feature x₁ (Pixel 1 = 0.0)  ────────► w₁,₁  ──┐
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Feature x₂ (Pixel 2 = 255.0) ────────► w₁,₂  ──┼──► Neuron h₁ (Error signal δ₁)
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Feature x₃ (Pixel 3 = 12.0) ────────► w₁,₃  ──┤
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   ⋮                                  ⋮       │
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Feature x₅₀₀₀₀ (Pixel 50000) ────────► w₁,₅₀₀₀₀─┘
+<h2 id="1-what-do-multiple-dimensions-represent-in-a-real-neural-network">1. What Do Multiple Dimensions Represent in a Real Neural Network?<a class="headerlink" href="#1-what-do-multiple-dimensions-represent-in-a-real-neural-network" title="Permanent link">&para;</a></h2>
+<p>In pure mathematics, we write:</p>
+<div class="arithmatex">\[\mathbf{x} \in \mathbb{R}^n, \quad \mathbf{y} \in \mathbb{R}^m, \quad L \in \mathbb{R}\]</div>
+<p>In a real neural network (e.g., classifying a <span class="arithmatex">\(28 \times 28\)</span> handwritten digit from the MNIST dataset), these abstract dimensions correspond to physical components:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  Input Image (28×28)            Hidden Layer 1               Hidden Layer 2            Output Class Scores
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>      x ∈ ℝ⁷⁸⁴                     h₁ ∈ ℝ¹²⁸                    h₂ ∈ ℝ⁶⁴                    ŷ ∈ ℝ¹⁰
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>┌──────────────────┐         ┌──────────────────┐         ┌──────────────────┐         ┌──────────────────┐
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  x₁ (Pixel 1)    │         │  h₁,₁            │         │  h₂,₁            │         │  ŷ₀ (Digit 0)    │
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  x₂ (Pixel 2)    │ ──────► │  h₁,₂            │ ──────► │  h₂,₂            │ ──────► │  ŷ₁ (Digit 1)    │
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│    ⋮             │ (W₁,b₁) │    ⋮             │ (W₂,b₂) │    ⋮             │ (W₃,b₃) │    ⋮             │
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│  x₇₈₄ (Pixel 784)│         │  h₁,₁₂₈          │         │  h₂,₆₄           │         │  ŷ₉ (Digit 9)    │
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>└──────────────────┘         └──────────────────┘         └──────────────────┘         └────────┬─────────┘
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                                                                                                │
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                                                                                           Loss Function L
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                                                                                                ▼
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                                                                                           L ∈ ℝ¹ (Scalar)
 </span></code></pre></div>
 <ol>
-<li><strong>Every single feature <span class="arithmatex">\(x_j\)</span> has its own private weight <span class="arithmatex">\(w_{ij}\)</span> connecting it to neuron <span class="arithmatex">\(i\)</span>.</strong></li>
-<li>In the Forward Pass, every feature contributes its own piece: <span class="arithmatex">\(w_{ij} x_j\)</span>.</li>
-<li>In the Backward Pass, each weight receives its own customized gradient:
-   $<span class="arithmatex">\(\frac{\partial L}{\partial w_{ij}} = \delta_i \cdot x_j\)</span>$</li>
-<li>Across millions of data samples:</li>
-<li>Features that are consistently active (<span class="arithmatex">\(x_j &gt; 0\)</span>) when the error is positive will have their weights steadily decreased.</li>
-<li>Features that are consistently active (<span class="arithmatex">\(x_j &gt; 0\)</span>) when the error is negative will have their weights steadily increased.</li>
-<li>Irrelevant noise features (averaging out to zero correlation with <span class="arithmatex">\(\delta_i\)</span>) will have their updates cancel out, leaving their weights near zero.</li>
+<li><strong>Input Dimension (<span class="arithmatex">\(n = 784\)</span>):</strong> The number of raw features (e.g., <span class="arithmatex">\(28 \times 28 = 784\)</span> pixel brightness values).</li>
+<li><strong>Hidden Dimensions (<span class="arithmatex">\(m_1 = 128, m_2 = 64\)</span>):</strong> Intermediate feature detector neurons (e.g., edge detectors, curves, loops).</li>
+<li><strong>Output Dimension (<span class="arithmatex">\(k = 10\)</span>):</strong> Predicted scores/probabilities for each possible answer (digits <span class="arithmatex">\(0, 1, \dots, 9\)</span>).</li>
+<li><strong>Loss Dimension (<span class="arithmatex">\(1\)</span>):</strong> A single scalar number measuring <strong>how wrong the prediction was</strong> (e.g., Mean Squared Error or Cross-Entropy = <span class="arithmatex">\(2.45\)</span>).</li>
 </ol>
 <hr />
-<h2 id="7-what-happens-in-deep-hidden-layers-activations-become-the-data">7. What Happens in Deep Hidden Layers? (Activations Become the "Data")<a class="headerlink" href="#7-what-happens-in-deep-hidden-layers-activations-become-the-data" title="Permanent link">&para;</a></h2>
-<p>In Layer 1, the weight gradient uses the raw input data <span class="arithmatex">\(\mathbf{x}\)</span>:
-$<span class="arithmatex">\(\frac{\partial L}{\partial W_1} = \boldsymbol{\delta}_1 \cdot \mathbf{x}^T\)</span>$</p>
-<p>In Layer 2, Layer 3, <span class="arithmatex">\(\dots\)</span>, Layer <span class="arithmatex">\(K\)</span>, <strong>the previous layer's activation vector <span class="arithmatex">\(\mathbf{a}_{l-1}\)</span> acts as the "input data" for that layer</strong>:</p>
-<div class="arithmatex">\[\Large \frac{\partial L}{\partial W_l} = \boldsymbol{\delta}_l \cdot (\mathbf{a}_{l-1})^T\]</div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Layer 1 Weights:   ∂L/∂W₁ = δ₁ · (x)ᵀ       ◄── Raw Input Data multiplies here!
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Layer 2 Weights:   ∂L/∂W₂ = δ₂ · (a₁)ᵀ      ◄── Layer 1 Features multiply here!
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Layer 3 Weights:   ∂L/∂W₃ = δ₃ · (a₂)ᵀ      ◄── Layer 2 Features multiply here!
+<h2 id="2-the-great-role-reversal-inputs-vs-weights">2. The Great Role Reversal: Inputs vs. Weights<a class="headerlink" href="#2-the-great-role-reversal-inputs-vs-weights" title="Permanent link">&para;</a></h2>
+<p>In high school calculus, you always differentiate with respect to <span class="arithmatex">\(x\)</span> (<span class="arithmatex">\(y = f(x)\)</span>) because <span class="arithmatex">\(x\)</span> is the variable and coefficients are fixed (<span class="arithmatex">\(y = ax^2 + bx\)</span>).</p>
+<h3 id="in-neural-network-training-the-roles-flip-completely">⚠️ In Neural Network Training, the Roles Flip Completely!<a class="headerlink" href="#in-neural-network-training-the-roles-flip-completely" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">What is FIXED (Constant)?</th>
+<th style="text-align: left;">What is VARIABLE (Differentiated)?</th>
+<th style="text-align: left;">Why?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>High School Math</strong></td>
+<td style="text-align: left;">Coefficients <span class="arithmatex">\((a, b, c)\)</span></td>
+<td style="text-align: left;">Input <span class="arithmatex">\(x\)</span></td>
+<td style="text-align: left;">We explore how the curve changes when <span class="arithmatex">\(x\)</span> moves.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Neural Net Prediction (Inference)</strong></td>
+<td style="text-align: left;">Learned Weights <span class="arithmatex">\((W, \mathbf{b})\)</span></td>
+<td style="text-align: left;">User Input <span class="arithmatex">\(\mathbf{x}\)</span></td>
+<td style="text-align: left;">We feed a new image <span class="arithmatex">\(\mathbf{x}\)</span> to compute predicted output <span class="arithmatex">\(\hat{\mathbf{y}}\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Neural Net TRAINING (Backpropagation)</strong></td>
+<td style="text-align: left;"><strong>Input Data</strong> (<span class="arithmatex">\(\mathbf{x}\)</span>) &amp; <strong>True Labels</strong> (<span class="arithmatex">\(\mathbf{y}_{\text{true}}\)</span>)</td>
+<td style="text-align: left;"><strong>Weights &amp; Biases</strong> (<span class="arithmatex">\(W, \mathbf{b}\)</span>)</td>
+<td style="text-align: left;"><strong>You cannot change the input photo!</strong> To reduce prediction error <span class="arithmatex">\(L\)</span>, you must turn the knobs: the <strong>Weights <span class="arithmatex">\(W\)</span></strong>!</td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>               ┌─────────────────────────────────────────────────────────┐
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>               │              THE TWO PARALLEL TRACKS                    │
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>               └─────────────────────────────────────────────────────────┘
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Track 1: THE DATA TRACK (Forward Flow)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>   Input Image (x) ────────► Layer Activations (a) ────────► Prediction (ŷ) ────► Loss (L)
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   (Fixed Constants)         (Intermediate Values)           (Model Guess)         │
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                                                                                   │
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Track 2: THE PARAMETER TRACK (Backward Optimization)                               │
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>   Weight Update (W ← W - η∇L) ◄─── Weight Gradients (∂L/∂W) ◄────────────────────┘
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>   (The Tunable Knobs)              (Computed via Vector Chain Rule)
 </span></code></pre></div>
 <hr />
-<h2 id="8-summary-the-complete-ecosystem">8. Summary: The Complete Ecosystem<a class="headerlink" href="#8-summary-the-complete-ecosystem" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>┌─────────────────────────────────────────────────────────────────────────────┐
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>│                     WHERE DOES DATA LIVE IN LEARNING?                       │
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├─────────────────────────────────────────────────────────────────────────────┤
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│                                                                             │
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│  1. IN THE FORWARD PASS:                                                    │
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│     Raw input x creates the feature activations aₗ across all layers.       │
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│                                                                             │
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│  2. IN THE LOSS FUNCTION:                                                   │
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│     Target label y_true compares against final prediction ŷ to create       │
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>│     the initial scalar error.                                               │
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>│                                                                             │
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>│  3. IN THE BACKWARD PASS (BACKPROPAGATION):                                 │
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>│     The error signal δ flows backwards from the loss, AND at EVERY LAYER,   │
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>│     it is MULTIPLIED by the stored activations / input data (x and aₗ₋₁)    │
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>│     to produce the exact weight gradient:                                   │
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>│                           ∂L/∂Wₗ = δₗ · (aₗ₋₁)ᵀ                             │
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>│                                                                             │
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>│  4. IN THE OPTIMIZER:                                                       │
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>│     Each weight wᵢⱼ is updated proportionally to how active its input       │
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>│     feature was:                                                            │
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>│                           wᵢⱼ ← wᵢⱼ - η · (δᵢ · xⱼ)                         │
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>│                                                                             │
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>└─────────────────────────────────────────────────────────────────────────────┘
+<h2 id="3-the-3-distinct-stages-of-deep-learning">3. The 3 Distinct Stages of Deep Learning<a class="headerlink" href="#3-the-3-distinct-stages-of-deep-learning" title="Permanent link">&para;</a></h2>
+<p>It is common to confuse where Backpropagation ends and the Optimizer begins. Deep learning consists of <strong>three separate sequential stages</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>┌─────────────────────────────────────────────────────────────────────────────┐
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>│  STAGE 1: FORWARD PASS (Inference / Function Evaluation)                    │
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│  • Input data flows forward through layers: aₗ = σ(Wₗ aₗ₋₁ + bₗ)             │
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│  • Computes predictions ŷ and evaluates the scalar Loss L.                  │
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>├─────────────────────────────────────────────────────────────────────────────┤
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│  STAGE 2: BACKWARD PASS / BACKPROPAGATION (Multivariable Chain Rule)        │
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>│  • Starts at the scalar Loss: ∂L/∂L = 1.                                    │
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│  • Flows backwards through the computational graph.                         │
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>│  • Computes the exact gradient ∂L/∂W and ∂L/∂b for every single weight.     │
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>├─────────────────────────────────────────────────────────────────────────────┤
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>│  STAGE 3: OPTIMIZER STEP (Gradient Descent / Weight Updation)               │
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>│  • Takes the gradients computed in Stage 2.                                 │
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>│  • Adjusts weights downhill: W ← W - η · (∂L/∂W)                            │
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>│  • Prepares the network to make a better prediction on the next step.       │
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>└─────────────────────────────────────────────────────────────────────────────┘
+</span></code></pre></div>
+<blockquote>
+<p><strong>Definition:</strong> <strong>Backpropagation is strictly Stage 2</strong>. It does <strong>not</strong> update weights. Backpropagation is purely the calculus algorithm that computes <span class="arithmatex">\(\frac{\partial L}{\partial W}\)</span> and <span class="arithmatex">\(\frac{\partial L}{\partial \mathbf{b}}\)</span> using Jacobian matrix multiplication.</p>
+</blockquote>
+<hr />
+<h2 id="4-rosetta-stone-math-symbols-longleftrightarrow-neural-network-realities">4. Rosetta Stone: Math Symbols <span class="arithmatex">\(\longleftrightarrow\)</span> Neural Network Realities<a class="headerlink" href="#4-rosetta-stone-math-symbols-longleftrightarrow-neural-network-realities" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pure Calculus Symbol</th>
+<th style="text-align: left;">Deep Neural Network Entity</th>
+<th style="text-align: left;">Real-World Meaning &amp; Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbf{x} \in \mathbb{R}^n\)</span></td>
+<td style="text-align: left;"><strong>Input Layer / Features</strong></td>
+<td style="text-align: left;">The raw input vector (pixels, audio samples, tokens).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(W \in \mathbb{R}^{m \times n}\)</span></td>
+<td style="text-align: left;"><strong>Weight Matrix</strong></td>
+<td style="text-align: left;">The learnable connection strengths between layer neurons.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbf{b} \in \mathbb{R}^m\)</span></td>
+<td style="text-align: left;"><strong>Bias Vector</strong></td>
+<td style="text-align: left;">The learnable threshold offsets for each neuron.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbf{z} = W\mathbf{x} + \mathbf{b}\)</span></td>
+<td style="text-align: left;"><strong>Pre-activation / Logits</strong></td>
+<td style="text-align: left;">The raw weighted sum before non-linearity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbf{a} = \sigma(\mathbf{z})\)</span></td>
+<td style="text-align: left;"><strong>Activation Vector</strong></td>
+<td style="text-align: left;">The non-linear output of a layer (ReLU, Sigmoid, GELU).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(L \in \mathbb{R}\)</span></td>
+<td style="text-align: left;"><strong>Loss Function</strong></td>
+<td style="text-align: left;">Scalar error penalty (e.g. Mean Squared Error, Cross-Entropy).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(J_{\mathbf{a}} L = \frac{\partial L}{\partial \mathbf{a}}\)</span></td>
+<td style="text-align: left;"><strong>Upstream Error Signal (<span class="arithmatex">\(\boldsymbol{\delta}\)</span>)</strong></td>
+<td style="text-align: left;">How much the loss changes when layer activations change.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\nabla_W L = \frac{\partial L}{\partial W}\)</span></td>
+<td style="text-align: left;"><strong>Weight Gradient</strong></td>
+<td style="text-align: left;">The exact sensitivity of Loss <span class="arithmatex">\(L\)</span> to changes in weight <span class="arithmatex">\(W\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbf{v} \cdot J\)</span> (VJP)</td>
+<td style="text-align: left;"><code>loss.backward()</code> in PyTorch</td>
+<td style="text-align: left;">Vector-Jacobian Product: on-the-fly gradient evaluation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-fully-solved-concrete-numerical-walkthrough">5. Fully Solved Concrete Numerical Walkthrough<a class="headerlink" href="#5-fully-solved-concrete-numerical-walkthrough" title="Permanent link">&para;</a></h2>
+<p>Let’s trace a complete cycle (<strong>Forward <span class="arithmatex">\(\to\)</span> Backprop <span class="arithmatex">\(\to\)</span> Optimizer</strong>) with real decimal numbers.</p>
+<h3 id="network-architecture">Network Architecture:<a class="headerlink" href="#network-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Input:</strong> <span class="arithmatex">\(\mathbf{x} = \begin{bmatrix} 1.0 \\ 2.0 \end{bmatrix} \in \mathbb{R}^2\)</span></li>
+<li><strong>Target Label:</strong> <span class="arithmatex">\(y_{\text{true}} = 1.0\)</span></li>
+<li><strong>Layer 1 (2 neurons):</strong>
+  $<span class="arithmatex">\(W_1 = \begin{bmatrix} 0.5 &amp; -0.2 \\ 0.3 &amp; 0.8 \end{bmatrix}, \quad \mathbf{b}_1 = \begin{bmatrix} 0.1 \\ -0.1 \end{bmatrix}\)</span>$
+  Activation: <span class="arithmatex">\(\text{ReLU}(z) = \max(0, z)\)</span></li>
+<li><strong>Layer 2 (1 output neuron, linear):</strong>
+  $<span class="arithmatex">\(W_2 = \begin{bmatrix} 0.7 &amp; 0.4 \end{bmatrix}, \quad b_2 = 0.2\)</span>$</li>
+<li><strong>Loss Function:</strong> Squared Error <span class="arithmatex">\(L = \frac{1}{2}(\hat{y} - y_{\text{true}})^2\)</span></li>
+<li><strong>Learning Rate:</strong> <span class="arithmatex">\(\eta = 0.1\)</span></li>
+</ul>
+<hr />
+<h3 id="step-1-forward-pass-computing-prediction-loss">Step 1: Forward Pass (Computing Prediction &amp; Loss)<a class="headerlink" href="#step-1-forward-pass-computing-prediction-loss" title="Permanent link">&para;</a></h3>
+<h4 id="1-layer-1-pre-activation-mathbfz_1">1. Layer 1 Pre-activation <span class="arithmatex">\(\mathbf{z}_1\)</span>:<a class="headerlink" href="#1-layer-1-pre-activation-mathbfz_1" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[\mathbf{z}_1 = W_1 \mathbf{x} + \mathbf{b}_1 = \begin{bmatrix} 0.5 &amp; -0.2 \\ 0.3 &amp; 0.8 \end{bmatrix} \begin{bmatrix} 1.0 \\ 2.0 \end{bmatrix} + \begin{bmatrix} 0.1 \\ -0.1 \end{bmatrix}\]</div>
+<div class="arithmatex">\[\mathbf{z}_1 = \begin{bmatrix} (0.5)(1.0) + (-0.2)(2.0) + 0.1 \\ (0.3)(1.0) + (0.8)(2.0) - 0.1 \end{bmatrix} = \begin{bmatrix} 0.5 - 0.4 + 0.1 \\ 0.3 + 1.6 - 0.1 \end{bmatrix} = \begin{bmatrix} 0.2 \\ 1.8 \end{bmatrix}\]</div>
+<h4 id="2-layer-1-activation-mathbfa_1">2. Layer 1 Activation <span class="arithmatex">\(\mathbf{a}_1\)</span>:<a class="headerlink" href="#2-layer-1-activation-mathbfa_1" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[\mathbf{a}_1 = \text{ReLU}(\mathbf{z}_1) = \begin{bmatrix} \text{ReLU}(0.2) \\ \text{ReLU}(1.8) \end{bmatrix} = \begin{bmatrix} 0.2 \\ 1.8 \end{bmatrix}\]</div>
+<h4 id="3-layer-2-output-haty">3. Layer 2 Output <span class="arithmatex">\(\hat{y}\)</span>:<a class="headerlink" href="#3-layer-2-output-haty" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[\hat{y} = W_2 \mathbf{a}_1 + b_2 = \begin{bmatrix} 0.7 &amp; 0.4 \end{bmatrix} \begin{bmatrix} 0.2 \\ 1.8 \end{bmatrix} + 0.2$$
+$$\hat{y} = (0.7)(0.2) + (0.4)(1.8) + 0.2 = 0.14 + 0.72 + 0.2 = 1.06\]</div>
+<h4 id="4-total-loss-l">4. Total Loss <span class="arithmatex">\(L\)</span>:<a class="headerlink" href="#4-total-loss-l" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[L = \frac{1}{2}(\hat{y} - y_{\text{true}})^2 = \frac{1}{2}(1.06 - 1.0)^2 = \frac{1}{2}(0.06)^2 = 0.0018\]</div>
+<hr />
+<h3 id="step-2-backward-pass-backpropagation-vector-chain-rule">Step 2: Backward Pass (Backpropagation / Vector Chain Rule)<a class="headerlink" href="#step-2-backward-pass-backpropagation-vector-chain-rule" title="Permanent link">&para;</a></h3>
+<p>Now we propagate backwards from <span class="arithmatex">\(L\)</span> to compute gradients for all parameters.</p>
+<h4 id="a-gradient-at-the-output">A. Gradient at the Output:<a class="headerlink" href="#a-gradient-at-the-output" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[\frac{\partial L}{\partial \hat{y}} = \frac{d}{d\hat{y}}\left[\frac{1}{2}(\hat{y} - y_{\text{true}})^2\right] = (\hat{y} - y_{\text{true}}) = 1.06 - 1.0 = +0.06\]</div>
+<h4 id="b-gradients-for-layer-2-parameters-w_2-b_2">B. Gradients for Layer 2 Parameters <span class="arithmatex">\((W_2, b_2)\)</span>:<a class="headerlink" href="#b-gradients-for-layer-2-parameters-w_2-b_2" title="Permanent link">&para;</a></h4>
+<p>Since <span class="arithmatex">\(\hat{y} = W_2 \mathbf{a}_1 + b_2 = w_{2,1} a_{1,1} + w_{2,2} a_{1,2} + b_2\)</span>:
+- <span class="arithmatex">\(\frac{\partial \hat{y}}{\partial W_2} = \mathbf{a}_1^T = \begin{bmatrix} 0.2 &amp; 1.8 \end{bmatrix}\)</span>
+- <span class="arithmatex">\(\frac{\partial \hat{y}}{\partial b_2} = 1\)</span></p>
+<p>Applying Chain Rule:
+$<span class="arithmatex">\(\frac{\partial L}{\partial W_2} = \frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial W_2} = (0.06) \cdot \begin{bmatrix} 0.2 &amp; 1.8 \end{bmatrix} = \begin{bmatrix} 0.012 &amp; 0.108 \end{bmatrix}\)</span>$</p>
+<div class="arithmatex">\[\frac{\partial L}{\partial b_2} = \frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial b_2} = (0.06) \cdot 1 = 0.06\]</div>
+<hr />
+<h4 id="c-propagate-error-back-to-layer-1-activations-mathbfa_1">C. Propagate Error Back to Layer 1 Activations <span class="arithmatex">\(\mathbf{a}_1\)</span>:<a class="headerlink" href="#c-propagate-error-back-to-layer-1-activations-mathbfa_1" title="Permanent link">&para;</a></h4>
+<p>Using the Jacobian <span class="arithmatex">\(J_{\mathbf{a}_1} \hat{y} = W_2 = \begin{bmatrix} 0.7 &amp; 0.4 \end{bmatrix}\)</span>:</p>
+<div class="arithmatex">\[J_{\mathbf{a}_1} L = \frac{\partial L}{\partial \mathbf{a}_1} = \frac{\partial L}{\partial \hat{y}} \cdot W_2 = (0.06) \cdot \begin{bmatrix} 0.7 &amp; 0.4 \end{bmatrix} = \begin{bmatrix} 0.042 &amp; 0.024 \end{bmatrix}\]</div>
+<hr />
+<h4 id="d-pass-through-relu-non-linearity">D. Pass Through ReLU Non-Linearity:<a class="headerlink" href="#d-pass-through-relu-non-linearity" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[\text{ReLU}'(z) = \begin{cases} 1 &amp; \text{if } z &gt; 0 \\ 0 &amp; \text{if } z \le 0 \end{cases}\]</div>
+<p>Since <span class="arithmatex">\(\mathbf{z}_1 = \begin{bmatrix} 0.2 \\ 1.8 \end{bmatrix} &gt; 0\)</span>, both derivatives are <span class="arithmatex">\(1\)</span>.</p>
+<p>The error signal at pre-activation <span class="arithmatex">\(\mathbf{z}_1\)</span> (<span class="arithmatex">\(\boldsymbol{\delta}_1\)</span>) is:
+$<span class="arithmatex">\(\boldsymbol{\delta}_1 = \frac{\partial L}{\partial \mathbf{z}_1} = \frac{\partial L}{\partial \mathbf{a}_1} \odot \text{ReLU}'(\mathbf{z}_1) = \begin{bmatrix} 0.042 \times 1 \\ 0.024 \times 1 \end{bmatrix} = \begin{bmatrix} 0.042 \\ 0.024 \end{bmatrix}\)</span>$</p>
+<hr />
+<h4 id="e-gradients-for-layer-1-parameters-w_1-mathbfb_1">E. Gradients for Layer 1 Parameters <span class="arithmatex">\((W_1, \mathbf{b}_1)\)</span>:<a class="headerlink" href="#e-gradients-for-layer-1-parameters-w_1-mathbfb_1" title="Permanent link">&para;</a></h4>
+<p>Since <span class="arithmatex">\(\mathbf{z}_1 = W_1 \mathbf{x} + \mathbf{b}_1\)</span>, the gradient with respect to <span class="arithmatex">\(W_1\)</span> is the outer product of error <span class="arithmatex">\(\boldsymbol{\delta}_1\)</span> and input <span class="arithmatex">\(\mathbf{x}\)</span>:</p>
+<div class="arithmatex">\[\frac{\partial L}{\partial W_1} = \boldsymbol{\delta}_1 \mathbf{x}^T = \begin{bmatrix} 0.042 \\ 0.024 \end{bmatrix} \begin{bmatrix} 1.0 &amp; 2.0 \end{bmatrix} = \begin{bmatrix} 0.042 \times 1.0 &amp; 0.042 \times 2.0 \\ 0.024 \times 1.0 &amp; 0.024 \times 2.0 \end{bmatrix} = \begin{bmatrix} 0.042 &amp; 0.084 \\ 0.024 &amp; 0.048 \end{bmatrix}\]</div>
+<div class="arithmatex">\[\frac{\partial L}{\partial \mathbf{b}_1} = \boldsymbol{\delta}_1 = \begin{bmatrix} 0.042 \\ 0.024 \end{bmatrix}\]</div>
+<hr />
+<h3 id="step-3-optimizer-step-updating-weights">Step 3: Optimizer Step (Updating Weights)<a class="headerlink" href="#step-3-optimizer-step-updating-weights" title="Permanent link">&para;</a></h3>
+<p>Using learning rate <span class="arithmatex">\(\eta = 0.1\)</span>:</p>
+<div class="arithmatex">\[W_{\text{new}} = W_{\text{old}} - \eta \frac{\partial L}{\partial W}, \quad \mathbf{b}_{\text{new}} = \mathbf{b}_{\text{old}} - \eta \frac{\partial L}{\partial \mathbf{b}}\]</div>
+<h4 id="updated-layer-2">Updated Layer 2:<a class="headerlink" href="#updated-layer-2" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[W_2 \leftarrow \begin{bmatrix} 0.7 &amp; 0.4 \end{bmatrix} - 0.1 \begin{bmatrix} 0.012 &amp; 0.108 \end{bmatrix} = \begin{bmatrix} 0.6988 &amp; 0.3892 \end{bmatrix}$$
+$$b_2 \leftarrow 0.2 - 0.1(0.06) = 0.194\]</div>
+<h4 id="updated-layer-1">Updated Layer 1:<a class="headerlink" href="#updated-layer-1" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[W_1 \leftarrow \begin{bmatrix} 0.5 &amp; -0.2 \\ 0.3 &amp; 0.8 \end{bmatrix} - 0.1 \begin{bmatrix} 0.042 &amp; 0.084 \\ 0.024 &amp; 0.048 \end{bmatrix} = \begin{bmatrix} 0.4958 &amp; -0.2084 \\ 0.2976 &amp; 0.7952 \end{bmatrix}\]</div>
+<div class="arithmatex">\[\mathbf{b}_1 \leftarrow \begin{bmatrix} 0.1 \\ -0.1 \end{bmatrix} - 0.1 \begin{bmatrix} 0.042 \\ 0.024 \end{bmatrix} = \begin{bmatrix} 0.0958 \\ -0.1024 \end{bmatrix}\]</div>
+<hr />
+<h2 id="6-demystifying-pytorch-what-is-a-vector-jacobian-product-vjp">6. Demystifying PyTorch: What is a Vector-Jacobian Product (VJP)?<a class="headerlink" href="#6-demystifying-pytorch-what-is-a-vector-jacobian-product-vjp" title="Permanent link">&para;</a></h2>
+<h3 id="the-problem-full-jacobians-are-memory-disasters">The Problem: Full Jacobians are Memory Disasters<a class="headerlink" href="#the-problem-full-jacobians-are-memory-disasters" title="Permanent link">&para;</a></h3>
+<p>Suppose Layer 1 has <span class="arithmatex">\(100{,}000\)</span> neurons and Layer 2 has <span class="arithmatex">\(100{,}000\)</span> neurons.
+The full Jacobian matrix <span class="arithmatex">\(J = \frac{\partial \mathbf{h}_2}{\partial \mathbf{h}_1}\)</span> contains:</p>
+<div class="arithmatex">\[100{,}000 \times 100{,}000 = 10{,}000{,}000{,}000 \text{ floats} \approx \mathbf{40\text{ Gigabytes of VRAM!}}\]</div>
+<p>Allocating this single table would instantly crash your GPU.</p>
+<h3 id="the-solution-vector-jacobian-products-vjp">The Solution: Vector-Jacobian Products (VJP)<a class="headerlink" href="#the-solution-vector-jacobian-products-vjp" title="Permanent link">&para;</a></h3>
+<p>Notice that Backpropagation <strong>never needs the individual entries of the Jacobian table by themselves</strong>. 
+It only ever needs the <strong>product</strong> of the incoming gradient row vector <span class="arithmatex">\(\mathbf{v} = \frac{\partial L}{\partial \mathbf{h}_2} \in \mathbb{R}^{1 \times 100{,}000}\)</span> with the Jacobian:</p>
+<div class="arithmatex">\[\text{Gradient to pass back} = \mathbf{v} \cdot J\]</div>
+<p>Instead of creating the <span class="arithmatex">\(40\text{ GB}\)</span> table <span class="arithmatex">\(J\)</span> and then multiplying it by <span class="arithmatex">\(\mathbf{v}\)</span>, PyTorch computes the resulting vector <strong>directly on the fly in one step</strong>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># In PyTorch:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">y</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>             <span class="c1"># 1. Forward pass computes graph &amp; activations</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>          <span class="c1"># 2. Backward pass executes VJPs layer by layer backwards!</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>         <span class="c1"># 3. Updates weights using computed gradients</span>
+</span></code></pre></div>
+<hr />
+<h2 id="7-master-summary-diagram">7. Master Summary Diagram<a class="headerlink" href="#7-master-summary-diagram" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>FORWARD PASS (Inference):
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[Input x] ──(W₁,b₁)──► [z₁] ──(ReLU)──► [a₁] ──(W₂,b₂)──► [ŷ] ──(Loss)──► [Scalar L]
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                                                                             │
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>BACKWARD PASS (Backpropagation / Vector Chain Rule):                         │
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[∂L/∂W₁, ∂L/∂b₁] ◄── [δ₁] ◄── (ReLU') ◄── [∂L/∂a₁] ◄── [∂L/∂W₂, ∂L/∂b₂] ◄───┘
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                                                           │
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>OPTIMIZER STEP (Gradient Descent):                         │
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>W₁ ← W₁ - η(∂L/∂W₁)                                        ▼
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>W₂ ← W₂ - η(∂L/∂W₂)                              [Next Prediction is Better!]
 </span></code></pre></div>
 
 
@@ -5959,12 +5398,12 @@ $<span class="arithmatex">\(\frac{\partial L}{\partial W_1} = \boldsymbol{\delta
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../../javascripts/katex.js"></script>
+        <script src="../../../../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

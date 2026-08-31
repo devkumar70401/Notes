@@ -313,15 +313,11 @@
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
-         <loc>https://devkumar70401.github.io/Notes/III%20Machine_Learning/Practice_and_Auditing_MLP/01_Introduction/</loc>
+         <loc>https://devkumar70401.github.io/Notes/III%20Machine_Learning/MLP/01_Introduction/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
-         <loc>https://devkumar70401.github.io/Notes/III%20Machine_Learning/Practice_and_Auditing_MLP/01_Introduction/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/</loc>
+         <loc>https://devkumar70401.github.io/Notes/III%20Machine_Learning/MLP/01_Introduction/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
@@ -345,6 +341,34 @@
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>
+         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/The_4_Master_Backpropagation_Equations_Demystified/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
+         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/</loc>
+         <lastmod>2026-08-31</lastmod>
+    </url>
+    <url>
          <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/CNN_Fundamentals/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
@@ -354,50 +378,6 @@
     </url>
     <url>
          <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/II%20CNNs/Transfer_Learning/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Jacobian_Matrices_and_Vector_Chain_Rule/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Master_Curriculum_Tier_List_Robotics_AI_and_Microfly/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Neural_Networks_Backpropagation_and_Jacobians/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/The_4_Master_Backpropagation_Equations_Demystified/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Week_01_Mastery_ANN_and_PyTorch/</loc>
-         <lastmod>2026-08-31</lastmod>
-    </url>
-    <url>
-         <loc>https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Week_02_Mastery_MLP_Backprop_and_Production_PyTorch/</loc>
          <lastmod>2026-08-31</lastmod>
     </url>
     <url>

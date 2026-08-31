@@ -12,31 +12,27 @@
         <meta name="author" content="Devendra">
       
       
-        <link rel="canonical" href="https://devkumar70401.github.io/Notes/IV%20Deep_Learning/II%20DL/Jacobian_Matrices_and_Vector_Chain_Rule/">
+        <link rel="canonical" href="https://devkumar70401.github.io/Notes/IV%20Deep_Learning/I%20DLGenAI/I%20ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule/">
       
       
-        <link rel="prev" href="../The_4_Master_Backpropagation_Equations_Demystified/">
-      
-      
-        <link rel="next" href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/avatar.png">
+      <link rel="icon" href="../../../../../assets/avatar.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Jacobian Matrices & Vector Chain Rule - ML Engineer</title>
+        <title>📐 Jacobian Matrices & Generalized Vector Chain Rule: The Foundation of Backpropagation - ML Engineer</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,9 +53,9 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -100,9 +96,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ML Engineer" class="md-header__button md-logo" aria-label="ML Engineer" data-md-component="logo">
+    <a href="../../../../.." title="ML Engineer" class="md-header__button md-logo" aria-label="ML Engineer" data-md-component="logo">
       
-  <img src="../../../assets/avatar.png" alt="logo">
+  <img src="../../../../../assets/avatar.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Jacobian Matrices & Vector Chain Rule
+              📐 Jacobian Matrices &amp; Generalized Vector Chain Rule: The Foundation of Backpropagation
             
           </span>
         </div>
@@ -231,7 +227,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
   
@@ -259,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-tabs__link">
+        <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-tabs__link">
           
   
   
@@ -296,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-tabs__link">
+        <a href="../../../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-tabs__link">
           
   
   
@@ -329,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-tabs__link">
+        <a href="../../../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-tabs__link">
           
   
   
@@ -348,7 +344,12 @@
   
   
   
+  
     
+    
+      
+  
+  
   
   
     
@@ -357,13 +358,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../II%20Pytorch%20Fundamentals/" class="md-tabs__link">
           
   
   
@@ -371,6 +370,9 @@
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -393,7 +395,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-tabs__link">
+        <a href="../../../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-tabs__link">
           
   
   
@@ -436,9 +438,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ML Engineer" class="md-nav__button md-logo" aria-label="ML Engineer" data-md-component="logo">
+    <a href="../../../../.." title="ML Engineer" class="md-nav__button md-logo" aria-label="ML Engineer" data-md-component="logo">
       
-  <img src="../../../assets/avatar.png" alt="logo">
+  <img src="../../../../../assets/avatar.png" alt="logo">
 
     </a>
     ML Engineer
@@ -465,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -600,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
         
   
   
@@ -628,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="md-nav__link">
         
   
   
@@ -656,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
         
   
   
@@ -684,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
         
   
   
@@ -712,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
         
   
   
@@ -740,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
         
   
   
@@ -768,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
         
   
   
@@ -796,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
         
   
   
@@ -886,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="md-nav__link">
         
   
   
@@ -914,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../I%20Foundations/Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="md-nav__link">
+      <a href="../../../../../I%20Foundations/Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="md-nav__link">
         
   
   
@@ -1119,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="md-nav__link">
         
   
   
@@ -1147,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/02_data_types_and_type_systems/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/02_data_types_and_type_systems/" class="md-nav__link">
         
   
   
@@ -1175,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/03_memory_management_stack_vs_heap/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/03_memory_management_stack_vs_heap/" class="md-nav__link">
         
   
   
@@ -1203,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/04_abstraction_and_modularity/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/04_abstraction_and_modularity/" class="md-nav__link">
         
   
   
@@ -1231,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/05_object_oriented_concepts/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/05_object_oriented_concepts/" class="md-nav__link">
         
   
   
@@ -1259,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_1/06_classes_and_objects/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_1/06_classes_and_objects/" class="md-nav__link">
         
   
   
@@ -1349,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/01_a_first_taste_of_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/01_a_first_taste_of_java/" class="md-nav__link">
         
   
   
@@ -1377,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/02_basic_datatypes_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/02_basic_datatypes_in_java/" class="md-nav__link">
         
   
   
@@ -1405,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/03_control_flow_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/03_control_flow_in_java/" class="md-nav__link">
         
   
   
@@ -1433,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/04_defining_classes_and_objects/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/04_defining_classes_and_objects/" class="md-nav__link">
         
   
   
@@ -1461,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_2/05_basic_input_and_output/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_2/05_basic_input_and_output/" class="md-nav__link">
         
   
   
@@ -1551,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/01_philosophy_of_object_oriented_programming/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/01_philosophy_of_object_oriented_programming/" class="md-nav__link">
         
   
   
@@ -1579,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/02_subclasses_and_inheritance/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/02_subclasses_and_inheritance/" class="md-nav__link">
         
   
   
@@ -1607,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/03_dynamic_dispatch_and_polymorphism/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/03_dynamic_dispatch_and_polymorphism/" class="md-nav__link">
         
   
   
@@ -1635,7 +1637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/04_the_java_class_hierarchy/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/04_the_java_class_hierarchy/" class="md-nav__link">
         
   
   
@@ -1663,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/05_subtyping_vs_inheritance/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/05_subtyping_vs_inheritance/" class="md-nav__link">
         
   
   
@@ -1691,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_3/06_java_modifiers/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_3/06_java_modifiers/" class="md-nav__link">
         
   
   
@@ -1781,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/01_abstract_classes_and_Interfaces/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/01_abstract_classes_and_Interfaces/" class="md-nav__link">
         
   
   
@@ -1809,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/02_interfaces/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/02_interfaces/" class="md-nav__link">
         
   
   
@@ -1837,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/03_private_classes/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/03_private_classes/" class="md-nav__link">
         
   
   
@@ -1865,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/04_controlled_interaction_with_objects/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/04_controlled_interaction_with_objects/" class="md-nav__link">
         
   
   
@@ -1893,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/05_CallBacks/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/05_CallBacks/" class="md-nav__link">
         
   
   
@@ -1921,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/06_Interators/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/06_Interators/" class="md-nav__link">
         
   
   
@@ -1949,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_4/Java_Week_4_Mastery_Notes/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_4/Java_Week_4_Mastery_Notes/" class="md-nav__link">
         
   
   
@@ -2039,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/01_polymorphism_revisited/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/01_polymorphism_revisited/" class="md-nav__link">
         
   
   
@@ -2067,7 +2069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/02_java_generics/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/02_java_generics/" class="md-nav__link">
         
   
   
@@ -2095,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/03_generics_and_subtyping/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/03_generics_and_subtyping/" class="md-nav__link">
         
   
   
@@ -2123,7 +2125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/04_java_reflection/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/04_java_reflection/" class="md-nav__link">
         
   
   
@@ -2151,7 +2153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_5/05_type_erasure_and_runtime_implications/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_5/05_type_erasure_and_runtime_implications/" class="md-nav__link">
         
   
   
@@ -2241,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/01_the_benefits_of_indirection/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/01_the_benefits_of_indirection/" class="md-nav__link">
         
   
   
@@ -2269,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/02_java_collections_framework/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/02_java_collections_framework/" class="md-nav__link">
         
   
   
@@ -2297,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/03_concrete_collections/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/03_concrete_collections/" class="md-nav__link">
         
   
   
@@ -2325,7 +2327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_6/04_java_maps/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_6/04_java_maps/" class="md-nav__link">
         
   
   
@@ -2415,7 +2417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/01_dealing_with_errors/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/01_dealing_with_errors/" class="md-nav__link">
         
   
   
@@ -2443,7 +2445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/02_exceptions_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/02_exceptions_in_java/" class="md-nav__link">
         
   
   
@@ -2471,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/03_packages_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/03_packages_in_java/" class="md-nav__link">
         
   
   
@@ -2499,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/04_assertions_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/04_assertions_in_java/" class="md-nav__link">
         
   
   
@@ -2527,7 +2529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_7/05_logging_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_7/05_logging_in_java/" class="md-nav__link">
         
   
   
@@ -2617,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/01_object_cloning/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/01_object_cloning/" class="md-nav__link">
         
   
   
@@ -2645,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/02_type_inference/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/02_type_inference/" class="md-nav__link">
         
   
   
@@ -2673,7 +2675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/03_higher_order_functions_and_lambdas/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/03_higher_order_functions_and_lambdas/" class="md-nav__link">
         
   
   
@@ -2701,7 +2703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_8/04_introduction_to_streams/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_8/04_introduction_to_streams/" class="md-nav__link">
         
   
   
@@ -2791,7 +2793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/01_optional_type/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/01_optional_type/" class="md-nav__link">
         
   
   
@@ -2819,7 +2821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/02_collecting_results_from_streams/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/02_collecting_results_from_streams/" class="md-nav__link">
         
   
   
@@ -2847,7 +2849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/03_input_and_output_streams/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/03_input_and_output_streams/" class="md-nav__link">
         
   
   
@@ -2875,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_9/04_serialization_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_9/04_serialization_in_java/" class="md-nav__link">
         
   
   
@@ -2965,7 +2967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/01_concurrency_threads_and_processes/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/01_concurrency_threads_and_processes/" class="md-nav__link">
         
   
   
@@ -2993,7 +2995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/02_race_conditions_and_critical_sections/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/02_race_conditions_and_critical_sections/" class="md-nav__link">
         
   
   
@@ -3021,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/03_mutual_exclusion_algorithms/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/03_mutual_exclusion_algorithms/" class="md-nav__link">
         
   
   
@@ -3049,7 +3051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/04_hardware_synchronization_primitives/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/04_hardware_synchronization_primitives/" class="md-nav__link">
         
   
   
@@ -3077,7 +3079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_10/05_monitors_concept/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_10/05_monitors_concept/" class="md-nav__link">
         
   
   
@@ -3167,7 +3169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/01_monitors_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/01_monitors_in_java/" class="md-nav__link">
         
   
   
@@ -3195,7 +3197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/02_threads_in_java/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/02_threads_in_java/" class="md-nav__link">
         
   
   
@@ -3223,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/03_concurrent_programming_example/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/03_concurrent_programming_example/" class="md-nav__link">
         
   
   
@@ -3251,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_11/04_thread_safe_collections_and_utilities/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_11/04_thread_safe_collections_and_utilities/" class="md-nav__link">
         
   
   
@@ -3341,7 +3343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_12/01_graphical_interfaces_and_event_driven_programming/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_12/01_graphical_interfaces_and_event_driven_programming/" class="md-nav__link">
         
   
   
@@ -3369,7 +3371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_12/02_the_swing_toolkit/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_12/02_the_swing_toolkit/" class="md-nav__link">
         
   
   
@@ -3397,7 +3399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Java/week_12/03_swing_event_handling_and_examples/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Java/week_12/03_swing_event_handling_and_examples/" class="md-nav__link">
         
   
   
@@ -3495,7 +3497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Python/soon/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Python/soon/" class="md-nav__link">
         
   
   
@@ -3585,7 +3587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/Algorithms_and_DSA/01_Abstract_Data_Types/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/Algorithms_and_DSA/01_Abstract_Data_Types/" class="md-nav__link">
         
   
   
@@ -3675,7 +3677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/01_Zero_Trust_Security/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/01_Zero_Trust_Security/" class="md-nav__link">
         
   
   
@@ -3703,7 +3705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/02_Identity_and_Access_Management/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/02_Identity_and_Access_Management/" class="md-nav__link">
         
   
   
@@ -3731,7 +3733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="md-nav__link">
         
   
   
@@ -3759,7 +3761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/04_Phoneblok_Design/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/04_Phoneblok_Design/" class="md-nav__link">
         
   
   
@@ -3787,7 +3789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../II%20Programming/System_Design/05_Lego_Design_Philosophy/" class="md-nav__link">
+      <a href="../../../../../II%20Programming/System_Design/05_Lego_Design_Philosophy/" class="md-nav__link">
         
   
   
@@ -3938,7 +3940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-nav__link">
+      <a href="../../../../../III%20Machine_Learning/Data_Wrangling_TDS/01_Array_creation/" class="md-nav__link">
         
   
   
@@ -4028,7 +4030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../III%20Machine_Learning/Practice_and_Auditing_MLP/01_Introduction/" class="md-nav__link">
+      <a href="../../../../../III%20Machine_Learning/MLP/01_Introduction/" class="md-nav__link">
         
   
   
@@ -4068,31 +4070,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -4110,7 +4109,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4134,13 +4133,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4149,7 +4145,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -4184,34 +4180,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AI Engineering Skills Map
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
     
@@ -4228,10 +4196,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_1" >
         
           
-          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
             
   
   
@@ -4249,8 +4217,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4267,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/II%20Pytorch%20Fundamentals/" class="md-nav__link">
+      <a href="../../II%20Pytorch%20Fundamentals/" class="md-nav__link">
         
   
   
@@ -4295,7 +4263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/III%20Pytorch%20Workflow/" class="md-nav__link">
+      <a href="../../III%20Pytorch%20Workflow/" class="md-nav__link">
         
   
   
@@ -4323,7 +4291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/IV%20Customer%20Churn%20Prediction/" class="md-nav__link">
+      <a href="../../IV%20Customer%20Churn%20Prediction/" class="md-nav__link">
         
   
   
@@ -4351,7 +4319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/V%20XOR%20Problem/" class="md-nav__link">
+      <a href="../../V%20XOR%20Problem/" class="md-nav__link">
         
   
   
@@ -4379,7 +4347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/I%20ANNs/VI%20Fashion%20MNIST%20Classification/" class="md-nav__link">
+      <a href="../../VI%20Fashion%20MNIST%20Classification/" class="md-nav__link">
         
   
   
@@ -4430,10 +4398,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_2" >
         
           
-          <label class="md-nav__link" for="__nav_5_1_3" id="__nav_5_1_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
             
   
   
@@ -4451,8 +4419,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4469,7 +4437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/II%20CNNs/CNN_Fundamentals/" class="md-nav__link">
+      <a href="../../../II%20CNNs/CNN_Fundamentals/" class="md-nav__link">
         
   
   
@@ -4497,7 +4465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/II%20CNNs/Transfer_Learning/" class="md-nav__link">
+      <a href="../../../II%20CNNs/Transfer_Learning/" class="md-nav__link">
         
   
   
@@ -4525,7 +4493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../I%20DLGenAI/II%20CNNs/Image_Segmentation_UNET/" class="md-nav__link">
+      <a href="../../../II%20CNNs/Image_Segmentation_UNET/" class="md-nav__link">
         
   
   
@@ -4549,820 +4517,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    II DL
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    II DL
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Week_01_Mastery_ANN_and_PyTorch/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Week 01 Mastery - ANN & PyTorch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Week_02_Mastery_MLP_Backprop_and_Production_PyTorch/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Week 02 Mastery - MLP & Production PyTorch
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    The 4 Master Backprop Equations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Jacobian Matrices & Vector Chain Rule
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Jacobian Matrices & Vector Chain Rule
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧭 Learning Objectives
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-the-core-problem-why-scalar-calculus-breaks-down" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. The Core Problem: Why Scalar Calculus Breaks Down
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. The Core Problem: Why Scalar Calculus Breaks Down">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-bottleneck-in-real-world-systems-neural-networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Bottleneck in Real-World Systems &amp; Neural Networks:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-mathematical-definition-what-is-a-jacobian-matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Mathematical Definition: What is a Jacobian Matrix?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-detailed-walkthroughs-from-1-d-to-n-d" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Detailed Walkthroughs: From 1-D to \(N\)-D
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Detailed Walkthroughs: From 1-D to \(N\)-D">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-1-1-dimensional-scalar-case-1-to-1-to-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔹 Example 1: 1-Dimensional Scalar Case (\(1 \to 1 \to 1\))
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Example 1: 1-Dimensional Scalar Case (\(1 \to 1 \to 1\))">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problem Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-differentiate-y-with-respect-to-x" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Differentiate \(y\) with respect to \(x\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-differentiate-l-with-respect-to-y" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Differentiate \(L\) with respect to \(y\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-apply-the-1-d-scalar-chain-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Apply the 1-D Scalar Chain Rule
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-verification-via-direct-algebraic-substitution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Verification via Direct Algebraic Substitution
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-2-2-dimensional-case-2-to-2-to-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔹 Example 2: 2-Dimensional Case (\(2 \to 2 \to 1\))
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Example 2: 2-Dimensional Case (\(2 \to 2 \to 1\))">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-setup_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problem Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-compute-the-2-times-2-jacobian-matrix-j_mathbfx-mathbfy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Compute the \(2 \times 2\) Jacobian Matrix \(J_{\mathbf{x}} \mathbf{y}\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-compute-the-1-times-2-jacobian-matrix-j_mathbfy-l" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Compute the \(1 \times 2\) Jacobian Matrix \(J_{\mathbf{y}} L\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-solve-via-multivariable-total-derivative-path-tracking" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Solve via Multivariable Total Derivative (Path Tracking)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-solve-via-matrix-multiplication-j_mathbfy-lj_mathbfx-mathbfy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Solve via Matrix Multiplication \((J_{\mathbf{y}} L)(J_{\mathbf{x}} \mathbf{y})\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-5-direct-verification-via-full-algebraic-substitution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Direct Verification via Full Algebraic Substitution
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-3-3-dimensional-case-3-to-3-to-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔹 Example 3: 3-Dimensional Case (\(3 \to 3 \to 1\))
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Example 3: 3-Dimensional Case (\(3 \to 3 \to 1\))">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-setup_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problem Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-compute-the-3-times-3-jacobian-matrix-j_mathbfx-mathbfy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Compute the \(3 \times 3\) Jacobian Matrix \(J_{\mathbf{x}} \mathbf{y}\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-compute-the-1-times-3-jacobian-matrix-j_mathbfy-l" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Compute the \(1 \times 3\) Jacobian Matrix \(J_{\mathbf{y}} L\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-compute-matrix-product-j_mathbfy-lj_mathbfx-mathbfy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Compute Matrix Product \((J_{\mathbf{y}} L)(J_{\mathbf{x}} \mathbf{y})\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-4-the-general-n-dimensional-vector-case-n-to-m-to-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔹 Example 4: The General \(N\)-Dimensional Vector Case (\(n \to m \to 1\))
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Example 4: The General \(N\)-Dimensional Vector Case (\(n \to m \to 1\))">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-setup_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Problem Setup
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-the-total-derivative-formula" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: The Total Derivative Formula
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-formulating-the-vector-matrices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Formulating the Vector Matrices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-matrix-multiplication-identity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Matrix Multiplication Identity
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-deep-neural-network-generalization-k-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Deep Neural Network Generalization (\(K\) Layers)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Deep Neural Network Generalization (\(K\) Layers)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-backpropagation-matrix-chain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Backpropagation Matrix Chain:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-production-insight-how-pytorch-implements-this-vjps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Production Insight: How PyTorch Implements This (VJPs)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-summary-comparison-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Summary Comparison Table
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Multi-Architecture Batch Derivations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Microscopic Gradient Formulas
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Role of Input Data in Backprop
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    XOR Problem Proof
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Neural_Networks_Backpropagation_and_Jacobians/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Neural Networks & Jacobians
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Master Study Roadmap
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Master_Curriculum_Tier_List_Robotics_AI_and_Microfly/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Master Curriculum Tier List
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -5498,7 +4652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-nav__link">
+      <a href="../../../../../V%20Tools/I%20Agy/I%20Introduction/" class="md-nav__link">
         
   
   
@@ -5972,72 +5126,6 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../../I%20DLGenAI/Andrew_Ng_AI_Engineering_Skills_Map/" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Deep Learning
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-    
-  
-
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../Week_01_Mastery_ANN_and_PyTorch/" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    II DL
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
               
               <article class="md-content__inner md-typeset">
                 
@@ -6458,12 +5546,12 @@ Given an incoming gradient row vector <span class="arithmatex">\(\mathbf{v} = J_
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
-        <script src="../../../javascripts/katex.js"></script>
+        <script src="../../../../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
