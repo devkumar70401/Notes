@@ -21,3 +21,6 @@ site/
 
 # MkDocs hidden build folder
 .docs/
+
+# Manim rendering cache and media outputs
+media/
