@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Devendra">
+        <link rel="canonical" href="https://devkumar70401.github.io/Notes/II%20Diploma/I%20Diploma_in_Programming/IV%20Java/week_10/05_monitors_concept/">
+        <link rel="shortcut icon" href="../../../../../img/favicon.ico">
+        <title>05_monitors_concept.md - ML Engineer</title>
+        <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../..">ML Engineer</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../../../.." class="nav-link">README.md</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">II Diploma</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Diploma_in_Programming</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III PDSA</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../III%20PDSA/01_Abstract_Data_Types/" class="dropdown-item">01_Abstract_Data_Types.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">IV Java</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_1/01_introduction_to_java_and_programming_paradigms/" class="dropdown-item">01_introduction_to_java_and_programming_paradigms.md</a>
+</li>
+            
+<li>
+    <a href="../../week_1/02_data_types_and_type_systems/" class="dropdown-item">02_data_types_and_type_systems.md</a>
+</li>
+            
+<li>
+    <a href="../../week_1/03_memory_management_stack_vs_heap/" class="dropdown-item">03_memory_management_stack_vs_heap.md</a>
+</li>
+            
+<li>
+    <a href="../../week_1/04_abstraction_and_modularity/" class="dropdown-item">04_abstraction_and_modularity.md</a>
+</li>
+            
+<li>
+    <a href="../../week_1/05_object_oriented_concepts/" class="dropdown-item">05_object_oriented_concepts.md</a>
+</li>
+            
+<li>
+    <a href="../../week_1/06_classes_and_objects/" class="dropdown-item">06_classes_and_objects.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_10</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../01_concurrency_threads_and_processes/" class="dropdown-item">01_concurrency_threads_and_processes.md</a>
+</li>
+            
+<li>
+    <a href="../02_race_conditions_and_critical_sections/" class="dropdown-item">02_race_conditions_and_critical_sections.md</a>
+</li>
+            
+<li>
+    <a href="../03_mutual_exclusion_algorithms/" class="dropdown-item">03_mutual_exclusion_algorithms.md</a>
+</li>
+            
+<li>
+    <a href="../04_hardware_synchronization_primitives/" class="dropdown-item">04_hardware_synchronization_primitives.md</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">05_monitors_concept.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_11</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_11/01_monitors_in_java/" class="dropdown-item">01_monitors_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_11/02_threads_in_java/" class="dropdown-item">02_threads_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_11/03_concurrent_programming_example/" class="dropdown-item">03_concurrent_programming_example.md</a>
+</li>
+            
+<li>
+    <a href="../../week_11/04_thread_safe_collections_and_utilities/" class="dropdown-item">04_thread_safe_collections_and_utilities.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_12</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_12/01_graphical_interfaces_and_event_driven_programming/" class="dropdown-item">01_graphical_interfaces_and_event_driven_programming.md</a>
+</li>
+            
+<li>
+    <a href="../../week_12/02_the_swing_toolkit/" class="dropdown-item">02_the_swing_toolkit.md</a>
+</li>
+            
+<li>
+    <a href="../../week_12/03_swing_event_handling_and_examples/" class="dropdown-item">03_swing_event_handling_and_examples.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_2/01_a_first_taste_of_java/" class="dropdown-item">01_a_first_taste_of_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_2/02_basic_datatypes_in_java/" class="dropdown-item">02_basic_datatypes_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_2/03_control_flow_in_java/" class="dropdown-item">03_control_flow_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_2/04_defining_classes_and_objects/" class="dropdown-item">04_defining_classes_and_objects.md</a>
+</li>
+            
+<li>
+    <a href="../../week_2/05_basic_input_and_output/" class="dropdown-item">05_basic_input_and_output.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_3/01_philosophy_of_object_oriented_programming/" class="dropdown-item">01_philosophy_of_object_oriented_programming.md</a>
+</li>
+            
+<li>
+    <a href="../../week_3/02_subclasses_and_inheritance/" class="dropdown-item">02_subclasses_and_inheritance.md</a>
+</li>
+            
+<li>
+    <a href="../../week_3/03_dynamic_dispatch_and_polymorphism/" class="dropdown-item">03_dynamic_dispatch_and_polymorphism.md</a>
+</li>
+            
+<li>
+    <a href="../../week_3/04_the_java_class_hierarchy/" class="dropdown-item">04_the_java_class_hierarchy.md</a>
+</li>
+            
+<li>
+    <a href="../../week_3/05_subtyping_vs_inheritance/" class="dropdown-item">05_subtyping_vs_inheritance.md</a>
+</li>
+            
+<li>
+    <a href="../../week_3/06_java_modifiers/" class="dropdown-item">06_java_modifiers.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_4</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_4/01_abstract_classes_and_Interfaces/" class="dropdown-item">01_abstract_classes_and_Interfaces.md</a>
+</li>
+            
+<li>
+    <a href="../../week_4/02_interfaces/" class="dropdown-item">02_interfaces.md</a>
+</li>
+            
+<li>
+    <a href="../../week_4/03_private_classes/" class="dropdown-item">03_private_classes.md</a>
+</li>
+            
+<li>
+    <a href="../../week_4/04_controlled_interaction_with_objects/" class="dropdown-item">04_controlled_interaction_with_objects.md</a>
+</li>
+            
+<li>
+    <a href="../../week_4/05_CallBacks/" class="dropdown-item">05_CallBacks.md</a>
+</li>
+            
+<li>
+    <a href="../../week_4/06_Interators/" class="dropdown-item">06_Interators.md</a>
+</li>
+            
+<li>
+    <a href="../../week_4/Java_Week_4_Mastery_Notes/" class="dropdown-item">Java_Week_4_Mastery_Notes.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_5/01_polymorphism_revisited/" class="dropdown-item">01_polymorphism_revisited.md</a>
+</li>
+            
+<li>
+    <a href="../../week_5/02_java_generics/" class="dropdown-item">02_java_generics.md</a>
+</li>
+            
+<li>
+    <a href="../../week_5/03_generics_and_subtyping/" class="dropdown-item">03_generics_and_subtyping.md</a>
+</li>
+            
+<li>
+    <a href="../../week_5/04_java_reflection/" class="dropdown-item">04_java_reflection.md</a>
+</li>
+            
+<li>
+    <a href="../../week_5/05_type_erasure_and_runtime_implications/" class="dropdown-item">05_type_erasure_and_runtime_implications.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_6</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_6/01_the_benefits_of_indirection/" class="dropdown-item">01_the_benefits_of_indirection.md</a>
+</li>
+            
+<li>
+    <a href="../../week_6/02_java_collections_framework/" class="dropdown-item">02_java_collections_framework.md</a>
+</li>
+            
+<li>
+    <a href="../../week_6/03_concrete_collections/" class="dropdown-item">03_concrete_collections.md</a>
+</li>
+            
+<li>
+    <a href="../../week_6/04_java_maps/" class="dropdown-item">04_java_maps.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_7</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_7/01_dealing_with_errors/" class="dropdown-item">01_dealing_with_errors.md</a>
+</li>
+            
+<li>
+    <a href="../../week_7/02_exceptions_in_java/" class="dropdown-item">02_exceptions_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_7/03_packages_in_java/" class="dropdown-item">03_packages_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_7/04_assertions_in_java/" class="dropdown-item">04_assertions_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../week_7/05_logging_in_java/" class="dropdown-item">05_logging_in_java.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_8</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_8/01_object_cloning/" class="dropdown-item">01_object_cloning.md</a>
+</li>
+            
+<li>
+    <a href="../../week_8/02_type_inference/" class="dropdown-item">02_type_inference.md</a>
+</li>
+            
+<li>
+    <a href="../../week_8/03_higher_order_functions_and_lambdas/" class="dropdown-item">03_higher_order_functions_and_lambdas.md</a>
+</li>
+            
+<li>
+    <a href="../../week_8/04_introduction_to_streams/" class="dropdown-item">04_introduction_to_streams.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_9</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../week_9/01_optional_type/" class="dropdown-item">01_optional_type.md</a>
+</li>
+            
+<li>
+    <a href="../../week_9/02_collecting_results_from_streams/" class="dropdown-item">02_collecting_results_from_streams.md</a>
+</li>
+            
+<li>
+    <a href="../../week_9/03_input_and_output_streams/" class="dropdown-item">03_input_and_output_streams.md</a>
+</li>
+            
+<li>
+    <a href="../../week_9/04_serialization_in_java/" class="dropdown-item">04_serialization_in_java.md</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Diploma_in_Data_Science</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III MLP</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/III%20MLP/01_Introduction/" class="dropdown-item">01_Introduction.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">IV TDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/IV%20TDS/01_Array_creation/" class="dropdown-item">01_Array_creation.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">VI DLGenAI</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I ANNs</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">extra</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="dropdown-item">Jacobian_Matrices_and_Vector_Chain_Rule.md</a>
+</li>
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="dropdown-item">Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md</a>
+</li>
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="dropdown-item">Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md</a>
+</li>
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/Neural_Networks_Backpropagation_and_Jacobians/" class="dropdown-item">Neural_Networks_Backpropagation_and_Jacobians.md</a>
+</li>
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="dropdown-item">Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md</a>
+</li>
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/The_4_Master_Backpropagation_Equations_Demystified/" class="dropdown-item">The_4_Master_Backpropagation_Equations_Demystified.md</a>
+</li>
+            
+<li>
+    <a href="../../../../II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="dropdown-item">The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">V Languages</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../V%20Languages/I%20Python/soon/" class="dropdown-item">soon.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Rust</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../V%20Languages/II%20Rust/Readme/" class="dropdown-item">Readme.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">VI Advanced_Foundations</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Physics_and_Computation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/I%20Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="dropdown-item">Computational_Science_Topology_Optimization_and_Quantum_Simulation.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/I%20Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="dropdown-item">Quantum_Physics_and_Quantum_Computing_Mastery.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Calculus_and_Linear_Algebra</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="dropdown-item">Jacobian_Matrices_and_Vector_Chain_Rule.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="dropdown-item">Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="dropdown-item">Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="dropdown-item">Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="dropdown-item">Neural_Networks_Backpropagation_and_Jacobians.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="dropdown-item">Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="dropdown-item">The_4_Master_Backpropagation_Equations_Demystified.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="dropdown-item">The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III System_Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/III%20System_Design/01_Zero_Trust_Security/" class="dropdown-item">01_Zero_Trust_Security.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/III%20System_Design/02_Identity_and_Access_Management/" class="dropdown-item">02_Identity_and_Access_Management.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/III%20System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="dropdown-item">03_Zero_Fail_Deterministic_Systems_Mastery.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/III%20System_Design/04_Phoneblok_Design/" class="dropdown-item">04_Phoneblok_Design.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../VI%20Advanced_Foundations/III%20System_Design/05_Lego_Design_Philosophy/" class="dropdown-item">05_Lego_Design_Philosophy.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">VII Tools</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Agy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../VII%20Tools/I%20Agy/I%20Introduction/" class="dropdown-item">I Introduction.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../04_hardware_synchronization_primitives/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../week_11/01_monitors_in_java/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/devkumar70401/Notes/edit/master/docs/II Diploma/I Diploma_in_Programming/IV Java/week_10/05_monitors_concept.md" class="nav-link">Edit on devkumar70401/Notes
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#the-monitor-abstraction" class="nav-link">The Monitor Abstraction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#condition-variables-wait-and-signal" class="nav-link">Condition Variables (wait and signal)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="the-monitor-abstraction">The Monitor Abstraction</h1>
+<pre><code class="language-mermaid">graph TD
+    subgraph Monitor Structure
+        ENTRY[&quot;Entry Queue (Threads waiting to enter)&quot;]
+        MUTEX[&quot;Mutual Exclusion Lock&lt;br&gt;[ Active Running Thread ]&quot;]
+        WAITSET[&quot;Condition Variable Wait Set&lt;br&gt;(Threads calling wait())&quot;]
+    end
+
+    ENTRY --&gt;|Acquires Lock| MUTEX
+    MUTEX --&gt;|condition not met: wait()| WAITSET
+    WAITSET --&gt;|condition met: notify()| MUTEX
+</code></pre>
+<ul>
+<li>Writing raw low-level synchronization (semaphores, spinlocks) is error-prone (forgetting to unlock leads to deadlock).</li>
+<li><strong>Monitor</strong> (invented by C.A.R. Hoare and Edsger Dijkstra):</li>
+<li>A high-level synchronization construct that encapsulates data, methods, and automatic mutual exclusion into a single module.</li>
+</ul>
+<pre><code class="language-text">+-------------------------------------------------------+
+|                       MONITOR                         |
+|                                                       |
+|  [ Private Shared State ]                             |
+|                                                       |
+|  [ Public Synchronized Methods ]                      |
+|    - Automatic Mutual Exclusion:                      |
+|      Only ONE thread can execute inside at any time   |
+|                                                       |
+|  [ Condition Variables: wait() / signal() ]           |
+|    - Allows threads to suspend and wake up            |
++-------------------------------------------------------+
+</code></pre>
+<hr />
+<h1 id="condition-variables-wait-and-signal">Condition Variables (<code>wait</code> and <code>signal</code>)</h1>
+<ul>
+<li>If a thread enters a monitor and finds that a pre-condition is not met (e.g. buffer is full):</li>
+<li>It calls <strong><code>wait()</code></strong>: Releases the monitor lock and goes to sleep in the wait-set.</li>
+<li>When another thread changes state (e.g. consumes an item):</li>
+<li>It calls <strong><code>signal()</code> / <code>notify()</code></strong>: Wakes up a waiting thread to re-acquire the lock and continue.</li>
+</ul>
+<hr />
+<h1 id="summary">Summary</h1>
+<ul>
+<li>Monitors encapsulate mutual exclusion and shared state into a safe abstraction</li>
+<li>Condition variables allow threads to yield locks and wait for state changes safely</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../js/base.js"></script>
+        <script src="../../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

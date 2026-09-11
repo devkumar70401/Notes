@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Devendra">
+        <link rel="canonical" href="https://devkumar70401.github.io/Notes/II%20Diploma/II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/">
+        <link rel="shortcut icon" href="../../../../../../img/favicon.ico">
+        <title>Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md - ML Engineer</title>
+        <link href="../../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../../..">ML Engineer</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../../../../.." class="nav-link">README.md</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">II Diploma</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Diploma_in_Programming</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III PDSA</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/III%20PDSA/01_Abstract_Data_Types/" class="dropdown-item">01_Abstract_Data_Types.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">IV Java</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="dropdown-item">01_introduction_to_java_and_programming_paradigms.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/02_data_types_and_type_systems/" class="dropdown-item">02_data_types_and_type_systems.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/03_memory_management_stack_vs_heap/" class="dropdown-item">03_memory_management_stack_vs_heap.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/04_abstraction_and_modularity/" class="dropdown-item">04_abstraction_and_modularity.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/05_object_oriented_concepts/" class="dropdown-item">05_object_oriented_concepts.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/06_classes_and_objects/" class="dropdown-item">06_classes_and_objects.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_10</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/01_concurrency_threads_and_processes/" class="dropdown-item">01_concurrency_threads_and_processes.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/02_race_conditions_and_critical_sections/" class="dropdown-item">02_race_conditions_and_critical_sections.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/03_mutual_exclusion_algorithms/" class="dropdown-item">03_mutual_exclusion_algorithms.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/04_hardware_synchronization_primitives/" class="dropdown-item">04_hardware_synchronization_primitives.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/05_monitors_concept/" class="dropdown-item">05_monitors_concept.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_11</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/01_monitors_in_java/" class="dropdown-item">01_monitors_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/02_threads_in_java/" class="dropdown-item">02_threads_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/03_concurrent_programming_example/" class="dropdown-item">03_concurrent_programming_example.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/04_thread_safe_collections_and_utilities/" class="dropdown-item">04_thread_safe_collections_and_utilities.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_12</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_12/01_graphical_interfaces_and_event_driven_programming/" class="dropdown-item">01_graphical_interfaces_and_event_driven_programming.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_12/02_the_swing_toolkit/" class="dropdown-item">02_the_swing_toolkit.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_12/03_swing_event_handling_and_examples/" class="dropdown-item">03_swing_event_handling_and_examples.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/01_a_first_taste_of_java/" class="dropdown-item">01_a_first_taste_of_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/02_basic_datatypes_in_java/" class="dropdown-item">02_basic_datatypes_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/03_control_flow_in_java/" class="dropdown-item">03_control_flow_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/04_defining_classes_and_objects/" class="dropdown-item">04_defining_classes_and_objects.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/05_basic_input_and_output/" class="dropdown-item">05_basic_input_and_output.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/01_philosophy_of_object_oriented_programming/" class="dropdown-item">01_philosophy_of_object_oriented_programming.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/02_subclasses_and_inheritance/" class="dropdown-item">02_subclasses_and_inheritance.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/03_dynamic_dispatch_and_polymorphism/" class="dropdown-item">03_dynamic_dispatch_and_polymorphism.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/04_the_java_class_hierarchy/" class="dropdown-item">04_the_java_class_hierarchy.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/05_subtyping_vs_inheritance/" class="dropdown-item">05_subtyping_vs_inheritance.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/06_java_modifiers/" class="dropdown-item">06_java_modifiers.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_4</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/01_abstract_classes_and_Interfaces/" class="dropdown-item">01_abstract_classes_and_Interfaces.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/02_interfaces/" class="dropdown-item">02_interfaces.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/03_private_classes/" class="dropdown-item">03_private_classes.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/04_controlled_interaction_with_objects/" class="dropdown-item">04_controlled_interaction_with_objects.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/05_CallBacks/" class="dropdown-item">05_CallBacks.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/06_Interators/" class="dropdown-item">06_Interators.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/Java_Week_4_Mastery_Notes/" class="dropdown-item">Java_Week_4_Mastery_Notes.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/01_polymorphism_revisited/" class="dropdown-item">01_polymorphism_revisited.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/02_java_generics/" class="dropdown-item">02_java_generics.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/03_generics_and_subtyping/" class="dropdown-item">03_generics_and_subtyping.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/04_java_reflection/" class="dropdown-item">04_java_reflection.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/05_type_erasure_and_runtime_implications/" class="dropdown-item">05_type_erasure_and_runtime_implications.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_6</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/01_the_benefits_of_indirection/" class="dropdown-item">01_the_benefits_of_indirection.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/02_java_collections_framework/" class="dropdown-item">02_java_collections_framework.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/03_concrete_collections/" class="dropdown-item">03_concrete_collections.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/04_java_maps/" class="dropdown-item">04_java_maps.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_7</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/01_dealing_with_errors/" class="dropdown-item">01_dealing_with_errors.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/02_exceptions_in_java/" class="dropdown-item">02_exceptions_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/03_packages_in_java/" class="dropdown-item">03_packages_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/04_assertions_in_java/" class="dropdown-item">04_assertions_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/05_logging_in_java/" class="dropdown-item">05_logging_in_java.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_8</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/01_object_cloning/" class="dropdown-item">01_object_cloning.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/02_type_inference/" class="dropdown-item">02_type_inference.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/03_higher_order_functions_and_lambdas/" class="dropdown-item">03_higher_order_functions_and_lambdas.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/04_introduction_to_streams/" class="dropdown-item">04_introduction_to_streams.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_9</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/01_optional_type/" class="dropdown-item">01_optional_type.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/02_collecting_results_from_streams/" class="dropdown-item">02_collecting_results_from_streams.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/03_input_and_output_streams/" class="dropdown-item">03_input_and_output_streams.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/04_serialization_in_java/" class="dropdown-item">04_serialization_in_java.md</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Diploma_in_Data_Science</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III MLP</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../III%20MLP/01_Introduction/" class="dropdown-item">01_Introduction.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">IV TDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../IV%20TDS/01_Array_creation/" class="dropdown-item">01_Array_creation.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">VI DLGenAI</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I ANNs</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">extra</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Jacobian_Matrices_and_Vector_Chain_Rule/" class="dropdown-item">Jacobian_Matrices_and_Vector_Chain_Rule.md</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md</a>
+</li>
+            
+<li>
+    <a href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="dropdown-item">Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md</a>
+</li>
+            
+<li>
+    <a href="../Neural_Networks_Backpropagation_and_Jacobians/" class="dropdown-item">Neural_Networks_Backpropagation_and_Jacobians.md</a>
+</li>
+            
+<li>
+    <a href="../Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="dropdown-item">Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md</a>
+</li>
+            
+<li>
+    <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="dropdown-item">The_4_Master_Backpropagation_Equations_Demystified.md</a>
+</li>
+            
+<li>
+    <a href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="dropdown-item">The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">V Languages</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../V%20Languages/I%20Python/soon/" class="dropdown-item">soon.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Rust</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../V%20Languages/II%20Rust/Readme/" class="dropdown-item">Readme.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">VI Advanced_Foundations</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Physics_and_Computation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/I%20Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="dropdown-item">Computational_Science_Topology_Optimization_and_Quantum_Simulation.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/I%20Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="dropdown-item">Quantum_Physics_and_Quantum_Computing_Mastery.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Calculus_and_Linear_Algebra</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="dropdown-item">Jacobian_Matrices_and_Vector_Chain_Rule.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="dropdown-item">Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="dropdown-item">Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="dropdown-item">Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="dropdown-item">Neural_Networks_Backpropagation_and_Jacobians.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="dropdown-item">Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="dropdown-item">The_4_Master_Backpropagation_Equations_Demystified.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="dropdown-item">The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III System_Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/01_Zero_Trust_Security/" class="dropdown-item">01_Zero_Trust_Security.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/02_Identity_and_Access_Management/" class="dropdown-item">02_Identity_and_Access_Management.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="dropdown-item">03_Zero_Fail_Deterministic_Systems_Mastery.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/04_Phoneblok_Design/" class="dropdown-item">04_Phoneblok_Design.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/05_Lego_Design_Philosophy/" class="dropdown-item">05_Lego_Design_Philosophy.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">VII Tools</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Agy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VII%20Tools/I%20Agy/I%20Introduction/" class="dropdown-item">I Introduction.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Jacobian_Matrices_and_Vector_Chain_Rule/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/devkumar70401/Notes/edit/master/docs/II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md" class="nav-link">Edit on devkumar70401/Notes
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#master-backpropagation-manual-raw-mathematical-derivations-across-architectures-batches" class="nav-link">📘 Master Backpropagation Manual: Raw Mathematical Derivations Across Architectures &amp; Batches</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#document-purpose" class="nav-link">🧭 Document Purpose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1-standard-mathematical-notation-master-equations" class="nav-link">1. Standard Mathematical Notation &amp; Master Equations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#section-a-architecture-1-input-2-to-hidden-2-to-output-1" class="nav-link">SECTION A: Architecture 1 — Input [2] $\to$ Hidden [2] $\to$ Output [1]</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#scenario-1-architecture-1-with-1-sample-n1" class="nav-link">📍 Scenario 1: Architecture 1 with 1 Sample ($N=1$)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#scenario-2-architecture-1-with-2-samples-mini-batch-n2" class="nav-link">📍 Scenario 2: Architecture 1 with 2 Samples / Mini-Batch ($N=2$)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#section-b-architecture-2-input-3-to-hidden-1-3-to-hidden-2-2-to-output-1-batch-of-4-samples" class="nav-link">SECTION B: Architecture 2 — Input [3] $\to$ Hidden 1 [3] $\to$ Hidden 2 [2] $\to$ Output [1] (Batch of 4 Samples)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#scenario-3-3-d-input-4-samples-n4" class="nav-link">📍 Scenario 3: 3-D Input, 4 Samples ($N=4$)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#section-c-architecture-3-deep-4-layer-network-2-to-2-to-2-to-2-to-1" class="nav-link">SECTION C: Architecture 3 — Deep 4-Layer Network (2 $\to$ 2 $\to$ 2 $\to$ 2 $\to$ 1)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#scenario-4-deep-multi-layer-gradient-propagation" class="nav-link">📍 Scenario 4: Deep Multi-Layer Gradient Propagation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-master-summary-table-across-all-architectures" class="nav-link">4. Master Summary Table Across All Architectures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="master-backpropagation-manual-raw-mathematical-derivations-across-architectures-batches">📘 Master Backpropagation Manual: Raw Mathematical Derivations Across Architectures &amp; Batches</h1>
+<hr />
+<h2 id="document-purpose">🧭 Document Purpose</h2>
+<p>This document provides a <strong>complete, zero-shortcut mathematical breakdown of Backpropagation</strong> in Deep Neural Networks. </p>
+<p>Every single forward pass multiplication, activation function evaluation, loss calculation, backward Jacobian product, outer product gradient, batch averaging step, and parameter update is written out in <strong>explicit raw arithmetic</strong> with clean, human-readable numbers.</p>
+<hr />
+<h2 id="1-standard-mathematical-notation-master-equations">1. Standard Mathematical Notation &amp; Master Equations</h2>
+<h3 id="notation-system-standard-deep-learning-convention">Notation System (Standard Deep Learning Convention)</h3>
+<ul>
+<li><strong>$l \in {1, 2, \dots, L}$</strong>: Layer index ($l=1$ is first hidden layer, $l=L$ is output layer).</li>
+<li><strong>$n^{[l]}$</strong>: Number of neurons in layer $l$ ($n^{[0]} = d_{\text{in}}$ is input dimension).</li>
+<li><strong>$W^{[l]} \in \mathbb{R}^{n^{[l]} \times n^{[l-1]}}$</strong>: Weight matrix for layer $l$.</li>
+<li><strong>$\mathbf{b}^{[l]} \in \mathbb{R}^{n^{[l]}}$</strong>: Bias vector for layer $l$.</li>
+<li><strong>$\mathbf{z}^{[l]} \in \mathbb{R}^{n^{[l]}}$</strong>: Pre-activation linear combination ($\mathbf{z}^{[l]} = W^{[l]} \mathbf{a}^{[l-1]} + \mathbf{b}^{[l]}$).</li>
+<li><strong>$\mathbf{a}^{[l]} \in \mathbb{R}^{n^{[l]}}$</strong>: Post-activation vector ($\mathbf{a}^{[l]} = \sigma(\mathbf{z}^{[l]})$), where $\mathbf{a}^{[0]} = \mathbf{x}$ is input.</li>
+<li><strong>$\boldsymbol{\delta}^{[l]} = \frac{\partial \mathcal{J}}{\partial \mathbf{z}^{[l]}} \in \mathbb{R}^{n^{[l]}}$</strong>: Upstream Error Signal vector at layer $l$.</li>
+<li><strong>$N$</strong>: Batch size (number of training samples).</li>
+<li><strong>$\mathcal{J} = \frac{1}{N} \sum_{k=1}^N L^{(k)}$</strong>: Mean Batch Loss.</li>
+</ul>
+<hr />
+<h3 id="the-4-master-backpropagation-equations">The 4 Master Backpropagation Equations</h3>
+<p>$$\begin{aligned}
+\text{\bf [BP1] Output Error Signal:} \quad &amp; \boldsymbol{\delta}^{[L]} = \nabla_{\mathbf{a}^{[L]}} L \odot \sigma'\left(\mathbf{z}^{[L]}\right) \[8pt]
+\text{\bf [BP2] Hidden Error Propagation:} \quad &amp; \boldsymbol{\delta}^{[l]} = \left( (W^{[l+1]})^T \boldsymbol{\delta}^{[l+1]} \right) \odot \sigma'\left(\mathbf{z}^{[l]}\right) \[8pt]
+\text{\bf [BP3] Weight Gradient (Batch-Averaged):} \quad &amp; \frac{\partial \mathcal{J}}{\partial W^{[l]}} = \frac{1}{N} \sum_{k=1}^N \boldsymbol{\delta}^{<a href="k">l</a>} \left(\mathbf{a}^{<a href="k">l-1</a>}\right)^T = \frac{1}{N} \Delta^{[l]} \left(A^{[l-1]}\right)^T \[8pt]
+\text{\bf [BP4] Bias Gradient (Batch-Averaged):} \quad &amp; \frac{\partial \mathcal{J}}{\partial \mathbf{b}^{[l]}} = \frac{1}{N} \sum_{k=1}^N \boldsymbol{\delta}^{<a href="k">l</a>} = \frac{1}{N} \Delta^{[l]} \mathbf{1}_N
+\end{aligned}$$</p>
+<hr />
+<h1 id="section-a-architecture-1-input-2-to-hidden-2-to-output-1">SECTION A: Architecture 1 — Input [2] $\to$ Hidden [2] $\to$ Output [1]</h1>
+<pre><code class="language-text">       x₁ ───┬───────► h₁ (z₁[¹], a₁[¹]) ───┬───────► Output ŷ (z[²]) ───► Loss L
+             │         ▲                    │
+             │   W[¹]  │              W[²]  │
+             ▼         │                    ▼
+       x₂ ───────────► h₂ (z₂[¹], a₂[¹]) ───┘
+</code></pre>
+<hr />
+<h2 id="scenario-1-architecture-1-with-1-sample-n1">📍 Scenario 1: Architecture 1 with 1 Sample ($N=1$)</h2>
+<h3 id="1-initial-state-setup">1. Initial State &amp; Setup</h3>
+<ul>
+<li><strong>Input:</strong> $\mathbf{x} = \begin{bmatrix} 2.0 \ 1.0 \end{bmatrix}$, <strong>Target:</strong> $y = 3.0$</li>
+<li><strong>Layer 1 Weights &amp; Biases ($2 \times 2$ and $2 \times 1$):</strong>
+  $$W^{[1]} = \begin{bmatrix} 0.5 &amp; 0.5 \ 1.0 &amp; -0.5 \end{bmatrix}, \quad \mathbf{b}^{[1]} = \begin{bmatrix} 0.0 \ 0.0 \end{bmatrix}$$</li>
+<li><strong>Layer 2 Weights &amp; Biases ($1 \times 2$ and $1 \times 1$):</strong>
+  $$W^{[2]} = \begin{bmatrix} 1.0 &amp; 0.5 \end{bmatrix}, \quad b^{[2]} = 0.0$$</li>
+<li><strong>Activation Functions:</strong> </li>
+<li>Hidden Layer: $\text{ReLU}(z) = \max(0, z)$ with derivative $\sigma'(z) = 1 \text{ if } z &gt; 0 \text{ else } 0$</li>
+<li>Output Layer: Linear $\sigma(z) = z$ with derivative $\sigma'(z) = 1$</li>
+<li><strong>Loss Function:</strong> Squared Error $L = \frac{1}{2}(\hat{y} - y)^2$</li>
+<li><strong>Learning Rate:</strong> $\eta = 0.1$</li>
+</ul>
+<hr />
+<h3 id="2-forward-pass-step-by-step-arithmetic">2. Forward Pass (Step-by-Step Arithmetic)</h3>
+<h4 id="step-21-pre-activation-mathbfz1">Step 2.1: Pre-activation $\mathbf{z}^{[1]}$</h4>
+<p>$$\mathbf{z}^{[1]} = W^{[1]} \mathbf{x} + \mathbf{b}^{[1]} = \begin{bmatrix} 0.5 &amp; 0.5 \ 1.0 &amp; -0.5 \end{bmatrix} \begin{bmatrix} 2.0 \ 1.0 \end{bmatrix} + \begin{bmatrix} 0.0 \ 0.0 \end{bmatrix}$$</p>
+<p>$$\begin{aligned}
+z_1^{[1]} &amp;= (0.5)(2.0) + (0.5)(1.0) + 0.0 = 1.0 + 0.5 = 1.5 \
+z_2^{[1]} &amp;= (1.0)(2.0) + (-0.5)(1.0) + 0.0 = 2.0 - 0.5 = 1.5
+\end{aligned} \implies \mathbf{z}^{[1]} = \begin{bmatrix} 1.5 \ 1.5 \end{bmatrix}$$</p>
+<h4 id="step-22-hidden-activation-mathbfa1">Step 2.2: Hidden Activation $\mathbf{a}^{[1]}$</h4>
+<p>$$\mathbf{a}^{[1]} = \text{ReLU}\left(\mathbf{z}^{[1]}\right) = \begin{bmatrix} \text{ReLU}(1.5) \ \text{ReLU}(1.5) \end{bmatrix} = \begin{bmatrix} 1.5 \ 1.5 \end{bmatrix}$$</p>
+<h4 id="step-23-output-pre-activation-and-prediction-haty">Step 2.3: Output Pre-activation and Prediction $\hat{y}$</h4>
+<p>$$z^{[2]} = W^{[2]} \mathbf{a}^{[1]} + b^{[2]} = \begin{bmatrix} 1.0 &amp; 0.5 \end{bmatrix} \begin{bmatrix} 1.5 \ 1.5 \end{bmatrix} + 0.0$$
+$$\hat{y} = z^{[2]} = (1.0)(1.5) + (0.5)(1.5) + 0.0 = 1.5 + 0.75 = \mathbf{2.25}$$</p>
+<h4 id="step-24-loss-evaluation">Step 2.4: Loss Evaluation</h4>
+<p>$$L = \frac{1}{2}(\hat{y} - y)^2 = \frac{1}{2}(2.25 - 3.0)^2 = \frac{1}{2}(-0.75)^2 = \frac{1}{2}(0.5625) = \mathbf{0.28125}$$</p>
+<hr />
+<h3 id="3-backward-pass-raw-chain-rule-execution">3. Backward Pass (Raw Chain Rule Execution)</h3>
+<h4 id="step-31-output-error-signal-delta2-bp1">Step 3.1: Output Error Signal $\delta^{[2]}$ [BP1]</h4>
+<p>$$\delta^{[2]} = \frac{\partial L}{\partial z^{[2]}} = \frac{\partial L}{\partial \hat{y}} \cdot \frac{d\hat{y}}{dz^{[2]}} = (\hat{y} - y) \cdot (1) = 2.25 - 3.0 = \mathbf{-0.75}$$</p>
+<h4 id="step-32-layer-2-gradients-fracpartial-lpartial-w2-and-fracpartial-lpartial-b2-bp3-bp4">Step 3.2: Layer 2 Gradients $\frac{\partial L}{\partial W^{[2]}}$ and $\frac{\partial L}{\partial b^{[2]}}$ [BP3, BP4]</h4>
+<p>$$\frac{\partial L}{\partial W^{[2]}} = \delta^{[2]} \left(\mathbf{a}^{[1]}\right)^T = (-0.75) \begin{bmatrix} 1.5 &amp; 1.5 \end{bmatrix} = \begin{bmatrix} -1.125 &amp; -1.125 \end{bmatrix}$$</p>
+<p>$$\frac{\partial L}{\partial b^{[2]}} = \delta^{[2]} = -0.75$$</p>
+<h4 id="step-33-backpropagate-error-to-hidden-layer-boldsymboldelta1-bp2">Step 3.3: Backpropagate Error to Hidden Layer $\boldsymbol{\delta}^{[1]}$ [BP2]</h4>
+<p>$$\boldsymbol{\delta}^{[1]} = \left( (W^{[2]})^T \delta^{[2]} \right) \odot \text{ReLU}'\left(\mathbf{z}^{[1]}\right)$$</p>
+<p>$$(W^{[2]})^T \delta^{[2]} = \begin{bmatrix} 1.0 \ 0.5 \end{bmatrix} (-0.75) = \begin{bmatrix} -0.75 \ -0.375 \end{bmatrix}$$</p>
+<p>Since both $z_1^{[1]} = 1.5 &gt; 0$ and $z_2^{[1]} = 1.5 &gt; 0$, the ReLU derivatives are:
+$$\text{ReLU}'\left(\mathbf{z}^{[1]}\right) = \begin{bmatrix} 1 \ 1 \end{bmatrix}$$</p>
+<p>$$\boldsymbol{\delta}^{[1]} = \begin{bmatrix} -0.75 \ -0.375 \end{bmatrix} \odot \begin{bmatrix} 1 \ 1 \end{bmatrix} = \begin{bmatrix} -0.75 \ -0.375 \end{bmatrix}$$</p>
+<h4 id="step-34-layer-1-gradients-fracpartial-lpartial-w1-and-fracpartial-lpartial-mathbfb1-bp3-bp4">Step 3.4: Layer 1 Gradients $\frac{\partial L}{\partial W^{[1]}}$ and $\frac{\partial L}{\partial \mathbf{b}^{[1]}}$ [BP3, BP4]</h4>
+<p>$$\frac{\partial L}{\partial W^{[1]}} = \boldsymbol{\delta}^{[1]} \mathbf{x}^T = \begin{bmatrix} -0.75 \ -0.375 \end{bmatrix} \begin{bmatrix} 2.0 &amp; 1.0 \end{bmatrix} = \begin{bmatrix} (-0.75)(2.0) &amp; (-0.75)(1.0) \ (-0.375)(2.0) &amp; (-0.375)(1.0) \end{bmatrix} = \begin{bmatrix} -1.50 &amp; -0.75 \ -0.75 &amp; -0.375 \end{bmatrix}$$</p>
+<p>$$\frac{\partial L}{\partial \mathbf{b}^{[1]}} = \boldsymbol{\delta}^{[1]} = \begin{bmatrix} -0.75 \ -0.375 \end{bmatrix}$$</p>
+<hr />
+<h3 id="4-optimizer-step-gradient-descent-update-with-eta-01">4. Optimizer Step (Gradient Descent Update with $\eta = 0.1$)</h3>
+<p>$$W^{[2]} \leftarrow \begin{bmatrix} 1.0 &amp; 0.5 \end{bmatrix} - 0.1 \begin{bmatrix} -1.125 &amp; -1.125 \end{bmatrix} = \begin{bmatrix} 1.0 + 0.1125 &amp; 0.5 + 0.1125 \end{bmatrix} = \mathbf{\begin{bmatrix} 1.1125 &amp; 0.6125 \end{bmatrix}}$$</p>
+<p>$$b^{[2]} \leftarrow 0.0 - 0.1(-0.75) = \mathbf{+0.075}$$</p>
+<p>$$W^{[1]} \leftarrow \begin{bmatrix} 0.5 &amp; 0.5 \ 1.0 &amp; -0.5 \end{bmatrix} - 0.1 \begin{bmatrix} -1.50 &amp; -0.75 \ -0.75 &amp; -0.375 \end{bmatrix} = \mathbf{\begin{bmatrix} 0.65 &amp; 0.575 \ 1.075 &amp; -0.4625 \end{bmatrix}}$$</p>
+<p>$$\mathbf{b}^{[1]} \leftarrow \begin{bmatrix} 0.0 \ 0.0 \end{bmatrix} - 0.1 \begin{bmatrix} -0.75 \ -0.375 \end{bmatrix} = \mathbf{\begin{bmatrix} 0.075 \ 0.0375 \end{bmatrix}}$$</p>
+<hr />
+<h2 id="scenario-2-architecture-1-with-2-samples-mini-batch-n2">📍 Scenario 2: Architecture 1 with 2 Samples / Mini-Batch ($N=2$)</h2>
+<p>Now we process <strong>two samples simultaneously</strong> to see how batch accumulation and averaging work mathematically.</p>
+<h3 id="1-data-batch-setup">1. Data Batch Setup</h3>
+<ul>
+<li><strong>Sample 1:</strong> $\mathbf{x}^{(1)} = \begin{bmatrix} 2.0 \ 1.0 \end{bmatrix}, \quad y^{(1)} = 3.0$</li>
+<li>
+<p><strong>Sample 2:</strong> $\mathbf{x}^{(2)} = \begin{bmatrix} 0.0 \ 2.0 \end{bmatrix}, \quad y^{(2)} = 1.0$</p>
+</li>
+<li>
+<p><strong>Batch Input Matrix $X \in \mathbb{R}^{2 \times 2}$ (each column is a sample):</strong>
+  $$X = \begin{bmatrix} \mathbf{x}^{(1)} &amp; \mathbf{x}^{(2)} \end{bmatrix} = \begin{bmatrix} 2.0 &amp; 0.0 \ 1.0 &amp; 2.0 \end{bmatrix}$$</p>
+</li>
+<li><strong>Target Vector:</strong> $\mathbf{y} = \begin{bmatrix} 3.0 &amp; 1.0 \end{bmatrix}$</li>
+<li><strong>Initial Weights:</strong> Same as Scenario 1 ($W^{[1]}, \mathbf{b}^{[1]}, W^{[2]}, b^{[2]}$).</li>
+</ul>
+<hr />
+<h3 id="2-forward-pass-on-the-batch">2. Forward Pass on the Batch</h3>
+<h4 id="step-21-layer-1-pre-activation-matrix-z1-in-mathbbr2-times-2">Step 2.1: Layer 1 Pre-activation Matrix $Z^{[1]} \in \mathbb{R}^{2 \times 2}$</h4>
+<p>$$Z^{[1]} = W^{[1]} X + \mathbf{b}^{[1]} \mathbf{1}_2^T = \begin{bmatrix} 0.5 &amp; 0.5 \ 1.0 &amp; -0.5 \end{bmatrix} \begin{bmatrix} 2.0 &amp; 0.0 \ 1.0 &amp; 2.0 \end{bmatrix} + \begin{bmatrix} 0.0 &amp; 0.0 \ 0.0 &amp; 0.0 \end{bmatrix}$$</p>
+<ul>
+<li>Column 1 (Sample 1): $\begin{bmatrix} (0.5)(2) + (0.5)(1) \ (1)(2) + (-0.5)(1) \end{bmatrix} = \begin{bmatrix} 1.5 \ 1.5 \end{bmatrix}$</li>
+<li>Column 2 (Sample 2): $\begin{bmatrix} (0.5)(0) + (0.5)(2) \ (1)(0) + (-0.5)(2) \end{bmatrix} = \begin{bmatrix} 1.0 \ -1.0 \end{bmatrix}$</li>
+</ul>
+<p>$$Z^{[1]} = \begin{bmatrix} 1.5 &amp; 1.0 \ 1.5 &amp; -1.0 \end{bmatrix}$$</p>
+<h4 id="step-22-layer-1-activation-matrix-a1-in-mathbbr2-times-2">Step 2.2: Layer 1 Activation Matrix $A^{[1]} \in \mathbb{R}^{2 \times 2}$</h4>
+<p>$$A^{[1]} = \text{ReLU}\left(Z^{[1]}\right) = \begin{bmatrix} \text{ReLU}(1.5) &amp; \text{ReLU}(1.0) \ \text{ReLU}(1.5) &amp; \text{ReLU}(-1.0) \end{bmatrix} = \begin{bmatrix} 1.5 &amp; 1.0 \ 1.5 &amp; \mathbf{0.0} \end{bmatrix}$$
+<em>(Notice neuron 2 was inactive for sample 2!)</em></p>
+<h4 id="step-23-layer-2-output-vector-hatmathbfy-in-mathbbr1-times-2">Step 2.3: Layer 2 Output Vector $\hat{\mathbf{y}} \in \mathbb{R}^{1 \times 2}$</h4>
+<p>$$\hat{\mathbf{y}} = Z^{[2]} = W^{[2]} A^{[1]} + b^{[2]} = \begin{bmatrix} 1.0 &amp; 0.5 \end{bmatrix} \begin{bmatrix} 1.5 &amp; 1.0 \ 1.5 &amp; 0.0 \end{bmatrix} + 0.0$$</p>
+<ul>
+<li>Sample 1: $\hat{y}^{(1)} = (1.0)(1.5) + (0.5)(1.5) = \mathbf{2.25}$</li>
+<li>Sample 2: $\hat{y}^{(2)} = (1.0)(1.0) + (0.5)(0.0) = \mathbf{1.00}$</li>
+</ul>
+<p>$$\hat{\mathbf{y}} = \begin{bmatrix} 2.25 &amp; 1.00 \end{bmatrix}$$</p>
+<h4 id="step-24-mean-batch-loss-mathcalj">Step 2.4: Mean Batch Loss $\mathcal{J}$</h4>
+<ul>
+<li>Sample 1 Loss: $L^{(1)} = \frac{1}{2}(2.25 - 3.0)^2 = \frac{1}{2}(-0.75)^2 = 0.28125$</li>
+<li>Sample 2 Loss: $L^{(2)} = \frac{1}{2}(1.00 - 1.0)^2 = \frac{1}{2}(0.0)^2 = 0.00000$</li>
+</ul>
+<p>$$\mathcal{J} = \frac{1}{2}\left(L^{(1)} + L^{(2)}\right) = \frac{1}{2}(0.28125 + 0.0) = \mathbf{0.140625}$$</p>
+<hr />
+<h3 id="3-backward-pass-on-the-batch">3. Backward Pass on the Batch</h3>
+<h4 id="step-31-output-error-matrix-delta2-in-mathbbr1-times-2">Step 3.1: Output Error Matrix $\Delta^{[2]} \in \mathbb{R}^{1 \times 2}$</h4>
+<p>$$\Delta^{[2]} = \hat{\mathbf{y}} - \mathbf{y} = \begin{bmatrix} 2.25 - 3.0 &amp; 1.00 - 1.0 \end{bmatrix} = \begin{bmatrix} \mathbf{-0.75} &amp; \mathbf{0.00} \end{bmatrix}$$</p>
+<h4 id="step-32-layer-2-batch-gradients-bp3-bp4">Step 3.2: Layer 2 Batch Gradients [BP3, BP4]</h4>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[2]}} = \frac{1}{N} \Delta^{[2]} \left(A^{[1]}\right)^T = \frac{1}{2} \begin{bmatrix} -0.75 &amp; 0.00 \end{bmatrix} \begin{bmatrix} 1.5 &amp; 1.5 \ 1.0 &amp; 0.0 \end{bmatrix} = \frac{1}{2} \begin{bmatrix} (-0.75)(1.5) + (0)(1.0) &amp; (-0.75)(1.5) + (0)(0) \end{bmatrix}$$</p>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[2]}} = \frac{1}{2} \begin{bmatrix} -1.125 &amp; -1.125 \end{bmatrix} = \mathbf{\begin{bmatrix} -0.5625 &amp; -0.5625 \end{bmatrix}}$$</p>
+<p>$$\frac{\partial \mathcal{J}}{\partial b^{[2]}} = \frac{1}{N} \sum_{k=1}^2 \delta^{<a href="k">2</a>} = \frac{1}{2}(-0.75 + 0.0) = \mathbf{-0.375}$$</p>
+<h4 id="step-33-backpropagate-error-matrix-to-hidden-layer-delta1-in-mathbbr2-times-2">Step 3.3: Backpropagate Error Matrix to Hidden Layer $\Delta^{[1]} \in \mathbb{R}^{2 \times 2}$</h4>
+<p>$$\Delta^{[1]} = \left( (W^{[2]})^T \Delta^{[2]} \right) \odot \text{ReLU}'\left(Z^{[1]}\right)$$</p>
+<p>$$(W^{[2]})^T \Delta^{[2]} = \begin{bmatrix} 1.0 \ 0.5 \end{bmatrix} \begin{bmatrix} -0.75 &amp; 0.00 \end{bmatrix} = \begin{bmatrix} -0.75 &amp; 0.00 \ -0.375 &amp; 0.00 \end{bmatrix}$$</p>
+<p>ReLU derivative matrix:
+$$\text{ReLU}'\left(Z^{[1]}\right) = \begin{bmatrix} \text{ReLU}'(1.5) &amp; \text{ReLU}'(1.0) \ \text{ReLU}'(1.5) &amp; \text{ReLU}'(-1.0) \end{bmatrix} = \begin{bmatrix} 1 &amp; 1 \ 1 &amp; \mathbf{0} \end{bmatrix}$$</p>
+<p>$$\Delta^{[1]} = \begin{bmatrix} -0.75 &amp; 0.00 \ -0.375 &amp; 0.00 \end{bmatrix} \odot \begin{bmatrix} 1 &amp; 1 \ 1 &amp; 0 \end{bmatrix} = \begin{bmatrix} \mathbf{-0.75} &amp; \mathbf{0.00} \ \mathbf{-0.375} &amp; \mathbf{0.00} \end{bmatrix}$$</p>
+<h4 id="step-34-layer-1-batch-gradients-bp3-bp4">Step 3.4: Layer 1 Batch Gradients [BP3, BP4]</h4>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[1]}} = \frac{1}{2} \Delta^{[1]} X^T = \frac{1}{2} \begin{bmatrix} -0.75 &amp; 0.00 \ -0.375 &amp; 0.00 \end{bmatrix} \begin{bmatrix} 2.0 &amp; 1.0 \ 0.0 &amp; 2.0 \end{bmatrix}$$</p>
+<p>Carrying out the matrix multiplication:
+- Row 1: $\begin{bmatrix} (-0.75)(2) + 0 &amp; (-0.75)(1) + 0 \end{bmatrix} = \begin{bmatrix} -1.50 &amp; -0.75 \end{bmatrix}$
+- Row 2: $\begin{bmatrix} (-0.375)(2) + 0 &amp; (-0.375)(1) + 0 \end{bmatrix} = \begin{bmatrix} -0.75 &amp; -0.375 \end{bmatrix}$</p>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[1]}} = \frac{1}{2} \begin{bmatrix} -1.50 &amp; -0.75 \ -0.75 &amp; -0.375 \end{bmatrix} = \mathbf{\begin{bmatrix} -0.750 &amp; -0.3750 \ -0.375 &amp; -0.1875 \end{bmatrix}}$$</p>
+<p>$$\frac{\partial \mathcal{J}}{\partial \mathbf{b}^{[1]}} = \frac{1}{2} \begin{bmatrix} -0.75 + 0.0 \ -0.375 + 0.0 \end{bmatrix} = \mathbf{\begin{bmatrix} -0.3750 \ -0.1875 \end{bmatrix}}$$</p>
+<hr />
+<h1 id="section-b-architecture-2-input-3-to-hidden-1-3-to-hidden-2-2-to-output-1-batch-of-4-samples">SECTION B: Architecture 2 — Input [3] $\to$ Hidden 1 [3] $\to$ Hidden 2 [2] $\to$ Output [1] (Batch of 4 Samples)</h1>
+<pre><code class="language-text">[Input x ∈ ℝ³] ───(W[¹] ∈ ℝ³ˣ³)───► [h₁ ∈ ℝ³] ───(W[²] ∈ ℝ²ˣ³)───► [h₂ ∈ ℝ²] ───(W[³] ∈ ℝ¹ˣ²)───► [ŷ ∈ ℝ¹]
+</code></pre>
+<h2 id="scenario-3-3-d-input-4-samples-n4">📍 Scenario 3: 3-D Input, 4 Samples ($N=4$)</h2>
+<h3 id="1-initial-state-batch-setup">1. Initial State &amp; Batch Setup</h3>
+<ul>
+<li><strong>Batch Input Matrix $X \in \mathbb{R}^{3 \times 4}$:</strong>
+  $$X = \begin{bmatrix} 
+  1.0 &amp; 0.0 &amp; 2.0 &amp; 1.0 \
+  2.0 &amp; 1.0 &amp; 0.0 &amp; 1.0 \
+  1.0 &amp; 2.0 &amp; 1.0 &amp; 0.0
+  \end{bmatrix}$$</li>
+<li>
+<p><strong>Target Vector ($1 \times 4$):</strong> $\mathbf{y} = \begin{bmatrix} 2.0 &amp; 1.0 &amp; 3.0 &amp; 2.0 \end{bmatrix}$</p>
+</li>
+<li>
+<p><strong>Layer 1 ($3 \times 3$):</strong>
+  $$W^{[1]} = \begin{bmatrix} 1 &amp; 0 &amp; 1 \ 0 &amp; 1 &amp; 1 \ 1 &amp; 1 &amp; 0 \end{bmatrix}, \quad \mathbf{b}^{[1]} = \begin{bmatrix} 0 \ 0 \ 0 \end{bmatrix}$$</p>
+</li>
+<li>
+<p><strong>Layer 2 ($2 \times 3$):</strong>
+  $$W^{[2]} = \begin{bmatrix} 1 &amp; 0 &amp; 1 \ 0 &amp; 1 &amp; 1 \end{bmatrix}, \quad \mathbf{b}^{[2]} = \begin{bmatrix} 0 \ 0 \end{bmatrix}$$</p>
+</li>
+<li>
+<p><strong>Layer 3 ($1 \times 2$):</strong>
+  $$W^{[3]} = \begin{bmatrix} 1 &amp; 1 \end{bmatrix}, \quad b^{[3]} = 0$$</p>
+</li>
+<li>
+<p><strong>Activation:</strong> Linear $\sigma(z) = z$ across all layers to make multi-layer propagation crystal clear.</p>
+</li>
+</ul>
+<hr />
+<h3 id="2-forward-pass-across-all-4-samples">2. Forward Pass Across All 4 Samples</h3>
+<h4 id="step-21-layer-1-activations-a1-w1-x-3-times-4">Step 2.1: Layer 1 Activations $A^{[1]} = W^{[1]} X$ ($3 \times 4$)</h4>
+<p>$$A^{[1]} = \begin{bmatrix} 1 &amp; 0 &amp; 1 \ 0 &amp; 1 &amp; 1 \ 1 &amp; 1 &amp; 0 \end{bmatrix} \begin{bmatrix} 1 &amp; 0 &amp; 2 &amp; 1 \ 2 &amp; 1 &amp; 0 &amp; 1 \ 1 &amp; 2 &amp; 1 &amp; 0 \end{bmatrix} = \begin{bmatrix} (1+0+1) &amp; (0+0+2) &amp; (2+0+1) &amp; (1+0+0) \ (0+2+1) &amp; (0+1+2) &amp; (0+0+1) &amp; (0+1+0) \ (1+2+0) &amp; (0+1+0) &amp; (2+0+0) &amp; (1+1+0) \end{bmatrix} = \mathbf{\begin{bmatrix} 2 &amp; 2 &amp; 3 &amp; 1 \ 3 &amp; 3 &amp; 1 &amp; 1 \ 3 &amp; 1 &amp; 2 &amp; 2 \end{bmatrix}}$$</p>
+<h4 id="step-22-layer-2-activations-a2-w2-a1-2-times-4">Step 2.2: Layer 2 Activations $A^{[2]} = W^{[2]} A^{[1]}$ ($2 \times 4$)</h4>
+<p>$$A^{[2]} = \begin{bmatrix} 1 &amp; 0 &amp; 1 \ 0 &amp; 1 &amp; 1 \end{bmatrix} \begin{bmatrix} 2 &amp; 2 &amp; 3 &amp; 1 \ 3 &amp; 3 &amp; 1 &amp; 1 \ 3 &amp; 1 &amp; 2 &amp; 2 \end{bmatrix} = \begin{bmatrix} (2+3) &amp; (2+1) &amp; (3+2) &amp; (1+2) \ (3+3) &amp; (3+1) &amp; (1+2) &amp; (1+2) \end{bmatrix} = \mathbf{\begin{bmatrix} 5 &amp; 3 &amp; 5 &amp; 3 \ 6 &amp; 4 &amp; 3 &amp; 3 \end{bmatrix}}$$</p>
+<h4 id="step-23-layer-3-predictions-hatmathbfy-w3-a2-1-times-4">Step 2.3: Layer 3 Predictions $\hat{\mathbf{y}} = W^{[3]} A^{[2]}$ ($1 \times 4$)</h4>
+<p>$$\hat{\mathbf{y}} = \begin{bmatrix} 1 &amp; 1 \end{bmatrix} \begin{bmatrix} 5 &amp; 3 &amp; 5 &amp; 3 \ 6 &amp; 4 &amp; 3 &amp; 3 \end{bmatrix} = \mathbf{\begin{bmatrix} 11 &amp; 7 &amp; 8 &amp; 6 \end{bmatrix}}$$</p>
+<h4 id="step-24-compute-errors-across-the-4-samples">Step 2.4: Compute Errors Across the 4 Samples</h4>
+<p>$$\mathbf{e} = \hat{\mathbf{y}} - \mathbf{y} = \begin{bmatrix} 11 - 2 &amp; 7 - 1 &amp; 8 - 3 &amp; 6 - 2 \end{bmatrix} = \mathbf{\begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \end{bmatrix}}$$</p>
+<p>$$\mathcal{J} = \frac{1}{4} \sum_{k=1}^4 \frac{1}{2}(e_k)^2 = \frac{1}{8}\left(81 + 36 + 25 + 16\right) = \frac{158}{8} = \mathbf{19.75}$$</p>
+<hr />
+<h3 id="3-backward-pass-across-all-4-samples">3. Backward Pass Across All 4 Samples</h3>
+<h4 id="step-31-output-error-matrix-delta3-in-mathbbr1-times-4">Step 3.1: Output Error Matrix $\Delta^{[3]} \in \mathbb{R}^{1 \times 4}$</h4>
+<p>$$\Delta^{[3]} = \begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \end{bmatrix}$$</p>
+<h4 id="step-32-layer-3-gradient-fracpartial-mathcaljpartial-w3">Step 3.2: Layer 3 Gradient $\frac{\partial \mathcal{J}}{\partial W^{[3]}}$</h4>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[3]}} = \frac{1}{4} \Delta^{[3]} \left(A^{[2]}\right)^T = \frac{1}{4} \begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \end{bmatrix} \begin{bmatrix} 5 &amp; 6 \ 3 &amp; 4 \ 5 &amp; 3 \ 3 &amp; 3 \end{bmatrix}$$</p>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[3]}} = \frac{1}{4} \begin{bmatrix} (45 + 18 + 25 + 12) &amp; (54 + 24 + 15 + 12) \end{bmatrix} = \frac{1}{4} \begin{bmatrix} 100 &amp; 105 \end{bmatrix} = \mathbf{\begin{bmatrix} 25.00 &amp; 26.25 \end{bmatrix}}$$</p>
+<hr />
+<h4 id="step-33-propagate-error-to-hidden-layer-2-delta2-in-mathbbr2-times-4">Step 3.3: Propagate Error to Hidden Layer 2 ($\Delta^{[2]} \in \mathbb{R}^{2 \times 4}$)</h4>
+<p>$$\Delta^{[2]} = (W^{[3]})^T \Delta^{[3]} = \begin{bmatrix} 1 \ 1 \end{bmatrix} \begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \end{bmatrix} = \mathbf{\begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \ 9 &amp; 6 &amp; 5 &amp; 4 \end{bmatrix}}$$</p>
+<h4 id="step-34-layer-2-gradient-fracpartial-mathcaljpartial-w2-2-times-3">Step 3.4: Layer 2 Gradient $\frac{\partial \mathcal{J}}{\partial W^{[2]}}$ ($2 \times 3$)</h4>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[2]}} = \frac{1}{4} \Delta^{[2]} \left(A^{[1]}\right)^T = \frac{1}{4} \begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \ 9 &amp; 6 &amp; 5 &amp; 4 \end{bmatrix} \begin{bmatrix} 2 &amp; 3 &amp; 3 \ 2 &amp; 3 &amp; 1 \ 3 &amp; 1 &amp; 2 \ 1 &amp; 1 &amp; 2 \end{bmatrix}$$</p>
+<p>$$\Delta^{[2]} \left(A^{[1]}\right)^T = \begin{bmatrix} 
+(18 + 12 + 15 + 4) &amp; (27 + 18 + 5 + 4) &amp; (27 + 6 + 10 + 8) \
+(18 + 12 + 15 + 4) &amp; (27 + 18 + 5 + 4) &amp; (27 + 6 + 10 + 8) 
+\end{bmatrix} = \begin{bmatrix} 49 &amp; 54 &amp; 51 \ 49 &amp; 54 &amp; 51 \end{bmatrix}$$</p>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[2]}} = \frac{1}{4} \begin{bmatrix} 49 &amp; 54 &amp; 51 \ 49 &amp; 54 &amp; 51 \end{bmatrix} = \mathbf{\begin{bmatrix} 12.25 &amp; 13.50 &amp; 12.75 \ 12.25 &amp; 13.50 &amp; 12.75 \end{bmatrix}}$$</p>
+<hr />
+<h4 id="step-35-propagate-error-to-hidden-layer-1-delta1-in-mathbbr3-times-4">Step 3.5: Propagate Error to Hidden Layer 1 ($\Delta^{[1]} \in \mathbb{R}^{3 \times 4}$)</h4>
+<p>$$\Delta^{[1]} = (W^{[2]})^T \Delta^{[2]} = \begin{bmatrix} 1 &amp; 0 \ 0 &amp; 1 \ 1 &amp; 1 \end{bmatrix} \begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \ 9 &amp; 6 &amp; 5 &amp; 4 \end{bmatrix} = \mathbf{\begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \ 9 &amp; 6 &amp; 5 &amp; 4 \ 18 &amp; 12 &amp; 10 &amp; 8 \end{bmatrix}}$$</p>
+<h4 id="step-36-layer-1-gradient-fracpartial-mathcaljpartial-w1-3-times-3">Step 3.6: Layer 1 Gradient $\frac{\partial \mathcal{J}}{\partial W^{[1]}}$ ($3 \times 3$)</h4>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[1]}} = \frac{1}{4} \Delta^{[1]} X^T = \frac{1}{4} \begin{bmatrix} 9 &amp; 6 &amp; 5 &amp; 4 \ 9 &amp; 6 &amp; 5 &amp; 4 \ 18 &amp; 12 &amp; 10 &amp; 8 \end{bmatrix} \begin{bmatrix} 1 &amp; 2 &amp; 1 \ 0 &amp; 1 &amp; 2 \ 2 &amp; 0 &amp; 1 \ 1 &amp; 1 &amp; 0 \end{bmatrix}$$</p>
+<ul>
+<li>Row 1: $\begin{bmatrix} (9+0+10+4) &amp; (18+6+0+4) &amp; (9+12+5+0) \end{bmatrix} = \begin{bmatrix} 23 &amp; 28 &amp; 26 \end{bmatrix}$</li>
+<li>Row 2: $\begin{bmatrix} (9+0+10+4) &amp; (18+6+0+4) &amp; (9+12+5+0) \end{bmatrix} = \begin{bmatrix} 23 &amp; 28 &amp; 26 \end{bmatrix}$</li>
+<li>Row 3: $\begin{bmatrix} (18+0+20+8) &amp; (36+12+0+8) &amp; (18+24+10+0) \end{bmatrix} = \begin{bmatrix} 46 &amp; 56 &amp; 52 \end{bmatrix}$</li>
+</ul>
+<p>$$\frac{\partial \mathcal{J}}{\partial W^{[1]}} = \frac{1}{4} \begin{bmatrix} 23 &amp; 28 &amp; 26 \ 23 &amp; 28 &amp; 26 \ 46 &amp; 56 &amp; 52 \end{bmatrix} = \mathbf{\begin{bmatrix} 5.75 &amp; 7.00 &amp; 6.50 \ 5.75 &amp; 7.00 &amp; 6.50 \ 11.50 &amp; 14.00 &amp; 13.00 \end{bmatrix}}$$</p>
+<hr />
+<h1 id="section-c-architecture-3-deep-4-layer-network-2-to-2-to-2-to-2-to-1">SECTION C: Architecture 3 — Deep 4-Layer Network (2 $\to$ 2 $\to$ 2 $\to$ 2 $\to$ 1)</h1>
+<pre><code class="language-text">x ∈ ℝ² ──(W[¹])──► h₁ ∈ ℝ² ──(W[²])──► h₂ ∈ ℝ² ──(W[³])──► h₃ ∈ ℝ² ──(W[⁴])──► ŷ ∈ ℝ¹
+</code></pre>
+<h2 id="scenario-4-deep-multi-layer-gradient-propagation">📍 Scenario 4: Deep Multi-Layer Gradient Propagation</h2>
+<h3 id="1-setup">1. Setup</h3>
+<ul>
+<li><strong>Input:</strong> $\mathbf{x} = \begin{bmatrix} 1.0 \ 1.0 \end{bmatrix}$, <strong>Target:</strong> $y = 10.0$</li>
+<li><strong>Weight Matrices:</strong>
+  $$W^{[1]} = \begin{bmatrix} 1 &amp; 1 \ 1 &amp; 0 \end{bmatrix}, \quad W^{[2]} = \begin{bmatrix} 1 &amp; 1 \ 0 &amp; 1 \end{bmatrix}, \quad W^{[3]} = \begin{bmatrix} 2 &amp; 0 \ 0 &amp; 1 \end{bmatrix}, \quad W^{[4]} = \begin{bmatrix} 1 &amp; 1 \end{bmatrix}$$</li>
+<li>All biases $\mathbf{b}^{[l]} = \mathbf{0}$, Linear activations.</li>
+</ul>
+<hr />
+<h3 id="2-forward-pass-through-all-4-layers">2. Forward Pass Through All 4 Layers</h3>
+<ol>
+<li><strong>Layer 1:</strong> $\mathbf{a}^{[1]} = W^{[1]} \mathbf{x} = \begin{bmatrix} 1 &amp; 1 \ 1 &amp; 0 \end{bmatrix} \begin{bmatrix} 1 \ 1 \end{bmatrix} = \begin{bmatrix} 2 \ 1 \end{bmatrix}$</li>
+<li><strong>Layer 2:</strong> $\mathbf{a}^{[2]} = W^{[2]} \mathbf{a}^{[1]} = \begin{bmatrix} 1 &amp; 1 \ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 2 \ 1 \end{bmatrix} = \begin{bmatrix} 3 \ 1 \end{bmatrix}$</li>
+<li><strong>Layer 3:</strong> $\mathbf{a}^{[3]} = W^{[3]} \mathbf{a}^{[2]} = \begin{bmatrix} 2 &amp; 0 \ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 3 \ 1 \end{bmatrix} = \begin{bmatrix} 6 \ 1 \end{bmatrix}$</li>
+<li><strong>Layer 4 (Output):</strong> $\hat{y} = W^{[4]} \mathbf{a}^{[3]} = \begin{bmatrix} 1 &amp; 1 \end{bmatrix} \begin{bmatrix} 6 \ 1 \end{bmatrix} = 6 + 1 = \mathbf{7.0}$</li>
+</ol>
+<p>Loss:
+$$L = \frac{1}{2}(\hat{y} - y)^2 = \frac{1}{2}(7.0 - 10.0)^2 = \frac{1}{2}(-3.0)^2 = \mathbf{4.5}$$</p>
+<hr />
+<h3 id="3-backward-pass-through-all-4-layers-the-deep-chain">3. Backward Pass Through All 4 Layers (The Deep Chain)</h3>
+<h4 id="step-31-output-layer-4-error-gradient">Step 3.1: Output Layer 4 Error &amp; Gradient</h4>
+<p>$$\delta^{[4]} = \hat{y} - y = 7.0 - 10.0 = \mathbf{-3.0}$$</p>
+<p>$$\frac{\partial L}{\partial W^{[4]}} = \delta^{[4]} \left(\mathbf{a}^{[3]}\right)^T = (-3.0) \begin{bmatrix} 6 &amp; 1 \end{bmatrix} = \mathbf{\begin{bmatrix} -18.0 &amp; -3.0 \end{bmatrix}}$$</p>
+<hr />
+<h4 id="step-32-layer-3-error-gradient">Step 3.2: Layer 3 Error &amp; Gradient</h4>
+<p>$$\boldsymbol{\delta}^{[3]} = (W^{[4]})^T \delta^{[4]} = \begin{bmatrix} 1 \ 1 \end{bmatrix} (-3.0) = \mathbf{\begin{bmatrix} -3.0 \ -3.0 \end{bmatrix}}$$</p>
+<p>$$\frac{\partial L}{\partial W^{[3]}} = \boldsymbol{\delta}^{[3]} \left(\mathbf{a}^{[2]}\right)^T = \begin{bmatrix} -3.0 \ -3.0 \end{bmatrix} \begin{bmatrix} 3 &amp; 1 \end{bmatrix} = \mathbf{\begin{bmatrix} -9.0 &amp; -3.0 \ -9.0 &amp; -3.0 \end{bmatrix}}$$</p>
+<hr />
+<h4 id="step-33-layer-2-error-gradient">Step 3.3: Layer 2 Error &amp; Gradient</h4>
+<p>$$\boldsymbol{\delta}^{[2]} = (W^{[3]})^T \boldsymbol{\delta}^{[3]} = \begin{bmatrix} 2 &amp; 0 \ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} -3.0 \ -3.0 \end{bmatrix} = \mathbf{\begin{bmatrix} -6.0 \ -3.0 \end{bmatrix}}$$</p>
+<p>$$\frac{\partial L}{\partial W^{[2]}} = \boldsymbol{\delta}^{[2]} \left(\mathbf{a}^{[1]}\right)^T = \begin{bmatrix} -6.0 \ -3.0 \end{bmatrix} \begin{bmatrix} 2 &amp; 1 \end{bmatrix} = \mathbf{\begin{bmatrix} -12.0 &amp; -6.0 \ -6.0 &amp; -3.0 \end{bmatrix}}$$</p>
+<hr />
+<h4 id="step-34-layer-1-error-gradient-reaching-the-input-layer">Step 3.4: Layer 1 Error &amp; Gradient (Reaching the Input Layer!)</h4>
+<p>$$\boldsymbol{\delta}^{[1]} = (W^{[2]})^T \boldsymbol{\delta}^{[2]} = \begin{bmatrix} 1 &amp; 0 \ 1 &amp; 1 \end{bmatrix} \begin{bmatrix} -6.0 \ -3.0 \end{bmatrix} = \begin{bmatrix} -6.0 + 0 \ -6.0 - 3.0 \end{bmatrix} = \mathbf{\begin{bmatrix} -6.0 \ -9.0 \end{bmatrix}}$$</p>
+<p>$$\frac{\partial L}{\partial W^{[1]}} = \boldsymbol{\delta}^{[1]} \mathbf{x}^T = \begin{bmatrix} -6.0 \ -9.0 \end{bmatrix} \begin{bmatrix} 1.0 &amp; 1.0 \end{bmatrix} = \mathbf{\begin{bmatrix} -6.0 &amp; -6.0 \ -9.0 &amp; -9.0 \end{bmatrix}}$$</p>
+<hr />
+<h2 id="4-master-summary-table-across-all-architectures">4. Master Summary Table Across All Architectures</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Architecture</th>
+<th style="text-align: left;">Layers</th>
+<th style="text-align: left;">Input Shape</th>
+<th style="text-align: left;">Batch Size ($N$)</th>
+<th style="text-align: left;">Output Equation ($\hat{y}$)</th>
+<th style="text-align: left;">Loss Gradient at Layer 1 ($\frac{\partial \mathcal{J}}{\partial W^{[1]}}$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Arch 1 (1 Sample)</strong></td>
+<td style="text-align: left;">$2 \to 2 \to 1$</td>
+<td style="text-align: left;">$2 \times 1$</td>
+<td style="text-align: left;">$1$</td>
+<td style="text-align: left;">$W^{[2]} \text{ReLU}(W^{[1]}\mathbf{x} + \mathbf{b}^{[1]}) + b^{[2]}$</td>
+<td style="text-align: left;">$\boldsymbol{\delta}^{[1]} \mathbf{x}^T = \begin{bmatrix} -1.50 &amp; -0.75 \ -0.75 &amp; -0.375 \end{bmatrix}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arch 1 (Mini-Batch)</strong></td>
+<td style="text-align: left;">$2 \to 2 \to 1$</td>
+<td style="text-align: left;">$2 \times 2$</td>
+<td style="text-align: left;">$2$</td>
+<td style="text-align: left;">$W^{[2]} \text{ReLU}(W^{[1]}X + \mathbf{b}^{[1]}) + b^{[2]}$</td>
+<td style="text-align: left;">$\frac{1}{2} \Delta^{[1]} X^T = \begin{bmatrix} -0.750 &amp; -0.3750 \ -0.375 &amp; -0.1875 \end{bmatrix}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arch 2 (Deep Batch)</strong></td>
+<td style="text-align: left;">$3 \to 3 \to 2 \to 1$</td>
+<td style="text-align: left;">$3 \times 4$</td>
+<td style="text-align: left;">$4$</td>
+<td style="text-align: left;">$W^{[3]} W^{[2]} W^{[1]} X$</td>
+<td style="text-align: left;">$\frac{1}{4} \Delta^{[1]} X^T = \begin{bmatrix} 5.75 &amp; 7.00 &amp; 6.50 \ 5.75 &amp; 7.00 &amp; 6.50 \ 11.50 &amp; 14.00 &amp; 13.00 \end{bmatrix}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Arch 3 (4 Layers)</strong></td>
+<td style="text-align: left;">$2 \to 2 \to 2 \to 2 \to 1$</td>
+<td style="text-align: left;">$2 \times 1$</td>
+<td style="text-align: left;">$1$</td>
+<td style="text-align: left;">$W^{[4]} W^{[3]} W^{[2]} W^{[1]} \mathbf{x}$</td>
+<td style="text-align: left;">$\boldsymbol{\delta}^{[1]} \mathbf{x}^T = \begin{bmatrix} -6.0 &amp; -6.0 \ -9.0 &amp; -9.0 \end{bmatrix}$</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../../js/base.js"></script>
+        <script src="../../../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

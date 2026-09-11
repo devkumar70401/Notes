@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Devendra">
+        <link rel="canonical" href="https://devkumar70401.github.io/Notes/II%20Diploma/II%20Diploma_in_Data_Science/VI%20DLGenAI/I%20ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule/">
+        <link rel="shortcut icon" href="../../../../../../img/favicon.ico">
+        <title>Jacobian_Matrices_and_Vector_Chain_Rule.md - ML Engineer</title>
+        <link href="../../../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../../../..">ML Engineer</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../../../../.." class="nav-link">README.md</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">II Diploma</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Diploma_in_Programming</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III PDSA</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/III%20PDSA/01_Abstract_Data_Types/" class="dropdown-item">01_Abstract_Data_Types.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">IV Java</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/01_introduction_to_java_and_programming_paradigms/" class="dropdown-item">01_introduction_to_java_and_programming_paradigms.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/02_data_types_and_type_systems/" class="dropdown-item">02_data_types_and_type_systems.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/03_memory_management_stack_vs_heap/" class="dropdown-item">03_memory_management_stack_vs_heap.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/04_abstraction_and_modularity/" class="dropdown-item">04_abstraction_and_modularity.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/05_object_oriented_concepts/" class="dropdown-item">05_object_oriented_concepts.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_1/06_classes_and_objects/" class="dropdown-item">06_classes_and_objects.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_10</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/01_concurrency_threads_and_processes/" class="dropdown-item">01_concurrency_threads_and_processes.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/02_race_conditions_and_critical_sections/" class="dropdown-item">02_race_conditions_and_critical_sections.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/03_mutual_exclusion_algorithms/" class="dropdown-item">03_mutual_exclusion_algorithms.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/04_hardware_synchronization_primitives/" class="dropdown-item">04_hardware_synchronization_primitives.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_10/05_monitors_concept/" class="dropdown-item">05_monitors_concept.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_11</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/01_monitors_in_java/" class="dropdown-item">01_monitors_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/02_threads_in_java/" class="dropdown-item">02_threads_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/03_concurrent_programming_example/" class="dropdown-item">03_concurrent_programming_example.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_11/04_thread_safe_collections_and_utilities/" class="dropdown-item">04_thread_safe_collections_and_utilities.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_12</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_12/01_graphical_interfaces_and_event_driven_programming/" class="dropdown-item">01_graphical_interfaces_and_event_driven_programming.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_12/02_the_swing_toolkit/" class="dropdown-item">02_the_swing_toolkit.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_12/03_swing_event_handling_and_examples/" class="dropdown-item">03_swing_event_handling_and_examples.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/01_a_first_taste_of_java/" class="dropdown-item">01_a_first_taste_of_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/02_basic_datatypes_in_java/" class="dropdown-item">02_basic_datatypes_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/03_control_flow_in_java/" class="dropdown-item">03_control_flow_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/04_defining_classes_and_objects/" class="dropdown-item">04_defining_classes_and_objects.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_2/05_basic_input_and_output/" class="dropdown-item">05_basic_input_and_output.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_3</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/01_philosophy_of_object_oriented_programming/" class="dropdown-item">01_philosophy_of_object_oriented_programming.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/02_subclasses_and_inheritance/" class="dropdown-item">02_subclasses_and_inheritance.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/03_dynamic_dispatch_and_polymorphism/" class="dropdown-item">03_dynamic_dispatch_and_polymorphism.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/04_the_java_class_hierarchy/" class="dropdown-item">04_the_java_class_hierarchy.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/05_subtyping_vs_inheritance/" class="dropdown-item">05_subtyping_vs_inheritance.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_3/06_java_modifiers/" class="dropdown-item">06_java_modifiers.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_4</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/01_abstract_classes_and_Interfaces/" class="dropdown-item">01_abstract_classes_and_Interfaces.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/02_interfaces/" class="dropdown-item">02_interfaces.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/03_private_classes/" class="dropdown-item">03_private_classes.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/04_controlled_interaction_with_objects/" class="dropdown-item">04_controlled_interaction_with_objects.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/05_CallBacks/" class="dropdown-item">05_CallBacks.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/06_Interators/" class="dropdown-item">06_Interators.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_4/Java_Week_4_Mastery_Notes/" class="dropdown-item">Java_Week_4_Mastery_Notes.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_5</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/01_polymorphism_revisited/" class="dropdown-item">01_polymorphism_revisited.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/02_java_generics/" class="dropdown-item">02_java_generics.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/03_generics_and_subtyping/" class="dropdown-item">03_generics_and_subtyping.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/04_java_reflection/" class="dropdown-item">04_java_reflection.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_5/05_type_erasure_and_runtime_implications/" class="dropdown-item">05_type_erasure_and_runtime_implications.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_6</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/01_the_benefits_of_indirection/" class="dropdown-item">01_the_benefits_of_indirection.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/02_java_collections_framework/" class="dropdown-item">02_java_collections_framework.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/03_concrete_collections/" class="dropdown-item">03_concrete_collections.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_6/04_java_maps/" class="dropdown-item">04_java_maps.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_7</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/01_dealing_with_errors/" class="dropdown-item">01_dealing_with_errors.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/02_exceptions_in_java/" class="dropdown-item">02_exceptions_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/03_packages_in_java/" class="dropdown-item">03_packages_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/04_assertions_in_java/" class="dropdown-item">04_assertions_in_java.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_7/05_logging_in_java/" class="dropdown-item">05_logging_in_java.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_8</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/01_object_cloning/" class="dropdown-item">01_object_cloning.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/02_type_inference/" class="dropdown-item">02_type_inference.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/03_higher_order_functions_and_lambdas/" class="dropdown-item">03_higher_order_functions_and_lambdas.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_8/04_introduction_to_streams/" class="dropdown-item">04_introduction_to_streams.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">week_9</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/01_optional_type/" class="dropdown-item">01_optional_type.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/02_collecting_results_from_streams/" class="dropdown-item">02_collecting_results_from_streams.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/03_input_and_output_streams/" class="dropdown-item">03_input_and_output_streams.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../I%20Diploma_in_Programming/IV%20Java/week_9/04_serialization_in_java/" class="dropdown-item">04_serialization_in_java.md</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Diploma_in_Data_Science</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III MLP</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../III%20MLP/01_Introduction/" class="dropdown-item">01_Introduction.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">IV TDS</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../IV%20TDS/01_Array_creation/" class="dropdown-item">01_Array_creation.md</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">VI DLGenAI</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I ANNs</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">extra</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Jacobian_Matrices_and_Vector_Chain_Rule.md</a>
+</li>
+            
+<li>
+    <a href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="dropdown-item">Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md</a>
+</li>
+            
+<li>
+    <a href="../Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="dropdown-item">Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md</a>
+</li>
+            
+<li>
+    <a href="../Neural_Networks_Backpropagation_and_Jacobians/" class="dropdown-item">Neural_Networks_Backpropagation_and_Jacobians.md</a>
+</li>
+            
+<li>
+    <a href="../Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="dropdown-item">Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md</a>
+</li>
+            
+<li>
+    <a href="../The_4_Master_Backpropagation_Equations_Demystified/" class="dropdown-item">The_4_Master_Backpropagation_Equations_Demystified.md</a>
+</li>
+            
+<li>
+    <a href="../The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="dropdown-item">The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">V Languages</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Python</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../V%20Languages/I%20Python/soon/" class="dropdown-item">soon.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Rust</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../V%20Languages/II%20Rust/Readme/" class="dropdown-item">Readme.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">VI Advanced_Foundations</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Physics_and_Computation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/I%20Physics_and_Computation/Computational_Science_Topology_Optimization_and_Quantum_Simulation/" class="dropdown-item">Computational_Science_Topology_Optimization_and_Quantum_Simulation.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/I%20Physics_and_Computation/Quantum_Physics_and_Quantum_Computing_Mastery/" class="dropdown-item">Quantum_Physics_and_Quantum_Computing_Mastery.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">II Calculus_and_Linear_Algebra</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Jacobian_Matrices_and_Vector_Chain_Rule/" class="dropdown-item">Jacobian_Matrices_and_Vector_Chain_Rule.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="dropdown-item">Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment/" class="dropdown-item">Master_Study_Roadmap_Foundations_to_Frontier_AI_and_Embodiment.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas/" class="dropdown-item">Microscopic_Mathematical_Derivation_From_3_Gradients_To_Matrix_Formulas.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Neural_Networks_Backpropagation_and_Jacobians/" class="dropdown-item">Neural_Networks_Backpropagation_and_Jacobians.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/Role_of_Input_Data_in_Backpropagation_and_Weight_Updation/" class="dropdown-item">Role_of_Input_Data_in_Backpropagation_and_Weight_Updation.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/The_4_Master_Backpropagation_Equations_Demystified/" class="dropdown-item">The_4_Master_Backpropagation_Equations_Demystified.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/II%20Calculus_and_Linear_Algebra/The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail/" class="dropdown-item">The_XOR_Problem_Mathematical_Proof_Why_Linear_Models_Fail.md</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">III System_Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/01_Zero_Trust_Security/" class="dropdown-item">01_Zero_Trust_Security.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/02_Identity_and_Access_Management/" class="dropdown-item">02_Identity_and_Access_Management.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/03_Zero_Fail_Deterministic_Systems_Mastery/" class="dropdown-item">03_Zero_Fail_Deterministic_Systems_Mastery.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/04_Phoneblok_Design/" class="dropdown-item">04_Phoneblok_Design.md</a>
+</li>
+            
+<li>
+    <a href="../../../../../../VI%20Advanced_Foundations/III%20System_Design/05_Lego_Design_Philosophy/" class="dropdown-item">05_Lego_Design_Philosophy.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">VII Tools</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">I Agy</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../../../../VII%20Tools/I%20Agy/I%20Introduction/" class="dropdown-item">I Introduction.md</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../../../IV%20TDS/01_Array_creation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Master_Backpropagation_Manual_Multi_Architecture_Batch_Derivations/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/devkumar70401/Notes/edit/master/docs/II Diploma/II Diploma_in_Data_Science/VI DLGenAI/I ANNs/extra/Jacobian_Matrices_and_Vector_Chain_Rule.md" class="nav-link">Edit on devkumar70401/Notes
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#jacobian-matrices-generalized-vector-chain-rule-the-foundation-of-backpropagation" class="nav-link">📐 Jacobian Matrices &amp; Generalized Vector Chain Rule: The Foundation of Backpropagation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#learning-objectives" class="nav-link">🧭 Learning Objectives</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1-the-core-problem-why-scalar-calculus-breaks-down" class="nav-link">1. The Core Problem: Why Scalar Calculus Breaks Down</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-mathematical-definition-what-is-a-jacobian-matrix" class="nav-link">2. Mathematical Definition: What is a Jacobian Matrix?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-detailed-walkthroughs-from-1-d-to-n-d" class="nav-link">3. Detailed Walkthroughs: From 1-D to $N$-D</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-deep-neural-network-generalization-k-layers" class="nav-link">4. Deep Neural Network Generalization ($K$ Layers)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-production-insight-how-pytorch-implements-this-vjps" class="nav-link">5. Production Insight: How PyTorch Implements This (VJPs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-summary-comparison-table" class="nav-link">6. Summary Comparison Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="jacobian-matrices-generalized-vector-chain-rule-the-foundation-of-backpropagation">📐 Jacobian Matrices &amp; Generalized Vector Chain Rule: The Foundation of Backpropagation</h1>
+<hr />
+<h2 id="learning-objectives">🧭 Learning Objectives</h2>
+<p>By working through this document, you will:
+1. Understand why multivariable calculus naturally transitions from scalar multiplication to <strong>Matrix Multiplication</strong>.
+2. Master the <strong>Jacobian Matrix</strong> as a structured table of first-order partial derivatives.
+3. Trace every derivative step across <strong>1-D</strong>, <strong>2-D</strong>, <strong>3-D</strong>, and general <strong>$N$-D</strong> systems with zero skipped algebra.
+4. Bridge pure multivariable calculus directly to <strong>Reverse-Mode Automatic Differentiation (Backpropagation)</strong> and PyTorch's Vector-Jacobian Product (VJP) engine.</p>
+<hr />
+<h2 id="1-the-core-problem-why-scalar-calculus-breaks-down">1. The Core Problem: Why Scalar Calculus Breaks Down</h2>
+<p>In standard single-variable calculus, every function operates on a single scalar number:</p>
+<p>$$x \in \mathbb{R} \xrightarrow{\quad f \quad} y \in \mathbb{R} \xrightarrow{\quad g \quad} L \in \mathbb{R}$$</p>
+<p>When input $x$ is nudged by $\Delta x$, the rate of change propagating to $L$ is simply the product of two real numbers:</p>
+<p>$$\frac{dL}{dx} = \frac{dL}{dy} \cdot \frac{dy}{dx}$$</p>
+<h3 id="the-bottleneck-in-real-world-systems-neural-networks">The Bottleneck in Real-World Systems &amp; Neural Networks:</h3>
+<p>Real-world systems (neural networks, computer vision, robotics, economics) operate on <strong>vectors (lists of numbers)</strong>:
+- Input $\mathbf{x} \in \mathbb{R}^n$ (e.g., $n$ features, pixels, or tokens)
+- Intermediate representation $\mathbf{y} \in \mathbb{R}^m$ (e.g., $m$ hidden neurons)
+- Scalar objective / Loss $L \in \mathbb{R}$ (e.g., Cross-Entropy, Mean Squared Error)</p>
+<pre><code class="language-text">               ┌──► y₁ ──┐
+               │    ▲    │
+               │    │    ▼
+  [x₁, x₂] ────┼──► y₂ ──┼───► L (Scalar Loss)
+               │    │    ▲
+               │    ▼    │
+               └──► y₃ ──┘
+</code></pre>
+<p>Because <strong>every input $x_j$ influences every intermediate node $y_i$</strong>, and <strong>every intermediate node $y_i$ influences the final loss $L$</strong>, there is no longer a single path. </p>
+<p>The change in $L$ with respect to $x_j$ is the <strong>sum of changes along all possible intermediate pathways</strong>.</p>
+<hr />
+<h2 id="2-mathematical-definition-what-is-a-jacobian-matrix">2. Mathematical Definition: What is a Jacobian Matrix?</h2>
+<p>Let $\mathbf{f}: \mathbb{R}^n \to \mathbb{R}^m$ be a vector-valued function taking an $n$-dimensional input vector $\mathbf{x} = [x_1, x_2, \dots, x_n]^T$ and producing an $m$-dimensional output vector $\mathbf{y} = [y_1, y_2, \dots, y_m]^T$:</p>
+<p>$$\mathbf{y} = \mathbf{f}(\mathbf{x}) = \begin{bmatrix} f_1(x_1, x_2, \dots, x_n) \ f_2(x_1, x_2, \dots, x_n) \ \vdots \ f_m(x_1, x_2, \dots, x_n) \end{bmatrix}$$</p>
+<p>The <strong>Jacobian Matrix</strong> $J_{\mathbf{x}} \mathbf{y} \in \mathbb{R}^{m \times n}$ is the organized $m \times n$ matrix containing all first-order partial derivatives:</p>
+<p>$$J_{\mathbf{x}} \mathbf{y} = \frac{\partial \mathbf{y}}{\partial \mathbf{x}} = \begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_1}{\partial x_n} \[10pt]
+\frac{\partial y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_2}{\partial x_n} \[10pt]
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \[10pt]
+\frac{\partial y_m}{\partial x_1} &amp; \frac{\partial y_m}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_m}{\partial x_n}
+\end{bmatrix}$$</p>
+<ul>
+<li><strong>Row $i$</strong> describes how output component $y_i$ changes with respect to all inputs $x_1, \dots, x_n$.</li>
+<li><strong>Column $j$</strong> describes how all outputs $y_1, \dots, y_m$ respond to a change in a single input $x_j$.</li>
+</ul>
+<hr />
+<h2 id="3-detailed-walkthroughs-from-1-d-to-n-d">3. Detailed Walkthroughs: From 1-D to $N$-D</h2>
+<hr />
+<h3 id="example-1-1-dimensional-scalar-case-1-to-1-to-1">🔹 Example 1: 1-Dimensional Scalar Case ($1 \to 1 \to 1$)</h3>
+<h4 id="problem-setup">Problem Setup</h4>
+<p>Let $x \in \mathbb{R}$ be a scalar input.
+- Intermediate function: $y = f(x) = x^2 + 3x$
+- Output loss function: $L = g(y) = 2y^3 + 5$</p>
+<pre><code class="language-text">x ────[ f(x) = x² + 3x ]────► y ────[ g(y) = 2y³ + 5 ]────► L
+</code></pre>
+<h4 id="step-1-differentiate-y-with-respect-to-x">Step 1: Differentiate $y$ with respect to $x$</h4>
+<p>Using standard power rule:
+$$\frac{dy}{dx} = \frac{d}{dx}\left(x^2 + 3x\right) = 2x + 3$$</p>
+<h4 id="step-2-differentiate-l-with-respect-to-y">Step 2: Differentiate $L$ with respect to $y$</h4>
+<p>$$\frac{dL}{dy} = \frac{d}{dy}\left(2y^3 + 5\right) = 6y^2$$</p>
+<h4 id="step-3-apply-the-1-d-scalar-chain-rule">Step 3: Apply the 1-D Scalar Chain Rule</h4>
+<p>$$\frac{dL}{dx} = \frac{dL}{dy} \cdot \frac{dy}{dx} = \left(6y^2\right) \cdot (2x + 3)$$</p>
+<p>Substitute $y = x^2 + 3x$ into the derivative:
+$$\frac{dL}{dx} = 6(x^2 + 3x)^2 \cdot (2x + 3)$$</p>
+<h4 id="step-4-verification-via-direct-algebraic-substitution">Step 4: Verification via Direct Algebraic Substitution</h4>
+<p>Compose the composite function directly:
+$$L(x) = 2(x^2 + 3x)^3 + 5$$</p>
+<p>Differentiate directly with respect to $x$:
+$$\frac{dL}{dx} = 2 \cdot 3(x^2 + 3x)^{3-1} \cdot \frac{d}{dx}(x^2 + 3x) = 6(x^2 + 3x)^2(2x + 3)$$</p>
+<p>$$\therefore \text{Chain Rule Result} \equiv \text{Direct Differentiation Result} \quad \checkmark$$</p>
+<hr />
+<h3 id="example-2-2-dimensional-case-2-to-2-to-1">🔹 Example 2: 2-Dimensional Case ($2 \to 2 \to 1$)</h3>
+<h4 id="problem-setup_1">Problem Setup</h4>
+<p>Let $\mathbf{x} = \begin{bmatrix} x_1 \ x_2 \end{bmatrix} \in \mathbb{R}^2$ be a 2-dimensional input vector.
+- Vector transformation $\mathbf{y} = \mathbf{f}(\mathbf{x}) \in \mathbb{R}^2$:
+  $$\begin{aligned}
+  y_1 &amp;= f_1(x_1, x_2) = 2x_1^2 + 3x_2 \
+  y_2 &amp;= f_2(x_1, x_2) = x_1 x_2^2
+  \end{aligned}$$
+- Scalar Loss function $L = g(\mathbf{y}) \in \mathbb{R}$:
+  $$L = g(y_1, y_2) = 3y_1^2 + 4y_2$$</p>
+<pre><code class="language-text">          ┌──(2x₁² + 3x₂)──► y₁ ──(3y₁²)──┐
+          │                  ▲            │
+[x₁, x₂] ─┤                  │            ├──► L
+          │                  ▼            │
+          └───(x₁ x₂²)─────► y₂ ──(4y₂)───┘
+</code></pre>
+<h4 id="step-1-compute-the-2-times-2-jacobian-matrix-j_mathbfx-mathbfy">Step 1: Compute the $2 \times 2$ Jacobian Matrix $J_{\mathbf{x}} \mathbf{y}$</h4>
+<p>Compute each partial derivative step-by-step:
+1. $\frac{\partial y_1}{\partial x_1} = \frac{\partial}{\partial x_1}(2x_1^2 + 3x_2) = 4x_1 + 0 = 4x_1$
+2. $\frac{\partial y_1}{\partial x_2} = \frac{\partial}{\partial x_2}(2x_1^2 + 3x_2) = 0 + 3 = 3$
+3. $\frac{\partial y_2}{\partial x_1} = \frac{\partial}{\partial x_1}(x_1 x_2^2) = 1 \cdot x_2^2 = x_2^2$
+4. $\frac{\partial y_2}{\partial x_2} = \frac{\partial}{\partial x_2}(x_1 x_2^2) = x_1 \cdot (2x_2) = 2x_1 x_2$</p>
+<p>Assembling the Jacobian matrix $J_{\mathbf{x}} \mathbf{y} \in \mathbb{R}^{2 \times 2}$:
+$$J_{\mathbf{x}} \mathbf{y} = \begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} \[8pt]
+\frac{\partial y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2}
+\end{bmatrix} = \begin{bmatrix}
+4x_1 &amp; 3 \[8pt]
+x_2^2 &amp; 2x_1 x_2
+\end{bmatrix}$$</p>
+<h4 id="step-2-compute-the-1-times-2-jacobian-matrix-j_mathbfy-l">Step 2: Compute the $1 \times 2$ Jacobian Matrix $J_{\mathbf{y}} L$</h4>
+<p>Differentiate $L = 3y_1^2 + 4y_2$ with respect to each component of $\mathbf{y}$:
+1. $\frac{\partial L}{\partial y_1} = \frac{\partial}{\partial y_1}(3y_1^2 + 4y_2) = 6y_1 + 0 = 6y_1$
+2. $\frac{\partial L}{\partial y_2} = \frac{\partial}{\partial y_2}(3y_1^2 + 4y_2) = 0 + 4 = 4$</p>
+<p>Assembling the row vector $J_{\mathbf{y}} L \in \mathbb{R}^{1 \times 2}$:
+$$J_{\mathbf{y}} L = \begin{bmatrix} \frac{\partial L}{\partial y_1} &amp; \frac{\partial L}{\partial y_2} \end{bmatrix} = \begin{bmatrix} 6y_1 &amp; 4 \end{bmatrix}$$</p>
+<h4 id="step-3-solve-via-multivariable-total-derivative-path-tracking">Step 3: Solve via Multivariable Total Derivative (Path Tracking)</h4>
+<p>To find $\frac{\partial L}{\partial x_1}$, sum over all pathways passing through $y_1$ and $y_2$:
+$$\begin{aligned}
+\frac{\partial L}{\partial x_1} &amp;= \left(\frac{\partial L}{\partial y_1} \cdot \frac{\partial y_1}{\partial x_1}\right) + \left(\frac{\partial L}{\partial y_2} \cdot \frac{\partial y_2}{\partial x_1}\right) \
+&amp;= (6y_1)(4x_1) + (4)(x_2^2) \
+&amp;= 24x_1 y_1 + 4x_2^2
+\end{aligned}$$</p>
+<p>To find $\frac{\partial L}{\partial x_2}$, sum over all pathways:
+$$\begin{aligned}
+\frac{\partial L}{\partial x_2} &amp;= \left(\frac{\partial L}{\partial y_1} \cdot \frac{\partial y_1}{\partial x_2}\right) + \left(\frac{\partial L}{\partial y_2} \cdot \frac{\partial y_2}{\partial x_2}\right) \
+&amp;= (6y_1)(3) + (4)(2x_1 x_2) \
+&amp;= 18y_1 + 8x_1 x_2
+\end{aligned}$$</p>
+<h4 id="step-4-solve-via-matrix-multiplication-j_mathbfy-lj_mathbfx-mathbfy">Step 4: Solve via Matrix Multiplication $(J_{\mathbf{y}} L)(J_{\mathbf{x}} \mathbf{y})$</h4>
+<p>Multiply row vector $(1 \times 2)$ by matrix $(2 \times 2)$:</p>
+<p>$$\nabla_{\mathbf{x}} L = J_{\mathbf{y}} L \times J_{\mathbf{x}} \mathbf{y}$$</p>
+<p>$$\begin{bmatrix} \frac{\partial L}{\partial x_1} &amp; \frac{\partial L}{\partial x_2} \end{bmatrix} = \begin{bmatrix} 6y_1 &amp; 4 \end{bmatrix} \times \begin{bmatrix} 4x_1 &amp; 3 \[8pt] x_2^2 &amp; 2x_1 x_2 \end{bmatrix}$$</p>
+<p>Carrying out the row-by-column dot product:
+- <strong>Column 1:</strong> $(6y_1)(4x_1) + (4)(x_2^2) = 24x_1 y_1 + 4x_2^2$
+- <strong>Column 2:</strong> $(6y_1)(3) + (4)(2x_1 x_2) = 18y_1 + 8x_1 x_2$</p>
+<p>$$\nabla_{\mathbf{x}} L = \begin{bmatrix} 24x_1 y_1 + 4x_2^2 &amp; 18y_1 + 8x_1 x_2 \end{bmatrix}$$</p>
+<p>Substituting $y_1 = 2x_1^2 + 3x_2$:
+$$\begin{aligned}
+\frac{\partial L}{\partial x_1} &amp;= 24x_1(2x_1^2 + 3x_2) + 4x_2^2 = 48x_1^3 + 72x_1 x_2 + 4x_2^2 \
+\frac{\partial L}{\partial x_2} &amp;= 18(2x_1^2 + 3x_2) + 8x_1 x_2 = 36x_1^2 + 54x_2 + 8x_1 x_2
+\end{aligned}$$</p>
+<h4 id="step-5-direct-verification-via-full-algebraic-substitution">Step 5: Direct Verification via Full Algebraic Substitution</h4>
+<p>Substitute $y_1$ and $y_2$ directly into $L$:
+$$L(x_1, x_2) = 3(2x_1^2 + 3x_2)^2 + 4(x_1 x_2^2)$$
+$$L(x_1, x_2) = 3(4x_1^4 + 12x_1^2 x_2 + 9x_2^2) + 4x_1 x_2^2 = 12x_1^4 + 36x_1^2 x_2 + 27x_2^2 + 4x_1 x_2^2$$</p>
+<p>Differentiate directly with respect to $x_1$:
+$$\frac{\partial L}{\partial x_1} = 48x_1^3 + 72x_1 x_2 + 0 + 4x_2^2 = 48x_1^3 + 72x_1 x_2 + 4x_2^2 \quad \checkmark$$</p>
+<p>Differentiate directly with respect to $x_2$:
+$$\frac{\partial L}{\partial x_2} = 0 + 36x_1^2 + 54x_2 + 8x_1 x_2 = 36x_1^2 + 54x_2 + 8x_1 x_2 \quad \checkmark$$</p>
+<hr />
+<h3 id="example-3-3-dimensional-case-3-to-3-to-1">🔹 Example 3: 3-Dimensional Case ($3 \to 3 \to 1$)</h3>
+<h4 id="problem-setup_2">Problem Setup</h4>
+<p>Let $\mathbf{x} = \begin{bmatrix} x_1 \ x_2 \ x_3 \end{bmatrix} \in \mathbb{R}^3$ be a 3-dimensional input vector.
+- Vector function $\mathbf{y} = \mathbf{f}(\mathbf{x}) \in \mathbb{R}^3$:
+  $$\begin{aligned}
+  y_1 &amp;= f_1(x_1, x_2, x_3) = x_1^2 + 2x_2 + x_3 \
+  y_2 &amp;= f_2(x_1, x_2, x_3) = 3x_1 x_2 - x_3^2 \
+  y_3 &amp;= f_3(x_1, x_2, x_3) = 2x_1 + x_2 x_3
+  \end{aligned}$$
+- Scalar Loss function $L = g(y_1, y_2, y_3) \in \mathbb{R}$:
+  $$L = g(y_1, y_2, y_3) = y_1^2 + 2y_2 y_3$$</p>
+<h4 id="step-1-compute-the-3-times-3-jacobian-matrix-j_mathbfx-mathbfy">Step 1: Compute the $3 \times 3$ Jacobian Matrix $J_{\mathbf{x}} \mathbf{y}$</h4>
+<p>Compute each of the 9 partial derivatives:</p>
+<p><strong>Row 1 (for $y_1$):</strong>
+- $\frac{\partial y_1}{\partial x_1} = \frac{\partial}{\partial x_1}(x_1^2 + 2x_2 + x_3) = 2x_1$
+- $\frac{\partial y_1}{\partial x_2} = \frac{\partial}{\partial x_2}(x_1^2 + 2x_2 + x_3) = 2$
+- $\frac{\partial y_1}{\partial x_3} = \frac{\partial}{\partial x_3}(x_1^2 + 2x_2 + x_3) = 1$</p>
+<p><strong>Row 2 (for $y_2$):</strong>
+- $\frac{\partial y_2}{\partial x_1} = \frac{\partial}{\partial x_1}(3x_1 x_2 - x_3^2) = 3x_2$
+- $\frac{\partial y_2}{\partial x_2} = \frac{\partial}{\partial x_2}(3x_1 x_2 - x_3^2) = 3x_1$
+- $\frac{\partial y_2}{\partial x_3} = \frac{\partial}{\partial x_3}(3x_1 x_2 - x_3^2) = -2x_3$</p>
+<p><strong>Row 3 (for $y_3$):</strong>
+- $\frac{\partial y_3}{\partial x_1} = \frac{\partial}{\partial x_1}(2x_1 + x_2 x_3) = 2$
+- $\frac{\partial y_3}{\partial x_2} = \frac{\partial}{\partial x_2}(2x_1 + x_2 x_3) = x_3$
+- $\frac{\partial y_3}{\partial x_3} = \frac{\partial}{\partial x_3}(2x_1 + x_2 x_3) = x_2$</p>
+<p>Assembling the $3 \times 3$ Jacobian Matrix $J_{\mathbf{x}} \mathbf{y}$:
+$$J_{\mathbf{x}} \mathbf{y} = \begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \frac{\partial y_1}{\partial x_3} \[8pt]
+\frac{\partial y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \frac{\partial y_2}{\partial x_3} \[8pt]
+\frac{\partial y_3}{\partial x_1} &amp; \frac{\partial y_3}{\partial x_2} &amp; \frac{\partial y_3}{\partial x_3}
+\end{bmatrix} = \begin{bmatrix}
+2x_1 &amp; 2 &amp; 1 \[8pt]
+3x_2 &amp; 3x_1 &amp; -2x_3 \[8pt]
+2 &amp; x_3 &amp; x_2
+\end{bmatrix}$$</p>
+<h4 id="step-2-compute-the-1-times-3-jacobian-matrix-j_mathbfy-l">Step 2: Compute the $1 \times 3$ Jacobian Matrix $J_{\mathbf{y}} L$</h4>
+<p>Differentiate $L = y_1^2 + 2y_2 y_3$ with respect to each component:
+- $\frac{\partial L}{\partial y_1} = \frac{\partial}{\partial y_1}(y_1^2 + 2y_2 y_3) = 2y_1$
+- $\frac{\partial L}{\partial y_2} = \frac{\partial}{\partial y_2}(y_1^2 + 2y_2 y_3) = 2y_3$
+- $\frac{\partial L}{\partial y_3} = \frac{\partial}{\partial y_3}(y_1^2 + 2y_2 y_3) = 2y_2$</p>
+<p>Assembling $J_{\mathbf{y}} L \in \mathbb{R}^{1 \times 3}$:
+$$J_{\mathbf{y}} L = \begin{bmatrix} \frac{\partial L}{\partial y_1} &amp; \frac{\partial L}{\partial y_2} &amp; \frac{\partial L}{\partial y_3} \end{bmatrix} = \begin{bmatrix} 2y_1 &amp; 2y_3 &amp; 2y_2 \end{bmatrix}$$</p>
+<h4 id="step-3-compute-matrix-product-j_mathbfy-lj_mathbfx-mathbfy">Step 3: Compute Matrix Product $(J_{\mathbf{y}} L)(J_{\mathbf{x}} \mathbf{y})$</h4>
+<p>Multiply $(1 \times 3)$ by $(3 \times 3)$:</p>
+<p>$$\nabla_{\mathbf{x}} L = \begin{bmatrix} 2y_1 &amp; 2y_3 &amp; 2y_2 \end{bmatrix} \times \begin{bmatrix}
+2x_1 &amp; 2 &amp; 1 \[8pt]
+3x_2 &amp; 3x_1 &amp; -2x_3 \[8pt]
+2 &amp; x_3 &amp; x_2
+\end{bmatrix}$$</p>
+<p><strong>Step-by-step dot products for each column:</strong></p>
+<ol>
+<li>
+<p><strong>For Column 1 ($\frac{\partial L}{\partial x_1}$):</strong>
+   $$\frac{\partial L}{\partial x_1} = (2y_1)(2x_1) + (2y_3)(3x_2) + (2y_2)(2) = 4x_1 y_1 + 6x_2 y_3 + 4y_2$$</p>
+</li>
+<li>
+<p><strong>For Column 2 ($\frac{\partial L}{\partial x_2}$):</strong>
+   $$\frac{\partial L}{\partial x_2} = (2y_1)(2) + (2y_3)(3x_1) + (2y_2)(x_3) = 4y_1 + 6x_1 y_3 + 2x_3 y_2$$</p>
+</li>
+<li>
+<p><strong>For Column 3 ($\frac{\partial L}{\partial x_3}$):</strong>
+   $$\frac{\partial L}{\partial x_3} = (2y_1)(1) + (2y_3)(-2x_3) + (2y_2)(x_2) = 2y_1 - 4x_3 y_3 + 2x_2 y_2$$</p>
+</li>
+</ol>
+<p>Resulting Gradient Row Vector:
+$$\nabla_{\mathbf{x}} L = \begin{bmatrix} 4x_1 y_1 + 6x_2 y_3 + 4y_2 &amp; 4y_1 + 6x_1 y_3 + 2x_3 y_2 &amp; 2y_1 - 4x_3 y_3 + 2x_2 y_2 \end{bmatrix}$$</p>
+<hr />
+<h3 id="example-4-the-general-n-dimensional-vector-case-n-to-m-to-1">🔹 Example 4: The General $N$-Dimensional Vector Case ($n \to m \to 1$)</h3>
+<h4 id="problem-setup_3">Problem Setup</h4>
+<p>Let:
+- $\mathbf{x} = \begin{bmatrix} x_1, x_2, \dots, x_n \end{bmatrix}^T \in \mathbb{R}^n$
+- $\mathbf{y} = \mathbf{f}(\mathbf{x}) = \begin{bmatrix} y_1, y_2, \dots, y_m \end{bmatrix}^T \in \mathbb{R}^m$ where each $y_i = f_i(x_1, x_2, \dots, x_n)$
+- $L = g(\mathbf{y}) \in \mathbb{R}$ where $L = g(y_1, y_2, \dots, y_m)$</p>
+<pre><code class="language-text">                   ┌──► y₁ ──┐
+                   │    ▲    │
+[x₁, x₂, ..., xₙ] ─┼──► y₂ ──┼───► L (Scalar)
+   (n inputs)      │    ⋮    │   (1 output)
+                   └──► yₘ ──┘
+                   (m outputs)
+</code></pre>
+<h4 id="step-1-the-total-derivative-formula">Step 1: The Total Derivative Formula</h4>
+<p>According to multivariable calculus, the total rate of change of $L$ with respect to any single input component $x_j$ (for $j \in {1, 2, \dots, n}$) is the sum of changes over all $m$ intermediate paths:</p>
+<p>$$\frac{\partial L}{\partial x_j} = \sum_{i=1}^m \frac{\partial L}{\partial y_i} \cdot \frac{\partial y_i}{\partial x_j}$$</p>
+<p>Expanded out with ellipses ($\cdots$):
+$$\frac{\partial L}{\partial x_j} = \left(\frac{\partial L}{\partial y_1} \frac{\partial y_1}{\partial x_j}\right) + \left(\frac{\partial L}{\partial y_2} \frac{\partial y_2}{\partial x_j}\right) + \cdots + \left(\frac{\partial L}{\partial y_m} \frac{\partial y_m}{\partial x_j}\right)$$</p>
+<h4 id="step-2-formulating-the-vector-matrices">Step 2: Formulating the Vector Matrices</h4>
+<p>Define the $1 \times m$ Jacobian of $L$ with respect to $\mathbf{y}$:
+$$J_{\mathbf{y}} L = \begin{bmatrix} \frac{\partial L}{\partial y_1} &amp; \frac{\partial L}{\partial y_2} &amp; \cdots &amp; \frac{\partial L}{\partial y_m} \end{bmatrix} \in \mathbb{R}^{1 \times m}$$</p>
+<p>Define the $m \times n$ Jacobian of $\mathbf{y}$ with respect to $\mathbf{x}$:
+$$J_{\mathbf{x}} \mathbf{y} = \begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_1}{\partial x_n} \[8pt]
+\frac{\partial y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_2}{\partial x_n} \[8pt]
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \[8pt]
+\frac{\partial y_m}{\partial x_1} &amp; \frac{\partial y_m}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_m}{\partial x_n}
+\end{bmatrix} \in \mathbb{R}^{m \times n}$$</p>
+<h4 id="step-3-matrix-multiplication-identity">Step 3: Matrix Multiplication Identity</h4>
+<p>Perform standard matrix multiplication $(1 \times m) \times (m \times n) = (1 \times n)$:</p>
+<p>$$\nabla_{\mathbf{x}} L = (J_{\mathbf{y}} L) \times (J_{\mathbf{x}} \mathbf{y})$$</p>
+<p>$$\begin{bmatrix} \frac{\partial L}{\partial x_1} &amp; \frac{\partial L}{\partial x_2} &amp; \cdots &amp; \frac{\partial L}{\partial x_n} \end{bmatrix} = \begin{bmatrix} \frac{\partial L}{\partial y_1} &amp; \frac{\partial L}{\partial y_2} &amp; \cdots &amp; \frac{\partial L}{\partial y_m} \end{bmatrix} \times \begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_1}{\partial x_n} \[8pt]
+\frac{\partial y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_2}{\partial x_n} \[8pt]
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \[8pt]
+\frac{\partial y_m}{\partial x_1} &amp; \frac{\partial y_m}{\partial x_2} &amp; \cdots &amp; \frac{\partial y_m}{\partial x_n}
+\end{bmatrix}$$</p>
+<p>For any column $j \in {1, \dots, n}$, the $j$-th entry of the product is:
+$$[\nabla_{\mathbf{x}} L]<em>j = \sum</em>{i=1}^m (J_{\mathbf{y}} L)<em>i \cdot (J</em>{\mathbf{x}} \mathbf{y})<em>{ij} = \sum</em>{i=1}^m \frac{\partial L}{\partial y_i} \frac{\partial y_i}{\partial x_j}$$</p>
+<p>This matches the multivariable total derivative <strong>identically</strong>.</p>
+<hr />
+<h2 id="4-deep-neural-network-generalization-k-layers">4. Deep Neural Network Generalization ($K$ Layers)</h2>
+<p>Consider a deep neural network with $K$ hidden layers:</p>
+<p>$$\mathbf{x} = \mathbf{h}_0 \xrightarrow{\mathbf{f}_1} \mathbf{h}_1 \xrightarrow{\mathbf{f}_2} \mathbf{h}_2 \xrightarrow{\mathbf{f}_3} \cdots \xrightarrow{\mathbf{f}_K} \mathbf{h}_K \xrightarrow{g} L$$</p>
+<p>Where:
+- $\mathbf{h}_0 \in \mathbb{R}^{d_0}$
+- $\mathbf{h}_l \in \mathbb{R}^{d_l}$ for each layer $l \in {1, 2, \dots, K}$
+- $L \in \mathbb{R}$ (Scalar loss)</p>
+<h3 id="the-backpropagation-matrix-chain">The Backpropagation Matrix Chain:</h3>
+<p>Applying the vector chain rule recursively from the output layer backwards:</p>
+<p>$$\nabla_{\mathbf{x}} L = (J_{\mathbf{h}<em>K} L) \cdot (J</em>{\mathbf{h}<em>{K-1}} \mathbf{h}_K) \cdot (J</em>{\mathbf{h}<em>{K-2}} \mathbf{h}</em>{K-1}) \cdots (J_{\mathbf{h}<em>1} \mathbf{h}_2) \cdot (J</em>{\mathbf{x}} \mathbf{h}_1)$$</p>
+<p>Using product notation:
+$$\nabla_{\mathbf{x}} L = (J_{\mathbf{h}<em>K} L) \prod</em>{l=K}^1 J_{\mathbf{h}_{l-1}} \mathbf{h}_l$$</p>
+<hr />
+<h2 id="5-production-insight-how-pytorch-implements-this-vjps">5. Production Insight: How PyTorch Implements This (VJPs)</h2>
+<p>In deep learning frameworks like <strong>PyTorch</strong> and <strong>JAX</strong>, constructing and storing a full $m \times n$ Jacobian matrix (which could be $100{,}000 \times 100{,}000 = 10 \text{ billion elements} \approx 40 \text{ GB}$) is too memory intensive.</p>
+<p>Instead, PyTorch computes <strong>Vector-Jacobian Products (VJP)</strong>:
+Given an incoming gradient row vector $\mathbf{v} = J_{\mathbf{y}} L \in \mathbb{R}^{1 \times m}$, it directly evaluates:</p>
+<p>$$\text{vjp}(\mathbf{v}) = \mathbf{v} \cdot J_{\mathbf{x}} \mathbf{y}$$</p>
+<p>This evaluates the product in $O(m \cdot n)$ time without ever allocating memory for the full Jacobian matrix in GPU VRAM!</p>
+<hr />
+<h2 id="6-summary-comparison-table">6. Summary Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">Input $\mathbf{x}$</th>
+<th style="text-align: left;">Intermediate $\mathbf{y}$</th>
+<th style="text-align: left;">Output $L$</th>
+<th style="text-align: left;">Jacobian $J_{\mathbf{x}} \mathbf{y}$ Shape</th>
+<th style="text-align: left;">Jacobian $J_{\mathbf{y}} L$ Shape</th>
+<th style="text-align: left;">Chain Rule Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1-D (Scalar)</strong></td>
+<td style="text-align: left;">$\mathbb{R}^1$</td>
+<td style="text-align: left;">$\mathbb{R}^1$</td>
+<td style="text-align: left;">$\mathbb{R}^1$</td>
+<td style="text-align: left;">$1 \times 1$ (scalar)</td>
+<td style="text-align: left;">$1 \times 1$ (scalar)</td>
+<td style="text-align: left;">$\frac{dL}{dx} = \frac{dL}{dy} \cdot \frac{dy}{dx}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2-D</strong></td>
+<td style="text-align: left;">$\mathbb{R}^2$</td>
+<td style="text-align: left;">$\mathbb{R}^2$</td>
+<td style="text-align: left;">$\mathbb{R}^1$</td>
+<td style="text-align: left;">$2 \times 2$ matrix</td>
+<td style="text-align: left;">$1 \times 2$ row vector</td>
+<td style="text-align: left;">$\nabla_{\mathbf{x}} L = (J_{\mathbf{y}} L)<em>{1 \times 2} (J</em>{\mathbf{x}} \mathbf{y})_{2 \times 2}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3-D</strong></td>
+<td style="text-align: left;">$\mathbb{R}^3$</td>
+<td style="text-align: left;">$\mathbb{R}^3$</td>
+<td style="text-align: left;">$\mathbb{R}^1$</td>
+<td style="text-align: left;">$3 \times 3$ matrix</td>
+<td style="text-align: left;">$1 \times 3$ row vector</td>
+<td style="text-align: left;">$\nabla_{\mathbf{x}} L = (J_{\mathbf{y}} L)<em>{1 \times 3} (J</em>{\mathbf{x}} \mathbf{y})_{3 \times 3}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$N$-D General</strong></td>
+<td style="text-align: left;">$\mathbb{R}^n$</td>
+<td style="text-align: left;">$\mathbb{R}^m$</td>
+<td style="text-align: left;">$\mathbb{R}^1$</td>
+<td style="text-align: left;">$m \times n$ matrix</td>
+<td style="text-align: left;">$1 \times m$ row vector</td>
+<td style="text-align: left;">$\nabla_{\mathbf{x}} L = (J_{\mathbf{y}} L)<em>{1 \times m} (J</em>{\mathbf{x}} \mathbf{y})_{m \times n}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>$K$-Layer Deep Net</strong></td>
+<td style="text-align: left;">$\mathbb{R}^{d_0}$</td>
+<td style="text-align: left;">$\mathbb{R}^{d_l}$</td>
+<td style="text-align: left;">$\mathbb{R}^1$</td>
+<td style="text-align: left;">Sequence of $d_l \times d_{l-1}$ matrices</td>
+<td style="text-align: left;">$1 \times d_K$ row vector</td>
+<td style="text-align: left;">$\nabla_{\mathbf{x}} L = (J_{\mathbf{h}<em>K} L) \prod</em>{l=K}^1 J_{\mathbf{h}_{l-1}} \mathbf{h}_l$</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../../../js/base.js"></script>
+        <script src="../../../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
