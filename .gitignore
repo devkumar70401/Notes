@@ -1,26 +1,22 @@
-# complete Python virtual environment.
-.venv/   
 
-# Whenever Python imports a module -> Python compiles it into bytecode.
-# Instead of recompiling every time, it stores the compiled version.
-__pycache__/
-
-# Same reason as __pycache__.
-# Sometimes .pyc files exist outside __pycache__.
-# This rule catches them too.
-*.pyc
-
-# This one is specific to Jupyter Notebook.
-# Jupyter automatically creates
 # Automatic backups -> Just like Microsoft Word creates autosaves -> Every few minutes:
-.ipynb_checkpoints/
-
-# MkDocs build output and cache
-site/
 .cache/
-
-# MkDocs hidden build folder
+# complete Python virtual environment.
 .docs/
-
+.DS_Store
+# Instead of recompiling every time, it stores the compiled version.
+.ipynb_checkpoints/
+# Jupyter automatically creates
 # Manim rendering cache and media outputs
 media/
+# MkDocs build output and cache
+# MkDocs hidden build folder
+*.pyc
+__pycache__/
+# Same reason as __pycache__.
+site/
+# Sometimes .pyc files exist outside __pycache__.
+# This one is specific to Jupyter Notebook.
+# This rule catches them too.
+.venv/   
+# Whenever Python imports a module -> Python compiles it into bytecode.
