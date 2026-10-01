@@ -1,3 +1,8 @@
+---
+title: Mathematics Basics
+description: Foundational mathematical concepts and roadmap
+---
+
 # Basics of Mathematics 
 
 Data science combines mathematics, statistics and computing

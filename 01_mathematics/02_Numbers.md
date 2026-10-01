@@ -1,3 +1,8 @@
+---
+title: Natural Numbers & Integers
+description: Number systems, arithmetic properties, and exponentiation
+---
+
 # Natural Numbers and Integers
 
 ---

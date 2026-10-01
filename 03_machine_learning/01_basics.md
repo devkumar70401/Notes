@@ -1,3 +1,8 @@
+---
+title: Introduction to Machine Learning
+description: Core concepts, task analysis, data representations, and model types
+---
+
 # Introduction to Machine Learning
 
 ---

@@ -7,7 +7,7 @@ def sync_all(root_dir, docs_dir):
     
     # 1. Clean up stale or broken symlinks/dirs in docs_dir
     valid_names = {item.name for item in root_dir.iterdir() if not item.name.startswith(".")}
-    valid_names.update({"index.md", "assets", "javascripts", "stylesheets"})
+    valid_names.update({"index.md", ".pages", "assets", "javascripts", "stylesheets"})
     for item in docs_dir.iterdir():
         if item.name not in valid_names or (item.is_symlink() and not item.exists()):
             if item.is_symlink() or item.is_file():
@@ -15,7 +15,12 @@ def sync_all(root_dir, docs_dir):
             elif item.is_dir():
                 shutil.rmtree(item)
 
-    # 2. Ensure docs/index.md exists and is updated from root README.md
+    # 2. Ensure docs/index.md and docs/.pages exist
+    root_pages = root_dir / ".pages"
+    docs_pages = docs_dir / ".pages"
+    if root_pages.exists():
+        shutil.copy2(root_pages, docs_pages)
+
     index_md = docs_dir / "index.md"
     readme = root_dir / "README.md"
     if not index_md.exists() and not readme.exists():

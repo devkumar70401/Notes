@@ -1,3 +1,8 @@
+---
+title: Git Command Reference
+description: Essential commands, configuration, and repository management
+---
+
 # Introduction to Git
 
 ---

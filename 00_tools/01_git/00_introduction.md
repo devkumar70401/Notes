@@ -1,3 +1,8 @@
+---
+title: Git Setup & Workflow
+description: Quickstart guide to initializing and pushing with Git
+---
+
 # Introduction To Git
 
 ## Setting up git in a folder
