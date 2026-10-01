@@ -2,7 +2,8 @@
 # Automatic backups -> Just like Microsoft Word creates autosaves -> Every few minutes:
 .cache/
 # complete Python virtual environment.
-.docs/
+.docs/*
+!.docs/.gitkeep
 .DS_Store
 # Instead of recompiling every time, it stores the compiled version.
 .ipynb_checkpoints/
