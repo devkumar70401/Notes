@@ -1,9 +1,9 @@
 site_name: Devendra's Notes
 site_description: Personal engineering knowledge base & technical vault
 site_author: Devendra
-site_url: https://devkumar70401.github.io/notes/
-repo_url: https://github.com/devkumar70401/notes
-repo_name: devkumar70401/notes
+site_url: https://devkumar70401.github.io/Notes/
+repo_url: https://github.com/devkumar70401/Notes
+repo_name: devkumar70401/Notes
 docs_dir: .docs
 
 hooks:
