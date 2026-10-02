@@ -36,7 +36,7 @@ def sync_all(root_dir, docs_dir):
     # 3. Link top-level content directories that contain markdown files
     excluded_dirs = {
         "docs", ".docs", "site", ".venv", ".git", ".github", ".cache",
-        "__pycache__", "hooks", "assets", "javascripts", "stylesheets"
+        "__pycache__", "hooks", "assets", "javascripts", "stylesheets",
     }
     for item in root_dir.iterdir():
         if item.is_dir() and item.name not in excluded_dirs and not item.name.startswith("."):

@@ -1,7 +1,7 @@
 # Devendra's Engineering Vault
 
 <p align="center" style="font-size: 1.15em; color: var(--md-default-fg-color--light); margin-top: -0.5em;">
-  A structured, production-grade knowledge base covering Machine Learning foundations, mathematical derivations, software tooling..
+  A structured, production-grade knowledge base covering Machine Learning foundations, mathematical derivations, and developer tooling.
 </p>
 
 <p align="center">
@@ -42,8 +42,6 @@
 
     [:octicons-arrow-right-24: Git Quickstart](00_tools/01_git/00_introduction.md)  
     [:octicons-arrow-right-24: Comprehensive Git Reference](00_tools/01_git/git.md)
-
-
 
 </div>
 
