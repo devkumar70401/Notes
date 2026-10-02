@@ -5,11 +5,20 @@ from pathlib import Path
 def sync_all(root_dir, docs_dir):
     docs_dir.mkdir(exist_ok=True)
     
-    # 1. Clean up stale or broken symlinks/dirs in docs_dir
-    valid_names = {item.name for item in root_dir.iterdir() if not item.name.startswith(".")}
+    excluded_dirs = {
+        "docs", ".docs", "site", ".venv", ".git", ".github", ".cache",
+        "__pycache__", "hooks", "assets", "javascripts", "stylesheets",
+        "07_personal"
+    }
+
+    # 1. Clean up stale, excluded, or broken symlinks/dirs in docs_dir
+    valid_names = {
+        item.name for item in root_dir.iterdir()
+        if not item.name.startswith(".") and item.name not in excluded_dirs
+    }
     valid_names.update({"index.md", ".pages", "assets", "javascripts", "stylesheets"})
     for item in docs_dir.iterdir():
-        if item.name not in valid_names or (item.is_symlink() and not item.exists()):
+        if item.name not in valid_names or item.name in excluded_dirs or (item.is_symlink() and not item.exists()):
             if item.is_symlink() or item.is_file():
                 item.unlink()
             elif item.is_dir():
@@ -34,10 +43,6 @@ def sync_all(root_dir, docs_dir):
             shutil.copy2(readme, index_md)
             
     # 3. Link top-level content directories that contain markdown files
-    excluded_dirs = {
-        "docs", ".docs", "site", ".venv", ".git", ".github", ".cache",
-        "__pycache__", "hooks", "assets", "javascripts", "stylesheets",
-    }
     for item in root_dir.iterdir():
         if item.is_dir() and item.name not in excluded_dirs and not item.name.startswith("."):
             has_md = any(f.is_file() and f.suffix == ".md" for f in item.rglob("*"))
