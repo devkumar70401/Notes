@@ -23,3 +23,4 @@ site/
 # Whenever Python imports a module -> Python compiles it into bytecode.
 
 # Personal notes & credentials - STRICTLY LOCAL (NEVER TRACK OR PUSH TO REMOTE)
+07_personal/
