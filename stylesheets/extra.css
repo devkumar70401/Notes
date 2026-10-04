@@ -1,13 +1,17 @@
 /* ==========================================================================
-   Devendra's Master Knowledge Vault - Custom Theme & Polish
+   Devendra's Master Knowledge Vault - Glassmorphic & Luminescent Glow Theme
    ========================================================================== */
 
-/* Modern Font & Smooth Transitions */
+/* Modern Color Palette & Typography */
 :root {
   --md-primary-fg-color:        #4f46e5;
   --md-primary-fg-color--light:  #6366f1;
   --md-primary-fg-color--dark:   #3730a3;
   --md-accent-fg-color:         #06b6d4;
+  --glass-bg:                   rgba(255, 255, 255, 0.7);
+  --glass-border:               rgba(99, 102, 241, 0.15);
+  --glass-glow:                 rgba(99, 102, 241, 0.25);
+  --glass-shadow:               0 8px 32px rgba(99, 102, 241, 0.08);
 }
 
 [data-md-color-scheme="slate"] {
@@ -18,43 +22,216 @@
   --md-primary-fg-color--light:  #818cf8;
   --md-primary-fg-color--dark:   #4f46e5;
   --md-accent-fg-color:         #38bdf8;
-  --md-code-bg-color:           #111827;
+  --md-code-bg-color:           rgba(17, 24, 39, 0.85);
+  --glass-bg:                   rgba(17, 24, 39, 0.65);
+  --glass-border:               rgba(255, 255, 255, 0.08);
+  --glass-glow:                 rgba(99, 102, 241, 0.35);
+  --glass-shadow:               0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
-/* Rounded Header Logo (Avatar) */
+/* ==========================================================================
+   Glassmorphic Header & Navigation Tabs
+   ========================================================================== */
+.md-header {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: rgba(11, 15, 25, 0.8) !important;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+.md-tabs {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background: rgba(15, 23, 42, 0.65) !important;
+}
+
+.md-tabs__link {
+  border-radius: 8px;
+  padding: 0.35rem 0.8rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 0.85;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  background: rgba(99, 102, 241, 0.15);
+  box-shadow: 0 0 12px var(--glass-glow);
+}
+
+.md-tabs__item--active .md-tabs__link {
+  opacity: 1;
+  background: rgba(99, 102, 241, 0.25);
+  box-shadow: 0 0 16px var(--glass-glow);
+}
+
+/* ==========================================================================
+   Avatar & Brand Icon Glow
+   ========================================================================== */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4), 0 0 20px rgba(56, 189, 248, 0.2);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
 }
 
 .md-header__button.md-logo:hover img {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
+  transform: scale(1.12) rotate(5deg);
+  box-shadow: 0 0 22px rgba(99, 102, 241, 0.6), 0 0 35px rgba(56, 189, 248, 0.4);
 }
 
-/* Glassmorphism Header */
-.md-header {
+/* ==========================================================================
+   Glassmorphic Search Dialog
+   ========================================================================== */
+.md-search__inner {
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.md-search__input {
+  border-radius: 12px;
+}
+
+[data-md-color-scheme="slate"] .md-search__inner {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.md-search__output {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), 0 0 25px var(--glass-glow);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Glassmorphic Cards Grid
+   ========================================================================== */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.45),
+              0 0 25px var(--glass-glow),
+              0 0 40px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* Translucent Pill Links inside Cards */
+.md-typeset .grid.cards a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  margin: 0.3rem 0.2rem 0.2rem 0;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: var(--md-primary-fg-color--light) !important;
+  font-weight: 500;
+  font-size: 0.84em;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-typeset .grid.cards a:hover {
+  background: rgba(99, 102, 241, 0.28);
+  border-color: rgba(99, 102, 241, 0.55);
+  box-shadow: 0 0 16px var(--glass-glow);
+  transform: translateX(4px);
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Content Tabs Polish
+   ========================================================================== */
+.md-typeset .tabbed-set {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--glass-shadow);
 }
 
-/* Sleek Cards & Admonitions */
+.md-typeset .tabbed-labels {
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.md-typeset .tabbed-labels > label {
+  border-radius: 8px 8px 0 0;
+  transition: all 0.25s ease;
+}
+
+.md-typeset .tabbed-labels > .tabbed-label--active {
+  color: var(--md-accent-fg-color) !important;
+  text-shadow: 0 0 12px var(--glass-glow);
+}
+
+/* ==========================================================================
+   Glassmorphic Admonitions & Callouts
+   ========================================================================== */
 .md-typeset .admonition,
 .md-typeset details {
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-left-width: 4px;
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--md-accent-fg-color) !important;
+  border-radius: 12px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
 }
 
-[data-md-color-scheme="slate"] .md-typeset .admonition,
-[data-md-color-scheme="slate"] .md-typeset details {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+.md-typeset .admonition:hover,
+.md-typeset details:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 15px var(--glass-glow);
 }
 
-/* Polished Code Blocks */
+/* ==========================================================================
+   Polished Glass Code Blocks
+   ========================================================================== */
+.md-typeset .highlight,
+.md-typeset pre {
+  background: var(--md-code-bg-color) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.md-typeset .highlight:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35), 0 0 18px var(--glass-glow);
+}
+
 .md-typeset pre > code {
   border-radius: 8px;
   font-family: 'JetBrains Mono', 'Fira Code', 'Roboto Mono', monospace;
@@ -62,7 +239,47 @@
   line-height: 1.6;
 }
 
-/* Custom Scrollbar */
+/* ==========================================================================
+   Sidebar Navigation Polish
+   ========================================================================== */
+.md-nav__link {
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-nav__link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--md-accent-fg-color) !important;
+  padding-left: 0.85rem;
+}
+
+.md-nav__link--active {
+  background: rgba(99, 102, 241, 0.15) !important;
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 var(--md-accent-fg-color), 0 0 14px var(--glass-glow);
+}
+
+/* ==========================================================================
+   KaTeX Math Polish
+   ========================================================================== */
+.katex-display {
+  padding: 0.85em 1em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* ==========================================================================
+   Custom Ambient Glow Scrollbar & Smooth Scrolling
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -73,28 +290,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.4);
-  border-radius: 4px;
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.7);
-}
-
-/* KaTeX Math Polish */
-.katex-display {
-  padding: 0.75em 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-/* Navigation Links Polish */
-.md-nav__link {
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.md-nav__link--active {
-  font-weight: 600;
-  color: var(--md-primary-fg-color) !important;
+  background: rgba(99, 102, 241, 0.7);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
 }

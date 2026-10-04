@@ -16,7 +16,7 @@ git commit -m "Initial commit" # Creating first commit
 
 # Connect to a remote repository (e.g., Github)
 
-git remote add origin https://github.com/devkumar70401/notes.git
+git remote add origin https://github.com/devkumar70401/Notes.git
 
 git push -u origin main
 ```

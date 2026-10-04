@@ -18,9 +18,9 @@ description: Core concepts, task analysis, data representations, and model types
 - Spam classifier
 - Recommendation engines
 - Robotics
-- Software assitants
+- Software assistants
 - Game playing
-- customer churn 
+- Customer churn 
 
 ---
 ## Task Hierarchy
@@ -198,9 +198,9 @@ Use data to get the "**best**" parameters
 - $f(x) = sign(w^Tx + b)$
 
 ---
-## Model Evaulation: Test Data
+## Model Evaluation: Test Data
 
-- Learning algorithm uses training data  $\{(x^1, y^1), (x^2, y^2), \cdots,  (x^n, y^n)\}$ to get model $f$.
+- Learning algorithm uses training data $\{(x^1, y^1), (x^2, y^2), \cdots,  (x^n, y^n)\}$ to get model $f$.
 - But evaluating the learned model must **not** be done on the training data itself.
 - Use test data that is not in the training data for model evaluation.
 
@@ -236,7 +236,7 @@ Group the million tweets into 10 manageable groups.
 - Loss $=\frac{1}{n} \sum_{i=1}^n \|g(f(x^i)) - x^i\|^2 $
 
 > [!NOTE]
-> $$d^\prime << d$$
+> $$d^\prime \ll d$$
 
 ---
 ## Density Estimation
@@ -244,7 +244,7 @@ Group the million tweets into 10 manageable groups.
 ### Example
 
 - Assuming tweets from an account are independently generated randomly. Create a robot account that generates more such tweets.
-- To generate such sentences randomly, we need to be able to assign a probability score to every possible 123 character sentence, giving hgih scores to those that are likely to be from the original source.
+- To generate such sentences randomly, we need to be able to assign a probability score to every possible 123 character sentence, giving high scores to those that are likely to be from the original source.
 - A density estimation model takes in several samples from a random source, and outputs a model that assigns a probability score to every possible instance.
 
 ### Explanation
@@ -252,8 +252,8 @@ Group the million tweets into 10 manageable groups.
 - Data: $\{x^1, x^2, \cdots, x^n \}$
 - $x^i \in \mathbb{R}^d$
 - Probability mapping $P: \mathbb{R}^d \to \mathbb{R}_+$ that sums to one 
-- Goal: $P(x)$ is large is $x \in Data$, and low otherwise
-- Loss $= \frac{1}{n} \sum_{i-1}^n - log(P(x^i))$
+- Goal: $P(x)$ is large if $x \in \text{Data}$, and low otherwise
+- Loss $= \frac{1}{n} \sum_{i=1}^n - \log(P(x^i))$
 
 
 

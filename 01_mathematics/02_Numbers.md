@@ -11,12 +11,12 @@ description: Number systems, arithmetic properties, and exponentiation
 - Numbers keep a count of objects
 - $1,2,3,4, \cdots$
 - $0$ to represent no objects at all
-- Natural numbers, $  \mathbb{N} = \{0,1,2, 3 ,\cdots \} $
-  - Sometimes $ \mathbb{N}_0$ to emphasize $0$ is inlcuded
+- Natural numbers, $\mathbb{N} = \{0, 1, 2, 3, \dots\}$
+  - Sometimes $\mathbb{N}_0$ to emphasize $0$ is included
 - Addition, subtraction, multiplication, division
   - Which of these always produce a natural number as the answer?
     - Addition
-    - multiplication
+    - Multiplication
 
 ---
 ## Integers
@@ -34,10 +34,10 @@ description: Number systems, arithmetic properties, and exponentiation
 - $7 \times 4$ - make 4 groups of 7
 - $m \times n = \underbrace{m+m+m+\cdots+m}_{n \space times}$
   - Notation: $m \times n, m \cdot n, mn$
-- multiplication is repeated Addition
+- Multiplication is repeated addition
 - Sign rule for multiplying negative numbers 
   - $-m \times n = -(m \cdot n), -m \times -n = m \cdot n$
-- If we have even number of minus sign, we get an positive number and if we have odd number of minus sign we get a negative number.
+- If we have an even number of minus signs, we get a positive number and if we have an odd number of minus signs we get a negative number.
 
 ### Exponentiation
 
@@ -49,6 +49,6 @@ description: Number systems, arithmetic properties, and exponentiation
 ---
 ## Division 
 
-- Division is repeated substraction
+- Division is repeated subtraction
 - 
 

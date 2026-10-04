@@ -13,7 +13,7 @@ First install git on your system.
 
 ```bash
 git config --global user.name "devkumar70401"
-git config --gloabl user.email "devkumar70401@gmail.com"
+git config --global user.email "devkumar70401@gmail.com"
 ```
 
 ### Setting your editor
@@ -26,7 +26,7 @@ git config --global core.editor vi
 
 To set main as the default branch name do 
 ```bash
-git config --global init.defaultbranch main
+git config --global init.defaultBranch main
 ```
 
 ### Checking your settings
