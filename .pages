@@ -1,5 +1,3 @@
 nav:
   - Home: index.md
-  - Developer Tools: 00_tools
-  - Mathematics: 01_mathematics
-  - Machine Learning: 03_machine_learning
+  - Machine Learning: machine learning

@@ -1,5 +1,5 @@
-site_name: Devendra's Notes
-site_description: Personal engineering knowledge base & technical vault
+site_name: Machine Learning Vault
+site_description: Exhaustive, intuition-first masterwork reference notes bridging mathematical theory and production-grade Machine Learning.
 site_author: Devendra
 site_url: https://devkumar70401.github.io/Notes/
 repo_url: https://github.com/devkumar70401/Notes
@@ -21,15 +21,15 @@ theme:
     # Auto preference detection + Light / Dark toggle
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: cyan
+      primary: custom
+      accent: sky
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: cyan
+      primary: custom
+      accent: sky
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
