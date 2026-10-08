@@ -211,3 +211,135 @@ When reaching out to engineering founders or hiring managers, do not send a bori
 - [ ] **Month 10:** Build & deploy **Hero Project 1** (Live API + Docker + clean GitHub README).
 - [ ] **Month 11:** Build & deploy **Hero Project 2 & 3**. Record 2-minute walkthroughs.
 - [ ] **Month 12:** Send 10 targeted, personalized applications per day. Land the offer.
+
+---
+
+## 📚 Zero-Fluff Curated Resource Directory (No Irrelevant Theory)
+
+This directory eliminates tutorial hell. Every resource listed here is the **definitive production standard** used by industry engineers. Each entry explicitly states **what to focus on** and **what to skip**.
+
+---
+
+### Phase 1: Python Deep Dive, Relational Databases & Problem Solving (Months 1–3)
+
+#### 1. Python Internals & Advanced Idioms
+* **Primary Resource:** **"Fluent Python" (2nd Edition) by Luciano Ramalho**
+  * *Why:* The global gold standard for writing idiomatic, professional Python.
+  * **What to Study:**
+    * Part I: Data Structures (Dicts, Sets, memory layout of sequences).
+    * Part II: Functions as Objects (Decorators, closures, variable scope).
+    * Part IV: Object-Oriented Idioms (Special methods `__repr__`, `@property`, Descriptors).
+    * Part V: Control Flow (Generators, Iterators, `asyncio` event loop architecture).
+  * **What to Skip:** Chapter 24 (Metaprogramming class factories) and historical Python 2 migrations.
+* **Secondary Resource (Free):** **Python Official `asyncio` Documentation & Caleb Hattingh's "Using Asyncio in Python"**
+  * **What to Study:** Event loop basics, `asyncio.gather()`, tasks vs futures, handling exceptions in concurrent tasks.
+  * **What to Skip:** Low-level transport and protocol protocols (focus on high-level `async/await` syntax).
+
+#### 2. Relational Databases & SQL (PostgreSQL Mastery)
+* **Primary Resource (Free):** **"Use The Index, Luke!" by Markus Winand (use-the-index-luke.com)**
+  * *Why:* The undisputed best guide on how database indexing works at the hardware and algorithmic level.
+  * **What to Study:** Anatomy of a B-Tree index, WHERE clause performance, multi-column indexes, functions on indexed columns, Join operations.
+  * **What to Skip:** Vendor-specific Oracle/DB2 sections (focus entirely on standard SQL & PostgreSQL).
+* **Secondary Resource (Free):** **SQLAlchemy 2.0 Official Unified Tutorial (docs.sqlalchemy.org)**
+  * **What to Study:** Modern 2.0 `select()` syntax, Declarative Mapping, Relationships, Engine connection pooling, and `async_session` with `asyncpg`.
+  * **What to Skip:** Legacy 1.4 `session.query()` syntax (deprecated).
+
+#### 3. Algorithmic Logic & Data Structures
+* **Primary Resource (Free):** **NeetCode.io (NeetCode 150 Roadmap)**
+  * *Why:* Video explanations are written purely in clean, idiomatic Python with zero boilerplate.
+  * **What to Study:** Arrays & Hashing, Two Pointers, Sliding Window, Stack, Binary Search, Trees, and Heap/Priority Queue.
+  * **What to Skip:** LeetCode Hard problems, Complex Bit Manipulation tricks, and Advanced Graph algorithms (Tarjan's/Bellman-Ford).
+
+---
+
+### Phase 2: Modern Web APIs, Redis, Docker & Testing (Months 4–6)
+
+#### 1. Modern Web APIs with FastAPI
+* **Primary Resource (Free):** **FastAPI Official Documentation & Tutorial (fastapi.tiangolo.com)**
+  * *Why:* Widely regarded as the best-written documentation in the software industry.
+  * **What to Study:**
+    * Tutorial: Path Parameters, Query Parameters, Pydantic Request/Response Models.
+    * Dependency Injection System (`Depends`): Database sessions, user authentication.
+    * Security: OAuth2 with Password & Bearer tokens (JWT generation and verification).
+    * Middleware, CORS, Background Tasks, and Custom Exception Handlers.
+  * **What to Skip:** Tutorial sections using legacy SQL databases without ORMs.
+
+#### 2. Caching & Background Task Queues
+* **Primary Resource (Free):** **Redis University — RU101: Introduction to Redis Data Structures (university.redis.com)**
+  * *Why:* Created by the core Redis team; includes hands-on labs.
+  * **What to Study:** Strings (caching), Hashes (session storage), Sets, Sorted Sets (leaderboards and sliding window rate limiters), TTL expiration, and Cache-Aside pattern.
+  * **What to Skip:** Redis Clustering architecture (single-node Redis is sufficient for entry-level).
+* **Secondary Resource (Free):** **ARQ Documentation (github.com/samuelcolvin/arq)**
+  * *Why:* Ultra-lightweight asynchronous Redis task queue built specifically for Python `asyncio`.
+  * **What to Study:** Defining background workers, enqueueing jobs from FastAPI, retries, and scheduled cron jobs.
+
+#### 3. Containerization & Linux Systems
+* **Primary Resource (Free):** **Docker Official Getting Started & Bret Fisher's Docker Guide**
+  * **What to Study:** `Dockerfile` instructions (`FROM`, `WORKDIR`, `COPY`, `RUN`, `CMD`), Multi-stage builds (reducing Python image sizes), `.dockerignore`, and writing `docker-compose.yml` combining FastAPI + PostgreSQL + Redis.
+  * **What to Skip:** Kubernetes (K8s) — Complete overkill for year 1. Docker and Docker Compose are all you need.
+* **Secondary Resource (Free):** **"The Linux Command Line" by William Shotts (linuxcommand.org)**
+  * **What to Study:** Navigating directories, file permissions (`chmod`, `chown`), process inspection (`ps aux`, `top`, `kill`), environment variables, piping, and redirecting outputs.
+
+#### 4. Testing & Code Quality
+* **Primary Resource:** **"Python Testing with pytest" by Brian Okken**
+  * **What to Study:** Writing test functions, `pytest.fixture` (creating temporary test databases), testing async FastAPI endpoints using `httpx.AsyncClient`, mocking external API calls.
+
+---
+
+### Phase 3: AI Inference Systems, Vector Search & MLOps (Months 7–9)
+
+#### 1. High-Performance Model Inference & Serving
+* **Primary Resource (Free):** **ONNX Runtime Official Tutorials (onnxruntime.ai/docs/tutorials)**
+  * *Why:* Industry standard for running machine learning models at maximum hardware speed.
+  * **What to Study:** Converting PyTorch models to ONNX via `torch.onnx.export()`, running inference sessions with `onnxruntime.InferenceSession`, CPU vs CUDA execution providers, latency benchmarking.
+* **Secondary Resource (Free):** **vLLM Official Documentation (docs.vllm.ai)**
+  * **What to Study:** Spinning up OpenAI-compatible high-throughput LLM servers, PagedAttention concepts, streaming tokens via Server-Sent Events (SSE).
+  * **What to Skip:** Distributed multi-node GPU cluster setups.
+
+#### 2. Vector Databases & Enterprise RAG
+* **Primary Resource (Free):** **pgvector Official Documentation (github.com/pgvector/pgvector)**
+  * *Why:* Production standard for storing and searching embeddings inside PostgreSQL.
+  * **What to Study:**
+    * Creating vector columns and inserting embeddings.
+    * HNSW indexing (`m` and `ef_construction` parameters) for sub-5ms similarity search.
+    * Distance metrics: Cosine Distance (`<=>`) vs L2 Distance (`<->`).
+    * Hybrid Search: Combining PostgreSQL Full-Text Search (`tsvector`) with vector embeddings.
+* **Secondary Resource (Free):** **Pinecone / Qdrant Architectural Guides on Modern RAG**
+  * *Why:* Excellent conceptual architectural diagrams on chunking strategies, semantic caching, and Cross-Encoder reranking.
+  * *Note:* Read the architectural concepts for free, but implement the code using **PostgreSQL + `pgvector`** to avoid paid hosted services.
+
+#### 3. Applied Computer Vision & Streaming
+* **Primary Resource (Free):** **Ultralytics YOLO Documentation (docs.ultralytics.com)**
+  * **What to Study:** Loading pretrained YOLO models, exporting to ONNX, processing individual frames, extracting bounding boxes, labels, and confidence scores.
+* **Secondary Resource (Free):** **OpenCV-Python Tutorials (docs.opencv.org)**
+  * **What to Study:** Reading video streams (`cv2.VideoCapture`), frame resizing, color transformations, JPEG encoding in memory (`cv2.imencode`) for WebSocket transport.
+  * **What to Skip:** Traditional edge detection algorithms (Sobel, Canny) and feature matchers (SIFT, SURF). Focus on modern deep learning frame pipelines.
+
+#### 4. Observability & MLOps
+* **Primary Resource (Free):** **Prometheus Python Client Documentation (github.com/prometheus/client_python)**
+  * **What to Study:** Instrumenting FastAPI endpoints with Counter (request count) and Histogram (p95/p99 latency) metrics, exposing `/metrics`.
+* **Secondary Resource (Free):** **GitHub Actions Official Documentation**
+  * **What to Study:** Writing `.github/workflows/ci.yml` to automatically run `ruff` (linter) and `pytest` on every pull request.
+
+---
+
+### Phase 4: Systems Architecture & Non-Degree Hiring (Months 10–12)
+
+#### 1. System Design & Data Architecture
+* **Primary Resource:** **"Designing Data-Intensive Applications" (DDIA) by Martin Kleppmann**
+  * *Why:* The holy grail of backend systems engineering.
+  * **What to Study:**
+    * Chapter 1: Reliability, Scalability, and Maintainability.
+    * Chapter 2: Data Models and Query Languages.
+    * Chapter 3: Storage and Retrieval (B-Trees vs Log-Structured Storage).
+    * Chapter 5: Replication (Leader-Follower, Read Scaling).
+    * Chapter 7: Transactions (ACID, Race Conditions, Isolation Levels).
+  * **What to Skip:** Part III (Batch Processing / Hadoop / MapReduce — legacy distributed computing).
+
+#### 2. Project Presentation & Asynchronous Outreach
+* **Primary Resource (Free):** **OBS Studio / Loom (Free tier)**
+  * *Tool:* Record 2-minute silent screen recordings demonstrating your live Swagger API docs, terminal execution, Docker containerization, and sub-50ms latency graphs. Add clean subtitles or text overlays.
+* **Hiring Channels:**
+  * **Wellfound (formerly AngelList):** Filter by "Seed / Early Stage" startups hiring Backend/Python engineers.
+  * **Y Combinator Work at a Startup (workatastartup.com):** Direct access to technical founders who hire based on GitHub code and live demos.
+
