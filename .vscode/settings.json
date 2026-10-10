@@ -1,0 +1,24 @@
+{
+    // Excluding files from showing in vscode explorar
+    "files.exclude": {
+        ".github": true,
+        ".vscode": true,
+        "assets": true,
+        "hooks": true,
+        "javascripts": true,
+        "stylesheets": true,
+        ".gitignore": true,
+        "**/*.pages": true,
+        "mkdocs.yml": true,
+        "requirements.txt": true,
+        "README.md":true
+    },
+
+    // Autosave
+    "files.autoSave": "afterDelay",
+
+   // Hiding the sidebar opened when splitting the terminal
+   "terminal.integrated.tabs.enabled":false,
+
+   // 
+}
