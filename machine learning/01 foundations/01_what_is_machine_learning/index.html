@@ -1,0 +1,3152 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Exhaustive, intuition-first masterwork reference notes bridging mathematical theory and production-grade Machine Learning.">
+      
+      
+        <meta name="author" content="Devendra">
+      
+      
+        <link rel="canonical" href="https://devkumar70401.github.io/Notes/machine%20learning/01%20foundations/01_what_is_machine_learning/">
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../02_calculus/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/avatar.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>01. What is Machine Learning - Machine Learning Vault</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="sky">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#machine-learning-foundations-introduction-terminology-and-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Machine Learning Vault" class="md-header__button md-logo" aria-label="Machine Learning Vault" data-md-component="logo">
+      
+  <img src="../../../assets/avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Machine Learning Vault
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              01. What is Machine Learning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="sky"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="sky"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/devkumar70401/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    devkumar70401/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Machine Learning
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Machine Learning Vault" class="md-nav__button md-logo" aria-label="Machine Learning Vault" data-md-component="logo">
+      
+  <img src="../../../assets/avatar.png" alt="logo">
+
+    </a>
+    Machine Learning Vault
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/devkumar70401/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    devkumar70401/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Machine Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. What is Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01. What is Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is Machine Learning?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is Machine Learning?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-life-touchpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Life Touchpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-task-hierarchy-paradigm-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Task Hierarchy &amp; Paradigm Comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Task Hierarchy &amp; Paradigm Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Paradigms:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-and-when-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Why and When Machine Learning?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Why and When Machine Learning?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-programming-human-labour-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When Programming / Human Labour Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preconditions-for-machine-learning-to-succeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preconditions for Machine Learning to Succeed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-task-by-task-case-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Task-by-Task Case Studies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-wonders-of-machine-learning-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Wonders of Machine Learning (Applications)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-data-models-and-learning-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Data, Models, and Learning Algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Data, Models, and Learning Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Data?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Data?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-housing-dataset-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Housing Dataset Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Model?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Model?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classical-scientific-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classical Scientific Models:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-models-in-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Models in Machine Learning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Models in Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-predictive-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Predictive Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-probabilistic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Probabilistic Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-mathematical-notation-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Mathematical Notation Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-supervised-learning-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Supervised Learning: Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Supervised Learning: Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squared-loss-mean-squared-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squared Loss (Mean Squared Error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-parameterisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linear Parameterisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-examples-in-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Examples in Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Examples in Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-one-dimensional-d1-n5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: One-Dimensional (\(d=1, n=5\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-multidimensional-housing-price-d3-n6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Multidimensional Housing Price (\(d=3, n=6\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-supervised-learning-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Supervised Learning: Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Supervised Learning: Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0-1-classification-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0-1 Classification Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-separator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linear Separator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-examples-in-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Examples in Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Examples in Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-2d-synthetic-classification-d2-n6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: 2D Synthetic Classification (\(d=2, n=6\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-housing-room-classification-n6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Housing Room Classification (\(n=6\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-evaluating-learned-models-data-splits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Evaluating Learned Models &amp; Data Splits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Evaluating Learned Models &amp; Data Splits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-pitfall-of-training-set-evaluation-overfitting-memorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Pitfall of Training Set Evaluation (Overfitting / Memorization)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-selection-validation-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Selection &amp; Validation Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-unsupervised-learning-dimensionality-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Unsupervised Learning: Dimensionality Reduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Unsupervised Learning: Dimensionality Reduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motivating-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivating Applications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formal-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Mathematical Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-example-in-dimensionality-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Example in Dimensionality Reduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Example in Dimensionality Reduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-of-the-two-candidate-autoencoder-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison of the Two Candidate Autoencoder Pairs:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-unsupervised-learning-density-estimation-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Unsupervised Learning: Density Estimation &amp; Clustering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Unsupervised Learning: Density Estimation &amp; Clustering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation-the-wisdom-of-chopra-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivation &amp; The Wisdom of Chopra Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formal-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-examples-in-density-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Examples in Density Estimation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Examples in Density Estimation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-1d-uniform-density-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: 1D Uniform Density Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-2d-gaussian-mixture-models-the-link-to-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: 2D Gaussian Mixture Models &amp; The Link to Clustering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-comprehensive-ml-paradigm-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Comprehensive ML Paradigm Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_calculus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02. Calculus & Continuous Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_subspaces_projections_and_least_squares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03. Subspaces, Projections & Least Squares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 Techniques
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 Techniques
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%20techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning: Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 Practice
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 Practice
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03%20practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning: Practice &amp; Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is Machine Learning?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is Machine Learning?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-life-touchpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Life Touchpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-task-hierarchy-paradigm-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Task Hierarchy &amp; Paradigm Comparison
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Task Hierarchy &amp; Paradigm Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Paradigms:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-why-and-when-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Why and When Machine Learning?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Why and When Machine Learning?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-programming-human-labour-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When Programming / Human Labour Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preconditions-for-machine-learning-to-succeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preconditions for Machine Learning to Succeed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-task-by-task-case-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Task-by-Task Case Studies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-wonders-of-machine-learning-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Wonders of Machine Learning (Applications)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-data-models-and-learning-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Data, Models, and Learning Algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Data, Models, and Learning Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Data?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Data?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-housing-dataset-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Housing Dataset Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Model?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Model?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classical-scientific-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classical Scientific Models:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-models-in-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Models in Machine Learning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Models in Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-predictive-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Predictive Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-probabilistic-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Probabilistic Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-mathematical-notation-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Mathematical Notation Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-supervised-learning-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Supervised Learning: Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Supervised Learning: Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squared-loss-mean-squared-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squared Loss (Mean Squared Error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-parameterisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linear Parameterisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-examples-in-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Examples in Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Examples in Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-one-dimensional-d1-n5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: One-Dimensional (\(d=1, n=5\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-multidimensional-housing-price-d3-n6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Multidimensional Housing Price (\(d=3, n=6\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-supervised-learning-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Supervised Learning: Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Supervised Learning: Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0-1-classification-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0-1 Classification Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-separator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linear Separator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-examples-in-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Examples in Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Examples in Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-2d-synthetic-classification-d2-n6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: 2D Synthetic Classification (\(d=2, n=6\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-housing-room-classification-n6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Housing Room Classification (\(n=6\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-evaluating-learned-models-data-splits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Evaluating Learned Models &amp; Data Splits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Evaluating Learned Models &amp; Data Splits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-pitfall-of-training-set-evaluation-overfitting-memorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Pitfall of Training Set Evaluation (Overfitting / Memorization)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-selection-validation-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Selection &amp; Validation Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-unsupervised-learning-dimensionality-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Unsupervised Learning: Dimensionality Reduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Unsupervised Learning: Dimensionality Reduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motivating-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivating Applications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formal-mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Mathematical Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-example-in-dimensionality-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Example in Dimensionality Reduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Example in Dimensionality Reduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparison-of-the-two-candidate-autoencoder-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison of the Two Candidate Autoencoder Pairs:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-unsupervised-learning-density-estimation-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Unsupervised Learning: Density Estimation &amp; Clustering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Unsupervised Learning: Density Estimation &amp; Clustering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivation-the-wisdom-of-chopra-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivation &amp; The Wisdom of Chopra Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formal-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formal Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-numerical-examples-in-density-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Numerical Examples in Density Estimation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Numerical Examples in Density Estimation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-1d-uniform-density-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: 1D Uniform Density Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-2d-gaussian-mixture-models-the-link-to-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: 2D Gaussian Mixture Models &amp; The Link to Clustering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-comprehensive-ml-paradigm-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Comprehensive ML Paradigm Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Foundations
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="machine-learning-foundations-introduction-terminology-and-setup">Machine Learning Foundations: Introduction, Terminology and Setup<a class="headerlink" href="#machine-learning-foundations-introduction-terminology-and-setup" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="1-what-is-machine-learning">1. What is Machine Learning?<a class="headerlink" href="#1-what-is-machine-learning" title="Permanent link">&para;</a></h2>
+<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p><strong>Machine Learning (ML)</strong> is the study of computer algorithms that <strong>improve automatically through experience and by the use of data</strong>.</p>
+<h3 id="daily-life-touchpoints">Daily Life Touchpoints<a class="headerlink" href="#daily-life-touchpoints" title="Permanent link">&para;</a></h3>
+<p>Machine learning is embedded in everyday consumer applications:
+* <strong>Weather Prediction:</strong> Interpreting atmospheric sensor readings and radar imagery to forecast precipitation and temperature.
+* <strong>Face Detection:</strong> Real-time visual bounding boxes on smartphone camera viewfinders and image galleries.</p>
+<hr />
+<h2 id="2-task-hierarchy-paradigm-comparison">2. Task Hierarchy &amp; Paradigm Comparison<a class="headerlink" href="#2-task-hierarchy-paradigm-comparison" title="Permanent link">&para;</a></h2>
+<p>Historically, computational and physical tasks have been addressed via three distinct paradigms:</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph MANUAL["1. Manual Labour"]
+        direction TB
+        I1["Input"] --&gt; H1["Human"] --&gt; O1["Output"]
+    end
+
+    subgraph PROG["2. Traditional Programming"]
+        direction TB
+        H2["Human"] --&gt; T2["Handcrafted Tool"]
+        I2["Input"] --&gt; T2 --&gt; O2["Output"]
+    end
+
+    subgraph ML["3. Machine Learning"]
+        direction TB
+        H3["Human"] --&gt; TD["Tool Design"]
+        D["Data"] --&gt; TD
+        TD --&gt; T3["Learned Model"]
+        I3["Input"] --&gt; T3 --&gt; O3["Output"]
+    end</code></pre>
+<h3 id="the-three-paradigms">The Three Paradigms:<a class="headerlink" href="#the-three-paradigms" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Manual Labour:</strong><br />
+   $<span class="arithmatex">\(\text{Input} \longrightarrow \text{Human} \longrightarrow \text{Output}\)</span>$<br />
+   A human directly processes the input and produces the output.</li>
+<li><strong>Traditional Programming (Rule-Based):</strong><br />
+   $<span class="arithmatex">\(\text{Human} \longrightarrow \text{Tool Design} \implies \text{Input} \longrightarrow \text{Software Tool} \longrightarrow \text{Output}\)</span>$<br />
+   A human programmer articulates explicit deterministic rules in code to create a tool that processes inputs.</li>
+<li><strong>Machine Learning:</strong><br />
+   $<span class="arithmatex">\((\text{Human} + \text{Data}) \longrightarrow \text{Tool Design (Learning Algorithm)} \implies \text{Input} \longrightarrow \text{Model} \longrightarrow \text{Output}\)</span>$<br />
+   Instead of writing rules directly, humans design a learning algorithm which, paired with large datasets, produces the predictive model.</li>
+</ol>
+<hr />
+<h2 id="3-why-and-when-machine-learning">3. Why and When Machine Learning?<a class="headerlink" href="#3-why-and-when-machine-learning" title="Permanent link">&para;</a></h2>
+<p>Machine Learning is not universally necessary. It is employed specifically when traditional approaches fail and requisite data conditions are satisfied.</p>
+<h3 id="when-programming-human-labour-fails">When Programming / Human Labour Fails<a class="headerlink" href="#when-programming-human-labour-fails" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Scale, Speed, &amp; Cost of Human Labour:</strong><br />
+   Human labor cannot scale to handle millions of transactions per second cost-effectively.</li>
+<li><strong>Inability to Express Rules Using Language:</strong><br />
+   Humans perform certain tasks intuitively (e.g., recognizing human faces, understanding speech), but cannot formally verbalize or code the exact underlying pixel-level or acoustic rules.</li>
+<li><strong>Unknown Transformation Rules:</strong><br />
+   Neither humans nor domain experts know the exact governing analytical formula mapping input to output (e.g., long-range weather systems).</li>
+</ol>
+<h3 id="preconditions-for-machine-learning-to-succeed">Preconditions for Machine Learning to Succeed<a class="headerlink" href="#preconditions-for-machine-learning-to-succeed" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Abundant Example Data:</strong> A sufficiently large collection of representative input-output pairs or observations must exist.</li>
+<li><strong>Structural Idea on the Rules:</strong> We must have some structural or hypothesis-level concept of the problem (e.g., selecting a suitable model class or parameterized function family).</li>
+</ol>
+<hr />
+<h2 id="4-task-by-task-case-studies">4. Task-by-Task Case Studies<a class="headerlink" href="#4-task-by-task-case-studies" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Case1["Case 1: Password Verification"]
+        PW["Password"] --&gt; S1["Rule-Based Software"] --&gt; A1["Authentication"]
+    end
+
+    subgraph Case2["Case 2: Face Detection"]
+        IMG["Image"] --&gt; S2["ML Model"] --&gt; A2["Face / No Face"]
+    end
+
+    subgraph Case3["Case 3: Weather Prediction"]
+        RAD["Radar Map"] --&gt; S3["ML Model"] --&gt; A3["Rain / Shine"]
+    end</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Task</th>
+<th style="text-align: left;">Manual Labour Analysis</th>
+<th style="text-align: left;">Traditional Programming Analysis</th>
+<th style="text-align: left;">Machine Learning Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Password Verification</strong></td>
+<td style="text-align: left;"><strong>Problem:</strong> Scale — Impractical for humans to manually verify millions of login requests.</td>
+<td style="text-align: left;"><strong>Feasibility:</strong> Perfect. Rules (<code>hash(input) == stored_hash</code>) are exact, deterministic, and trivial to code.</td>
+<td style="text-align: left;"><strong>ML Not Required:</strong> Traditional software solves this with 100% precision.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Face Detection / Tagging</strong></td>
+<td style="text-align: left;"><strong>Problem:</strong> Scale — Impractical for humans to tag faces across billions of online photos.</td>
+<td style="text-align: left;"><strong>Problem:</strong> Expressing face vs. no-face rules in code is practically impossible.</td>
+<td style="text-align: left;"><strong>ML Required &amp; Succeeds:</strong> Massive image datasets are available; algorithms learn visual feature representations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Weather Prediction</strong></td>
+<td style="text-align: left;"><strong>Problem:</strong> Information overload — Humans cannot process complex radar maps and global atmospheric telemetry in real time.</td>
+<td style="text-align: left;"><strong>Problem:</strong> Scientists do not know the complete deterministic rules transforming radar maps into exact precipitation forecasts.</td>
+<td style="text-align: left;"><strong>ML Required &amp; Succeeds:</strong> Decades of meteorological telemetry provide ample data to train predictive models.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-the-wonders-of-machine-learning-applications">5. The Wonders of Machine Learning (Applications)<a class="headerlink" href="#5-the-wonders-of-machine-learning-applications" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Inbox (Spam Filtering):</strong></li>
+<li>Incoming emails pass through an automated classifier separating legitimate correspondence into the <code>Inbox</code> and malicious/unwanted email into the <code>Spam Folder</code>.</li>
+<li><strong>Shopping Cart (Recommender Systems):</strong></li>
+<li>E-commerce recommendation modules:<ul>
+<li><em>"Frequently Bought Together"</em> (bundle suggestions)</li>
+<li><em>"Customers Who Bought This Item Also Bought"</em> (collaborative filtering over purchase histories)</li>
+</ul>
+</li>
+<li><strong>Smart Assistants:</strong></li>
+<li>Voice-activated hardware agents (e.g., Amazon Echo/Alexa, Apple Siri) leveraging speech recognition and natural language processing.</li>
+<li><strong>Robot AIs:</strong></li>
+<li>Autonomous navigation, perception, and obstacle avoidance in extraterrestrial exploration rovers (e.g., Mars Rovers).</li>
+<li><strong>Games:</strong></li>
+<li>AI systems mastering highly complex search spaces.</li>
+<li><em>Landmark Milestone:</em> <strong>AlphaGo</strong> defeating world champion Lee Sedol in the game of Go (covered globally by news outlets such as BBC News).</li>
+<li><strong>Marketing:</strong></li>
+<li>Multi-platform targeted advertising, behavioral audience segmentation, and personalized customer reach across digital channels.</li>
+</ul>
+<hr />
+<h2 id="6-data-models-and-learning-algorithms">6. Data, Models, and Learning Algorithms<a class="headerlink" href="#6-data-models-and-learning-algorithms" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-data">What is Data?<a class="headerlink" href="#what-is-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Data</strong> is a collection of vectors:<br />
+  $<span class="arithmatex">\(\mathcal{D} = \{\mathbf{x}^1, \mathbf{x}^2, \dots, \mathbf{x}^n\}\)</span>$</li>
+<li><strong>Metadata</strong> is contextual information explaining the data attributes (features and targets).</li>
+</ul>
+<h4 id="running-housing-dataset-example">Running Housing Dataset Example<a class="headerlink" href="#running-housing-dataset-example" title="Permanent link">&para;</a></h4>
+<p>Consider a dataset of 6 properties:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Observation</th>
+<th style="text-align: center;">Rooms (<span class="arithmatex">\(x_1\)</span>)</th>
+<th style="text-align: center;">Area in 100 sq.ft (<span class="arithmatex">\(x_2\)</span>)</th>
+<th style="text-align: center;">Distance to Metro in km (<span class="arithmatex">\(x_3\)</span>)</th>
+<th style="text-align: center;">Price in 10 Lakhs (<span class="arithmatex">\(y\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>House 1</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>House 2</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.2\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>House 3</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.8\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.6\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>House 4</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(16\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.8\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>House 5</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(15\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(8.5\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>House 6</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(11\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.6\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.9\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Metadata:</strong> <span class="arithmatex">\((\text{\# rooms}, \text{Area in 100 sq.ft}, \text{Distance to metro in km}, \text{Price in 10 lakhs})\)</span>.</li>
+</ul>
+<hr />
+<h3 id="what-is-a-model">What is a Model?<a class="headerlink" href="#what-is-a-model" title="Permanent link">&para;</a></h3>
+<p>A <strong>model</strong> is a mathematical simplification of reality.</p>
+<h4 id="classical-scientific-models">Classical Scientific Models:<a class="headerlink" href="#classical-scientific-models" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>The Ideal Gas Model:</strong> <span class="arithmatex">\(PV = nRT\)</span></li>
+<li><strong>Inverse Square Law:</strong> Newton’s law of universal gravitational attraction (<span class="arithmatex">\(F = G \frac{m_1 m_2}{r^2}\)</span>)</li>
+<li><strong>Moore’s Law:</strong> Empirical observation that semiconductor transistor count doubles roughly every two years</li>
+<li><strong>Cobb–Douglas Model:</strong> Production function in economics (<span class="arithmatex">\(Y = A L^\alpha K^\beta\)</span>)</li>
+</ul>
+<blockquote>
+<p>[!NOTE] <strong>George Box's Aphorism</strong>
+<em>"All models are wrong, but some are useful."</em></p>
+</blockquote>
+<hr />
+<h3 id="types-of-models-in-machine-learning">Types of Models in Machine Learning<a class="headerlink" href="#types-of-models-in-machine-learning" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    MLM["Models in Machine Learning"]
+    MLM --&gt; PRED["Predictive Models"]
+    MLM --&gt; PROB["Probabilistic Models"]
+    PRED --&gt; REG["Regression Models"]
+    PRED --&gt; CLS["Classification Models"]
+    PROB --&gt; DEN["Density Estimation"]
+    PROB --&gt; GEN["Generative Models"]</code></pre>
+<h4 id="1-predictive-models">1. Predictive Models<a class="headerlink" href="#1-predictive-models" title="Permanent link">&para;</a></h4>
+<p>Map observed input features directly to a target output value:
+* <strong>Regression Model:</strong> Target output is continuous.
+  * <em>Example:</em> Predict house price from area and distance to metro.
+  * <em>Hypothesis:</em> <span class="arithmatex">\(\text{Price} = 0.5 \times \text{Area} - \text{Distance}\)</span>
+* <strong>Classification Model:</strong> Target output is categorical / discrete.
+  * <em>Example:</em> Determine whether a house is close (<span class="arithmatex">\(&lt; 2\text{ km}\)</span>) to a metro station based on price and rooms.
+  * <em>Hypothesis:</em>
+    $<span class="arithmatex">\(\text{Answer} = \begin{cases} \text{Close}, &amp; \text{if } 2 \times \text{Rooms} - \text{Price} &lt; 1 \\ \text{Far}, &amp; \text{otherwise} \end{cases}\)</span>$</p>
+<h4 id="2-probabilistic-models">2. Probabilistic Models<a class="headerlink" href="#2-probabilistic-models" title="Permanent link">&para;</a></h4>
+<p>Estimate the underlying probability distribution over possible events:
+* <em>Example 1:</em> What is the probability that a randomly chosen individual is located at GPS coordinates <span class="arithmatex">\((25^\circ\text{N}, 30^\circ\text{E})\)</span>?
+* <em>Example 2:</em> What is the probability that a given tweet was generated by Mr. Chopra?</p>
+<hr />
+<h3 id="learning-algorithms">Learning Algorithms<a class="headerlink" href="#learning-algorithms" title="Permanent link">&para;</a></h3>
+<p>A <strong>Learning Algorithm</strong> defines a functional mapping from Data to Models:
+$<span class="arithmatex">\(\text{Learning Algorithm}: \text{Data} \longrightarrow \text{Model}\)</span>$</p>
+<ol>
+<li>A human defines a <strong>model family</strong> sharing the same functional structure but parameterized by tunable parameters <span class="arithmatex">\(\mathbf{w}\)</span> (weights) and <span class="arithmatex">\(b\)</span> (bias).
+   $<span class="arithmatex">\(\text{Price} = a \times (\text{Area}) + b \times (\text{\# Rooms}) + c \times (\text{Distance to Metro})\)</span>$
+   $<span class="arithmatex">\(\text{Parameters: } a, b, c\)</span>$</li>
+<li>The learning algorithm ingests the training data to calculate the <strong>"best"</strong> set of parameter values that optimizes a designated objective (loss function).</li>
+</ol>
+<pre class="mermaid"><code>flowchart LR
+    H["Human"] --&gt; LA["Learning Algorithm"]
+    D["Data"] --&gt; LA
+    LA --&gt; M["Learned Model"]
+    IN["New Input"] --&gt; M --&gt; OUT["Prediction"]</code></pre>
+<hr />
+<h2 id="7-mathematical-notation-reference">7. Mathematical Notation Reference<a class="headerlink" href="#7-mathematical-notation-reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(\mathbb{R}\)</span>: Set of real numbers.</li>
+<li><span class="arithmatex">\(\mathbb{R}_+\)</span>: Set of non-negative real numbers (<span class="arithmatex">\(\{x \in \mathbb{R} \mid x \ge 0\}\)</span>).</li>
+<li><span class="arithmatex">\(\mathbb{R}^d\)</span>: <span class="arithmatex">\(d\)</span>-dimensional Euclidean space (column vectors of <span class="arithmatex">\(d\)</span> real numbers).
+  $<span class="arithmatex">\(\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_d \end{bmatrix} \in \mathbb{R}^d\)</span>$</li>
+<li><span class="arithmatex">\(\mathbf{x}\)</span>: A vector.</li>
+<li><span class="arithmatex">\(x_j\)</span>: The <span class="arithmatex">\(j\)</span>-th coordinate (component) of vector <span class="arithmatex">\(\mathbf{x}\)</span>.
+  $<span class="arithmatex">\(\text{If } \mathbf{x} = \begin{bmatrix} 1 \\ 2 \\ 7 \end{bmatrix} \in \mathbb{R}^3 \implies x_3 = 7\)</span>$</li>
+<li><span class="arithmatex">\(\|\mathbf{x}\|\)</span>: Euclidean norm (length) of vector <span class="arithmatex">\(\mathbf{x}\)</span>.
+  $<span class="arithmatex">\(\|\mathbf{x}\|^2 = \sum_{j=1}^d x_j^2 = x_1^2 + x_2^2 + \dots + x_d^2\)</span>$</li>
+<li><span class="arithmatex">\(\mathbf{x}^1, \mathbf{x}^2, \dots, \mathbf{x}^n\)</span>: A collection of <span class="arithmatex">\(n\)</span> sample vectors (superscripts index data points).
+  $<span class="arithmatex">\(\mathbf{x}^1 = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad \mathbf{x}^2 = \begin{bmatrix} 7 \\ 8 \\ 9 \end{bmatrix}\)</span>$</li>
+<li><span class="arithmatex">\(x_j^i\)</span>: The <span class="arithmatex">\(j\)</span>-th coordinate of the <span class="arithmatex">\(i\)</span>-th vector in the sample set.
+  $<span class="arithmatex">\(\text{From above: } x_2^2 = 8\)</span>$</li>
+<li><span class="arithmatex">\((x_1)^2\)</span>: The scalar square of the first coordinate of vector <span class="arithmatex">\(\mathbf{x}\)</span>.</li>
+<li><span class="arithmatex">\(\mathbf{1}(\cdot)\)</span>: Indicator function:
+  $<span class="arithmatex">\(\mathbf{1}(\text{condition}) = \begin{cases} 1, &amp; \text{if condition is True} \\ 0, &amp; \text{if condition is False} \end{cases}\)</span>$
+  $<span class="arithmatex">\(\mathbf{1}(2 \text{ is even}) = 1, \quad \mathbf{1}(2 \text{ is odd}) = 0\)</span>$</li>
+</ul>
+<hr />
+<h2 id="8-supervised-learning-regression">8. Supervised Learning: Regression<a class="headerlink" href="#8-supervised-learning-regression" title="Permanent link">&para;</a></h2>
+<h3 id="formulation">Formulation<a class="headerlink" href="#formulation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Supervised Learning Concept:</strong> Supervised learning can be viewed as multidimensional curve-fitting.</li>
+<li><strong>Given Training Data:</strong>
+  $<span class="arithmatex">\(\mathcal{D} = \{(\mathbf{x}^1, y^1), (\mathbf{x}^2, y^2), \dots, (\mathbf{x}^n, y^n)\}\)</span>$
+  where <span class="arithmatex">\(\mathbf{x}^i \in \mathbb{R}^d\)</span> and target label <span class="arithmatex">\(y^i \in \mathbb{R}\)</span>.</li>
+<li><strong>Goal:</strong> Discover a model function <span class="arithmatex">\(f: \mathbb{R}^d \to \mathbb{R}\)</span> such that <span class="arithmatex">\(f(\mathbf{x}^i)\)</span> is as close as possible to <span class="arithmatex">\(y^i\)</span> for all <span class="arithmatex">\(i\)</span>.</li>
+</ul>
+<h3 id="squared-loss-mean-squared-error">Squared Loss (Mean Squared Error)<a class="headerlink" href="#squared-loss-mean-squared-error" title="Permanent link">&para;</a></h3>
+<p>The quality of a candidate model <span class="arithmatex">\(f\)</span> is quantified using the <strong>squared loss</strong>:
+$<span class="arithmatex">\(\text{Loss}[f] = \frac{1}{n} \sum_{i=1}^n \left(f(\mathbf{x}^i) - y^i\right)^2\)</span>$</p>
+<h3 id="linear-parameterisation">Linear Parameterisation<a class="headerlink" href="#linear-parameterisation" title="Permanent link">&para;</a></h3>
+<p>A standard linear model expresses predictions as an affine transformation:
+$<span class="arithmatex">\(f(\mathbf{x}) = \mathbf{w}^\top \mathbf{x} + b = \sum_{j=1}^d w_j x_j + b\)</span>$
+For the housing problem:
+$<span class="arithmatex">\(f(\mathbf{x}) = w_1 (\text{\# rooms}) + w_2 (\text{area}) + w_3 (\text{distance}) + b\)</span>$</p>
+<hr />
+<h3 id="worked-numerical-examples-in-regression">Worked Numerical Examples in Regression<a class="headerlink" href="#worked-numerical-examples-in-regression" title="Permanent link">&para;</a></h3>
+<h4 id="example-1-one-dimensional-d1-n5">Example 1: One-Dimensional (<span class="arithmatex">\(d=1, n=5\)</span>)<a class="headerlink" href="#example-1-one-dimensional-d1-n5" title="Permanent link">&para;</a></h4>
+<p>Consider 5 observations with a single feature <span class="arithmatex">\(x\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Observation <span class="arithmatex">\(i\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(x^i\)</span></th>
+<th style="text-align: center;">Ground Truth <span class="arithmatex">\(y^i\)</span></th>
+<th style="text-align: center;">Candidate Model <span class="arithmatex">\(f(x) = 2x_1\)</span></th>
+<th style="text-align: center;">Candidate Model <span class="arithmatex">\(g(x) = x_1 + 3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\([1]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4.0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="arithmatex">\([2]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="arithmatex">\([3]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="arithmatex">\([6]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(11.5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="arithmatex">\([7]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(13.9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(14.0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(10.0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Loss Computation for <span class="arithmatex">\(f(x) = 2x_1\)</span>:</strong>
+$<span class="arithmatex">\(\text{Loss}[f] = \frac{1}{5} \left[(2.0 - 2.1)^2 + (4.0 - 3.9)^2 + (6.0 - 6.2)^2 + (12.0 - 11.5)^2 + (14.0 - 13.9)^2\right]\)</span>$
+$<span class="arithmatex">\(\text{Loss}[f] = \frac{1}{5} \left[(-0.1)^2 + (0.1)^2 + (-0.2)^2 + (0.5)^2 + (0.1)^2\right]\)</span>$
+$<span class="arithmatex">\(\text{Loss}[f] = \frac{1}{5} [0.01 + 0.01 + 0.04 + 0.25 + 0.01] = \frac{0.32}{5} \approx 0.064\)</span>$</p>
+<p><strong>Loss Computation for <span class="arithmatex">\(g(x) = x_1 + 3\)</span>:</strong>
+$<span class="arithmatex">\(\text{Loss}[g] = \frac{1}{5} \left[(4.0 - 2.1)^2 + (5.0 - 3.9)^2 + (6.0 - 6.2)^2 + (9.0 - 11.5)^2 + (10.0 - 13.9)^2\right]\)</span>$
+$<span class="arithmatex">\(\text{Loss}[g] = \frac{1}{5} \left[(1.9)^2 + (1.1)^2 + (-0.2)^2 + (-2.5)^2 + (-3.9)^2\right]\)</span>$
+$<span class="arithmatex">\(\text{Loss}[g] = \frac{1}{5} [3.61 + 1.21 + 0.04 + 6.25 + 15.21] = \frac{26.32}{5} = 5.264\)</span>$</p>
+<p><strong>Conclusion:</strong> Model <span class="arithmatex">\(f\)</span> incurs significantly lower squared loss than <span class="arithmatex">\(g\)</span>, fitting the linear trend closely.</p>
+<hr />
+<h4 id="example-2-multidimensional-housing-price-d3-n6">Example 2: Multidimensional Housing Price (<span class="arithmatex">\(d=3, n=6\)</span>)<a class="headerlink" href="#example-2-multidimensional-housing-price-d3-n6" title="Permanent link">&para;</a></h4>
+<p>Two candidate regression models evaluated on the housing dataset:
+* Model <span class="arithmatex">\(f\)</span>: <span class="arithmatex">\(f(\mathbf{x}) = 2 \times \text{Rooms} - 0.5 \times \text{Distance}\)</span>
+* Model <span class="arithmatex">\(g\)</span>: <span class="arithmatex">\(g(\mathbf{x}) = \text{Rooms} + 2 \times \text{Distance}\)</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">House</th>
+<th style="text-align: center;">Rooms</th>
+<th style="text-align: center;">Area</th>
+<th style="text-align: center;">Distance</th>
+<th style="text-align: center;">Price (<span class="arithmatex">\(y\)</span>)</th>
+<th style="text-align: center;">Prediction <span class="arithmatex">\(f(\mathbf{x})\)</span></th>
+<th style="text-align: center;">Prediction <span class="arithmatex">\(g(\mathbf{x})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.9\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(5.0\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2(3) - 0.5(1.9) = \mathbf{5.05}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3 + 2(1.9) = \mathbf{6.8}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="arithmatex">\(2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.1\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(3.2\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2(2) - 0.5(2.1) = \mathbf{2.95}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2 + 2(2.1) = \mathbf{6.2}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(12\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.8\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(6.6\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2(4) - 0.5(2.8) = \mathbf{6.60}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4 + 2(2.8) = \mathbf{9.6}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(16\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.9\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(9.8\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2(5) - 0.5(0.9) = \mathbf{9.55}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5 + 2(0.9) = \mathbf{6.8}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(15\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.1\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(8.5\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2(5) - 0.5(3.1) = \mathbf{8.45}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5 + 2(3.1) = \mathbf{11.2}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(11\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.6\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(6.9\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2(4) - 0.5(1.6) = \mathbf{7.20}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4 + 2(1.6) = \mathbf{7.2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusion:</strong> Model <span class="arithmatex">\(f\)</span> closely matches the true house prices, whereas Model <span class="arithmatex">\(g\)</span> assumes price increases with distance to the metro, leading to large prediction errors.</p>
+<hr />
+<h2 id="9-supervised-learning-classification">9. Supervised Learning: Classification<a class="headerlink" href="#9-supervised-learning-classification" title="Permanent link">&para;</a></h2>
+<h3 id="formulation_1">Formulation<a class="headerlink" href="#formulation_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Target:</strong> Discrete labels <span class="arithmatex">\(y^i \in \{+1, -1\}\)</span>.</li>
+<li><strong>Training Data:</strong> <span class="arithmatex">\(\mathcal{D} = \{(\mathbf{x}^1, y^1), \dots, (\mathbf{x}^n, y^n)\}\)</span>, where <span class="arithmatex">\(\mathbf{x}^i \in \mathbb{R}^d\)</span>.</li>
+<li><strong>Algorithm Goal:</strong> Output a decision function <span class="arithmatex">\(f: \mathbb{R}^d \to \{+1, -1\}\)</span>.</li>
+</ul>
+<h3 id="0-1-classification-loss">0-1 Classification Loss<a class="headerlink" href="#0-1-classification-loss" title="Permanent link">&para;</a></h3>
+<p>The fraction of training instances classified incorrectly by <span class="arithmatex">\(f\)</span>:
+$<span class="arithmatex">\(\text{Loss}[f] = \frac{1}{n} \sum_{i=1}^n \mathbf{1}\left(f(\mathbf{x}^i) \neq y^i\right)\)</span>$</p>
+<h3 id="linear-separator">Linear Separator<a class="headerlink" href="#linear-separator" title="Permanent link">&para;</a></h3>
+<p>A hyperplane parameterised by weights <span class="arithmatex">\(\mathbf{w}\)</span> and scalar threshold/bias <span class="arithmatex">\(b\)</span>:
+$<span class="arithmatex">\(f(\mathbf{x}) = \text{sign}\left(\mathbf{w}^\top \mathbf{x} + b\right)\)</span>$
+where:
+$<span class="arithmatex">\(\text{sign}(z) = \begin{cases} +1, &amp; \text{if } z \ge 0 \\ -1, &amp; \text{if } z &lt; 0 \end{cases}\)</span>$</p>
+<hr />
+<h3 id="worked-numerical-examples-in-classification">Worked Numerical Examples in Classification<a class="headerlink" href="#worked-numerical-examples-in-classification" title="Permanent link">&para;</a></h3>
+<h4 id="example-1-2d-synthetic-classification-d2-n6">Example 1: 2D Synthetic Classification (<span class="arithmatex">\(d=2, n=6\)</span>)<a class="headerlink" href="#example-1-2d-synthetic-classification-d2-n6" title="Permanent link">&para;</a></h4>
+<p>Data coordinates with positive labels concentrated near the origin and negative labels further out:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data Point <span class="arithmatex">\(\mathbf{x}^i\)</span></th>
+<th style="text-align: center;">True Label <span class="arithmatex">\(y^i\)</span></th>
+<th style="text-align: center;">Candidate <span class="arithmatex">\(f(\mathbf{x}) = \text{sign}(2 - x_1)\)</span></th>
+<th style="text-align: center;">Candidate <span class="arithmatex">\(g(\mathbf{x}) = \text{sign}(x_1 - 2x_2)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([0, 0]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(2 - 0) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(0 - 0) = \mathbf{+1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([0, 1]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(2 - 0) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(0 - 2) = \mathbf{-1}\)</span> <em>(Error)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([1, 0]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(2 - 1) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(1 - 0) = \mathbf{+1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([4, 4]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(2 - 4) = \mathbf{-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(4 - 8) = \mathbf{-1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([3, 4]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(2 - 3) = \mathbf{-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(3 - 8) = \mathbf{-1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([4, 3]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(2 - 4) = \mathbf{-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(4 - 6) = \mathbf{-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Loss Evaluation:</strong>
+* <strong>Model <span class="arithmatex">\(f\)</span>:</strong> <span class="arithmatex">\(0\)</span> errors out of <span class="arithmatex">\(6 \implies \text{Loss}[f] = \frac{0}{6} = 0\)</span>. (Separating line: vertical boundary <span class="arithmatex">\(x_1 = 2\)</span>).
+* <strong>Model <span class="arithmatex">\(g\)</span>:</strong> <span class="arithmatex">\(1\)</span> error at <span class="arithmatex">\([0, 1] \implies \text{Loss}[g] = \frac{1}{6}\)</span>. (Separating line: <span class="arithmatex">\(x_2 = 0.5 x_1\)</span>).</p>
+<hr />
+<h4 id="example-2-housing-room-classification-n6">Example 2: Housing Room Classification (<span class="arithmatex">\(n=6\)</span>)<a class="headerlink" href="#example-2-housing-room-classification-n6" title="Permanent link">&para;</a></h4>
+<p>Target: Classify if a property has more than 3 rooms:
+$<span class="arithmatex">\(\text{Rooms } \le 3 \implies -1, \qquad \text{Rooms } &gt; 3 \implies +1\)</span>$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">House</th>
+<th style="text-align: center;">Area (<span class="arithmatex">\(x_1\)</span>)</th>
+<th style="text-align: center;">Price (<span class="arithmatex">\(x_2\)</span>)</th>
+<th style="text-align: center;">Label (<span class="arithmatex">\(y\)</span>)</th>
+<th style="text-align: center;"><span class="arithmatex">\(f(\mathbf{x}) = \text{sign}(\text{Area} - 10)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(g(\mathbf{x}) = \text{sign}(\text{Price} - 6)\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(h(\mathbf{x}) = \text{sign}(\text{Price} - 9)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(9\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(-1\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-1) = \mathbf{-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-1.0) = \mathbf{-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-4.0) = \mathbf{-1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><span class="arithmatex">\(7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.1\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(-1\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-3) = \mathbf{-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-2.9) = \mathbf{-1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-5.9) = \mathbf{-1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="arithmatex">\(12\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6.9\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(+1\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+2) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+0.9) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-2.1) = \mathbf{-1}\)</span> <em>(Error)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="arithmatex">\(16\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(9.7\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(+1\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+6) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+3.7) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+0.7) = \mathbf{+1}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="arithmatex">\(15\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(8.5\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(+1\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+5) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+2.5) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-0.5) = \mathbf{-1}\)</span> <em>(Error)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><span class="arithmatex">\(11\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(7.1\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(+1\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+1) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(+1.1) = \mathbf{+1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\text{sign}(-1.9) = \mathbf{-1}\)</span> <em>(Error)</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Loss Evaluation:</strong>
+* <span class="arithmatex">\(\text{Loss}[f] = \frac{0}{6} = 0\)</span>
+* <span class="arithmatex">\(\text{Loss}[g] = \frac{0}{6} = 0\)</span>
+* <span class="arithmatex">\(\text{Loss}[h] = \frac{3}{6} = 0.5\)</span> (misclassifies Houses 3, 5, and 6)</p>
+<hr />
+<h2 id="10-evaluating-learned-models-data-splits">10. Evaluating Learned Models &amp; Data Splits<a class="headerlink" href="#10-evaluating-learned-models-data-splits" title="Permanent link">&para;</a></h2>
+<h3 id="the-pitfall-of-training-set-evaluation-overfitting-memorization">The Pitfall of Training Set Evaluation (Overfitting / Memorization)<a class="headerlink" href="#the-pitfall-of-training-set-evaluation-overfitting-memorization" title="Permanent link">&para;</a></h3>
+<p>Evaluating a learned model on the same data used to train it produces a dangerously deceptive measure of performance.</p>
+<p><strong>The Lookup Table Paradox:</strong><br />
+Consider a memorizing classifier <span class="arithmatex">\(f_{\text{mem}}\)</span> defined as:
+$<span class="arithmatex">\(f_{\text{mem}}(\mathbf{x}) = \begin{cases}
++1, &amp; \text{if } \mathbf{x} = [0, 0]^\top \\
++1, &amp; \text{if } \mathbf{x} = [1, 0]^\top \\
++1, &amp; \text{if } \mathbf{x} = [0, 1]^\top \\
+-1, &amp; \text{otherwise}
+\end{cases}\)</span>$
+* On the training set: <span class="arithmatex">\(\text{Loss}_{\text{train}}[f_{\text{mem}}] = 0\)</span> (perfect training performance).
+* On unseen data: Predicts <span class="arithmatex">\(-1\)</span> everywhere across the feature space, failing completely to generalize.</p>
+<p><strong>Core Principle:</strong> A model must be evaluated on <strong>Test Data</strong> that is strictly held out and absent from the training set.</p>
+<hr />
+<h3 id="model-selection-validation-data">Model Selection &amp; Validation Data<a class="headerlink" href="#model-selection-validation-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A learning algorithm searches for the best parameters <span class="arithmatex">\(\mathbf{w}, b\)</span> <em>within</em> a specified model family.</li>
+<li><strong>Model Selection:</strong> How do we choose the right family or complexity of models (e.g., linear vs. polynomial, which feature subset to include)?</li>
+<li>Selecting model structure using test data contaminates the test set. Therefore, data is divided into three distinct sets:</li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+    D["Full Dataset"] --&gt; TR["Training Data"]
+    D --&gt; VAL["Validation Data"]
+    D --&gt; TE["Test Data"]
+
+    TR --&gt;|"Tune Parameters (w, b)"| M["Candidate Models"]
+    VAL --&gt;|"Model Selection (Hyperparameters)"| BM["Best Model Structure"]
+    TE --&gt;|"Unbiased Final Evaluation"| PE["Final Performance Estimate"]</code></pre>
+<ol>
+<li><strong>Training Data:</strong> Used by the learning algorithm to fit internal parameters (<span class="arithmatex">\(\mathbf{w}, b\)</span>).</li>
+<li><strong>Validation Data:</strong> A distinct holdout used to compare and select the best model family/architecture.</li>
+<li><strong>Test Data:</strong> Evaluates the final chosen model to provide an unbiased estimate of real-world generalization performance.</li>
+</ol>
+<hr />
+<h2 id="11-unsupervised-learning-dimensionality-reduction">11. Unsupervised Learning: Dimensionality Reduction<a class="headerlink" href="#11-unsupervised-learning-dimensionality-reduction" title="Permanent link">&para;</a></h2>
+<h3 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Unsupervised Learning</strong> is defined as <strong>"understanding data"</strong>.</li>
+<li><strong>Dataset:</strong> <span class="arithmatex">\(\mathcal{D} = \{\mathbf{x}^1, \mathbf{x}^2, \dots, \mathbf{x}^n\}\)</span> where <span class="arithmatex">\(\mathbf{x}^i \in \mathbb{R}^d\)</span>.</li>
+<li><strong>Key Characteristic:</strong> There are <strong>no supervision target labels</strong> (<span class="arithmatex">\(y^i\)</span>).</li>
+<li><strong>Objectives:</strong> Build models that <strong>compress</strong>, <strong>explain</strong>, and <strong>group</strong> the data.</li>
+</ul>
+<h3 id="motivating-applications">Motivating Applications<a class="headerlink" href="#motivating-applications" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Clustering Social Media Feeds:</strong> Grouping <span class="arithmatex">\(1,000,000\)</span> uncategorized tweets into <span class="arithmatex">\(10\)</span> coherent topic clusters.</li>
+<li><strong>Genomic Data Compression:</strong> A person's profile contains <span class="arithmatex">\(10^6\)</span> gene expression measurements. Dimensionality reduction compresses this to <span class="arithmatex">\(100\)</span> informative numbers per individual while preserving essential biological variation.</li>
+</ol>
+<hr />
+<h3 id="formal-mathematical-formulation">Formal Mathematical Formulation<a class="headerlink" href="#formal-mathematical-formulation" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    X["Original Data x in R^d"] --&gt;|"Encoder f"| Z["Compressed Code u in R^d'"]
+    Z --&gt;|"Decoder g"| XHAT["Reconstructed Point g(u) in R^d"]</code></pre>
+<ul>
+<li>Original dimension: <span class="arithmatex">\(d\)</span></li>
+<li>Reduced / compressed dimension: <span class="arithmatex">\(d'\)</span> where <span class="arithmatex">\(d' \ll d\)</span>.</li>
+<li><strong>Encoder:</strong> <span class="arithmatex">\(f: \mathbb{R}^d \to \mathbb{R}^{d'}\)</span> (maps high-dimensional input to compact representation).</li>
+<li><strong>Decoder:</strong> <span class="arithmatex">\(g: \mathbb{R}^{d'} \to \mathbb{R}^d\)</span> (reconstructs original vector from compressed code).</li>
+<li><strong>Goal:</strong> Ensure the round-trip reconstruction matches the original data:
+  $<span class="arithmatex">\(g(f(\mathbf{x}^i)) \approx \mathbf{x}^i, \quad \forall i\)</span>$</li>
+<li><strong>Reconstruction Loss:</strong>
+  $<span class="arithmatex">\(\text{Loss}[f, g] = \frac{1}{n} \sum_{i=1}^n \|g(f(\mathbf{x}^i)) - \mathbf{x}^i\|^2\)</span>$</li>
+</ul>
+<hr />
+<h3 id="worked-numerical-example-in-dimensionality-reduction">Worked Numerical Example in Dimensionality Reduction<a class="headerlink" href="#worked-numerical-example-in-dimensionality-reduction" title="Permanent link">&para;</a></h3>
+<p>Compressing <span class="arithmatex">\(2\text{D}\)</span> data to <span class="arithmatex">\(1\text{D}\)</span> (<span class="arithmatex">\(d=2, d'=1, n=4\)</span>):</p>
+<div class="arithmatex">\[\mathbf{x}^1 = [1, 0.8], \quad \mathbf{x}^2 = [2, 2.2], \quad \mathbf{x}^3 = [3, 3.2], \quad \mathbf{x}^4 = [4, 3.8]\]</div>
+<pre class="mermaid"><code>flowchart TD
+    subgraph CandidateA["Candidate Pair 1 (Poor)"]
+        EA["f(x) = x_1 - x_2"] --&gt; DA["g(u) = [u, u]"]
+    end
+    subgraph CandidateB["Candidate Pair 2 (Optimal)"]
+        EB["f~(x) = (x_1 + x_2) / 2"] --&gt; DB["g~(u) = [u, u]"]
+    end</code></pre>
+<h4 id="comparison-of-the-two-candidate-autoencoder-pairs">Comparison of the Two Candidate Autoencoder Pairs:<a class="headerlink" href="#comparison-of-the-two-candidate-autoencoder-pairs" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data Point <span class="arithmatex">\(\mathbf{x}^i\)</span></th>
+<th style="text-align: center;">Pair 1 Encoded <span class="arithmatex">\(f(\mathbf{x}) = x_1 - x_2\)</span></th>
+<th style="text-align: center;">Pair 1 Reconstruction <span class="arithmatex">\(g(f(\mathbf{x}))\)</span></th>
+<th style="text-align: center;">Pair 2 Encoded <span class="arithmatex">\(\tilde{f}(\mathbf{x}) = \frac{x_1 + x_2}{2}\)</span></th>
+<th style="text-align: center;">Pair 2 Reconstruction <span class="arithmatex">\(\tilde{g}(\tilde{f}(\mathbf{x}))\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([1, 0.8]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1 - 0.8 = \mathbf{0.2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([0.2, 0.2]\)</span> <em>(Poor: far from <span class="arithmatex">\([1, 0.8]\)</span>)</em></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1 + 0.8}{2} = \mathbf{0.9}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([\mathbf{0.9}, \mathbf{0.9}]\)</span> <em>(Very close!)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([2, 2.2]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2 - 2.2 = \mathbf{-0.2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([-0.2, -0.2]\)</span> <em>(Far from <span class="arithmatex">\([2, 2.2]\)</span>)</em></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{2 + 2.2}{2} = \mathbf{2.1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([\mathbf{2.1}, \mathbf{2.1}]\)</span> <em>(Very close!)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([3, 3.2]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3 - 3.2 = \mathbf{-0.2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([-0.2, -0.2]\)</span> <em>(Far from <span class="arithmatex">\([3, 3.2]\)</span>)</em></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{3 + 3.2}{2} = \mathbf{3.1}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([\mathbf{3.1}, \mathbf{3.1}]\)</span> <em>(Very close!)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\([4, 3.8]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4 - 3.8 = \mathbf{0.2}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([0.2, 0.2]\)</span> <em>(Far from <span class="arithmatex">\([4, 3.8]\)</span>)</em></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{4 + 3.8}{2} = \mathbf{3.9}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\([\mathbf{3.9}, \mathbf{3.9}]\)</span> <em>(Very close!)</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observation:</strong>
+* Candidate Pair 1 collapses the points around zero, losing positional information along the line of greatest variance.
+* Candidate Pair 2 projects points orthogonally onto the principal line <span class="arithmatex">\(x_2 = x_1\)</span>, minimizing Euclidean reconstruction loss.</p>
+<hr />
+<h2 id="12-unsupervised-learning-density-estimation-clustering">12. Unsupervised Learning: Density Estimation &amp; Clustering<a class="headerlink" href="#12-unsupervised-learning-density-estimation-clustering" title="Permanent link">&para;</a></h2>
+<h3 id="motivation-the-wisdom-of-chopra-example">Motivation &amp; The Wisdom of Chopra Example<a class="headerlink" href="#motivation-the-wisdom-of-chopra-example" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scenario:</strong> Analyze a stream of text messages from an author (e.g., Deepak Chopra quotes on <code>wisdomofchopra.com</code>) generated from randomly assembled profound-sounding phrases.</li>
+<li><strong>Goal:</strong> Build an autonomous generator that produces new realistic quotes resembling the original stream.</li>
+<li><strong>Requirement:</strong> To synthesize realistic instances, the system must assign a <strong>probability score</strong> to every possible sequence of <span class="arithmatex">\(128\)</span> characters, giving high probabilities to typical sequences and near-zero probabilities to arbitrary gibberish.</li>
+</ul>
+<h3 id="formal-formulation">Formal Formulation<a class="headerlink" href="#formal-formulation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Input Data:</strong> <span class="arithmatex">\(\mathcal{D} = \{\mathbf{x}^1, \mathbf{x}^2, \dots, \mathbf{x}^n\}\)</span>, with <span class="arithmatex">\(\mathbf{x}^i \in \mathbb{R}^d\)</span>.</li>
+<li><strong>Probability Model:</strong> A function <span class="arithmatex">\(P: \mathbb{R}^d \to \mathbb{R}_+\)</span> that sums/integrates to <span class="arithmatex">\(1\)</span>:
+  $<span class="arithmatex">\(\sum_{\mathbf{x}} P(\mathbf{x}) = 1 \quad \left(\text{or } \int_{\mathbb{R}^d} P(\mathbf{x}) \, d\mathbf{x} = 1\right)\)</span>$</li>
+<li><strong>Objective:</strong> <span class="arithmatex">\(P(\mathbf{x})\)</span> should be large when <span class="arithmatex">\(\mathbf{x} \in \text{Data}\)</span>, and low for arbitrary non-conforming inputs.</li>
+<li><strong>Negative Log-Likelihood Loss:</strong>
+  $<span class="arithmatex">\(\text{Loss}[P] = \frac{1}{n} \sum_{i=1}^n -\log\left(P(\mathbf{x}^i)\right)\)</span>$</li>
+</ul>
+<hr />
+<h3 id="worked-numerical-examples-in-density-estimation">Worked Numerical Examples in Density Estimation<a class="headerlink" href="#worked-numerical-examples-in-density-estimation" title="Permanent link">&para;</a></h3>
+<h4 id="example-1-1d-uniform-density-estimation">Example 1: 1D Uniform Density Estimation<a class="headerlink" href="#example-1-1d-uniform-density-estimation" title="Permanent link">&para;</a></h4>
+<p>Consider 4 one-dimensional data points:
+$<span class="arithmatex">\(\mathbf{x}^1 = [1.2], \quad \mathbf{x}^2 = [1.9], \quad \mathbf{x}^3 = [4.3], \quad \mathbf{x}^4 = [4.8]\)</span>$</p>
+<p>Evaluate four candidate uniform distributions:
+1. <span class="arithmatex">\(P^1 = \text{Uniform}[3, 10]\)</span>:
+   * Width <span class="arithmatex">\(= 7 \implies\)</span> Density height <span class="arithmatex">\(= \frac{1}{7}\)</span> on <span class="arithmatex">\([3, 10]\)</span>, <span class="arithmatex">\(0\)</span> elsewhere.
+   * Observed values: <span class="arithmatex">\(P^1(1.2) = 0\)</span>, <span class="arithmatex">\(P^1(1.9) = 0\)</span>, <span class="arithmatex">\(P^1(4.3) = \frac{1}{7}\)</span>, <span class="arithmatex">\(P^1(4.8) = \frac{1}{7}\)</span>.
+   * <span class="arithmatex">\(\text{Loss}[P^1] = \frac{1}{4}[-\log(0) - \log(0) - \log(1/7) - \log(1/7)] = \mathbf{\infty}\)</span>.
+2. <span class="arithmatex">\(P^2 = \text{Uniform}[0, 10]\)</span>:
+   * Width <span class="arithmatex">\(= 10 \implies\)</span> Density height <span class="arithmatex">\(= \frac{1}{10}\)</span> on <span class="arithmatex">\([0, 10]\)</span>.
+   * All points lie within interval: <span class="arithmatex">\(P^2(\mathbf{x}^i) = \frac{1}{10}\)</span> for all <span class="arithmatex">\(i\)</span>.
+   * <span class="arithmatex">\(\text{Loss}[P^2] = -\log\left(\frac{1}{10}\right) = \log(10) \approx \mathbf{2.302}\)</span>.
+3. <span class="arithmatex">\(P^3 = \text{Uniform}[1, 5]\)</span>:
+   * Width <span class="arithmatex">\(= 4 \implies\)</span> Density height <span class="arithmatex">\(= \frac{1}{4}\)</span> on <span class="arithmatex">\([1, 5]\)</span>.
+   * All points lie within interval: <span class="arithmatex">\(P^3(\mathbf{x}^i) = \frac{1}{4}\)</span> for all <span class="arithmatex">\(i\)</span>.
+   * <span class="arithmatex">\(\text{Loss}[P^3] = -\log\left(\frac{1}{4}\right) = \log(4) \approx \mathbf{1.386}\)</span>.
+4. <span class="arithmatex">\(P^4 = \text{Uniform}[3, 5]\)</span>:
+   * Width <span class="arithmatex">\(= 2 \implies\)</span> Density height <span class="arithmatex">\(= \frac{1}{2}\)</span> on <span class="arithmatex">\([3, 5]\)</span>, <span class="arithmatex">\(0\)</span> elsewhere.
+   * <span class="arithmatex">\(P^4(1.2) = 0\)</span>, <span class="arithmatex">\(P^4(1.9) = 0 \implies \text{Loss}[P^4] = \mathbf{\infty}\)</span>.</p>
+<p><strong>Ranking of Models:</strong>
+$<span class="arithmatex">\(\text{Loss}[P^4] = \text{Loss}[P^1] = \infty &gt; \text{Loss}[P^2] \, (2.302) &gt; \text{Loss}[P^3] \, (1.386)\)</span>$
+<strong>Takeaway:</strong> <span class="arithmatex">\(P^3\)</span> is the superior model because it concentrates probability mass tightly over the observed points without assigning zero probability to any valid data sample.</p>
+<hr />
+<h4 id="example-2-2d-gaussian-mixture-models-the-link-to-clustering">Example 2: 2D Gaussian Mixture Models &amp; The Link to Clustering<a class="headerlink" href="#example-2-2d-gaussian-mixture-models-the-link-to-clustering" title="Permanent link">&para;</a></h4>
+<p>Consider nine 2D data points grouping into three natural geometric clusters:
+* Cluster 1: <span class="arithmatex">\((1.1, 1.3), (0.9, 0.7), (0.9, 1.2) \approx \text{centered near } [1, 1]^\top\)</span>
+* Cluster 2: <span class="arithmatex">\((2.1, -1.0), (2.2, -0.9), (1.9, -1.1) \approx \text{centered near } [2, -1]^\top\)</span>
+* Cluster 3: <span class="arithmatex">\((5.1, 0.1), (5.1, 0.0), (4.8, -0.1) \approx \text{centered near } [5, 0]^\top\)</span></p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph GMM["Gaussian Mixture Model Comparison"]
+        P1["P^1 Centers: [3, 3], [5, 5], [4, 4] (Far from true clusters -&gt; Poor likelihood)"]
+        P2["P^2 Centers: [1, 1], [2, -1], [5, 0] (Centered on true clusters -&gt; High likelihood)"]
+    end
+    P2 --&gt; CLUST["Natural Clustering: Cluster assignment matches density mixture components"]</code></pre>
+<ul>
+<li><strong>Candidate Model <span class="arithmatex">\(P^1\)</span>:</strong> Mixture components centered at <span class="arithmatex">\([3, 3]^\top, [5, 5]^\top, [4, 4]^\top\)</span>. Incurs heavy negative log-likelihood penalty because data points lie in low-density tails.</li>
+<li><strong>Candidate Model <span class="arithmatex">\(P^2\)</span>:</strong> Mixture components centered at <span class="arithmatex">\([1, 1]^\top, [2, -1]^\top, [5, 0]^\top\)</span>. Places probability density directly over data concentrations, minimizing loss.</li>
+<li><strong>Connection to Clustering:</strong> Fitting a multi-modal probability density (e.g., Gaussian Mixture Model) discovers natural data clusters; each mixture component represents an identifiable data cluster.</li>
+</ul>
+<hr />
+<h2 id="13-comprehensive-ml-paradigm-taxonomy">13. Comprehensive ML Paradigm Taxonomy<a class="headerlink" href="#13-comprehensive-ml-paradigm-taxonomy" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">Supervised: Regression</th>
+<th style="text-align: left;">Supervised: Classification</th>
+<th style="text-align: left;">Unsupervised: Dimensionality Reduction</th>
+<th style="text-align: left;">Unsupervised: Density Estimation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Data Provided</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\{(\mathbf{x}^i, y^i)\}_{i=1}^n\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\{(\mathbf{x}^i, y^i)\}_{i=1}^n\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\{\mathbf{x}^i\}_{i=1}^n\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\{\mathbf{x}^i\}_{i=1}^n\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Target Label <span class="arithmatex">\(y\)</span></strong></td>
+<td style="text-align: left;">Continuous: <span class="arithmatex">\(y \in \mathbb{R}\)</span></td>
+<td style="text-align: left;">Discrete: <span class="arithmatex">\(y \in \{+1, -1\}\)</span></td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Model Structure</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(f: \mathbb{R}^d \to \mathbb{R}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(f: \mathbb{R}^d \to \{+1, -1\}\)</span></td>
+<td style="text-align: left;">Encoder <span class="arithmatex">\(f: \mathbb{R}^d \to \mathbb{R}^{d'}\)</span><br>Decoder <span class="arithmatex">\(g: \mathbb{R}^{d'} \to \mathbb{R}^d\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(P: \mathbb{R}^d \to \mathbb{R}_+\)</span> with <span class="arithmatex">\(\int P = 1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Typical Hypothesis</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(f(\mathbf{x}) = \mathbf{w}^\top \mathbf{x} + b\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(f(\mathbf{x}) = \text{sign}(\mathbf{w}^\top \mathbf{x} + b)\)</span></td>
+<td style="text-align: left;">Linear projection / Autoencoder</td>
+<td style="text-align: left;">Uniform, Gaussian Mixture Models</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Canonical Loss</strong></td>
+<td style="text-align: left;"><strong>Squared Loss:</strong><br><span class="arithmatex">\(\frac{1}{n}\sum (f(\mathbf{x}^i) - y^i)^2\)</span></td>
+<td style="text-align: left;"><strong>0-1 Loss:</strong><br><span class="arithmatex">\(\frac{1}{n}\sum \mathbf{1}(f(\mathbf{x}^i) \neq y^i)\)</span></td>
+<td style="text-align: left;"><strong>Reconstruction Loss:</strong><br><span class="arithmatex">\(\frac{1}{n}\sum \|g(f(\mathbf{x}^i)) - \mathbf{x}^i\|^2\)</span></td>
+<td style="text-align: left;"><strong>Negative Log-Likelihood:</strong><br><span class="arithmatex">\(\frac{1}{n}\sum -\log P(\mathbf{x}^i)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Core Objective</strong></td>
+<td style="text-align: left;">Predict real numbers</td>
+<td style="text-align: left;">Separate classes</td>
+<td style="text-align: left;">Compress &amp; simplify (<span class="arithmatex">\(d' \ll d\)</span>)</td>
+<td style="text-align: left;">Assign probability scores &amp; generate samples</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02_calculus/" class="md-footer__link md-footer__link--next" aria-label="Next: 02. Calculus &amp; Continuous Optimization">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                02. Calculus & Continuous Optimization
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/devkumar70401" target="_blank" rel="noopener" title="GitHub Profile" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:devkumar70401@gmail.com" target="_blank" rel="noopener" title="Email Devendra" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
